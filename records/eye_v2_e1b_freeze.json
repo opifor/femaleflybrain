@@ -1,0 +1,22 @@
+{
+    "hash_basis":  "lf",
+    "input_hash_basis":  "exact bytes including compression",
+    "frozen_utc":  "2026-09-16T22:40:25.3471508Z",
+    "preregistration":  {
+                            "sha256":  "781cb6851981f9b3d11e8581a72e488890b57bc394213a940b8a8a0a21ae092d",
+                            "path":  "experiments/eye_v2_e1b.md"
+                        },
+    "graph":  {
+                  "sha256":  "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+                  "path":  "build/graph_female.npz"
+              },
+    "csv":  {
+                "sha256":  "bdf4ce7f62cc63493d53eefad3816ff2dfd08b190e97b35a492e0e453df2f0f6",
+                "path":  "build/raw_female/column_assignment.csv.gz"
+            },
+    "initial_head":  "af368926d00583a53c22d31b07c8951be23c4335",
+    "initial_status":  [
+                           "?? experiments/eye_v2_e1b.md"
+                       ],
+    "implementation_existed":  false
+}

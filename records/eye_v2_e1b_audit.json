@@ -1,0 +1,192 @@
+{
+  "hash_basis": "lf",
+  "binary_hash_basis": "exact bytes",
+  "files": {
+    "experiments/eye_v2_e1b.md": {
+      "bytes": 6019,
+      "sha256": "781cb6851981f9b3d11e8581a72e488890b57bc394213a940b8a8a0a21ae092d",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "flybench/experiment/retinotopy_holdout.py": {
+      "bytes": 12402,
+      "sha256": "6517302a444e4b1dbc0aa9df141851a87fa255de61b5cfd5c407e33d85fcf144",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "tests/test_retinotopy_holdout.py": {
+      "bytes": 6465,
+      "sha256": "7f6cdd45851b0bf82405dd5f37cb8ab5c6357f2fa37e8449081e1281dcc1d374",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "records/eye_v2_e1b_report.md": {
+      "bytes": 24024,
+      "sha256": "4e23b2ea9ada2df817ca8b7d52acea37e81411220a3aa16946ac138acc801d25",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "records/eye_v2_e1b_results.json": {
+      "bytes": 434964,
+      "sha256": "ccddd3703451dcee56d704fefeebbf669589ddfc757ecffa759083a1f429326f",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "records/eye_v2_e1b_freeze.json": {
+      "bytes": 953,
+      "sha256": "080907937f4ffcb10f6cf736399ae0602c7e13447ebbd65b0dcf1ab2d6b99163",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/finalize.py": {
+      "bytes": 20289,
+      "sha256": "1cc85308d3fd4cfecfa5433f94f03d737117c34570c0e0a05c38e078ca5a9fa7",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/full.log": {
+      "bytes": 2347,
+      "sha256": "15e8e7a94f1f3337bfa7abcb9a1a2108b65bcc675e663830cfbe30e324830fa8",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/full_cells.npz": {
+      "bytes": 3920130,
+      "sha256": "8181db79c85ac8d345f57e602af0aba85dfca9b0068d49ac2c439402daafece5"
+    },
+    "build/records-raw/eye_v2_e1b/full_results.json": {
+      "bytes": 432843,
+      "sha256": "5ec40c8bcc2bed5abe05631b91eadcf93459d1014400393ecc669b0427aae243",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/independent_checks.json": {
+      "bytes": 476,
+      "sha256": "66f1ce14951d48ca860db2986b12d1b72a5251d72c630ce74e2d58902f8ba943",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/intentional_failure.log": {
+      "bytes": 721,
+      "sha256": "d6a643558b4e22ae4661a7306d3cf17db3acb13097475e0008e123a183e27933",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/pytest.log": {
+      "bytes": 99,
+      "sha256": "c14a17203d4a64021f59d18c38e482e8d8f32ad8e6fde01bb8e64213cc67f7f6",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/quick.log": {
+      "bytes": 2401,
+      "sha256": "71a8c92c1ad4bc0c4cfab4fac719058d459471d55ea9adf21fc1ab7746192961",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/quick_cells.npz": {
+      "bytes": 1033500,
+      "sha256": "c3a86aa3b10cb86c6944a432886ea2e75b1c4e68e09bd43b687585d59d4988df"
+    },
+    "build/records-raw/eye_v2_e1b/quick_results.json": {
+      "bytes": 80686,
+      "sha256": "80629505e8930dcc5a8cd63405222544011b1a7b425b6aa7f939cee7080628fb",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/run_evidence.py": {
+      "bytes": 2573,
+      "sha256": "8cdb5fd1fb2bc049b57fe2f34995328bf7a90daf59198db6bb50e9fd76560423",
+      "utf8_without_bom": true,
+      "lf": true
+    },
+    "build/records-raw/eye_v2_e1b/verification.json": {
+      "bytes": 808,
+      "sha256": "ca8e7d63c8fdbe34ac48eef81a8f88026d2d46ea8ae2df3bcd46039c2002c796",
+      "utf8_without_bom": true,
+      "lf": true
+    }
+  },
+  "self_hash_exclusion": "This audit omits its own recursive hash and size from the file inventory.",
+  "git": {
+    "head": "af368926d00583a53c22d31b07c8951be23c4335",
+    "status_before_audit_write": [
+      "?? experiments/eye_v2_e1b.md",
+      "?? flybench/experiment/retinotopy_holdout.py",
+      "?? records/eye_v2_e1b_freeze.json",
+      "?? records/eye_v2_e1b_report.md",
+      "?? records/eye_v2_e1b_results.json",
+      "?? tests/test_retinotopy_holdout.py"
+    ],
+    "tracked_diff": [],
+    "staged_diff": [],
+    "branch": "lane-eye2",
+    "final_status": [
+      "?? experiments/eye_v2_e1b.md",
+      "?? flybench/experiment/retinotopy_holdout.py",
+      "?? records/eye_v2_e1b_audit.json",
+      "?? records/eye_v2_e1b_freeze.json",
+      "?? records/eye_v2_e1b_report.md",
+      "?? records/eye_v2_e1b_results.json",
+      "?? tests/test_retinotopy_holdout.py"
+    ]
+  },
+  "frozen_hashes_rechecked": true,
+  "verification": {
+    "intentional_failure": {
+      "exit_code": 1,
+      "log": "build/records-raw/eye_v2_e1b/intentional_failure.log",
+      "count_line": "1 failed in 0.49s"
+    },
+    "pytest": {
+      "exit_code": 0,
+      "log": "build/records-raw/eye_v2_e1b/pytest.log",
+      "count_line": "15 passed in 0.39s"
+    },
+    "quick": {
+      "exit_code": 0,
+      "log": "build/records-raw/eye_v2_e1b/quick.log",
+      "count_line": null
+    },
+    "full": {
+      "exit_code": 0,
+      "log": "build/records-raw/eye_v2_e1b/full.log",
+      "count_line": null
+    },
+    "environment": {
+      "chain": "prescribed Windows CPython 3.12 and supplied dependency directory",
+      "LC_ALL": "C",
+      "LANG": "C",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "cacheprovider": "disabled",
+      "environment_difference": false
+    }
+  },
+  "independent_raw_checks": {
+    "all_cell_cube_distance_and_type_summary_checks": true,
+    "quick_full_predictions_identical_all_cases_and_directions": true,
+    "permutation_coordinate_multisets_preserved_by_hemisphere": true,
+    "direct_full_graph_oracle_targets": 1004,
+    "direct_full_graph_oracle_cases": [
+      "real",
+      "permutation_1",
+      "rank_surrogate"
+    ],
+    "direct_full_graph_oracle_directions": [
+      "both",
+      "incoming",
+      "outgoing"
+    ],
+    "e1_context_complete_coverage_rows": 17370
+  },
+  "environment_difference": false,
+  "clean_room": true,
+  "preregistration_frozen_before_implementation": true,
+  "post_delivery_edit": {
+    "file": "records/eye_v2_e1b_report.md",
+    "change": "one scope sentence added after audit (cell-level vs column-level hold-out)",
+    "report_sha256_after_edit": "39c37b6351b44415f911fe440160572870e3717a6c63e87fbab83f664be104bf",
+    "hash_basis": "lf"
+  }
+}
