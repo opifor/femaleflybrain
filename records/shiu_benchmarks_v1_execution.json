@@ -1,0 +1,14 @@
+{
+  "chain": [
+    {
+      "stage": "quick",
+      "exit_code": 0
+    },
+    {
+      "stage": "full",
+      "exit_code": 0
+    }
+  ],
+  "backend": "fast_gpu",
+  "device": "cuda"
+}

@@ -1,0 +1,9 @@
+{
+  "example_sugar_exact_match": true,
+  "example_MN9_exact_match": true,
+  "sha256": {
+    "model.py": "b879a8a286f367165e3effa6d47562cac289333c977be7716ccb646067326cce",
+    "Readme.md": "b716376bf62eae026a18c9c295b4b8b441c97a26f16b0bcb2d876c5baf1a50bd",
+    "example.ipynb": "ff86ffe82c9e280be5a0a5d8b3110f9454faebac19d2b0c9671558cb1f710ff9"
+  }
+}

@@ -246,6 +246,8 @@ Run `python -m pytest -q -p no:cacheprovider tests/test_dictionary.py`.
 
 ## Experiments
 
+The [shiu_benchmarks_v1 controls](experiments/shiu_benchmarks_v1.md) reproduce feeding and grooming directions with explicit [results and drive audits](records/shiu_benchmarks_v1_report.md).
+
 The [female_hearing_v1 hearing ladder](experiments/female_hearing_v1.md) separates dose calibration, frozen choices and held-out tests; see the [experiment guide](docs/experiments.md#female_hearing_v1).
 
 Run the preregistered female-only experiment with

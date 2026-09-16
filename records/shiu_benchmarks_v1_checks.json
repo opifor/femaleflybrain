@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "full_trials": 130,
+  "drive_window_checks": 300,
+  "protocol_sha256": "e95446d667dbcc711edf2f6d7aafe9373f362729c9ab6346dd14f1718d274d1d",
+  "graph_sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+  "utf8_without_bom": true,
+  "code_hashes_match": true,
+  "pytest": "56 passed, 3 skipped; exit 0",
+  "failure_probe": "1 failed, 7 deselected; exit 1"
+}

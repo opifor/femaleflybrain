@@ -116,3 +116,55 @@ Outputs are `records/female_hearing_v1_{calibration,frozen,test}.json`;
 the JSON report contains a `Result` object. The Markdown report is rendered
 from that saved JSON, with calibration and pre-registered test sections.
 Quick output and execution evidence are under `build/`.
+
+## shiu_benchmarks_v1
+
+The [preregistered Shiu controls](../experiments/shiu_benchmarks_v1.md) test
+sugar-to-MN9 dose response and bitter suppression, JO-CE versus JO-F activation
+of aBN1, and external-drive delivery including JO-A/B second-order responses.
+Use the existing `build/graph_female.npz` with FAFB v783, the Shiu export and
+`shiu2024-parquet` signs. Run, in order:
+
+```text
+python -m flybench.experiment.benchmarks --quick
+python -m flybench.experiment.benchmarks
+python -m pytest -q -p no:cacheprovider tests/test_benchmarks.py
+```
+
+Both stages use 1 s trials and exclude the first 200 ms from readouts. Quick
+uses seeds 0-1; full uses 0-9. The full command requires a matching quick record.
+All neuronal simulation uses the unchanged `fast_gpu` CUDA batch engine.
+Shiu's literal source IDs are preserved; missing v783 IDs are reported rather
+than replaced. The three absent IDs reduce sugar to 20, bitter to 20 and JO-CE
+to 69 cells. Water and Ir94e each contain 18, JO-F 60, and both readouts one.
+
+The [generated report](../records/shiu_benchmarks_v1_report.md) and
+[JSON record](../records/shiu_benchmarks_v1_report.json) include a `Result` object,
+all 130 seedwise trials, graph/protocol/code fingerprints, exact selector lists,
+per-cell drive audits and the top 20 directly postsynaptic types for each JO-A/B
+input. The report compares the measured directions with paper figures; it does
+not invent exact paper rates or equate 50 mM sucrose with an input frequency.
+The approximately 80% maximum in Shiu's Methods is not a refractory-limit claim.
+
+The robustness gate requires every predefined B1 and B2 contrast to exceed
+2 SE. Water and Ir94e are secondary checks. This is a v783 directional replication,
+with dt=0.2 ms, ten repeats and an 800 ms readout, not exact reconstruction of the
+paper's v630, dt=0.1 ms, thirty-repeat calculation. Passing controls do not prove
+that a silent hearing pathway is biologically absent.
+
+The measured B1 and B2 gates passed. Sugar100 produced 63.375 +/- 1.817 Hz MN9,
+falling to 4.500 +/- 0.972 Hz with bitter100. JO-CE100 produced 26.875 +/- 0.678 Hz
+aBN1 versus 0.625 +/- 0.384 Hz for JO-F100. Water100 produced zero MN9 spikes,
+so that secondary activation prediction was not reproduced at this dose.
+Sugar100/sugar200 was 0.675, below the paper's approximate 0.8 calibration target;
+the denominator here is only the measured 200 Hz condition, not a known maximum.
+All sampled drive events were delivered in the recorded trials. Each of the
+JO-A, JO-B and combined-input top-20 second-order type sets contained 20 active
+types (any seed >0 Hz). These controls argue against a global drive failure,
+while leaving the cause of the silent vpoEN hearing response unresolved.
+
+Acceptance: benchmark plus reference/fast-backend tests reported 56 passed,
+3 skipped (opt-in failure probes), exit 0. The benchmark's intentional-failure
+probe reported 1 failed, 7 deselected, exit 1. See the
+[delivery checks](../records/shiu_benchmarks_v1_checks.json) and
+[native process exits](../records/shiu_benchmarks_v1_execution.json).
