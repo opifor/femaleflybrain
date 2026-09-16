@@ -1,0 +1,5996 @@
+{
+  "schema_version": "female_readouts_v1.checks.1",
+  "mode": "full",
+  "datasets": {
+    "female": {
+      "slice_coverage": true,
+      "raw_reconstruction_equal": true,
+      "observer_comparisons": [
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 41.25,
+          "runner": 41.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 31.875,
+          "runner": 31.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 38.125,
+          "runner": 38.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 45.0,
+          "runner": 45.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 43.75,
+          "runner": 43.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 35.0,
+          "runner": 35.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 36.875,
+          "runner": 36.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 34.375,
+          "runner": 34.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 41.25,
+          "runner": 41.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 41.875,
+          "runner": 41.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 29.125,
+          "runner": 29.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 22.375,
+          "runner": 22.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 26.75,
+          "runner": 26.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 31.25,
+          "runner": 31.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 30.75,
+          "runner": 30.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 23.75,
+          "runner": 23.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 26.0,
+          "runner": 26.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 24.75,
+          "runner": 24.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 29.625,
+          "runner": 29.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 29.375,
+          "runner": 29.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 41.25,
+          "runner": 41.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 33.75,
+          "runner": 33.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 38.125,
+          "runner": 38.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 45.625,
+          "runner": 45.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 43.75,
+          "runner": 43.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 35.0,
+          "runner": 35.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 36.25,
+          "runner": 36.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 34.375,
+          "runner": 34.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 41.25,
+          "runner": 41.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 41.875,
+          "runner": 41.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 29.125,
+          "runner": 29.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 23.5,
+          "runner": 23.5,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 26.75,
+          "runner": 26.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 31.25,
+          "runner": 31.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 30.75,
+          "runner": 30.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 23.75,
+          "runner": 23.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 25.75,
+          "runner": 25.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 24.75,
+          "runner": 24.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 29.625,
+          "runner": 29.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 29.375,
+          "runner": 29.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 141.875,
+          "runner": 141.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 157.5,
+          "runner": 157.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 31.875,
+          "runner": 31.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 203.125,
+          "runner": 203.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 208.125,
+          "runner": 208.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 89.375,
+          "runner": 89.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 163.75,
+          "runner": 163.75,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 179.375,
+          "runner": 179.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 197.5,
+          "runner": 197.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 21.375,
+          "runner": 21.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.125,
+          "runner": 0.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 2.875,
+          "runner": 2.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.875,
+          "runner": 0.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 2.0,
+          "runner": 2.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.625,
+          "runner": 0.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 4.875,
+          "runner": 4.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.5,
+          "runner": 0.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 204.375,
+          "runner": 204.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 208.125,
+          "runner": 208.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 192.5,
+          "runner": 192.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 115.0,
+          "runner": 115.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 129.375,
+          "runner": 129.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 113.75,
+          "runner": 113.75,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 196.875,
+          "runner": 196.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 198.125,
+          "runner": 198.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.625,
+          "runner": 0.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 96.875,
+          "runner": 96.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 194.375,
+          "runner": 194.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 208.125,
+          "runner": 208.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 208.125,
+          "runner": 208.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 76.875,
+          "runner": 76.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 156.875,
+          "runner": 156.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 173.125,
+          "runner": 173.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 208.125,
+          "runner": 208.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.125,
+          "runner": 0.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 2.5,
+          "runner": 2.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.125,
+          "runner": 0.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.5,
+          "runner": 0.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 2.125,
+          "runner": 2.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 1.375,
+          "runner": 1.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.375,
+          "runner": 0.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        }
+      ],
+      "observer_equal": true,
+      "historical": {
+        "coverage_equal": true,
+        "comparisons": [
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 41.25,
+            "expected": 41.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 29.125,
+            "expected": 29.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 31.875,
+            "expected": 31.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 22.375,
+            "expected": 22.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 38.125,
+            "expected": 38.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 26.75,
+            "expected": 26.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 45.0,
+            "expected": 45.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 31.25,
+            "expected": 31.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 43.75,
+            "expected": 43.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 30.75,
+            "expected": 30.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 35.0,
+            "expected": 35.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 23.75,
+            "expected": 23.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 36.875,
+            "expected": 36.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 26.0,
+            "expected": 26.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 34.375,
+            "expected": 34.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 24.75,
+            "expected": 24.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 41.25,
+            "expected": 41.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 29.625,
+            "expected": 29.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 41.875,
+            "expected": 41.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 29.375,
+            "expected": 29.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 41.25,
+            "expected": 41.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 29.125,
+            "expected": 29.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 33.75,
+            "expected": 33.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 23.5,
+            "expected": 23.5,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 38.125,
+            "expected": 38.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 26.75,
+            "expected": 26.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 45.625,
+            "expected": 45.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 31.25,
+            "expected": 31.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 43.75,
+            "expected": 43.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 30.75,
+            "expected": 30.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 35.0,
+            "expected": 35.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 23.75,
+            "expected": 23.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 36.25,
+            "expected": 36.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 25.75,
+            "expected": 25.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 34.375,
+            "expected": 34.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 24.75,
+            "expected": 24.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 41.25,
+            "expected": 41.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 29.625,
+            "expected": 29.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 41.875,
+            "expected": 41.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 29.375,
+            "expected": 29.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 21.375,
+            "expected": 21.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 141.875,
+            "expected": 141.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.125,
+            "expected": 0.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 157.5,
+            "expected": 157.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 2.875,
+            "expected": 2.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 31.875,
+            "expected": 31.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.875,
+            "expected": 0.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 203.125,
+            "expected": 208.75,
+            "equal": false
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 2.0,
+            "expected": 5.375,
+            "equal": false
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 208.125,
+            "expected": 208.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 89.375,
+            "expected": 89.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.625,
+            "expected": 0.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 163.75,
+            "expected": 163.75,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 179.375,
+            "expected": 179.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 4.875,
+            "expected": 4.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 197.5,
+            "expected": 197.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.5,
+            "expected": 0.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 204.375,
+            "expected": 203.75,
+            "equal": false
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 208.125,
+            "expected": 208.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 192.5,
+            "expected": 192.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 115.0,
+            "expected": 115.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 129.375,
+            "expected": 129.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 113.75,
+            "expected": 113.75,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 196.875,
+            "expected": 196.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 198.125,
+            "expected": 198.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.625,
+            "expected": 0.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.125,
+            "expected": 0.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 96.875,
+            "expected": 96.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 194.375,
+            "expected": 195.625,
+            "equal": false
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 2.5,
+            "expected": 2.75,
+            "equal": false
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 208.125,
+            "expected": 208.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.125,
+            "expected": 0.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 208.125,
+            "expected": 208.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.5,
+            "expected": 0.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 76.875,
+            "expected": 76.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 2.125,
+            "expected": 2.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 156.875,
+            "expected": 156.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 1.375,
+            "expected": 1.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 173.125,
+            "expected": 173.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 208.125,
+            "expected": 208.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.375,
+            "expected": 0.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          }
+        ],
+        "passed": false
+      },
+      "two_female_embedded_fafb_equal": false,
+      "passed": false,
+      "configuration_comparison": {
+        "ear": true,
+        "parameters": true,
+        "environment": true
+      },
+      "protocol_numeric_fields_equal": {
+        "conditions": true,
+        "seeds": true,
+        "windows": true,
+        "warmup": true,
+        "window_ms": true,
+        "dt": true
+      }
+    },
+    "banc": {
+      "slice_coverage": true,
+      "raw_reconstruction_equal": true,
+      "observer_comparisons": [
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 13.75,
+          "runner": 13.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 10.625,
+          "runner": 10.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 10.625,
+          "runner": 10.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 5.0,
+          "runner": 5.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 9.375,
+          "runner": 9.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 5.625,
+          "runner": 5.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 7.5,
+          "runner": 7.5,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 6.25,
+          "runner": 6.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 8.125,
+          "runner": 8.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 10.0,
+          "runner": 10.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 17.125,
+          "runner": 17.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 13.75,
+          "runner": 13.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 14.75,
+          "runner": 14.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 9.0,
+          "runner": 9.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 13.25,
+          "runner": 13.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 9.625,
+          "runner": 9.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 14.0,
+          "runner": 14.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 10.375,
+          "runner": 10.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 12.625,
+          "runner": 12.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 13.125,
+          "runner": 13.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 16.875,
+          "runner": 16.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 13.125,
+          "runner": 13.125,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 10.625,
+          "runner": 10.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 6.875,
+          "runner": 6.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 11.875,
+          "runner": 11.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 6.25,
+          "runner": 6.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 10.0,
+          "runner": 10.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 6.875,
+          "runner": 6.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 9.375,
+          "runner": 9.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 10.625,
+          "runner": 10.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 17.875,
+          "runner": 17.875,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 14.0,
+          "runner": 14.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 14.75,
+          "runner": 14.75,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 9.375,
+          "runner": 9.375,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 13.625,
+          "runner": 13.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 9.625,
+          "runner": 9.625,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 14.25,
+          "runner": 14.25,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 10.5,
+          "runner": 10.5,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 12.5,
+          "runner": 12.5,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 13.5,
+          "runner": 13.5,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "shiu",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 5.375,
+          "runner": 5.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 7.375,
+          "runner": 7.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 5.25,
+          "runner": 5.25,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 1.5,
+          "runner": 1.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 3.0,
+          "runner": 3.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 2.875,
+          "runner": 2.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 1.5,
+          "runner": 1.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 2.5,
+          "runner": 2.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 3.375,
+          "runner": 3.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 3.625,
+          "runner": 3.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 1.5,
+          "runner": 1.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.375,
+          "runner": 0.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.75,
+          "runner": 0.75,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 1.0,
+          "runner": 1.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.875,
+          "runner": 0.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.125,
+          "runner": 0.125,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.25,
+          "runner": 0.25,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_song",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.5,
+          "runner": 0.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 2.5,
+          "runner": 2.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 4.375,
+          "runner": 4.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 3.75,
+          "runner": 3.75,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 12.5,
+          "runner": 12.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 2.5,
+          "runner": 2.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 6.25,
+          "runner": 6.25,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 2.5,
+          "runner": 2.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 6.875,
+          "runner": 6.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 5.875,
+          "runner": 5.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 5.5,
+          "runner": 5.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 5.625,
+          "runner": 5.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 1.625,
+          "runner": 1.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 4.5,
+          "runner": 4.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 7.625,
+          "runner": 7.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 3.875,
+          "runner": 3.875,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 4.625,
+          "runner": 4.625,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 4.375,
+          "runner": 4.375,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "virgin_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 6.5,
+          "runner": 6.5,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "vpoDN",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 0,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 1,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 2,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 3,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 4,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 5,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 6,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 7,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 8,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        },
+        {
+          "kernel": "jump",
+          "condition": "mated_silence",
+          "seed": 9,
+          "group": "pC1",
+          "observed": 0.0,
+          "runner": 0.0,
+          "equal": true
+        }
+      ],
+      "observer_equal": true,
+      "historical": {
+        "coverage_equal": true,
+        "comparisons": [
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 13.75,
+            "expected": 13.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 17.125,
+            "expected": 17.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 10.625,
+            "expected": 10.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 13.75,
+            "expected": 13.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 10.625,
+            "expected": 10.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 14.75,
+            "expected": 14.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 5.0,
+            "expected": 5.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 9.0,
+            "expected": 9.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 9.375,
+            "expected": 9.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 13.25,
+            "expected": 13.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 5.625,
+            "expected": 5.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 9.625,
+            "expected": 9.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 7.5,
+            "expected": 7.5,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 14.0,
+            "expected": 14.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 6.25,
+            "expected": 6.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 10.375,
+            "expected": 10.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 8.125,
+            "expected": 8.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 12.625,
+            "expected": 12.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 10.0,
+            "expected": 10.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 13.125,
+            "expected": 13.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 16.875,
+            "expected": 16.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 17.875,
+            "expected": 17.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 13.125,
+            "expected": 13.125,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 14.0,
+            "expected": 14.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 10.625,
+            "expected": 10.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 14.75,
+            "expected": 14.75,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 6.875,
+            "expected": 6.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 9.375,
+            "expected": 9.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 11.875,
+            "expected": 11.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 13.625,
+            "expected": 13.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 6.25,
+            "expected": 6.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 9.625,
+            "expected": 9.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 10.0,
+            "expected": 10.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 14.25,
+            "expected": 14.25,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 6.875,
+            "expected": 6.875,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 10.5,
+            "expected": 10.5,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 9.375,
+            "expected": 9.375,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 12.5,
+            "expected": 12.5,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 10.625,
+            "expected": 10.625,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 13.5,
+            "expected": 13.5,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "shiu",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 5.375,
+            "expected": 5.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 7.375,
+            "expected": 7.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 5.25,
+            "expected": 5.25,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 1.5,
+            "expected": 1.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 3.0,
+            "expected": 3.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 2.875,
+            "expected": 2.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 1.5,
+            "expected": 1.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 2.5,
+            "expected": 2.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 3.375,
+            "expected": 3.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 3.625,
+            "expected": 3.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 1.5,
+            "expected": 1.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.375,
+            "expected": 0.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.75,
+            "expected": 0.75,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 1.0,
+            "expected": 1.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.875,
+            "expected": 0.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.125,
+            "expected": 0.125,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.25,
+            "expected": 0.25,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_song",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.5,
+            "expected": 0.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 2.5,
+            "expected": 2.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 5.875,
+            "expected": 9.0,
+            "equal": false
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 4.375,
+            "expected": 4.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 5.5,
+            "expected": 5.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 3.75,
+            "expected": 3.75,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 5.625,
+            "expected": 5.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 1.625,
+            "expected": 1.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 4.5,
+            "expected": 4.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 12.5,
+            "expected": 12.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 7.625,
+            "expected": 7.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 2.5,
+            "expected": 2.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 3.875,
+            "expected": 3.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 6.25,
+            "expected": 6.25,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 4.625,
+            "expected": 4.625,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 2.5,
+            "expected": 2.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 4.375,
+            "expected": 4.375,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 6.875,
+            "expected": 6.875,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "virgin_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 6.5,
+            "expected": 6.5,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 0,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 1,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 2,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 3,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 4,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 5,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 6,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 7,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 8,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "vpoDN",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          },
+          {
+            "kernel": "jump",
+            "condition": "mated_silence",
+            "seed": 9,
+            "group": "pC1",
+            "actual": 0.0,
+            "expected": 0.0,
+            "equal": true
+          }
+        ],
+        "passed": false
+      },
+      "passed": false,
+      "configuration_comparison": {
+        "ear": true,
+        "parameters": true,
+        "environment": true
+      },
+      "protocol_numeric_fields_equal": {
+        "conditions": true,
+        "seeds": true,
+        "windows": true,
+        "warmup": true,
+        "window_ms": true,
+        "dt": true
+      }
+    }
+  },
+  "status": "FAIL-CLOSED: historical vpoDN/pC1 mismatch",
+  "continuation": {
+    "created_utc": "2026-09-16T23:09:16.360968+00:00",
+    "purpose": "Complete requested descriptive tables; retain FAIL-CLOSED",
+    "source": "build/records-raw/female_readouts_v1/complete_fail_closed.py",
+    "source_sha256": "23131a634c593e23d0979548483d80e3d0121d4e47bc810d596bfdd7c6055eff",
+    "protocol_changes": false,
+    "historical_equality_tolerance_added": false,
+    "command": "python -B build/records-raw/female_readouts_v1/complete_fail_closed.py",
+    "exit_code": 0,
+    "source_unchanged": true
+  },
+  "frozen_inputs_unchanged": true,
+  "equality_passed": false,
+  "completed_utc": "2026-09-16T23:10:27.343154+00:00",
+  "protected_tracked_files": {
+    "count": 191,
+    "changed": [],
+    "passed": true
+  },
+  "acceptance": {
+    "pytest": {
+      "command": "python -B -m pytest -q -p no:cacheprovider --disable-warnings --tb=short --basetemp build/records-raw/female_readouts_v1/pytest_acceptance tests/test_female_readouts.py",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "...........s                                                             [100%]\n11 passed, 1 skipped, 1 warning in 5.47s\n",
+      "elapsed_seconds": 5.997064399998635,
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      }
+    },
+    "failure_probe": {
+      "command": "python -B -m pytest -q -p no:cacheprovider --disable-warnings --tb=short tests/test_female_readouts.py -k deliberate_failure_probe",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "output": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________ test_deliberate_failure_probe ________________________\ntests\\test_female_readouts.py:164: in test_deliberate_failure_probe\n    assert False, \"Intentional failure: harness must return a nonzero exit\"\nE   AssertionError: Intentional failure: harness must return a nonzero exit\nE   assert False\n=========================== short test summary info ===========================\nFAILED tests/test_female_readouts.py::test_deliberate_failure_probe - Asserti...\n1 failed, 11 deselected in 1.84s\n",
+      "elapsed_seconds": 2.3503175000005285,
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      }
+    },
+    "freeze": {
+      "command": "python -B -m flybench.experiment.female_readouts --freeze",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "d396254eb8062673eeac243f265bc5566526c1dd157fa8f22df9b8b2956a1d8c\n",
+      "elapsed_seconds": 14.518051800001558,
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      }
+    },
+    "quick": {
+      "command": "python -B -m flybench.experiment.female_readouts --quick",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "<repository>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to http<runtime path>\n  self.delivery = torch.sparse_csr_tensor(\nshiu virgin_song: 2 seeds complete; 2.3 s\nshiu mated_song: 2 seeds complete; 4.2 s\nshiu virgin_silence: 2 seeds complete; 6.1 s\nshiu mated_silence: 2 seeds complete; 7.9 s\njump virgin_song: 2 seeds complete; 10.1 s\njump mated_song: 2 seeds complete; 11.9 s\njump virgin_silence: 2 seeds complete; 13.7 s\njump mated_silence: 2 seeds complete; 15.5 s\n{\"mode\": \"quick\", \"elapsed_seconds\": 21.959945499998867, \"equality_passed\": true}\n",
+      "elapsed_seconds": 23.97889849999774,
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      }
+    },
+    "full": {
+      "command": "python -B -m flybench.experiment.female_readouts",
+      "exit_code": 1,
+      "expected_exit_code": 0,
+      "output": "<repository>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to http<runtime path>\n  self.delivery = torch.sparse_csr_tensor(\nshiu virgin_song: 10 seeds complete; 8.5 s\nshiu mated_song: 10 seeds complete; 16.4 s\nshiu virgin_silence: 10 seeds complete; 24.3 s\nshiu mated_silence: 10 seeds complete; 32.1 s\njump virgin_song: 10 seeds complete; 40.4 s\njump mated_song: 10 seeds complete; 48.3 s\njump virgin_silence: 10 seeds complete; 56.2 s\njump mated_silence: 10 seeds complete; 64.1 s\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"<repository>\\flybench\\experiment\\female_readouts.py\", line 407, in <module>\n    main()\n  File \"<repository>\\flybench\\experiment\\female_readouts.py\", line 403, in main\n    execute(quick=args.quick)\n  File \"<repository>\\flybench\\experiment\\female_readouts.py\", line 379, in execute\n    raise ValueError(checks[\"status\"])\nValueError: FAIL-CLOSED: equality or coverage mismatch\n",
+      "elapsed_seconds": 72.48297029999958,
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      }
+    }
+  },
+  "initial_test_attempt": {
+    "exit_code": 1,
+    "passed": 10,
+    "skipped": 1,
+    "errors": 1,
+    "reason": "pytest basetemp parent did not yet exist; created the authorized raw directory before rerun"
+  },
+  "environment_chain": {
+    "runtime": "operator-specified CPython 3.12 and dependency directory",
+    "workaround": false,
+    "LC_ALL": "C",
+    "LANG": "C",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "device": "cuda",
+    "evidence": "acceptance evidence"
+  },
+  "clean_room": {
+    "restricted_source_trees_read": false,
+    "git_write_commands": false,
+    "machine_paths_or_personal_names_in_delivery": false
+  },
+  "preregistration_before_runs": true,
+  "delivery_integrity": {
+    "experiments/female_readouts_v1.md": {
+      "sha256": "d396254eb8062673eeac243f265bc5566526c1dd157fa8f22df9b8b2956a1d8c",
+      "hash_basis": "lf",
+      "utf8_no_bom": true,
+      "lf": true,
+      "bytes": 6264
+    },
+    "flybench/experiment/female_readouts.py": {
+      "sha256": "fa9aa58cd1c381b6461406d42ab34c2541caa9ff674a918ae79cd132462d118e",
+      "hash_basis": "lf",
+      "utf8_no_bom": true,
+      "lf": true,
+      "bytes": 22458
+    },
+    "tests/test_female_readouts.py": {
+      "sha256": "7b24565ed7c947778141a6d06e6562172319395c84414131787b951004acb327",
+      "hash_basis": "lf",
+      "utf8_no_bom": true,
+      "lf": true,
+      "bytes": 7239
+    },
+    "records/female_readouts_v1_experiment.json": {
+      "sha256": "b218174e18d2cf14bcc41f18cade9edc4f4526db2dd165ed95763b403cd042d1",
+      "hash_basis": "lf",
+      "utf8_no_bom": true,
+      "lf": true,
+      "bytes": 532647
+    },
+    "records/female_readouts_v1_freeze.json": {
+      "sha256": "7b13907d14fcf7982ae376afec337a463057f31f2950a6d8e0374df881606c91",
+      "hash_basis": "lf",
+      "utf8_no_bom": true,
+      "lf": true,
+      "bytes": 77136
+    },
+    "records/female_readouts_v1_report.md": {
+      "sha256": "919f7736694dec9b4f6fc8808fb46aa8106398c80b0c1076bb22fd55242af94e",
+      "hash_basis": "lf",
+      "utf8_no_bom": true,
+      "lf": true,
+      "bytes": 50747
+    }
+  },
+  "checks_encoding": "UTF-8 without BOM; LF; self-hash excluded",
+  "raw_hashes_verified": true,
+  "independent_raw_count_audit": {
+    "female": {
+      "integer_count_cell_means_exact": true,
+      "silence_labels_exact": true,
+      "absent_handling_correct": true,
+      "max_seed_rate_roundoff_hz": 4.263256414560601e-14,
+      "seed_rate_roundoff_bound_hz": 1e-12,
+      "note": "Direct count totals use a different floating reduction; historical comparisons remain exact.",
+      "passed": true
+    },
+    "banc": {
+      "integer_count_cell_means_exact": true,
+      "silence_labels_exact": true,
+      "absent_handling_correct": true,
+      "max_seed_rate_roundoff_hz": 2.842170943040401e-14,
+      "seed_rate_roundoff_bound_hz": 1e-12,
+      "note": "Direct count totals use a different floating reduction; historical comparisons remain exact.",
+      "passed": true
+    }
+  },
+  "harness_verified": true,
+  "artifact_verification_passed": true,
+  "compact_bytes_before_size_field": 812995,
+  "compact_under_5_mb": true,
+  "review": {
+    "verdict": "partial acceptance: shiu results independently reproduced (160/160), jump equality condition judged an envelope overreach per README fast-backend note; jump columns kept as open anomaly",
+    "report_sha256_after_note": "8108256dc4ad5afd2547ee7bc5f9b68da375521ea2f4de4b501d5c665fbc0586",
+    "hash_basis": "lf"
+  }
+}
