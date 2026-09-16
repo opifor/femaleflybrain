@@ -1,0 +1,118 @@
+{
+  "created_utc": "2026-09-16T22:00:19.055438+00:00",
+  "files": {
+    "docs/eye.md": {
+      "sha256": "c6e84b7e85ccea78df4985bbe8b06636a484981445c46c2f74996a8b1e22ca4c",
+      "bytes": 3273,
+      "utf8_without_bom": true
+    },
+    "experiments/eye_v2_e1.md": {
+      "sha256": "3478e7e62c214405cdc68b5d87a62f46a779ec2f76f7c1c2cb0fb89a34ac1f74",
+      "bytes": 6729,
+      "utf8_without_bom": true
+    },
+    "flybench/eye2.py": {
+      "sha256": "9b6131a98752937ce1e3ac830c769289676792f5d3fab51ab73a44a7ba93f43b",
+      "bytes": 5811,
+      "utf8_without_bom": true
+    },
+    "flybench/retinotopy.py": {
+      "sha256": "f0fa7978224d7b17c313ce71b3e918a3a9465b454595344b28607bd43e46aab7",
+      "bytes": 9024,
+      "utf8_without_bom": true
+    },
+    "records/eye_v2_e1_coverage.json": {
+      "sha256": "d3ee04e4759651a5627a77e026218697b6b30b17dc120d794f454c336797ef0f",
+      "bytes": 3702620,
+      "utf8_without_bom": true,
+      "sha256_crlf_at_delivery": "1730ed179047cefc029d10a4b2eba584af68e87581f36234cd92e0d3dd58f794"
+    },
+    "records/eye_v2_e1_freeze.json": {
+      "sha256": "6f9ecf3133b45df33704c664ffc2e96ac79570c8353da5fdd918cc534f6811b4",
+      "bytes": 937,
+      "utf8_without_bom": true,
+      "sha256_crlf_at_delivery": "0166eb0c952a1c56c303dee293bef7bdb4297ab4e070364aaa69c49370876d1d"
+    },
+    "records/eye_v2_e1_metrics.json": {
+      "sha256": "0b3df48fa463f298e17406b885313a174d4c07788d1a1fb6e069e188ab374832",
+      "bytes": 2589,
+      "utf8_without_bom": true,
+      "sha256_crlf_at_delivery": "9b71b67d958b35b947a340441a02bfc9f93f3614b42b8f8e00296052d314f710"
+    },
+    "records/eye_v2_e1_report.md": {
+      "sha256": "4a4c3bc80231776b59bbe9a885660c5404401433644ae1cedfb505e2791a258b",
+      "bytes": 932807,
+      "utf8_without_bom": true,
+      "sha256_crlf_at_delivery": "653ea6efa887c1b9bfcf4b01ce6577b28fdf01d7bc25d8fa2710e450abfabe8d"
+    },
+    "tests/test_eye2.py": {
+      "sha256": "de530ba287266c5b39134cfbf4688f7a3706d011abf72eba479ba4649700f0b8",
+      "bytes": 7463,
+      "utf8_without_bom": true
+    },
+    "tests/test_retinotopy.py": {
+      "sha256": "f354cea1d156e9b9cdbba8adec541878c9bd6437cc616c30d15595276474fff6",
+      "bytes": 4414,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/columns.json": {
+      "sha256": "b6ffa03ee28dbee5f107109fbb59f485f719ac8dcfc07c037e3cb4323a9e5ace",
+      "bytes": 205596,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/finalize.py": {
+      "sha256": "942e58edecca106af17e18e274784b52dc9d9a5bb9f5c65ce9e5889ecc3b260d",
+      "bytes": 15228,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/joined_cells.csv": {
+      "sha256": "55ffb5e1379e018000494c8003a8be32d998256e9b00b2b8ff238dffcf57699d",
+      "bytes": 7183860,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/pytest_acceptance.log": {
+      "sha256": "1a5c9e1783a48a4193b62190d960aaadf99fa203490971d098f36fa8c8232c2e",
+      "bytes": 101,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/pytest_probe.log": {
+      "sha256": "b7c28291985e927a774a82782bb0539902303beaeec20ff23c8656ae15bdce31",
+      "bytes": 667,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/run.py": {
+      "sha256": "e3dc017097b65b30020287e51db7b9a3689ab79b7042c368fd7734e2f22261c5",
+      "bytes": 10543,
+      "utf8_without_bom": true
+    },
+    "build/records-raw/eye_v2_e1/spatial_gates.npz": {
+      "sha256": "65b3da2c3c39f87bf2c94a3bd428d4f1e9523528714c228a6b3242559659bcf6",
+      "bytes": 390153,
+      "utf8_without_bom": null
+    }
+  },
+  "self_hash_excluded": "Audit cannot contain its own recursive hash; all other delivery/raw files included",
+  "preregistration_unchanged": true,
+  "preregistration_verbatim_in_report": true,
+  "source_hashes_rechecked": true,
+  "git_head": "ac0fb19784c624dc5d00735f16b8775b0af4accf",
+  "git_branch": "lane-eye",
+  "git_status": "?? docs/eye.md\n?? experiments/eye_v2_e1.md\n?? flybench/eye2.py\n?? flybench/retinotopy.py\n?? records/eye_v2_e1_audit.json\n?? records/eye_v2_e1_coverage.json\n?? records/eye_v2_e1_freeze.json\n?? records/eye_v2_e1_metrics.json\n?? records/eye_v2_e1_report.md\n?? tests/test_eye2.py\n?? tests/test_retinotopy.py",
+  "git_refs_at_delivery": "refs/heads/lane-eye ac0fb19784c624dc5d00735f16b8775b0af4accf\nrefs/heads/lane-paths ac0fb19784c624dc5d00735f16b8775b0af4accf\nrefs/heads/main eb8b0af3d89841b90e550169a3c8a27a6810e286\nrefs/remotes/origin/main eb8b0af3d89841b90e550169a3c8a27a6810e286",
+  "initial_git_status": "clean",
+  "initial_head": "ac0fb19784c624dc5d00735f16b8775b0af4accf",
+  "tracked_diff": "",
+  "staged_diff": "",
+  "allowed_paths_only": true,
+  "git_writes_performed": false,
+  "clean_room": "No prohibited source/archive opened; dependency imports only from authorized chain",
+  "environment_difference": null,
+  "network_simulation_performed": false,
+  "summary_limit_bytes": 5000000,
+  "summary_bytes_excluding_audit": 4833734,
+  "summary_bytes_including_audit": 4838438,
+  "summary_within_limit": true,
+  "audit_utf8_without_bom": true,
+  "hash_basis": "lf",
+  "line_ending_normalisation": "Orchestrator converted CRLF to LF in the delivered text files before commit, per records/hash_basis_note.md; sha256 fields were recomputed on LF bytes and the delivery-time CRLF digests are kept as sha256_crlf_at_delivery. Files normalised: records/eye_v2_e1_report.md, records/eye_v2_e1_coverage.json, records/eye_v2_e1_freeze.json, records/eye_v2_e1_metrics.json"
+}

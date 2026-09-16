@@ -1,0 +1,107 @@
+{
+  "gates": {
+    "G1": {
+      "passed": true,
+      "prefix_bit_equal": true
+    },
+    "G2": {
+      "passed": true,
+      "modes": {
+        "column_luminance": {
+          "graded_max_error": 0.0,
+          "signed_max_error": 0.0,
+          "polarity_equal": true,
+          "start_samples_correct": true,
+          "passed": true
+        },
+        "object_parametric": {
+          "graded_max_error": 0.0,
+          "signed_max_error": 0.0,
+          "polarity_equal": true,
+          "start_samples_correct": true,
+          "passed": true
+        }
+      }
+    },
+    "G3": {
+      "passed": true,
+      "targets": 1581,
+      "comparisons": 2499561,
+      "tolerance_deg": 4.0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "G4": {
+      "passed": true,
+      "hemispheres": {
+        "left": {
+          "signs_consistent": true,
+          "active_same_hemisphere": 785,
+          "cross_hemisphere": 0,
+          "passed": true
+        },
+        "right": {
+          "signs_consistent": true,
+          "active_same_hemisphere": 796,
+          "cross_hemisphere": 0,
+          "passed": true
+        }
+      },
+      "biological_laterality": "declared, unverified"
+    },
+    "G5": {
+      "passed": true,
+      "corrupted_G3_passed": false,
+      "false_positive": 121908,
+      "false_negative": 121908,
+      "per_target_counts_equal": true,
+      "maximum_sum_error": 5.684341886080802e-14
+    },
+    "biological": {
+      "status": "unassessed",
+      "reason": "No visual recording targets in supplied evidence"
+    }
+  },
+  "config": {
+    "hex_step_deg": 2.0,
+    "sample_rate_hz": 1000.0,
+    "tau_lowpass_ms": 5.0,
+    "tau_sub_ms": 50.0,
+    "tau_div_ms": 100.0,
+    "strength": 1.0,
+    "eye_absolute_rate_calibrated": false,
+    "eye_rate_ceiling_hz": null
+  },
+  "seeds": {
+    "G1": 2801,
+    "G2": 2802,
+    "G5": 2805
+  },
+  "pytest": {
+    "command": "<python> -m pytest -q -p no:cacheprovider tests/test_eye2.py tests/test_retinotopy.py",
+    "exit_code": 0,
+    "counts": {
+      "passed": 54
+    }
+  },
+  "harness_failure_probe": {
+    "command": "<python> -m pytest -q -p no:cacheprovider tests/test_eye2.py::test_harness_failure_probe",
+    "exit_code": 1,
+    "counts": {
+      "failed": 1
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "platform": "Windows",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "bytecode_disabled": true,
+    "plugin_autoload_disabled": "1",
+    "prescribed_chain": true,
+    "environment_difference": null
+  },
+  "elapsed_seconds": 25.51953879999928
+}

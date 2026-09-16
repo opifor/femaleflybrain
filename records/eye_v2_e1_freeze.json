@@ -1,0 +1,17 @@
+{
+  "phase": "before implementation",
+  "preregistration": {
+    "sha256": "3478e7e62c214405cdc68b5d87a62f46a779ec2f76f7c1c2cb0fb89a34ac1f74",
+    "path": "experiments/eye_v2_e1.md"
+  },
+  "frozen_utc": "2026-09-16T21:53:00.3473254Z",
+  "head": "ac0fb19784c624dc5d00735f16b8775b0af4accf",
+  "sources": {
+    "build/graph_female.npz": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+    "build/raw_female/column_assignment.csv.gz": "bdf4ce7f62cc63493d53eefad3816ff2dfd08b190e97b35a492e0e453df2f0f6",
+    "build/raw_female/coordinates.csv.gz": "14337121f451f98c2576cee72c24409ada5aaf7948b7c7ca8de9040296840e05",
+    "build/raw_female/visual_neuron_types.csv.gz": "4bcc6a2f98b86e6c3fb7eaddb49736f3d81ab65bda35da8f740641201a1e379f",
+    "build/raw_female/consolidated_cell_types.csv.gz": "8aba246d71dc40361677493629972ce3883048c3d02010adc42bda22962a1a2d"
+  },
+  "sources_frozen_utc": "2026-09-16T21:56:34.952306+00:00"
+}
