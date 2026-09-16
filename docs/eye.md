@@ -52,4 +52,4 @@ biological gates unassessed. Sequential rank is not a coordinate: the legacy
 `eye.py` spreads sorted body IDs at zero elevation, whereas this module retains
 published p,q assignments and explicitly labels its angle convention.
 No graph-drive or spike interface is provided. Network delivery is a separate
-round requiring Akif's seal. See `experiments/eye_v2_e1.md` and the E1 report.
+round requiring its own pre-registration and decision. See `experiments/eye_v2_e1.md` and the E1 report.

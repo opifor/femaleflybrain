@@ -290,6 +290,14 @@ a stress test of this front end, not a measurement of the female's hearing.
 The records stand as run; their claims are narrowed to that. A replacement
 front end will be pre-registered before any new hearing number is produced.
 
+Scope note on the eye (2026-09-17): `flybench/eye.py` spreads sorted body IDs
+across the field at zero elevation, so its "retina" is a rank order, not a
+coordinate. `flybench/retinotopy.py` and `flybench/eye2.py` join the published
+FAFB v783 column assignments (hex p,q per cell) to the graph and provide a
+causal graded front end with a declared, uncalibrated angle convention; no
+network drive exists yet and no visual physiology target is in the ledger.
+See [docs/eye.md](docs/eye.md) and `records/eye_v2_e1_report.md`.
+
 The [shiu_benchmarks_v1 controls](experiments/shiu_benchmarks_v1.md) reproduce feeding and grooming directions with explicit [results and drive audits](records/shiu_benchmarks_v1_report.md).
 
 The [female_hearing_v1 hearing ladder](experiments/female_hearing_v1.md) separates dose calibration, frozen choices and held-out tests; see the [experiment guide](docs/experiments.md#female_hearing_v1).
