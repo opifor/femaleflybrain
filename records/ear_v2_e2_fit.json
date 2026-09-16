@@ -1,0 +1,174 @@
+{
+  "conditional_on": "E1 bank not fitted; E1 G3/G5 open",
+  "scope": "Synthetic JO proxy; no graph or E1 bank executed",
+  "parameters": {
+    "g_gap": 0.9860617939449138,
+    "g_chem": 0.3400213082568594,
+    "beta": 0.7800000000000006,
+    "d_ms": 1.6594305841032413,
+    "tau_m_ms": 4.281809724550729,
+    "tau_syn_ms": 1.4834087207045068
+  },
+  "joint_fit": {
+    "objective": 2.092261605430749e-25,
+    "success": true,
+    "nfev": 47,
+    "metrics": {
+      "H1": 1.959999999999863,
+      "H3": 0.800000000000003,
+      "H4": 0.21999999999999942
+    }
+  },
+  "sampled_metrics": {
+    "H1": 1.9600014396507817,
+    "H3": 0.8000000000000089,
+    "H4": 0.2199999999999939,
+    "peaks_nominal_mV": {
+      "WT": 0.6676947848474329,
+      "WT_block": 0.5341558278779523,
+      "shakB": 0.34002130825685906,
+      "shakB_block": 0.07480468781650691
+    }
+  },
+  "sensitivity_ranges": {
+    "g_gap": [
+      0.05,
+      20
+    ],
+    "g_chem": [
+      0.009523809523809526,
+      11.249999999999998
+    ],
+    "beta": [
+      0.78,
+      0.78
+    ],
+    "d_ms": [
+      0.5813570820511356,
+      1.9569830449939145
+    ],
+    "tau_m_ms": [
+      0.5,
+      10
+    ],
+    "tau_syn_ms": [
+      1,
+      2
+    ]
+  },
+  "range_interpretation": "Grid sensitivity ranges, NOT confidence intervals",
+  "grid_candidates": 675,
+  "grid_retained": 225,
+  "gates": {
+    "E2-G1": true,
+    "E2-G2": true,
+    "E2-G3": true,
+    "E2-G4": true,
+    "E2-G5": true,
+    "E2-G6": true
+  },
+  "gate_status": {
+    "E2-G1": "passed",
+    "E2-G2": "passed",
+    "E2-G3": "passed",
+    "E2-G4": "passed",
+    "E2-G5": "passed",
+    "E2-G6": "passed"
+  },
+  "H2": {
+    "deterministic_jitter_ms": 0,
+    "biological_jitter": "unassessed",
+    "noise_added": false
+  },
+  "causality": {
+    "prefix_bit_equal": true,
+    "chunk_max_errors": [
+      0.0,
+      0.0
+    ],
+    "passed": true
+  },
+  "continuity": {
+    "max_increments": [
+      0.004595145957560848,
+      0.002300242823201771,
+      0.001150788178061294
+    ],
+    "aligned_max_errors": [
+      1.6764367671839864e-14,
+      3.375077994860476e-14
+    ],
+    "delay_alignment_ms": 1.6600000000000001,
+    "passed": true
+  },
+  "frequency": {
+    "rows": [
+      {
+        "frequency_hz": 100,
+        "amplitude_nominal_mV": 0.3529501268992646,
+        "phase_rad": -2.1280059991709552,
+        "r_squared": 1.0
+      },
+      {
+        "frequency_hz": 200,
+        "amplitude_nominal_mV": 0.18681243822326682,
+        "phase_rad": 2.835520537101905,
+        "r_squared": 1.0
+      },
+      {
+        "frequency_hz": 300,
+        "amplitude_nominal_mV": 0.12395816048978406,
+        "phase_rad": 1.7020126379696978,
+        "r_squared": 1.0
+      },
+      {
+        "frequency_hz": 400,
+        "amplitude_nominal_mV": 0.0925270159244111,
+        "phase_rad": 0.6149996719530916,
+        "r_squared": 1.0
+      },
+      {
+        "frequency_hz": 500,
+        "amplitude_nominal_mV": 0.07380482090423829,
+        "phase_rad": -0.4552892400656797,
+        "r_squared": 1.0
+      },
+      {
+        "frequency_hz": 600,
+        "amplitude_nominal_mV": 0.06139367094815597,
+        "phase_rad": -1.5178764581045723,
+        "r_squared": 1.0
+      }
+    ],
+    "passed": true,
+    "interpretation": "Descriptive forced phase locking only; no biological tuning validation"
+  },
+  "H3_H4_jointly_passed": true,
+  "E5_no_go_fit_trigger": false,
+  "E5_readiness": "Not established; conditional E1 limitations remain",
+  "freeze": {
+    "original_ledger_sha256": "6ff6a47e65981e7362b2ec7f468a6596f572983f77a514f12b73f0e83e70769b",
+    "ledger_sha256": "1904fc036534e37f65142d3d7bbd7ae1bd0b48fe01707bdbbef70127c7d64e5e",
+    "added_ids": [
+      "R3_009",
+      "R3_010",
+      "R3_011",
+      "R3_012"
+    ],
+    "existing_entries_unchanged": true,
+    "build_absent_at_initial_inspection": true,
+    "initial_head": "84bce06",
+    "preregistration_sha256": "68d0540cd8429f4b06de513b93678f7138fc11f255dd24cc9a0fb73d1a0fd24c",
+    "frozen_before_model_code": true
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "platform": "Windows 11",
+    "locale": "C",
+    "chain": "Task-prescribed CPython 3.12 with task-prescribed dependency site-packages",
+    "bytecode": false,
+    "pytest_plugin_autoload": false
+  }
+}

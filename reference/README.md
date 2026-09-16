@@ -36,3 +36,17 @@ classes, not uniquely identified anatomical subtypes or individual rates.
 The round-2 amendment authorizes conditional target placement despite
 the preserved fit_allowed=false snapshot policy. See round-2 freeze
 and fit records for original/current hashes and limitations.
+
+## E2 ledger 1.2 extension
+
+Version 1.2 appends R3_009--R3_012: WT residual 0.80 +/- 0.06,
+shakB2 residual 0.22 +/- 0.04 under nicotinic antagonists, no observed
+B1 spikes in 17 cell-attached recordings, and latency/jitter with n=24.
+Evidence class is VERIFIED_OPERATOR_FULLTEXT: read by the operator in the
+PMC full text, 2026-09-16. Supplied quotations are verbatim; their uncertainty
+kind is not independently established. No SD/SEM conversion is made.
+Existing entries, including unresolved R3_003 and C18 R3_006--R3_008,
+remain unchanged. The original snapshot paragraphs above are historical.
+The E2 preregistration authorizes the conditional fit; source-wide metadata
+and historical fit policies are preserved. See experiments/ear_v2_e2.md and
+records/ear_v2_e2_freeze.json for scope and hashes.

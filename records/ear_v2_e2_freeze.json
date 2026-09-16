@@ -1,0 +1,15 @@
+{
+    "original_ledger_sha256":  "6ff6a47e65981e7362b2ec7f468a6596f572983f77a514f12b73f0e83e70769b",
+    "ledger_sha256":  "1904fc036534e37f65142d3d7bbd7ae1bd0b48fe01707bdbbef70127c7d64e5e",
+    "added_ids":  [
+                      "R3_009",
+                      "R3_010",
+                      "R3_011",
+                      "R3_012"
+                  ],
+    "existing_entries_unchanged":  true,
+    "build_absent_at_initial_inspection":  true,
+    "initial_head":  "84bce06",
+    "preregistration_sha256":  "68d0540cd8429f4b06de513b93678f7138fc11f255dd24cc9a0fb73d1a0fd24c",
+    "frozen_before_model_code":  true
+}
