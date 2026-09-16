@@ -23,6 +23,8 @@ class State:
     rng: np.random.Generator
     step: int = 0
     owner: object = None
+    release_pending: object = None
+    dropped_flux: object = None
 
 
 @dataclass
@@ -37,6 +39,7 @@ class Result:
     delivered_hz: np.ndarray
     sampled_drive_hz: np.ndarray
     spikes: list | None
+    dropped_flux: np.ndarray | None = None
 
 
 class Simulator:
@@ -48,7 +51,7 @@ class Simulator:
     """
 
     def __init__(self, weights, *, params=None, kernel="shiu", drive=None,
-                 groups=None):
+                 groups=None, release=None):
         self.params = params or Parameters()
         if kernel not in ("shiu", "jump"):
             raise ValueError("Unknown kernel")
@@ -61,6 +64,11 @@ class Simulator:
             raise ValueError("Weights must be nonempty and square")
         if not np.isfinite(self.weights.data).all():
             raise ValueError("Weights must be finite")
+        self.release = None
+        if release is not None:
+            if kernel != "shiu":
+                raise ValueError("Graded release requires the shiu kernel")
+            self.weights, self.release = release.bind(self.weights)
         self.drive = drive
         self.targets = self._indices(drive.targets if drive else ())
         if drive and (drive.mode not in ("poisson", "bernoulli") or
@@ -72,6 +80,10 @@ class Simulator:
         self.em = math.exp(-self.params.dt / self.params.tau_m)
         self.es = math.exp(-self.params.dt / self.params.tau_s)
         self.coupling = self.params.tau_s / (self.params.tau_m - self.params.tau_s) * (self.em - self.es)
+        if self.release is not None:
+            self.release.verify_scaled(
+                np.repeat(np.arange(self.n), np.diff(self.weights.indptr)),
+                self.weights.data * self.params.w_syn)
 
     def _indices(self, values):
         raw = np.asarray(tuple(values))
@@ -109,6 +121,8 @@ class Simulator:
         state = self.initial_state(seed) if state is None else state
         if state.owner is not self:
             raise ValueError("State belongs to another simulator")
+        if self.release is not None:
+            self.release.validate_run(state, steps)
         counts = np.zeros(self.n, dtype=np.int64)
         sampled = np.zeros(self.n, dtype=np.int64)
         delivered = np.zeros(self.n, dtype=np.int64)
@@ -147,6 +161,9 @@ class Simulator:
                 else:
                     state.v[cols] += self._where(active[cols], values, values * 0)
             if self.kernel == "shiu":
+                if self.release is not None:
+                    state.delay_buffer[destination] += self.release.enqueue(
+                        state, active, destination, p.dt, p.w_syn)
                 state.g += self._where(active, state.delay_buffer[state.cursor], state.g * 0)
             state.delay_buffer[state.cursor] = 0
             index = self._array(ids)
@@ -166,4 +183,5 @@ class Simulator:
                        for k, v in self.groups.items()}
         return Result(state, counts, counts / seconds, float(counts.sum() / seconds / self.n),
                       group_counts, group_rates, requested, delivered / seconds,
-                      sampled / seconds, log)
+                      sampled / seconds, log,
+                      None if state.dropped_flux is None else state.dropped_flux.copy())

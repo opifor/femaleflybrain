@@ -37,6 +37,8 @@ class Simulator(ReferenceSimulator):
         self.delivery = self.weights.T.tocsr()
         self.delivery.data *= self.params.w_syn
         self.delivery.sort_indices()
+        if self.release is not None:
+            self.release.verify_scaled(self.delivery.indices, self.delivery.data)
 
     def initial_state(self, seed=0):
         state = super().initial_state(seed)
@@ -54,6 +56,8 @@ class Simulator(ReferenceSimulator):
         state = self.initial_state(seed) if state is None else state
         if state.owner is not self:
             raise ValueError("State belongs to another simulator")
+        if self.release is not None:
+            self.release.validate_run(state, steps)
         counts = np.zeros(self.n, dtype=np.int64)
         sampled = np.zeros(self.n, dtype=np.int64)
         delivered = np.zeros(self.n, dtype=np.int64)
@@ -82,6 +86,9 @@ class Simulator(ReferenceSimulator):
             if self.kernel == "shiu":
                 destination = (state.cursor + self.delay_steps) % len(state.delay_buffer)
                 state.delay_buffer[destination] += events
+                if self.release is not None:
+                    state.delay_buffer[destination] += self.release.enqueue(
+                        state, active, destination, p.dt, p.w_syn)
                 state.g += np.where(active, state.delay_buffer[state.cursor], 0.0)
             else:
                 state.v += np.where(active, events, 0.0)
@@ -102,7 +109,8 @@ class Simulator(ReferenceSimulator):
                        for k, v in self.groups.items()}
         return Result(state, counts, counts / seconds, float(counts.sum() / seconds / self.n),
                       group_counts, group_rates, requested, delivered / seconds,
-                      sampled / seconds, log)
+                      sampled / seconds, log,
+                      None if state.dropped_flux is None else state.dropped_flux.copy())
 
 
 def benchmark():

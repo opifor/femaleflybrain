@@ -34,6 +34,9 @@ class Simulator(ReferenceSimulator):
             torch.as_tensor(delivery.data * self.params.w_syn, dtype=dtype, device=self.device),
             size=delivery.shape, device=self.device)
         self.target = torch.as_tensor(self.targets, device=self.device)
+        if self.release is not None:
+            self.release.verify_scaled(self.delivery.col_indices().cpu().numpy(),
+                                       self.delivery.values().cpu().numpy())
 
     def initial_state(self, seed=0):
         return self._initial((seed,), single=True)
@@ -77,6 +80,8 @@ class Simulator(ReferenceSimulator):
             raise ValueError("Duration must be an integer number of steps")
         if state.owner is not self:
             raise ValueError("State belongs to another simulator")
+        if self.release is not None:
+            self.release.validate_run(state, steps)
         single = state.v.ndim == 1
         v = state.v[:, None] if single else state.v
         g = state.g[:, None] if single else state.g
@@ -122,6 +127,11 @@ class Simulator(ReferenceSimulator):
             if self.kernel == "shiu":
                 destination = (state.cursor + self.delay_steps) % len(ring)
                 ring[destination] += events
+                if self.release is not None:
+                    release_events = self.release.enqueue(
+                        state, active.cpu().numpy(), destination, p.dt, p.w_syn)
+                    ring[destination] += torch.as_tensor(
+                        release_events, dtype=self.dtype, device=self.device)[:, None]
                 g += torch.where(active, ring[state.cursor], 0.0)
             else:
                 v += torch.where(active, events, 0.0)
@@ -155,4 +165,6 @@ class Simulator(ReferenceSimulator):
         total = counts.sum(axis=0) / seconds / self.n
         return Result(state, counts, counts / seconds, float(total) if single else total,
                       group_counts, group_rates, requested, delivered_full, sampled_full,
-                      (logs[0] if single else logs) if logs is not None else None)
+                      (logs[0] if single else logs) if logs is not None else None,
+                      None if state.dropped_flux is None else
+                      (state.dropped_flux[:, 0] if single else state.dropped_flux).copy())
