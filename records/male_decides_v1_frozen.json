@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-09-16T14:12:12.690654+00:00",
+  "protocol_sha256": "0a636f0494f36a46b96dc568ad176735f3fbf88407f6eaf11f1aae69e10d8c73",
+  "calibration_sha256": "1c5baac168009b73b7a8542014400f85bca99f5e2edb115ae320c2de5000b9b4",
+  "choices": {
+    "A": {
+      "dose": 30,
+      "fallback": false,
+      "metric": "P1"
+    },
+    "B": {
+      "dose": null,
+      "fallback": false,
+      "metric": "LC10a",
+      "reason": "No qualifying calibration dose"
+    },
+    "C": {
+      "dose": 30,
+      "fallback": false,
+      "metric": "pIP10"
+    }
+  },
+  "smell_ignition_threshold": null
+}

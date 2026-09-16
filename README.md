@@ -266,3 +266,4 @@ update a planar arena; records keep sensory evidence, neural readouts, movement,
 and contact separate. See [world assumptions and usage](docs/world.md).
 Run python -m pytest -q -p no:cacheprovider tests/test_world.py for synthetic acceptance.
 The [courtship_v1 protocol](experiments/courtship_v1.md) preregisters paired two-fly world trials with live and muted male song.
+The [male_decides_v1 sensory dose ladder](experiments/male_decides_v1.md) freezes male smell, vision and P1 doses before [held-out tests](records/male_decides_v1_report.md).

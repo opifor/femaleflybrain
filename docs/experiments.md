@@ -200,3 +200,19 @@ See the [courtship report](../records/courtship_v1_report.md) and
 execution limitations. The male ppk23 group is empty in this dictionary;
 no substitute contact population is introduced. Paired seeds do not imply
 bitwise numerical reproducibility on the recorded CUDA execution chain.
+
+## male_decides_v1
+
+The [preregistered male sensory dose ladder](../experiments/male_decides_v1.md)
+isolates smell, right-side L1/L2 vision and direct P1 drive in the male Shiu
+network. Calibration seeds 0–9 freeze doses before paired held-out seeds 10–29.
+Run `python -m flybench.experiment.male_decides` with stages `quick`,
+`calibration`, `freeze`, `test`, then `report`, in that order.
+
+The [report](../records/male_decides_v1_report.md) separates calibration and
+held-out predictions. Compact seed summaries and frozen choices reside in
+`records/male_decides_v1_*`; window data and target indices remain under
+`build/records-raw/`. Rates are per neuron; network total rates and spike
+counts are included separately. Ignition is a window fraction, not behavior.
+Run `python -m pytest -q -p no:cacheprovider tests/test_male_decides.py`;
+the opt-in `FLYBENCH_FAIL_PROBE=1` harness probe must fail with exit 1.

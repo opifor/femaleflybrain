@@ -1,0 +1,81 @@
+{
+  "pytest": {
+    "exit_code": 0,
+    "count_line": "6 passed, 1 skipped, 1 warning in 1.32s"
+  },
+  "failure_probe": {
+    "exit_code": 1,
+    "count_line": "1 failed, 6 deselected in 1.26s"
+  },
+  "quick": {
+    "sha256": "734ab2667e989c352856883d283298ae717c725df417671bc8cb4550e1aa778b",
+    "trials": 8,
+    "elapsed_seconds": 38.52321529999972,
+    "counts": {
+      "P1": 46,
+      "pIP10": 2,
+      "LC10a": 275,
+      "DNa01": 2,
+      "MDN": 4,
+      "Or47b": 130,
+      "L1": 1776,
+      "L2": 1779,
+      "DNa02_L": 1,
+      "DNa02_R": 1,
+      "ORN:ORN_VA1v": 130,
+      "L1:L1": 892,
+      "L2:L2": 893
+    }
+  },
+  "calibration": {
+    "sha256": "1c5baac168009b73b7a8542014400f85bca99f5e2edb115ae320c2de5000b9b4",
+    "trials": 150,
+    "elapsed_seconds": 144.3622722,
+    "counts": {
+      "P1": 46,
+      "pIP10": 2,
+      "LC10a": 275,
+      "DNa01": 2,
+      "MDN": 4,
+      "Or47b": 130,
+      "L1": 1776,
+      "L2": 1779,
+      "DNa02_L": 1,
+      "DNa02_R": 1,
+      "ORN:ORN_VA1v": 130,
+      "L1:L1": 892,
+      "L2:L2": 893
+    }
+  },
+  "test": {
+    "sha256": "0d666f7f9c392d8c505cfb46244c59c2b84e151413c4bb1fd4caf8b8028d764d",
+    "trials": 60,
+    "elapsed_seconds": 39.47027359999993,
+    "counts": {
+      "P1": 46,
+      "pIP10": 2,
+      "LC10a": 275,
+      "DNa01": 2,
+      "MDN": 4,
+      "Or47b": 130,
+      "L1": 1776,
+      "L2": 1779,
+      "DNa02_L": 1,
+      "DNa02_R": 1,
+      "ORN:ORN_VA1v": 130,
+      "L1:L1": 892,
+      "L2:L2": 893
+    }
+  },
+  "records_total_bytes": 13205450,
+  "experiment_summary_bytes": 178152,
+  "preexisting_records_bytes": 13027298,
+  "clean_room": "Repository inspection only; supplied dependency import path used.",
+  "deviations": [
+    "Quick initially failed due to Result field names; corrected before completed quick and calibration.",
+    "B/C no-dose fallback was unspecified; preregistered absent selection and unassessed test if needed.",
+    "Preexisting records already exceeded 10 MB; only new experiment summaries are constrained below 10 MB. Existing evidence was preserved."
+  ],
+  "bom_free": true,
+  "frozen_before_test": true
+}
