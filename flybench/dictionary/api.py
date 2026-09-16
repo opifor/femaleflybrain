@@ -30,12 +30,14 @@ def groups(dataset, *, data_dir=None, graph=None):
 def drive_targets(dataset, name, *, data_dir=None, graph=None):
     """Return a group's indices; raise KeyError for unknown, ValueError for absent.
 
-    All roles are addressable for perturbation experiments. Callers decide
+    Read-only diagnostic populations cannot be driven. Callers decide
     whether a proxy is appropriate; confidence is in entries/build reports.
     """
     definition = next((entry for entry in entries(dataset) if entry.name == name), None)
     if definition is None:
         raise KeyError(f"unknown dictionary group {name!r} for {dataset}")
+    if definition.read_only:
+        raise ValueError(f"dictionary group {name!r} is a read-only diagnostic population")
     if graph is None:
         graph = load(graph_path(dataset, data_dir))
     indices = definition.selector.select(graph)

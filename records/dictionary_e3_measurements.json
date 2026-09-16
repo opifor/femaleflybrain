@@ -1,0 +1,1407 @@
+{
+  "female": {
+    "graph_file": "graph_female.npz",
+    "sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+    "dataset": "FAFB",
+    "version": "783",
+    "rows": {
+      "AMMC-B1-candidate": {
+        "count": 39,
+        "sides": {
+          "L": 20,
+          "R": 19
+        },
+        "types": {
+          "CB1078": 26,
+          "CB1542": 11,
+          "SAD053": 2
+        },
+        "nt": {
+          "": 2,
+          "acetylcholine": 37
+        },
+        "jo_a_synapses": 1,
+        "jo_b_synapses": 649,
+        "by_type": {
+          "CB1078": {
+            "nt": {
+              "": 1,
+              "acetylcholine": 25
+            },
+            "jo_a_synapses": 1,
+            "jo_b_synapses": 210
+          },
+          "CB1542": {
+            "nt": {
+              "": 1,
+              "acetylcholine": 10
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 195
+          },
+          "SAD053": {
+            "nt": {
+              "acetylcholine": 2
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 244
+          }
+        }
+      },
+      "AMMC-B1-candidate-graph": {
+        "count": 23,
+        "sides": {
+          "L": 11,
+          "R": 12
+        },
+        "types": {
+          "CB1076": 8,
+          "CB1125": 11,
+          "CB2789": 4
+        },
+        "nt": {
+          "acetylcholine": 23
+        },
+        "jo_a_synapses": 4,
+        "jo_b_synapses": 889,
+        "by_type": {
+          "CB1076": {
+            "nt": {
+              "acetylcholine": 8
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 429
+          },
+          "CB1125": {
+            "nt": {
+              "acetylcholine": 11
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 158
+          },
+          "CB2789": {
+            "nt": {
+              "acetylcholine": 4
+            },
+            "jo_a_synapses": 4,
+            "jo_b_synapses": 302
+          }
+        }
+      },
+      "A2-candidate": {
+        "count": 4,
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "types": {
+          "CB1817a": 2,
+          "CB1817b": 2
+        },
+        "nt": {
+          "acetylcholine": 4
+        },
+        "jo_a_synapses": 266,
+        "jo_b_synapses": 0,
+        "by_type": {
+          "CB1817a": {
+            "nt": {
+              "acetylcholine": 2
+            },
+            "jo_a_synapses": 182,
+            "jo_b_synapses": 0
+          },
+          "CB1817b": {
+            "nt": {
+              "acetylcholine": 2
+            },
+            "jo_a_synapses": 84,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "vpoIN": {
+        "count": 6,
+        "sides": {
+          "L": 3,
+          "R": 3
+        },
+        "types": {
+          "CB1385": 6
+        },
+        "nt": {
+          "": 1,
+          "gaba": 5
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {
+          "CB1385": {
+            "nt": {
+              "": 1,
+              "gaba": 5
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "vpoDN-GABA-input": {
+        "count": 10,
+        "sides": {
+          "L": 5,
+          "R": 5
+        },
+        "types": {
+          "AVLP008": 10
+        },
+        "nt": {
+          "": 3,
+          "gaba": 7
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {
+          "AVLP008": {
+            "nt": {
+              "": 3,
+              "gaba": 7
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "aLN-m": {
+        "count": 2,
+        "sides": {
+          "M": 2
+        },
+        "types": {
+          "CB3880": 2
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "jo_a_synapses": 1,
+        "jo_b_synapses": 51,
+        "by_type": {
+          "CB3880": {
+            "nt": {
+              "gaba": 2
+            },
+            "jo_a_synapses": 1,
+            "jo_b_synapses": 51
+          }
+        }
+      }
+    },
+    "top20_targets": {
+      "CB1076": [
+        [
+          "CB1760",
+          2810
+        ],
+        [
+          "CB3491",
+          2487
+        ],
+        [
+          "CB2238",
+          1253
+        ],
+        [
+          "WED119",
+          1103
+        ],
+        [
+          "CB2228",
+          829
+        ],
+        [
+          "CB2023",
+          733
+        ],
+        [
+          "CB1110",
+          701
+        ],
+        [
+          "AVLP140",
+          686
+        ],
+        [
+          "CB1074",
+          520
+        ],
+        [
+          "CB1314",
+          425
+        ],
+        [
+          "CB1675",
+          367
+        ],
+        [
+          "CB3327",
+          328
+        ],
+        [
+          "AN_multi_106",
+          281
+        ],
+        [
+          "CB2072",
+          279
+        ],
+        [
+          "WED072",
+          276
+        ],
+        [
+          "CB1383",
+          239
+        ],
+        [
+          "WED114",
+          235
+        ],
+        [
+          "CB1816",
+          219
+        ],
+        [
+          "CB3422",
+          204
+        ],
+        [
+          "WED092d",
+          202
+        ]
+      ],
+      "CB1078": [
+        [
+          "CB2108",
+          2008
+        ],
+        [
+          "CB3881",
+          1486
+        ],
+        [
+          "CB3245",
+          1235
+        ],
+        [
+          "CB3882",
+          847
+        ],
+        [
+          "CB2449",
+          819
+        ],
+        [
+          "CB1206",
+          813
+        ],
+        [
+          "CB2545",
+          783
+        ],
+        [
+          "CB1383",
+          631
+        ],
+        [
+          "CB3880",
+          592
+        ],
+        [
+          "CB3064",
+          572
+        ],
+        [
+          "CB0264",
+          499
+        ],
+        [
+          "SAD021_a",
+          394
+        ],
+        [
+          "CB1557",
+          376
+        ],
+        [
+          "CB0956",
+          330
+        ],
+        [
+          "CB0533",
+          283
+        ],
+        [
+          "CB3913",
+          278
+        ],
+        [
+          "CB3162",
+          261
+        ],
+        [
+          "CB1538",
+          254
+        ],
+        [
+          "CB3184",
+          251
+        ],
+        [
+          "CB2364",
+          242
+        ]
+      ]
+    },
+    "top20_overlap": [
+      "CB1383"
+    ],
+    "paths": {
+      "AMMC-B1-candidate": {
+        "candidate_to_vpoEN": {
+          "path_count": 4895,
+          "max_bottleneck": 44,
+          "best_path": {
+            "ids": [
+              720575940624704393,
+              720575940631535073,
+              720575940635403230
+            ],
+            "types": [
+              "CB1542",
+              "CB1383",
+              "vpoEN"
+            ],
+            "weights": [
+              58,
+              44
+            ]
+          }
+        },
+        "jo_via_candidate_to_vpoEN": {
+          "path_count": 91,
+          "max_bottleneck": 3,
+          "best_path": {
+            "ids": [
+              720575940636990005,
+              720575940614840891,
+              720575940632385943
+            ],
+            "types": [
+              "JO-B",
+              "CB1542",
+              "vpoEN"
+            ],
+            "weights": [
+              8,
+              3
+            ]
+          }
+        },
+        "direct_to_vpoEN": 16
+      },
+      "AMMC-B1-candidate-graph": {
+        "candidate_to_vpoEN": {
+          "path_count": 1144,
+          "max_bottleneck": 29,
+          "best_path": {
+            "ids": [
+              720575940622577336,
+              720575940621146771,
+              720575940635403230
+            ],
+            "types": [
+              "CB1076",
+              "CB1383",
+              "vpoEN"
+            ],
+            "weights": [
+              30,
+              29
+            ]
+          }
+        },
+        "jo_via_candidate_to_vpoEN": {
+          "path_count": 0,
+          "max_bottleneck": 0,
+          "best_path": null
+        },
+        "direct_to_vpoEN": 0
+      }
+    },
+    "auxiliary": {
+      "legacy-vpoIN": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "AMMC-A2": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "vPN1-report": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "aPN1-report-core": {
+        "count": 37,
+        "sides": {
+          "L": 19,
+          "R": 18
+        },
+        "types": {
+          "CB1078": 26,
+          "CB1542": 11
+        }
+      }
+    },
+    "b1_intersection": [],
+    "avlp008_to_dnp37": 265,
+    "avlp008_to_pc1_family": 237
+  },
+  "banc": {
+    "graph_file": "graph_banc.npz",
+    "sha256": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+    "dataset": "BANC",
+    "version": "888",
+    "rows": {
+      "AMMC-B1-candidate": {
+        "count": 38,
+        "sides": {
+          "L": 21,
+          "R": 17
+        },
+        "types": {
+          "CB1078": 28,
+          "CB1542": 6,
+          "SAD053": 4
+        },
+        "nt": {
+          "": 1,
+          "acetylcholine": 37
+        },
+        "jo_a_synapses": 95,
+        "jo_b_synapses": 3102,
+        "by_type": {
+          "CB1078": {
+            "nt": {
+              "": 1,
+              "acetylcholine": 27
+            },
+            "jo_a_synapses": 89,
+            "jo_b_synapses": 2018
+          },
+          "CB1542": {
+            "nt": {
+              "acetylcholine": 6
+            },
+            "jo_a_synapses": 6,
+            "jo_b_synapses": 661
+          },
+          "SAD053": {
+            "nt": {
+              "acetylcholine": 4
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 423
+          }
+        }
+      },
+      "AMMC-B1-candidate-graph": {
+        "count": 26,
+        "sides": {
+          "L": 13,
+          "R": 13
+        },
+        "types": {
+          "CB1076": 6,
+          "CB1125": 18,
+          "CB2789": 2
+        },
+        "nt": {
+          "": 1,
+          "acetylcholine": 24,
+          "dopamine": 1
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 606,
+        "by_type": {
+          "CB1076": {
+            "nt": {
+              "acetylcholine": 6
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 289
+          },
+          "CB1125": {
+            "nt": {
+              "": 1,
+              "acetylcholine": 16,
+              "dopamine": 1
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 222
+          },
+          "CB2789": {
+            "nt": {
+              "acetylcholine": 2
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 95
+          }
+        }
+      },
+      "A2-candidate": {
+        "count": 2,
+        "sides": {
+          "R": 2
+        },
+        "types": {
+          "CB1817a": 1,
+          "CB1817b": 1
+        },
+        "nt": {
+          "acetylcholine": 2
+        },
+        "jo_a_synapses": 1104,
+        "jo_b_synapses": 4,
+        "by_type": {
+          "CB1817a": {
+            "nt": {
+              "acetylcholine": 1
+            },
+            "jo_a_synapses": 624,
+            "jo_b_synapses": 4
+          },
+          "CB1817b": {
+            "nt": {
+              "acetylcholine": 1
+            },
+            "jo_a_synapses": 480,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "vpoIN": {
+        "count": 4,
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "types": {
+          "CB1385": 4
+        },
+        "nt": {
+          "gaba": 4
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {
+          "CB1385": {
+            "nt": {
+              "gaba": 4
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "vpoDN-GABA-input": {
+        "count": 8,
+        "sides": {
+          "L": 4,
+          "R": 4
+        },
+        "types": {
+          "AVLP008": 8
+        },
+        "nt": {
+          "": 1,
+          "gaba": 7
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {
+          "AVLP008": {
+            "nt": {
+              "": 1,
+              "gaba": 7
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "aLN-m": {
+        "count": 2,
+        "sides": {
+          "L": 1,
+          "R": 1
+        },
+        "types": {
+          "CB3880": 2
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 45,
+        "by_type": {
+          "CB3880": {
+            "nt": {
+              "gaba": 2
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 45
+          }
+        }
+      }
+    },
+    "top20_targets": {
+      "CB1076": [
+        [
+          "CB1760",
+          1010
+        ],
+        [
+          "CB2238",
+          758
+        ],
+        [
+          "CB3491",
+          701
+        ],
+        [
+          "WED119",
+          413
+        ],
+        [
+          "AVLP140",
+          366
+        ],
+        [
+          "SAD021_c",
+          340
+        ],
+        [
+          "CB2228",
+          260
+        ],
+        [
+          "CB1074",
+          245
+        ],
+        [
+          "CB1314",
+          205
+        ],
+        [
+          "CB2023",
+          190
+        ],
+        [
+          "WED114",
+          169
+        ],
+        [
+          "WED109",
+          161
+        ],
+        [
+          "WED072",
+          123
+        ],
+        [
+          "WED092d",
+          120
+        ],
+        [
+          "CB1675",
+          102
+        ],
+        [
+          "AN01A055",
+          100
+        ],
+        [
+          "CB0533",
+          96
+        ],
+        [
+          "CB1948",
+          95
+        ],
+        [
+          "PVLP122b",
+          83
+        ],
+        [
+          "DNg56",
+          81
+        ]
+      ],
+      "CB1078": [
+        [
+          "CB2108",
+          2725
+        ],
+        [
+          "CB3881",
+          2297
+        ],
+        [
+          "CB2545",
+          1203
+        ],
+        [
+          "CB3245",
+          1133
+        ],
+        [
+          "CB2449",
+          1088
+        ],
+        [
+          "CB3880",
+          1082
+        ],
+        [
+          "SAD021_a",
+          1082
+        ],
+        [
+          "CB3882",
+          930
+        ],
+        [
+          "CB1206",
+          699
+        ],
+        [
+          "CB3064",
+          680
+        ],
+        [
+          "SAD021_c",
+          581
+        ],
+        [
+          "CB0264",
+          462
+        ],
+        [
+          "CB1383",
+          318
+        ],
+        [
+          "CB0956",
+          303
+        ],
+        [
+          "CB1557",
+          276
+        ],
+        [
+          "CB3877",
+          255
+        ],
+        [
+          "CB3184",
+          221
+        ],
+        [
+          "AN01A055",
+          217
+        ],
+        [
+          "CB1948",
+          211
+        ],
+        [
+          "CB1078",
+          209
+        ]
+      ]
+    },
+    "top20_overlap": [
+      "AN01A055",
+      "CB1948",
+      "SAD021_c"
+    ],
+    "paths": {
+      "AMMC-B1-candidate": {
+        "candidate_to_vpoEN": {
+          "path_count": 5325,
+          "max_bottleneck": 34,
+          "best_path": {
+            "ids": [
+              720575941566370055,
+              720575941413746324,
+              720575941626128074
+            ],
+            "types": [
+              "CB1078",
+              "CB1383",
+              "vpoEN"
+            ],
+            "weights": [
+              38,
+              34
+            ]
+          }
+        },
+        "jo_via_candidate_to_vpoEN": {
+          "path_count": 413,
+          "max_bottleneck": 3,
+          "best_path": {
+            "ids": [
+              720575941732309547,
+              720575941566370055,
+              720575941626128074
+            ],
+            "types": [
+              "JO-B",
+              "CB1078",
+              "vpoEN"
+            ],
+            "weights": [
+              6,
+              3
+            ]
+          }
+        },
+        "direct_to_vpoEN": 27
+      },
+      "AMMC-B1-candidate-graph": {
+        "candidate_to_vpoEN": {
+          "path_count": 793,
+          "max_bottleneck": 14,
+          "best_path": {
+            "ids": [
+              720575941484236941,
+              720575941441471679,
+              720575941564712960
+            ],
+            "types": [
+              "CB1076",
+              "SAD021_c",
+              "vpoEN"
+            ],
+            "weights": [
+              14,
+              21
+            ]
+          }
+        },
+        "jo_via_candidate_to_vpoEN": {
+          "path_count": 96,
+          "max_bottleneck": 2,
+          "best_path": {
+            "ids": [
+              720575941640358773,
+              720575941484236941,
+              720575941554868051
+            ],
+            "types": [
+              "JO-B",
+              "CB1076",
+              "vpoEN"
+            ],
+            "weights": [
+              5,
+              2
+            ]
+          }
+        },
+        "direct_to_vpoEN": 5
+      }
+    },
+    "auxiliary": {
+      "legacy-vpoIN": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "AMMC-A2": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "vPN1-report": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "aPN1-report-core": {
+        "count": 34,
+        "sides": {
+          "L": 19,
+          "R": 15
+        },
+        "types": {
+          "CB1078": 28,
+          "CB1542": 6
+        }
+      }
+    },
+    "b1_intersection": [],
+    "avlp008_to_dnp37": 93,
+    "avlp008_to_pc1_family": 94
+  },
+  "male": {
+    "graph_file": "graph_male.npz",
+    "sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+    "dataset": "MaleCNS",
+    "version": "1.0",
+    "rows": {
+      "AMMC-B1-candidate": {
+        "count": 12,
+        "sides": {
+          "L": 6,
+          "R": 6
+        },
+        "types": {
+          "CB1078": 8,
+          "CB1542": 2,
+          "SAD053": 2
+        },
+        "nt": {
+          "acetylcholine": 12
+        },
+        "jo_a_synapses": 1,
+        "jo_b_synapses": 795,
+        "by_type": {
+          "CB1078": {
+            "nt": {
+              "acetylcholine": 8
+            },
+            "jo_a_synapses": 1,
+            "jo_b_synapses": 177
+          },
+          "CB1542": {
+            "nt": {
+              "acetylcholine": 2
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 214
+          },
+          "SAD053": {
+            "nt": {
+              "acetylcholine": 2
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 404
+          }
+        }
+      },
+      "AMMC-B1-candidate-graph": {
+        "count": 11,
+        "sides": {
+          "L": 6,
+          "R": 5
+        },
+        "types": {
+          "CB1076": 7,
+          "CB2789": 4
+        },
+        "nt": {
+          "acetylcholine": 11
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 970,
+        "by_type": {
+          "CB1076": {
+            "nt": {
+              "acetylcholine": 7
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 584
+          },
+          "CB2789": {
+            "nt": {
+              "acetylcholine": 4
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 386
+          }
+        }
+      },
+      "A2-candidate": {
+        "count": 0,
+        "sides": {},
+        "types": {},
+        "nt": {},
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {}
+      },
+      "vpoIN": {
+        "count": 5,
+        "sides": {
+          "L": 2,
+          "R": 3
+        },
+        "types": {
+          "vpoIN": 5
+        },
+        "nt": {
+          "gaba": 5
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {
+          "vpoIN": {
+            "nt": {
+              "gaba": 5
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 0
+          }
+        }
+      },
+      "vpoDN-GABA-input": {
+        "count": 0,
+        "sides": {},
+        "types": {},
+        "nt": {},
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "by_type": {}
+      },
+      "aLN-m": {
+        "count": 2,
+        "sides": {
+          "M": 2
+        },
+        "types": {
+          "WED191": 2
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 21,
+        "by_type": {
+          "WED191": {
+            "nt": {
+              "gaba": 2
+            },
+            "jo_a_synapses": 0,
+            "jo_b_synapses": 21
+          }
+        }
+      }
+    },
+    "top20_targets": {
+      "CB1076": [
+        [
+          "CB4118",
+          5719
+        ],
+        [
+          "CB2228",
+          1325
+        ],
+        [
+          "WED119",
+          1217
+        ],
+        [
+          "SAD021",
+          926
+        ],
+        [
+          "AN01A055",
+          839
+        ],
+        [
+          "AVLP140",
+          686
+        ],
+        [
+          "CB1074",
+          672
+        ],
+        [
+          "CB1314",
+          628
+        ],
+        [
+          "WED055_b",
+          399
+        ],
+        [
+          "WED093",
+          382
+        ],
+        [
+          "WED114",
+          371
+        ],
+        [
+          "CB2371",
+          333
+        ],
+        [
+          "WED055_a",
+          313
+        ],
+        [
+          "WED092",
+          295
+        ],
+        [
+          "WED072",
+          264
+        ],
+        [
+          "CB2489",
+          262
+        ],
+        [
+          "CB0533",
+          239
+        ],
+        [
+          "SAD021_c",
+          234
+        ],
+        [
+          "DNp12",
+          224
+        ],
+        [
+          "WED206",
+          219
+        ]
+      ],
+      "CB1078": [
+        [
+          "CB3245",
+          888
+        ],
+        [
+          "WED185",
+          877
+        ],
+        [
+          "CB4172",
+          695
+        ],
+        [
+          "WED056",
+          575
+        ],
+        [
+          "WED191",
+          393
+        ],
+        [
+          "WED190",
+          369
+        ],
+        [
+          "CB2108",
+          359
+        ],
+        [
+          "SAD021_b",
+          328
+        ],
+        [
+          "CB0956",
+          304
+        ],
+        [
+          "WED065",
+          289
+        ],
+        [
+          "WED063_b",
+          261
+        ],
+        [
+          "WED063_a",
+          257
+        ],
+        [
+          "CB2545",
+          253
+        ],
+        [
+          "WED055_b",
+          252
+        ],
+        [
+          "WED047",
+          250
+        ],
+        [
+          "WED193",
+          244
+        ],
+        [
+          "CB4173",
+          218
+        ],
+        [
+          "PVLP123",
+          205
+        ],
+        [
+          "CB1557",
+          199
+        ],
+        [
+          "CB1538",
+          197
+        ]
+      ]
+    },
+    "top20_overlap": [
+      "WED055_b"
+    ],
+    "paths": {
+      "AMMC-B1-candidate": {
+        "candidate_to_vpoEN": {
+          "path_count": 2312,
+          "max_bottleneck": 43,
+          "best_path": {
+            "ids": [
+              12530,
+              20068,
+              16559
+            ],
+            "types": [
+              "CB1542",
+              "WED055_b",
+              "vpoEN"
+            ],
+            "weights": [
+              43,
+              53
+            ]
+          }
+        },
+        "jo_via_candidate_to_vpoEN": {
+          "path_count": 36,
+          "max_bottleneck": 4,
+          "best_path": {
+            "ids": [
+              957696,
+              12530,
+              17470
+            ],
+            "types": [
+              "JO-B1_a",
+              "CB1542",
+              "vpoEN"
+            ],
+            "weights": [
+              10,
+              4
+            ]
+          }
+        },
+        "direct_to_vpoEN": 9
+      },
+      "AMMC-B1-candidate-graph": {
+        "candidate_to_vpoEN": {
+          "path_count": 1569,
+          "max_bottleneck": 33,
+          "best_path": {
+            "ids": [
+              11835,
+              20068,
+              17841
+            ],
+            "types": [
+              "CB1076",
+              "WED055_b",
+              "vpoEN"
+            ],
+            "weights": [
+              33,
+              35
+            ]
+          }
+        },
+        "jo_via_candidate_to_vpoEN": {
+          "path_count": 87,
+          "max_bottleneck": 5,
+          "best_path": {
+            "ids": [
+              750369552,
+              11835,
+              514909
+            ],
+            "types": [
+              "JO-B3",
+              "CB1076",
+              "vpoEN"
+            ],
+            "weights": [
+              7,
+              5
+            ]
+          }
+        },
+        "direct_to_vpoEN": 17
+      }
+    },
+    "auxiliary": {
+      "legacy-vpoIN": {
+        "count": 5,
+        "sides": {
+          "L": 2,
+          "R": 3
+        },
+        "types": {
+          "vpoIN": 5
+        }
+      },
+      "AMMC-A2": {
+        "count": 0,
+        "sides": {},
+        "types": {}
+      },
+      "vPN1-report": {
+        "count": 11,
+        "sides": {
+          "L": 6,
+          "R": 5
+        },
+        "types": {
+          "AVLP761m": 4,
+          "AVLP762m": 5,
+          "AVLP763m": 2
+        }
+      },
+      "aPN1-report-core": {
+        "count": 10,
+        "sides": {
+          "L": 5,
+          "R": 5
+        },
+        "types": {
+          "CB1078": 8,
+          "CB1542": 2
+        }
+      }
+    },
+    "b1_intersection": [],
+    "avlp008_to_dnp37": 0,
+    "avlp008_to_pc1_family": 0
+  }
+}

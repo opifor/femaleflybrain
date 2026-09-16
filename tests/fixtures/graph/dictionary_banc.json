@@ -1,0 +1,5136 @@
+{
+  "dictionary_version": "1",
+  "dataset": "banc",
+  "graph": {
+    "file": "graph_banc.npz",
+    "sha256": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+    "neuron_count": 137791,
+    "meta": {
+      "aggregated_duplicate_rows": 0,
+      "below_min_syn_edges": 0,
+      "below_min_syn_synapses": 0,
+      "created_utc": "2026-09-16T12:09:24.882486+00:00",
+      "dataset": "BANC",
+      "dropped": {
+        "below_min_syn_synapses": 0,
+        "outside_population_rows": 1359895,
+        "outside_population_synapses": 4344932
+      },
+      "edge_count": 12260970,
+      "elapsed_seconds": 11.717311000000336,
+      "input_rows": 13620865,
+      "input_synapses": 42309621,
+      "license": "CC-BY-4.0",
+      "memory_measurement": "OS process lifetime peak RSS/working set; fresh CLI process recommended",
+      "min_syn": 1,
+      "neuron_count": 137791,
+      "nt_distribution": {
+        "": 3639,
+        "acetylcholine": 77174,
+        "dopamine": 7688,
+        "gaba": 20184,
+        "glutamate": 21866,
+        "histamine": 3522,
+        "octopamine": 1968,
+        "serotonin": 1540,
+        "tyramine": 210
+      },
+      "nt_policy": {
+        "confidence": "neurotransmitter_score",
+        "label": "neurotransmitter_predicted",
+        "verified": "not used: verified labels can be multi-transmitter"
+      },
+      "outside_population_rows": 1359895,
+      "outside_population_synapses": 4344932,
+      "peak_rss_bytes": 1327702016,
+      "population": "proofread OR roughly_proofread; excludes forbidden statuses and glia; induced graph",
+      "population_filter": {
+        "excluded_from_union": 18221,
+        "proofread_count": 150952,
+        "proofread_union_count": 156012,
+        "roughly_proofread_count": 5060
+      },
+      "schema_version": "1",
+      "sign_rule": "shiu2024",
+      "sign_rule_version": "1",
+      "sources": [
+        {
+          "name": "banc_888_edgelist_simple_v3.feather",
+          "sha256": "8c296e946f3c69a8c7222f30ad75fa8a98eeb189124fec6df829c9125f4be64b"
+        },
+        {
+          "name": "banc_888_meta.feather",
+          "sha256": "86ccf5df0c67419f8c5f43e93a7ed38d23a080e9f7fde26737290252f3780098"
+        }
+      ],
+      "synapse_count": 37964689,
+      "type_labeled_fraction": 0.7571176637080796,
+      "version": "888"
+    }
+  },
+  "entries": [
+    {
+      "name": "JO-A",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^JO-A(?:[1-4](?:_[abc])?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Auditory responses of Johnston's organ neurons (2013): A/B Johnston's-organ populations respond to sound.",
+      "confidence": "family",
+      "notes": "Numbered subtypes included; '-unclear', JO-mz and other JO families excluded.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3734059/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 30,
+      "status": "present",
+      "example_body_ids": [
+        720575941354397744,
+        720575941394218500,
+        720575941408300079,
+        720575941436083488,
+        720575941436087328
+      ],
+      "side_distribution": {
+        "L": 17,
+        "R": 13
+      },
+      "nt_distribution": {
+        "acetylcholine": 30
+      },
+      "matched_types": {
+        "JO-A": 30
+      }
+    },
+    {
+      "name": "JO-B",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^JO-B(?:[1-4](?:_[abc])?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Auditory responses of Johnston's organ neurons (2013): A/B Johnston's-organ populations respond to sound.",
+      "confidence": "family",
+      "notes": "Numbered subtypes included; '-unclear', JO-mz and other JO families excluded.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3734059/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 235,
+      "status": "present",
+      "example_body_ids": [
+        720575941353910320,
+        720575941354411568,
+        720575941391945732,
+        720575941401098275,
+        720575941410161711
+      ],
+      "side_distribution": {
+        "L": 125,
+        "R": 110
+      },
+      "nt_distribution": {
+        "": 3,
+        "acetylcholine": 221,
+        "gaba": 11
+      },
+      "matched_types": {
+        "JO-B": 235
+      }
+    },
+    {
+      "name": "ORN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN(?:_[A-Za-z0-9]+)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): olfactory receptor neurons project to named glomeruli.",
+      "confidence": "family",
+      "notes": "ORN annotation family includes non-Or receptor classes; it is not proof of Or expression. D_ORN is excluded.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2018,
+      "status": "present",
+      "example_body_ids": [
+        720575941352084784,
+        720575941352539440,
+        720575941352825904,
+        720575941352972848,
+        720575941353056816
+      ],
+      "side_distribution": {
+        "L": 1167,
+        "R": 851
+      },
+      "nt_distribution": {
+        "": 6,
+        "acetylcholine": 2012
+      },
+      "matched_types": {
+        "ORN": 6,
+        "ORN_D": 15,
+        "ORN_DA1": 86,
+        "ORN_DA2": 17,
+        "ORN_DA3": 8,
+        "ORN_DA4l": 22,
+        "ORN_DA4m": 37,
+        "ORN_DC1": 42,
+        "ORN_DC2": 16,
+        "ORN_DC3": 34,
+        "ORN_DC4": 22,
+        "ORN_DL1": 29,
+        "ORN_DL2d": 19,
+        "ORN_DL2v": 25,
+        "ORN_DL3": 16,
+        "ORN_DL4": 20,
+        "ORN_DL5": 26,
+        "ORN_DM1": 76,
+        "ORN_DM2": 49,
+        "ORN_DM3": 32,
+        "ORN_DM4": 49,
+        "ORN_DM5": 34,
+        "ORN_DM6": 44,
+        "ORN_DP1l": 32,
+        "ORN_DP1m": 10,
+        "ORN_V": 72,
+        "ORN_VA1d": 69,
+        "ORN_VA1v": 90,
+        "ORN_VA2": 69,
+        "ORN_VA3": 56,
+        "ORN_VA4": 38,
+        "ORN_VA5": 15,
+        "ORN_VA6": 54,
+        "ORN_VA7l": 1,
+        "ORN_VA7m": 28,
+        "ORN_VC1": 30,
+        "ORN_VC2": 23,
+        "ORN_VC3": 36,
+        "ORN_VC4": 42,
+        "ORN_VC5": 24,
+        "ORN_VL1": 102,
+        "ORN_VL2a": 45,
+        "ORN_VL2p": 29,
+        "ORN_VM1": 29,
+        "ORN_VM2": 43,
+        "ORN_VM3": 49,
+        "ORN_VM4": 50,
+        "ORN_VM5d": 67,
+        "ORN_VM5v": 39,
+        "ORN_VM6": 2,
+        "ORN_VM6l": 30,
+        "ORN_VM6m": 14,
+        "ORN_VM6v": 31,
+        "ORN_VM7d": 30,
+        "ORN_VM7v": 45
+      }
+    },
+    {
+      "name": "Or*",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^Or[0-9]+[a-z]+$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): receptor genes identify olfactory sensory classes.",
+      "confidence": "family",
+      "notes": "Literal receptor-labelled types only; no gene identity inferred from arbitrary ORN names. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "Or47b",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA1v$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): Or47b ORNs innervate VA1v.",
+      "confidence": "proxy",
+      "notes": "Glomerular type proxy; receptor expression is not measured in the graph.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 90,
+      "status": "present",
+      "example_body_ids": [
+        720575941405191280,
+        720575941408510638,
+        720575941409039022,
+        720575941413783151,
+        720575941414599316
+      ],
+      "side_distribution": {
+        "L": 59,
+        "R": 31
+      },
+      "nt_distribution": {
+        "acetylcholine": 90
+      },
+      "matched_types": {
+        "ORN_VA1v": 90
+      }
+    },
+    {
+      "name": "Or67d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DA1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): Or67d ORNs innervate DA1.",
+      "confidence": "proxy",
+      "notes": "Glomerular type proxy; receptor expression is not measured in the graph.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 86,
+      "status": "present",
+      "example_body_ids": [
+        720575941393278212,
+        720575941394780822,
+        720575941408635310,
+        720575941408668078,
+        720575941415722012
+      ],
+      "side_distribution": {
+        "L": 65,
+        "R": 21
+      },
+      "nt_distribution": {
+        "acetylcholine": 86
+      },
+      "matched_types": {
+        "ORN_DA1": 86
+      }
+    },
+    {
+      "name": "Gr32a",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^Gr32a$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Thistle et al. (2012), contact chemoreceptors: contact chemosensory pathways contribute to mate recognition.",
+      "confidence": "exact",
+      "notes": "Literal gene-labelled type only; unnamed gustatory neurons are not substituted. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3365544/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "ppk23",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ppk23$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Thistle et al. (2012), contact chemoreceptors: contact chemosensory pathways contribute to mate recognition.",
+      "confidence": "exact",
+      "notes": "Literal gene-labelled type only; unnamed gustatory neurons are not substituted. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3365544/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "ppk25",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ppk25$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Vijayan et al. (2014), ppk25 pheromone neurons: contact chemosensory pathways contribute to mate recognition.",
+      "confidence": "exact",
+      "notes": "Literal gene-labelled type only; unnamed gustatory neurons are not substituted. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3967927/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "L1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^L1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Matsliah et al. (2024), visual-system parts list: lamina neurons relay early visual input.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-024-07981-1",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 100,
+      "status": "present",
+      "example_body_ids": [
+        720575941391304452,
+        720575941392074134,
+        720575941407512494,
+        720575941408617902,
+        720575941410087727
+      ],
+      "side_distribution": {
+        "L": 72,
+        "R": 28
+      },
+      "nt_distribution": {
+        "": 1,
+        "gaba": 5,
+        "glutamate": 89,
+        "histamine": 5
+      },
+      "matched_types": {
+        "L1": 100
+      }
+    },
+    {
+      "name": "L2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^L2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Matsliah et al. (2024), visual-system parts list: lamina neurons relay early visual input.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-024-07981-1",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 59,
+      "status": "present",
+      "example_body_ids": [
+        720575941394879126,
+        720575941414403729,
+        720575941414490004,
+        720575941426647380,
+        720575941427882324
+      ],
+      "side_distribution": {
+        "L": 32,
+        "R": 27
+      },
+      "nt_distribution": {
+        "acetylcholine": 45,
+        "histamine": 14
+      },
+      "matched_types": {
+        "L2": 59
+      }
+    },
+    {
+      "name": "R1-R6",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^R1-(?:R)?6$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Matsliah et al. (2024), visual-system parts list: outer photoreceptors provide visual input.",
+      "confidence": "family",
+      "notes": "Matches the two observed aggregate spellings R1-R6 and R1-6; no generic R prefix. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://doi.org/10.1038/s41586-024-07981-1",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "LC10a",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^LC10a$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Sten et al. (2021), arousal gates visual processing: LC10a participates in visual pursuit.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-021-03714-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 224,
+      "status": "present",
+      "example_body_ids": [
+        720575941393241604,
+        720575941393887492,
+        720575941403071088,
+        720575941406768302,
+        720575941408439599
+      ],
+      "side_distribution": {
+        "L": 92,
+        "R": 132
+      },
+      "nt_distribution": {
+        "acetylcholine": 223,
+        "octopamine": 1
+      },
+      "matched_types": {
+        "LC10a": 224
+      }
+    },
+    {
+      "name": "LC10b",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^LC10b$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Matsliah et al. (2024), visual-system parts list: LC types are visual projection neurons.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-024-07981-1",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 89,
+      "status": "present",
+      "example_body_ids": [
+        720575941354549040,
+        720575941407316142,
+        720575941414268271,
+        720575941417412380,
+        720575941432667863
+      ],
+      "side_distribution": {
+        "L": 43,
+        "R": 46
+      },
+      "nt_distribution": {
+        "": 1,
+        "acetylcholine": 76,
+        "dopamine": 8,
+        "gaba": 2,
+        "glutamate": 2
+      },
+      "matched_types": {
+        "LC10b": 89
+      }
+    },
+    {
+      "name": "LC10c",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^LC10c(?:-[12])?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Matsliah et al. (2024), visual-system parts list: LC types are visual projection neurons.",
+      "confidence": "family",
+      "notes": "LC10c-1/-2 are pooled; unclassified LC10 is excluded.",
+      "source": "https://doi.org/10.1038/s41586-024-07981-1",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 166,
+      "status": "present",
+      "example_body_ids": [
+        720575941353920048,
+        720575941393650692,
+        720575941394630806,
+        720575941402835491,
+        720575941403317104
+      ],
+      "side_distribution": {
+        "L": 90,
+        "R": 76
+      },
+      "nt_distribution": {
+        "": 1,
+        "acetylcholine": 160,
+        "dopamine": 1,
+        "gaba": 1,
+        "glutamate": 3
+      },
+      "matched_types": {
+        "LC10c": 166
+      }
+    },
+    {
+      "name": "LC10d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^LC10d$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Matsliah et al. (2024), visual-system parts list: LC types are visual projection neurons.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-024-07981-1",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 182,
+      "status": "present",
+      "example_body_ids": [
+        720575941391464196,
+        720575941394733718,
+        720575941400228643,
+        720575941406570543,
+        720575941408409135
+      ],
+      "side_distribution": {
+        "L": 79,
+        "R": 103
+      },
+      "nt_distribution": {
+        "acetylcholine": 180,
+        "dopamine": 2
+      },
+      "matched_types": {
+        "LC10d": 182
+      }
+    },
+    {
+      "name": "AOTU019",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^AOTU019$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: atlas identifies anterior optic tubercle cell types.",
+      "confidence": "exact",
+      "notes": "Anatomical readout; no specific courtship function is asserted.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941519589848,
+        720575941532426699
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "": 1,
+        "gaba": 1
+      },
+      "matched_types": {
+        "AOTU019": 2
+      }
+    },
+    {
+      "name": "AOTU025",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^AOTU025$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: atlas identifies anterior optic tubercle cell types.",
+      "confidence": "exact",
+      "notes": "Anatomical readout; no specific courtship function is asserted.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941500020642,
+        720575941564667648
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "": 1,
+        "acetylcholine": 1
+      },
+      "matched_types": {
+        "AOTU025": 2
+      }
+    },
+    {
+      "name": "P1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^P1(?:_[0-9]+[a-z]?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Hoopfer et al. (2015), P1 and persistent social state: P1 activation promotes persistent social arousal.",
+      "confidence": "proxy",
+      "notes": "MaleCNS v1.0 has pC1 rather than P1 types. Frozen conservative proxy: coexpress_high and male-specific official annotations; coexpress_low, potentially male-specific, dsx-only, pC1x and ambiguous pC1_2a/2b excluded. Not a P1a driver match. Female P1-9 is unrelated and excluded. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://elifesciences.org/articles/11346",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "pC1a",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pC1a$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Deutsch et al. (2020), persistent female internal state: female pC1 subtypes participate in social state circuits.",
+      "confidence": "exact",
+      "notes": "Subtype identity only; pC1d/e persistent-state evidence is not generalized to every subtype.",
+      "source": "https://elifesciences.org/articles/59502",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941432567511,
+        720575941555764307
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "dopamine": 2
+      },
+      "matched_types": {
+        "pC1a": 2
+      }
+    },
+    {
+      "name": "pC1b",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pC1b$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Deutsch et al. (2020), persistent female internal state: female pC1 subtypes participate in social state circuits.",
+      "confidence": "exact",
+      "notes": "Subtype identity only; pC1d/e persistent-state evidence is not generalized to every subtype.",
+      "source": "https://elifesciences.org/articles/59502",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941612305325,
+        720575941660473680
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "": 1,
+        "dopamine": 1
+      },
+      "matched_types": {
+        "pC1b": 2
+      }
+    },
+    {
+      "name": "pC1c",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pC1c$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Deutsch et al. (2020), persistent female internal state: female pC1 subtypes participate in social state circuits.",
+      "confidence": "exact",
+      "notes": "Subtype identity only; pC1d/e persistent-state evidence is not generalized to every subtype.",
+      "source": "https://elifesciences.org/articles/59502",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941488882384,
+        720575941539298709
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "dopamine": 2
+      },
+      "matched_types": {
+        "pC1c": 2
+      }
+    },
+    {
+      "name": "pC1d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pC1d$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Deutsch et al. (2020), persistent female internal state: female pC1 subtypes participate in social state circuits.",
+      "confidence": "exact",
+      "notes": "Subtype identity only; pC1d/e persistent-state evidence is not generalized to every subtype.",
+      "source": "https://elifesciences.org/articles/59502",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941481788802,
+        720575941704306650
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "pC1d": 2
+      }
+    },
+    {
+      "name": "pC1e",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pC1e$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Deutsch et al. (2020), persistent female internal state: female pC1 subtypes participate in social state circuits.",
+      "confidence": "exact",
+      "notes": "Subtype identity only; pC1d/e persistent-state evidence is not generalized to every subtype.",
+      "source": "https://elifesciences.org/articles/59502",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941437245216,
+        720575941611385674
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 1,
+        "dopamine": 1
+      },
+      "matched_types": {
+        "pC1e": 2
+      }
+    },
+    {
+      "name": "pIP10",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pIP10$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "von Philipsborn et al. (2011), control of courtship song: identified descending/VNC circuits participate in male song.",
+      "confidence": "exact",
+      "notes": "Functional evidence is from males; matching a female type does not establish song production. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://doi.org/10.1016/j.neuron.2011.01.011",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "vPR6",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^vPR6$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "von Philipsborn et al. (2011), control of courtship song: identified descending/VNC circuits participate in male song.",
+      "confidence": "exact",
+      "notes": "Functional evidence is from males; matching a female type does not establish song production. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://doi.org/10.1016/j.neuron.2011.01.011",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "vMS11",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^vMS11$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "von Philipsborn et al. (2011), control of courtship song: identified descending/VNC circuits participate in male song.",
+      "confidence": "exact",
+      "notes": "Functional evidence is from males; matching a female type does not establish song production.",
+      "source": "https://doi.org/10.1016/j.neuron.2011.01.011",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 6,
+      "status": "present",
+      "example_body_ids": [
+        720575941460225168,
+        720575941464777814,
+        720575941546689825,
+        720575941568553586,
+        720575941581672569
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 2
+      },
+      "nt_distribution": {
+        "glutamate": 6
+      },
+      "matched_types": {
+        "vMS11": 6
+      }
+    },
+    {
+      "name": "pMP2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pMP2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Lillvis et al. (2024), nested song circuits: identified descending/VNC circuits participate in male song.",
+      "confidence": "exact",
+      "notes": "Functional evidence is from males; matching a female type does not establish song production. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "dPR1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^dPR1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Lillvis et al. (2024), nested song circuits: identified descending/VNC circuits participate in male song.",
+      "confidence": "exact",
+      "notes": "Functional evidence is from males; matching a female type does not establish song production. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "TN1A",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^TN1a(?:_[a-i])?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Lillvis et al. (2024), nested song circuits: identified descending/VNC circuits participate in male song.",
+      "confidence": "family",
+      "notes": "TN1a subtypes pooled; TN1c excluded. Female homologues do not establish male song function. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "vpoDN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^(?:DNp37|vpoDN)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Marin et al. (2025), descending/ascending comparison: vpoDN (DNp37) controls female vaginal plate opening.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-025-08925-z",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941492968423,
+        720575941586653062
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "": 1,
+        "acetylcholine": 1
+      },
+      "matched_types": {
+        "DNp37": 2
+      }
+    },
+    {
+      "name": "vpoEN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^vpoEN$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.",
+      "confidence": "exact",
+      "notes": "Sex-shared label is not evidence of a shared behavioural output.",
+      "source": "https://doi.org/10.1038/s41586-020-2972-7",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 6,
+      "status": "present",
+      "example_body_ids": [
+        720575941474113066,
+        720575941485559949,
+        720575941530935736,
+        720575941554868051,
+        720575941564712960
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 2,
+        "dopamine": 2,
+        "gaba": 2
+      },
+      "matched_types": {
+        "vpoEN": 6
+      }
+    },
+    {
+      "name": "vpoIN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^CB1385$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.",
+      "confidence": "exact",
+      "notes": "Sex-shared label is not evidence of a shared behavioural output. Task-supplied external report maps vpoIN to CB1385 in female/BANC; legacy ^vpoIN$: 0 cells in FAFB v783 and BANC v888; renamed 2026-09-16. MaleCNS retains ^vpoIN$ (five cells). AVLP008 is a separate connectivity population.",
+      "source": "https://doi.org/10.1038/s41586-020-2972-7",
+      "evidence_class": "annotation crosswalk, external report, REPORTED",
+      "read_only": false,
+      "count": 4,
+      "status": "present",
+      "example_body_ids": [
+        720575941412970095,
+        720575941477521972,
+        720575941578899545,
+        720575941626374764
+      ],
+      "side_distribution": {
+        "L": 2,
+        "R": 2
+      },
+      "nt_distribution": {
+        "gaba": 4
+      },
+      "matched_types": {
+        "CB1385": 4
+      }
+    },
+    {
+      "name": "SAG",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ANXXX983$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "BANC, distributed brain-and-cord control circuits: ANXXX983/SAG carries reproductive-tract state toward pC1.",
+      "confidence": "exact",
+      "notes": "BANC ANXXX983 alias is supported by the BANC paper; male SpsP is not assumed homologous.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941514023523,
+        720575941526853378
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "dopamine": 2
+      },
+      "matched_types": {
+        "ANXXX983": 2
+      }
+    },
+    {
+      "name": "oviDN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^oviDN(?:[ab](?:_[ab])?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Marin et al. (2025), descending/ascending comparison: oviDN pathways participate in oviposition.",
+      "confidence": "family",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-025-08925-z",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 6,
+      "status": "present",
+      "example_body_ids": [
+        720575941452030330,
+        720575941460006128,
+        720575941491649255,
+        720575941521454003,
+        720575941561430829
+      ],
+      "side_distribution": {
+        "L": 3,
+        "R": 3
+      },
+      "nt_distribution": {
+        "acetylcholine": 6
+      },
+      "matched_types": {
+        "oviDNa_a": 2,
+        "oviDNa_b": 2,
+        "oviDNb": 2
+      }
+    },
+    {
+      "name": "DNp13/pMN1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^(?:DNp13|pMN1)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Marin et al. (2025), descending/ascending comparison: DNp13/pMN1 drives female ovipositor extrusion and has sex-specific VNC targets.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://doi.org/10.1038/s41586-025-08925-z",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941491877833,
+        720575941682268861
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "DNp13": 2
+      }
+    },
+    {
+      "name": "pCd",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^pCd(?:[0-9]+[a-z]?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Deutsch et al. (2020), persistent female internal state: persistent courtship state involves pCd.",
+      "confidence": "family",
+      "notes": "No synonym inferred from an unrelated anatomical label. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://elifesciences.org/articles/59502",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "aIPg",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^aIPg(?:[0-9]+|_m[1-4])?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Social state alters vision (2024): aIPg links female aggression and visual processing.",
+      "confidence": "family",
+      "notes": "Only explicit aIPg types; functional identity of male subtypes is not established. No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://doi.org/10.1038/s41586-024-08255-6",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "mAL",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^mAL(?:[0-9]+[A-I]?[0-9]?|[BCD][1-6]|_[mf][0-9]+[abc]?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Clowney et al. (2015), excitation/inhibition and mate choice: mAL inhibition contributes to mate choice.",
+      "confidence": "family",
+      "notes": "Anatomical type family is broader than the functional mAL driver population.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4695383/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 108,
+      "status": "present",
+      "example_body_ids": [
+        720575941406971310,
+        720575941407915823,
+        720575941408690991,
+        720575941410224943,
+        720575941412805999
+      ],
+      "side_distribution": {
+        "L": 54,
+        "R": 54
+      },
+      "nt_distribution": {
+        "": 3,
+        "gaba": 100,
+        "glutamate": 5
+      },
+      "matched_types": {
+        "mAL4": 24,
+        "mAL5A": 5,
+        "mAL5B": 2,
+        "mAL6": 4,
+        "mALB1": 2,
+        "mALB2": 2,
+        "mALB3": 4,
+        "mALB4": 2,
+        "mALB5": 2,
+        "mALC3": 2,
+        "mALC4": 2,
+        "mALC5": 2,
+        "mALC6": 4,
+        "mALD1": 2,
+        "mALD2": 2,
+        "mALD3": 2,
+        "mALD4": 2,
+        "mAL_f1": 7,
+        "mAL_f2": 10,
+        "mAL_f3": 20,
+        "mAL_f4": 6
+      }
+    },
+    {
+      "name": "vAB3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^vAB3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Clowney et al. (2015), excitation/inhibition and mate choice: ascending pheromone pathways excite courtship circuitry.",
+      "confidence": "exact",
+      "notes": "No match in this graph snapshot; absent is not evidence of biological absence.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4695383/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 0,
+      "status": "absent",
+      "example_body_ids": [],
+      "side_distribution": {},
+      "nt_distribution": {},
+      "matched_types": {}
+    },
+    {
+      "name": "DNa01",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^DNa01$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "BANC, distributed brain-and-cord control circuits: descending pathways provide locomotor-related readouts.",
+      "confidence": "exact",
+      "notes": "Readout designation does not imply a pure walking command or motor-neuron identity.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941432123640,
+        720575941535862506
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "DNa01": 2
+      }
+    },
+    {
+      "name": "DNa02",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^DNa02$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "BANC, distributed brain-and-cord control circuits: descending pathways provide locomotor-related readouts.",
+      "confidence": "exact",
+      "notes": "Readout designation does not imply a pure walking command or motor-neuron identity.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941456897005,
+        720575941510475536
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "DNa02": 2
+      }
+    },
+    {
+      "name": "DNp09",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^DNp09$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "BANC, distributed brain-and-cord control circuits: descending pathways provide locomotor-related readouts.",
+      "confidence": "exact",
+      "notes": "Readout designation does not imply a pure walking command or motor-neuron identity.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941433155799,
+        720575941566493282
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "DNp09": 2
+      }
+    },
+    {
+      "name": "MDN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^MDN$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "BANC, distributed brain-and-cord control circuits: descending pathways provide locomotor-related readouts.",
+      "confidence": "exact",
+      "notes": "Readout designation does not imply a pure walking command or motor-neuron identity.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 4,
+      "status": "present",
+      "example_body_ids": [
+        720575941491012809,
+        720575941491065653,
+        720575941499708745,
+        720575941614906387
+      ],
+      "side_distribution": {
+        "L": 2,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 4
+      },
+      "matched_types": {
+        "MDN": 4
+      }
+    },
+    {
+      "name": "DNg100",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^DNg100$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "BANC, distributed brain-and-cord control circuits: descending pathways provide locomotor-related readouts.",
+      "confidence": "exact",
+      "notes": "Readout designation does not imply a pure walking command or motor-neuron identity.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941500851362,
+        720575941626500746
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "DNg100": 2
+      }
+    },
+    {
+      "name": "DNb08",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^DNb08$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "BANC, distributed brain-and-cord control circuits: descending pathways provide locomotor-related readouts.",
+      "confidence": "exact",
+      "notes": "Readout designation does not imply a pure walking command or motor-neuron identity.",
+      "source": "https://doi.org/10.1038/s41586-026-10735-w",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 4,
+      "status": "present",
+      "example_body_ids": [
+        720575941415598737,
+        720575941534881368,
+        720575941545432425,
+        720575941724184890
+      ],
+      "side_distribution": {
+        "L": 2,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 4
+      },
+      "matched_types": {
+        "DNb08": 4
+      }
+    },
+    {
+      "name": "wing_motor",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^.*$",
+        "side": null,
+        "superclass": "motor",
+        "nt": null,
+        "cell_class": "wing_motor_neuron"
+      },
+      "role": "motor",
+      "literature": "Marin et al. (2025), descending/ascending comparison: wing motor neurons are targets of descending/VNC circuits.",
+      "confidence": "family",
+      "notes": "Exact class filter; FAFB brain-only graph may have no wing motor population.",
+      "source": "https://doi.org/10.1038/s41586-025-08925-z",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 62,
+      "status": "present",
+      "example_body_ids": [
+        720575941432491145,
+        720575941456201887,
+        720575941458961604,
+        720575941459347411,
+        720575941463144336
+      ],
+      "side_distribution": {
+        "L": 31,
+        "R": 31
+      },
+      "nt_distribution": {
+        "acetylcholine": 8,
+        "gaba": 47,
+        "octopamine": 7
+      },
+      "matched_types": {
+        "DLM1-4": 8,
+        "DLM5": 2,
+        "DVM1a-c": 6,
+        "DVM2a-b": 4,
+        "DVM3a-b": 4,
+        "MNxm01": 2,
+        "PS1": 2,
+        "PS2": 2,
+        "PSn_u": 2,
+        "b1": 2,
+        "b2": 2,
+        "b3": 2,
+        "i1": 2,
+        "i2": 2,
+        "iii1": 2,
+        "iii3": 2,
+        "iii4": 2,
+        "iv1": 2,
+        "iv2": 2,
+        "iv3": 2,
+        "iv4": 2,
+        "tp1": 2,
+        "tp2": 2,
+        "tpn": 2
+      }
+    },
+    {
+      "name": "ps1_MN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^(?:ps1 MN|PS1)$",
+        "side": null,
+        "superclass": "motor",
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "motor",
+      "literature": "Lillvis et al. (2024), nested song circuits: named wing motor neurons participate in wing control.",
+      "confidence": "exact",
+      "notes": "BANC PS1 spelling is constrained to motor superclass; no case-insensitive PS100 match.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941544439325,
+        720575941643100754
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "PS1": 2
+      }
+    },
+    {
+      "name": "i1_MN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^i1(?: MN)?$",
+        "side": null,
+        "superclass": "motor",
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "motor",
+      "literature": "Lillvis et al. (2024), nested song circuits: named wing motor neurons participate in wing control.",
+      "confidence": "exact",
+      "notes": "BANC PS1 spelling is constrained to motor superclass; no case-insensitive PS100 match.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941468897856,
+        720575941547315060
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "i1": 2
+      }
+    },
+    {
+      "name": "iii1_MN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^iii1(?: MN)?$",
+        "side": null,
+        "superclass": "motor",
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "motor",
+      "literature": "Lillvis et al. (2024), nested song circuits: named wing motor neurons participate in wing control.",
+      "confidence": "exact",
+      "notes": "BANC PS1 spelling is constrained to motor superclass; no case-insensitive PS100 match.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941489673420,
+        720575941629172716
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "iii1": 2
+      }
+    },
+    {
+      "name": "b3_MN",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^b3(?: MN)?$",
+        "side": null,
+        "superclass": "motor",
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "motor",
+      "literature": "Lillvis et al. (2024), nested song circuits: named wing motor neurons participate in wing control.",
+      "confidence": "exact",
+      "notes": "BANC PS1 spelling is constrained to motor superclass; no case-insensitive PS100 match.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941474574132,
+        720575941542412805
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "b3": 2
+      }
+    },
+    {
+      "name": "PAM",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^PAM(?:[0-9]{2})?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "modulatory",
+      "literature": "Li et al. (2020), mushroom-body connectome: dopaminergic mushroom-body inputs support reinforcement learning.",
+      "confidence": "family",
+      "notes": "Type family membership; the observed NT distribution is reported, not overwritten.",
+      "source": "https://elifesciences.org/articles/62576",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 277,
+      "status": "present",
+      "example_body_ids": [
+        720575941352199472,
+        720575941391990788,
+        720575941392524438,
+        720575941392651158,
+        720575941392698262
+      ],
+      "side_distribution": {
+        "L": 140,
+        "R": 137
+      },
+      "nt_distribution": {
+        "": 22,
+        "acetylcholine": 20,
+        "dopamine": 230,
+        "glutamate": 4,
+        "octopamine": 1
+      },
+      "matched_types": {
+        "PAM": 18,
+        "PAM01": 37,
+        "PAM02": 21,
+        "PAM03": 1,
+        "PAM04": 31,
+        "PAM05": 25,
+        "PAM06": 27,
+        "PAM07": 12,
+        "PAM08": 55,
+        "PAM09": 4,
+        "PAM10": 12,
+        "PAM11": 9,
+        "PAM12": 10,
+        "PAM13": 8,
+        "PAM14": 4,
+        "PAM15": 3
+      }
+    },
+    {
+      "name": "PPL1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^PPL1(?:[0-9]{2})?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "modulatory",
+      "literature": "Li et al. (2020), mushroom-body connectome: dopaminergic mushroom-body inputs support reinforcement learning.",
+      "confidence": "family",
+      "notes": "Type family membership; the observed NT distribution is reported, not overwritten.",
+      "source": "https://elifesciences.org/articles/62576",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 13,
+      "status": "present",
+      "example_body_ids": [
+        720575941416009108,
+        720575941450471246,
+        720575941477857076,
+        720575941491905737,
+        720575941494251696
+      ],
+      "side_distribution": {
+        "L": 8,
+        "R": 5
+      },
+      "nt_distribution": {
+        "": 2,
+        "dopamine": 11
+      },
+      "matched_types": {
+        "PPL101": 2,
+        "PPL102": 2,
+        "PPL103": 2,
+        "PPL104": 1,
+        "PPL105": 1,
+        "PPL106": 1,
+        "PPL107": 2,
+        "PPL108": 2
+      }
+    },
+    {
+      "name": "serotonin",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^.*$",
+        "side": null,
+        "superclass": null,
+        "nt": "serotonin",
+        "cell_class": null
+      },
+      "role": "modulatory",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: source NT annotations identify serotonergic candidates.",
+      "confidence": "proxy",
+      "notes": "NT prediction only; no confidence threshold or serotonergic gene/driver verification.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 1540,
+      "status": "present",
+      "example_body_ids": [
+        720575941350526512,
+        720575941352896816,
+        720575941353312560,
+        720575941354092336,
+        720575941354104368
+      ],
+      "side_distribution": {
+        "L": 1008,
+        "R": 532
+      },
+      "nt_distribution": {
+        "serotonin": 1540
+      },
+      "matched_types": {
+        "": 429,
+        "5-HTPLP01": 2,
+        "5-HTPMPD01": 1,
+        "5-HTPMPV01": 2,
+        "5-HTPMPV03": 2,
+        "AC neuron": 3,
+        "AN27X009": 4,
+        "AN27X017": 4,
+        "ANXXX005": 2,
+        "ANXXX136": 2,
+        "ANXXX470": 1,
+        "ANXXX981": 1,
+        "ATL014": 1,
+        "ATL031": 1,
+        "ATL035,ATL036": 1,
+        "AVLP078": 1,
+        "AVLP082": 2,
+        "AVLP084": 1,
+        "AVLP085": 1,
+        "AVLP087": 2,
+        "AVLP190,AVLP191": 3,
+        "AVLP194": 1,
+        "AVLP194_a": 1,
+        "AVLP216": 1,
+        "AVLP218b": 1,
+        "AVLP269_a": 1,
+        "AVLP347": 1,
+        "AVLP400": 1,
+        "AVLP418": 1,
+        "AVLP420_a,AVLP427": 1,
+        "AVLP423": 2,
+        "AVLP434_a": 1,
+        "AVLP436": 1,
+        "AVLP471": 1,
+        "AVLP532": 1,
+        "AVLP533": 2,
+        "AVLP536": 1,
+        "AVLP537": 2,
+        "AVLP538": 2,
+        "AVLP541a": 4,
+        "AVLP544": 2,
+        "AVLP546": 2,
+        "AVLP548_b": 3,
+        "AVLP548_d": 1,
+        "AVLP548_f": 4,
+        "AVLP550a": 1,
+        "AVLP557": 3,
+        "AVLP558": 3,
+        "AVLP559a": 2,
+        "AVLP584": 1,
+        "AVLP594": 2,
+        "AVLP614": 1,
+        "BM_Hau": 7,
+        "BM_InOm": 7,
+        "BM_Taste": 11,
+        "BM_vOcci_vPoOr": 2,
+        "BiT": 1,
+        "C3": 7,
+        "CB0017": 2,
+        "CB0026": 1,
+        "CB0041": 2,
+        "CB0060": 2,
+        "CB0066": 2,
+        "CB0071": 1,
+        "CB0075": 1,
+        "CB0088": 2,
+        "CB0097": 2,
+        "CB0099": 1,
+        "CB0117": 1,
+        "CB0124": 2,
+        "CB0138": 2,
+        "CB0148": 1,
+        "CB0208": 1,
+        "CB0212": 3,
+        "CB0254": 3,
+        "CB0262": 2,
+        "CB0270": 3,
+        "CB0288": 1,
+        "CB0310": 1,
+        "CB0417": 2,
+        "CB0450": 1,
+        "CB0461": 1,
+        "CB0479": 1,
+        "CB0494": 2,
+        "CB0564": 2,
+        "CB0575": 2,
+        "CB0579": 2,
+        "CB0596": 1,
+        "CB0620": 1,
+        "CB0668": 2,
+        "CB0684": 1,
+        "CB0736": 2,
+        "CB0749": 2,
+        "CB0761": 2,
+        "CB0801": 1,
+        "CB0825": 3,
+        "CB0853": 1,
+        "CB0874": 1,
+        "CB0883": 1,
+        "CB0892": 1,
+        "CB0906": 1,
+        "CB0907": 1,
+        "CB0927": 1,
+        "CB0955": 5,
+        "CB0958": 2,
+        "CB0963": 1,
+        "CB0991": 4,
+        "CB1008": 1,
+        "CB1009": 1,
+        "CB1013": 1,
+        "CB1022": 2,
+        "CB1048": 1,
+        "CB1049": 4,
+        "CB1063": 1,
+        "CB1094": 2,
+        "CB1096": 1,
+        "CB1121": 1,
+        "CB1148": 1,
+        "CB1160": 1,
+        "CB1176": 1,
+        "CB1181": 2,
+        "CB1205": 10,
+        "CB1228": 1,
+        "CB1251": 2,
+        "CB1274": 2,
+        "CB1297": 1,
+        "CB1304": 1,
+        "CB1369": 5,
+        "CB1379": 2,
+        "CB1384": 3,
+        "CB1394_a": 1,
+        "CB1417": 2,
+        "CB1429": 2,
+        "CB1523": 7,
+        "CB1545": 2,
+        "CB1549": 4,
+        "CB1563": 2,
+        "CB1570": 1,
+        "CB1586": 1,
+        "CB1605": 1,
+        "CB1627": 1,
+        "CB1641": 3,
+        "CB1678": 3,
+        "CB1703": 1,
+        "CB1712": 2,
+        "CB1714": 1,
+        "CB1737": 1,
+        "CB1741": 1,
+        "CB1774": 1,
+        "CB1800": 1,
+        "CB1809": 4,
+        "CB1810": 1,
+        "CB1836": 1,
+        "CB1925": 1,
+        "CB1955": 1,
+        "CB1959": 3,
+        "CB1964": 2,
+        "CB1979": 1,
+        "CB1997": 5,
+        "CB2054": 2,
+        "CB2071": 1,
+        "CB2148": 1,
+        "CB2187": 4,
+        "CB2190": 3,
+        "CB2231": 1,
+        "CB2242": 1,
+        "CB2252": 6,
+        "CB2287": 5,
+        "CB2291": 4,
+        "CB2365": 3,
+        "CB2374": 2,
+        "CB2385": 1,
+        "CB2432": 3,
+        "CB2517": 2,
+        "CB2518": 1,
+        "CB2527": 1,
+        "CB2571": 1,
+        "CB2573": 1,
+        "CB2574": 1,
+        "CB2636": 1,
+        "CB2653": 1,
+        "CB2684": 2,
+        "CB2694": 2,
+        "CB2829": 3,
+        "CB2863": 1,
+        "CB2873": 1,
+        "CB2928": 1,
+        "CB2962": 2,
+        "CB2995": 2,
+        "CB2996": 1,
+        "CB3004": 4,
+        "CB3017": 1,
+        "CB3043": 1,
+        "CB3067": 1,
+        "CB3135": 2,
+        "CB3242": 1,
+        "CB3270": 1,
+        "CB3379": 1,
+        "CB3425": 7,
+        "CB3435": 1,
+        "CB3439": 1,
+        "CB3498": 1,
+        "CB3529": 3,
+        "CB3593": 2,
+        "CB3606": 4,
+        "CB3619": 2,
+        "CB3653": 1,
+        "CB3658": 3,
+        "CB3670": 1,
+        "CB3687": 2,
+        "CB3708": 2,
+        "CB3724": 1,
+        "CB3760": 2,
+        "CB3858": 2,
+        "CB3859": 2,
+        "CB3865": 6,
+        "CB3870": 1,
+        "CB4058": 1,
+        "CB4148": 5,
+        "CB4230": 3,
+        "CB4246": 2,
+        "CEM": 1,
+        "CL235": 4,
+        "CL237": 1,
+        "CL344": 4,
+        "CL360": 2,
+        "CRE008,CRE010": 4,
+        "CRE069": 2,
+        "CSD": 2,
+        "DGI": 1,
+        "DNc01": 1,
+        "DNg22": 2,
+        "DNg26": 4,
+        "DNg28": 3,
+        "DNg30": 2,
+        "DNp27": 1,
+        "DNp29": 2,
+        "DNp30": 2,
+        "DNp32": 2,
+        "DNp58": 1,
+        "DNp62": 2,
+        "DSKMP3": 4,
+        "Dm10": 1,
+        "Dm11": 1,
+        "Dm12": 1,
+        "Dm15": 3,
+        "Dm16": 1,
+        "Dm2": 8,
+        "Dm3p": 4,
+        "Dm3q": 2,
+        "Dm3v": 7,
+        "Dm9": 1,
+        "DmDRA1": 1,
+        "EFFabg19": 1,
+        "EFFabg39": 1,
+        "EFFabg40": 3,
+        "EFFabg43": 1,
+        "EFFabg49": 1,
+        "EFFabg50": 1,
+        "EN27X010": 1,
+        "ENS3": 15,
+        "ENS4": 7,
+        "ENS5": 16,
+        "ENXXX012": 2,
+        "ENXXX226": 1,
+        "ExR3": 2,
+        "FB1H": 3,
+        "FB4G": 1,
+        "FB4Y": 3,
+        "FS4A": 2,
+        "FS4C": 1,
+        "IB065": 1,
+        "IB097": 1,
+        "IB118": 2,
+        "IN00A017": 1,
+        "IN12A024": 1,
+        "INXXX816_f": 1,
+        "INXXX842_f": 2,
+        "INXXX863_f": 1,
+        "INXXX917_f": 1,
+        "INXXX955_f": 2,
+        "ISN": 2,
+        "LAL042": 4,
+        "LAL051": 2,
+        "LAL074,LAL084": 1,
+        "LAL085": 1,
+        "LAL087": 1,
+        "LAL089": 1,
+        "LAL096,LAL097": 1,
+        "LAL120a": 2,
+        "LAL120b": 2,
+        "LAL122": 2,
+        "LAL123": 2,
+        "LAL124": 2,
+        "LAL125,LAL108": 4,
+        "LAL133a": 1,
+        "LAL133b": 5,
+        "LAL147b": 1,
+        "LAL149": 2,
+        "LAL150a": 3,
+        "LB1a": 1,
+        "LB1b": 3,
+        "LB1c": 5,
+        "LB1d": 7,
+        "LB2b": 2,
+        "LB3a": 1,
+        "LB3b": 2,
+        "LB3c": 2,
+        "LB3d": 4,
+        "LC22": 1,
+        "LC26": 1,
+        "LC39": 2,
+        "LCe02": 1,
+        "LCe05": 1,
+        "LHAV8a1": 1,
+        "LMa3": 1,
+        "LN-DN1": 1,
+        "LN-DN2": 5,
+        "LPT51": 4,
+        "LT55": 1,
+        "LTe07": 1,
+        "Lawf2": 3,
+        "LgAG1": 1,
+        "LgAG7": 2,
+        "Li124_56": 2,
+        "MBON25,MBON34": 2,
+        "MLt6": 1,
+        "MN10": 2,
+        "MN13": 1,
+        "MN4b": 1,
+        "MN5": 1,
+        "MNx03": 1,
+        "MNx05": 2,
+        "MTe01a": 3,
+        "MTe02": 1,
+        "MTe04": 1,
+        "MTe06": 1,
+        "MTe08": 1,
+        "MTe13": 1,
+        "MTe23": 1,
+        "MTe50": 1,
+        "MeMe_e01": 1,
+        "MeMe_e08": 1,
+        "MeMe_e09": 1,
+        "MeTu2a": 1,
+        "Mi1": 1,
+        "Mi13": 2,
+        "Mi14": 1,
+        "Mi15": 6,
+        "Mi2": 3,
+        "Mi4": 6,
+        "Mi9": 31,
+        "PDt": 4,
+        "PDt1": 1,
+        "PLP042c": 1,
+        "PLP170": 1,
+        "PPM1204,PS139": 1,
+        "PS083a": 2,
+        "PS083b": 2,
+        "PS087": 2,
+        "PS099b": 2,
+        "PS108": 2,
+        "PS146": 1,
+        "PS174": 2,
+        "PS175": 1,
+        "PS177": 2,
+        "PS213": 1,
+        "PS276": 1,
+        "PS279": 1,
+        "PS289": 1,
+        "PhG12": 1,
+        "SAD047": 1,
+        "SAabg01": 7,
+        "SAch01": 2,
+        "SAxx02": 10,
+        "SEZ_NSC_Hugin": 1,
+        "SIP076": 1,
+        "SIP078,SIP080": 1,
+        "SIP087": 2,
+        "SLP184": 2,
+        "SLP244": 2,
+        "SLP304b": 1,
+        "SLP359": 2,
+        "SLP374": 1,
+        "SLP389": 1,
+        "SLP405": 1,
+        "SLP456": 1,
+        "SMP001": 2,
+        "SMP039": 3,
+        "SMP105_a": 1,
+        "SMP128": 1,
+        "SMP169": 1,
+        "SMP186": 2,
+        "SMP202": 1,
+        "SMP252": 2,
+        "SMP384": 2,
+        "SMP389a": 1,
+        "SMP503": 1,
+        "SMP504": 2,
+        "SMP505": 2,
+        "SMP530": 1,
+        "SMP604": 2,
+        "SMP746": 4,
+        "SMPp&v1B_H01": 1,
+        "SNabg02": 6,
+        "SNabg11": 12,
+        "SNabg12": 4,
+        "SNabg14": 1,
+        "SNabg19": 6,
+        "SNabg21": 7,
+        "SNabg23": 23,
+        "SNabg24": 8,
+        "SNabg27": 1,
+        "SNabg28": 8,
+        "SNabg30": 1,
+        "SNabg31": 1,
+        "SNabg32": 2,
+        "SNabg96f": 1,
+        "SNabg97f": 1,
+        "SNabg98f": 3,
+        "SNabgxx": 2,
+        "SNcb01": 7,
+        "SNcb02": 4,
+        "SNch10": 6,
+        "SNpp23": 14,
+        "SNta29": 1,
+        "SNxx25": 6,
+        "SNxx25_a": 1,
+        "SNxx27": 2,
+        "SNxx29": 21,
+        "SNxx31": 1,
+        "SNxx32": 2,
+        "SPSN": 6,
+        "Sm01": 1,
+        "Sm03": 1,
+        "Sm06": 1,
+        "Sm07": 5,
+        "Sm15": 9,
+        "Sm23": 3,
+        "T1": 2,
+        "T4a": 1,
+        "TPMN2": 1,
+        "Tm20": 5,
+        "Tm27": 1,
+        "Tm35": 3,
+        "Tm4": 2,
+        "Tm5b": 1,
+        "Tm5c": 1,
+        "TmY20": 1,
+        "TuTuAb": 1,
+        "WED034,WED035": 2,
+        "WED039": 1,
+        "WED040": 4,
+        "WED041b": 1,
+        "WED096a": 1,
+        "WED097": 1,
+        "WED103": 3,
+        "aMe17a2": 1,
+        "aMe17c": 4,
+        "cLM01": 1,
+        "cM03": 3,
+        "cM04": 3,
+        "cM07": 1,
+        "cM08b": 1,
+        "cM09": 5,
+        "l_NSC_CRZ": 1,
+        "l_NSC_DH31": 1,
+        "m_NSC_DILP": 5,
+        "m_NSC_DMS": 2,
+        "pDm8": 5,
+        "unknown_antennal_sensory": 1,
+        "unknown_maxillary-labial_sensory": 2,
+        "unknown_sensory": 2,
+        "v2LN34E": 2,
+        "v2LN39a": 2,
+        "v2LN46a": 1,
+        "v2LN46b": 3,
+        "vDeltaA_a": 1,
+        "yDm8": 1
+      }
+    },
+    {
+      "name": "octopamine",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^.*$",
+        "side": null,
+        "superclass": null,
+        "nt": "octopamine",
+        "cell_class": null
+      },
+      "role": "modulatory",
+      "literature": "Octopaminergic descending neurons (2024): octopaminergic neurons modulate locomotor and other circuits.",
+      "confidence": "proxy",
+      "notes": "NT-labelled octopamine only. Tdc2 also labels tyraminergic neurons, so this is not the full Tdc2 population.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11064449/",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 1968,
+      "status": "present",
+      "example_body_ids": [
+        720575941350444592,
+        720575941353301552,
+        720575941353467696,
+        720575941353525808,
+        720575941354071344
+      ],
+      "side_distribution": {
+        "": 1,
+        "L": 1178,
+        "R": 789
+      },
+      "nt_distribution": {
+        "octopamine": 1968
+      },
+      "matched_types": {
+        "": 914,
+        "AN07B082": 1,
+        "AN07B101_b": 1,
+        "AN12B011": 1,
+        "AN19B019": 1,
+        "ANXXX019": 2,
+        "AN_multi_124": 1,
+        "AOTU007": 1,
+        "AOTU037": 1,
+        "AOTU038": 3,
+        "AOTU039": 2,
+        "AVLP051": 2,
+        "AVLP059": 3,
+        "AVLP555": 1,
+        "AVLP558": 1,
+        "AVLP559a": 1,
+        "AVLP559b": 1,
+        "AVLP559c": 1,
+        "AVLP573": 1,
+        "AVLP580": 1,
+        "BM_InOm": 146,
+        "BM_vOcci_vPoOr": 13,
+        "C2": 1,
+        "C3": 3,
+        "CB0207": 2,
+        "CB0457": 1,
+        "CB0588": 1,
+        "CB0663": 3,
+        "CB0723": 1,
+        "CB0873": 2,
+        "CB0901": 2,
+        "CB0945": 1,
+        "CB1007": 2,
+        "CB1236": 1,
+        "CB1252": 1,
+        "CB1271": 1,
+        "CB1812": 1,
+        "CB1824": 1,
+        "CB1900": 1,
+        "CB1903": 1,
+        "CB1983": 1,
+        "CB2021": 1,
+        "CB2905": 1,
+        "CB2966": 5,
+        "CB3983": 2,
+        "CL005": 1,
+        "CL111": 2,
+        "CL169": 1,
+        "CL243": 1,
+        "CL301,CL302": 1,
+        "CL339": 2,
+        "CvN10": 1,
+        "CvN4": 1,
+        "CvNA2": 1,
+        "DNg104": 2,
+        "DNg34": 2,
+        "DNg66": 1,
+        "DNge138": 2,
+        "DNge149": 1,
+        "DNge150": 1,
+        "DNge151": 1,
+        "DNge152": 1,
+        "DNp59": 1,
+        "DProN5": 1,
+        "DProN8": 1,
+        "DProN9": 1,
+        "DVM1a-c": 1,
+        "DVM2a-b": 1,
+        "DVM3a-b": 3,
+        "Dm1": 2,
+        "Dm10": 3,
+        "Dm11": 1,
+        "Dm15": 19,
+        "Dm2": 15,
+        "Dm20": 2,
+        "Dm3p": 8,
+        "Dm3q": 3,
+        "Dm3v": 10,
+        "Dm4": 2,
+        "Dm6": 2,
+        "EA00B006": 1,
+        "EAXXX079": 2,
+        "EFFabg01": 1,
+        "EFFabg03": 2,
+        "EFFabg05": 1,
+        "EFFabg10": 1,
+        "EFFabg11": 2,
+        "EFFabg12": 3,
+        "EFFabg13": 1,
+        "EFFabg14": 3,
+        "EFFabg15": 1,
+        "EFFabg19": 5,
+        "EFFabg21": 1,
+        "EFFabg27": 1,
+        "EFFabg30": 1,
+        "EFFabg36": 5,
+        "EFFabg37": 1,
+        "EFFabg38": 4,
+        "EFFabg39": 2,
+        "EFFabg40": 2,
+        "EFFabg41": 3,
+        "EFFabg42": 2,
+        "EFFabg43": 2,
+        "EFFabg44": 3,
+        "EFFabg45": 2,
+        "EFFabg46": 3,
+        "EFFabg47": 1,
+        "EFFabg48": 2,
+        "EFFabg49": 2,
+        "EFFabg50": 1,
+        "EFFabg96f": 2,
+        "EFFabg97f": 1,
+        "EFFabg98f": 1,
+        "EFFabg99f": 1,
+        "EL": 18,
+        "EN00B001": 1,
+        "EN00B003": 1,
+        "EN00B007": 1,
+        "EN00B008_T1": 1,
+        "EN00B010": 1,
+        "EN00B011": 2,
+        "EN00B013": 1,
+        "EN00B015": 2,
+        "EN00B016": 1,
+        "EN00B019": 1,
+        "EN00B024": 1,
+        "EN00B026": 7,
+        "EN21X001": 2,
+        "EN27X010": 1,
+        "ENXXX": 1,
+        "ENXXX226": 4,
+        "ENXXX286": 1,
+        "IN06A064": 1,
+        "IN12B011": 1,
+        "INXXX045": 1,
+        "INXXX221": 2,
+        "INXXX240": 1,
+        "INXXX244": 1,
+        "INXXX271": 1,
+        "INXXX302": 1,
+        "INXXX336": 1,
+        "INXXX364": 4,
+        "INXXX394": 1,
+        "INXXX441": 2,
+        "INXXX822_f": 3,
+        "INXXX863_f": 1,
+        "INXXX873_f": 3,
+        "INXXX874_f": 1,
+        "INXXX877_f": 2,
+        "INXXX887_f": 1,
+        "INXXX917_f": 1,
+        "INXXX926_f": 2,
+        "INXXX942_f": 1,
+        "LAL087": 2,
+        "LAL091": 1,
+        "LB1a": 2,
+        "LB3b": 1,
+        "LC10a": 1,
+        "LC10e": 1,
+        "LC14": 4,
+        "LC14a2": 1,
+        "LC17": 2,
+        "LC24": 1,
+        "LC26": 1,
+        "LC27": 1,
+        "LCe01b": 2,
+        "LCe02": 1,
+        "LCe06": 1,
+        "LHAV2b1": 1,
+        "LMa5": 2,
+        "LMt3": 1,
+        "LPi05": 1,
+        "LTe47": 1,
+        "Lat": 1,
+        "Lawf1": 2,
+        "Lawf2": 6,
+        "Li01": 4,
+        "Li02": 1,
+        "Li06": 5,
+        "Li09": 1,
+        "MLt7": 5,
+        "MN2V": 1,
+        "MN6": 1,
+        "MN7": 1,
+        "MNabgxxF": 1,
+        "MNad07": 1,
+        "MNad09": 1,
+        "MNx02": 1,
+        "MNx04": 1,
+        "MNxm01": 1,
+        "MNxm02": 1,
+        "MNxm03": 2,
+        "MTe01a": 3,
+        "MTe04": 2,
+        "MeTu3b": 1,
+        "MeTu4a": 1,
+        "Mi10": 2,
+        "Mi13": 1,
+        "Mi15": 219,
+        "Mi2": 4,
+        "Mi4": 4,
+        "Mi9": 20,
+        "OA-AL2b1": 2,
+        "OA-AL2i1": 2,
+        "OA-AL2i2": 4,
+        "OA-AL2i3": 4,
+        "OA-AL2i4": 2,
+        "OA-ASM1": 4,
+        "OA-ASM2": 1,
+        "OA-ASM3": 3,
+        "OA-VPM3": 2,
+        "OA-VPM4": 1,
+        "OA-VUMa1": 2,
+        "OA-VUMa2": 2,
+        "OA-VUMa3": 2,
+        "OA-VUMa4": 2,
+        "OA-VUMa5": 2,
+        "OA-VUMa6": 2,
+        "OA-VUMa8": 1,
+        "OCG02a": 1,
+        "PAM": 1,
+        "PLP032": 1,
+        "PLP237": 1,
+        "PS008": 1,
+        "PS247": 1,
+        "SAD047": 1,
+        "SMP142,SMP145": 3,
+        "SMP158": 1,
+        "SNabg01": 1,
+        "SNabg05": 1,
+        "Sm01": 2,
+        "Sm02": 1,
+        "Sm03": 4,
+        "Sm04": 1,
+        "Sm05": 2,
+        "Sm07": 8,
+        "Sm08": 1,
+        "Sm09": 3,
+        "Sm15": 1,
+        "Sm17": 1,
+        "Sm20": 2,
+        "Sm22": 1,
+        "T1": 5,
+        "T2a": 1,
+        "T3": 2,
+        "Tm16": 1,
+        "Tm20": 24,
+        "Tm21": 47,
+        "Tm27": 4,
+        "Tm32": 3,
+        "Tm33": 1,
+        "Tm34": 1,
+        "Tm35": 5,
+        "Tm37": 5,
+        "Tm4": 1,
+        "Tm40": 2,
+        "Tm5a": 3,
+        "Tm5b": 2,
+        "Tm5c": 6,
+        "Tm5d": 1,
+        "Tm5e": 1,
+        "Tm7": 1,
+        "Tm9": 2,
+        "TmY10": 1,
+        "TmY11": 1,
+        "TmY14": 2,
+        "TmY20": 1,
+        "TmY31": 1,
+        "TmY5a": 1,
+        "WED162": 1,
+        "aMe1": 1,
+        "aMe5": 1,
+        "ab-PDF": 6,
+        "accessory_tibia_flexor_A_slow": 1,
+        "accessory_tibia_flexor_B": 1,
+        "anterior_dorsal_mesothoracic_nerve_cut": 1,
+        "cL19": 2,
+        "femur_reductor": 2,
+        "l_NSC_CRZ": 1,
+        "long_tendon_muscle_B": 2,
+        "m-NSC": 1,
+        "m_NSC_DH44": 5,
+        "m_NSC_DILP": 8,
+        "m_NSC_DMS": 4,
+        "mesVUM-MJ": 1,
+        "pDm8": 10,
+        "sternal_adductor": 1,
+        "sternal_adductor_ProAN": 1,
+        "sternal_posterior_rotator_miller_32": 1,
+        "tarsus_depressor_B": 1,
+        "tergotrochanter_extensor_TT_PDMN": 1,
+        "tp2": 1,
+        "trochanter_flexor_MesoALN_posterior_soma": 1,
+        "v2LN30": 1,
+        "yDm8": 9
+      }
+    },
+    {
+      "name": "KC",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^KC(?:ab(?:-(?:ap1|[cmps]))?|a'b'(?:-(?:ap[12]|m))?|apbp-(?:ap[12]|m)|g(?:-(?:[dm]|s[1-4]))?)?$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "state",
+      "literature": "Li et al. (2020), mushroom-body connectome: Kenyon cells provide mushroom-body representations for learning.",
+      "confidence": "family",
+      "notes": "",
+      "source": "https://elifesciences.org/articles/62576",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 4403,
+      "status": "present",
+      "example_body_ids": [
+        720575941351040048,
+        720575941351118640,
+        720575941351883568,
+        720575941351937840,
+        720575941352042288
+      ],
+      "side_distribution": {
+        "": 1,
+        "L": 2218,
+        "R": 2184
+      },
+      "nt_distribution": {
+        "": 113,
+        "acetylcholine": 4265,
+        "dopamine": 7,
+        "gaba": 13,
+        "glutamate": 5
+      },
+      "matched_types": {
+        "KC": 352,
+        "KCa'b'": 467,
+        "KCa'b'-ap1": 3,
+        "KCa'b'-ap2": 4,
+        "KCa'b'-m": 5,
+        "KCab": 1312,
+        "KCab-c": 9,
+        "KCab-m": 27,
+        "KCab-p": 81,
+        "KCab-s": 3,
+        "KCapbp-ap1": 70,
+        "KCapbp-ap2": 14,
+        "KCapbp-m": 38,
+        "KCg": 427,
+        "KCg-d": 149,
+        "KCg-m": 1439,
+        "KCg-s1": 2,
+        "KCg-s2": 1
+      }
+    },
+    {
+      "name": "MBON",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^MBON[0-9]{2}$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Li et al. (2020), mushroom-body connectome: mushroom-body output neurons carry learned output.",
+      "confidence": "family",
+      "notes": "Ambiguous comma-joined types and '-like' cells excluded, including BANC MBON25,MBON34.",
+      "source": "https://elifesciences.org/articles/62576",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 92,
+      "status": "present",
+      "example_body_ids": [
+        720575941353646640,
+        720575941393641732,
+        720575941394436502,
+        720575941407672494,
+        720575941412161451
+      ],
+      "side_distribution": {
+        "L": 48,
+        "R": 44
+      },
+      "nt_distribution": {
+        "": 3,
+        "acetylcholine": 33,
+        "dopamine": 16,
+        "gaba": 24,
+        "glutamate": 16
+      },
+      "matched_types": {
+        "MBON01": 2,
+        "MBON02": 2,
+        "MBON03": 2,
+        "MBON04": 2,
+        "MBON05": 2,
+        "MBON06": 2,
+        "MBON07": 4,
+        "MBON09": 4,
+        "MBON10": 12,
+        "MBON11": 2,
+        "MBON12": 4,
+        "MBON13": 3,
+        "MBON14": 5,
+        "MBON15": 3,
+        "MBON16": 2,
+        "MBON17": 4,
+        "MBON18": 2,
+        "MBON19": 6,
+        "MBON20": 2,
+        "MBON21": 2,
+        "MBON22": 2,
+        "MBON23": 2,
+        "MBON24": 2,
+        "MBON26": 2,
+        "MBON27": 2,
+        "MBON28": 2,
+        "MBON29": 2,
+        "MBON30": 2,
+        "MBON31": 3,
+        "MBON32": 2,
+        "MBON33": 2,
+        "MBON35": 2
+      }
+    },
+    {
+      "name": "APL",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^APL$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "modulatory",
+      "literature": "Amin et al. (2020), localized mushroom-body inhibition: APL provides feedback inhibition to Kenyon cells.",
+      "confidence": "exact",
+      "notes": "",
+      "source": "https://elifesciences.org/articles/56954",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 1,
+      "status": "present",
+      "example_body_ids": [
+        720575941482622627
+      ],
+      "side_distribution": {
+        "R": 1
+      },
+      "nt_distribution": {
+        "": 1
+      },
+      "matched_types": {
+        "APL": 1
+      }
+    },
+    {
+      "name": "ORN_D",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_D$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 15,
+      "status": "present",
+      "example_body_ids": [
+        720575941408700846,
+        720575941411409323,
+        720575941439777759,
+        720575941441494107,
+        720575941454707625
+      ],
+      "side_distribution": {
+        "L": 6,
+        "R": 9
+      },
+      "nt_distribution": {
+        "acetylcholine": 15
+      },
+      "matched_types": {
+        "ORN_D": 15
+      }
+    },
+    {
+      "name": "ORN_DA1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DA1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 86,
+      "status": "present",
+      "example_body_ids": [
+        720575941393278212,
+        720575941394780822,
+        720575941408635310,
+        720575941408668078,
+        720575941415722012
+      ],
+      "side_distribution": {
+        "L": 65,
+        "R": 21
+      },
+      "nt_distribution": {
+        "acetylcholine": 86
+      },
+      "matched_types": {
+        "ORN_DA1": 86
+      }
+    },
+    {
+      "name": "ORN_DA2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DA2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 17,
+      "status": "present",
+      "example_body_ids": [
+        720575941353213744,
+        720575941409080879,
+        720575941441505983,
+        720575941453785671,
+        720575941455777331
+      ],
+      "side_distribution": {
+        "L": 8,
+        "R": 9
+      },
+      "nt_distribution": {
+        "acetylcholine": 17
+      },
+      "matched_types": {
+        "ORN_DA2": 17
+      }
+    },
+    {
+      "name": "ORN_DA3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DA3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 8,
+      "status": "present",
+      "example_body_ids": [
+        720575941455982643,
+        720575941481016483,
+        720575941486482498,
+        720575941499160649,
+        720575941505459394
+      ],
+      "side_distribution": {
+        "L": 6,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 8
+      },
+      "matched_types": {
+        "ORN_DA3": 8
+      }
+    },
+    {
+      "name": "ORN_DA4l",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DA4l$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 22,
+      "status": "present",
+      "example_body_ids": [
+        720575941432596183,
+        720575941441231701,
+        720575941461535187,
+        720575941477832001,
+        720575941481060003
+      ],
+      "side_distribution": {
+        "L": 18,
+        "R": 4
+      },
+      "nt_distribution": {
+        "acetylcholine": 22
+      },
+      "matched_types": {
+        "ORN_DA4l": 22
+      }
+    },
+    {
+      "name": "ORN_DA4m",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DA4m$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 37,
+      "status": "present",
+      "example_body_ids": [
+        720575941393541014,
+        720575941410638612,
+        720575941426848852,
+        720575941431582345,
+        720575941432411233
+      ],
+      "side_distribution": {
+        "L": 18,
+        "R": 19
+      },
+      "nt_distribution": {
+        "acetylcholine": 37
+      },
+      "matched_types": {
+        "ORN_DA4m": 37
+      }
+    },
+    {
+      "name": "ORN_DC1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DC1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 42,
+      "status": "present",
+      "example_body_ids": [
+        720575941449130933,
+        720575941458978207,
+        720575941460254704,
+        720575941460316831,
+        720575941462621907
+      ],
+      "side_distribution": {
+        "L": 21,
+        "R": 21
+      },
+      "nt_distribution": {
+        "acetylcholine": 42
+      },
+      "matched_types": {
+        "ORN_DC1": 42
+      }
+    },
+    {
+      "name": "ORN_DC2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DC2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 16,
+      "status": "present",
+      "example_body_ids": [
+        720575941401286179,
+        720575941472903744,
+        720575941481830786,
+        720575941506262844,
+        720575941508469377
+      ],
+      "side_distribution": {
+        "L": 10,
+        "R": 6
+      },
+      "nt_distribution": {
+        "acetylcholine": 16
+      },
+      "matched_types": {
+        "ORN_DC2": 16
+      }
+    },
+    {
+      "name": "ORN_DC3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DC3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 34,
+      "status": "present",
+      "example_body_ids": [
+        720575941353056816,
+        720575941444981674,
+        720575941466543385,
+        720575941470976477,
+        720575941471260171
+      ],
+      "side_distribution": {
+        "L": 22,
+        "R": 12
+      },
+      "nt_distribution": {
+        "acetylcholine": 34
+      },
+      "matched_types": {
+        "ORN_DC3": 34
+      }
+    },
+    {
+      "name": "ORN_DC4",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DC4$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 22,
+      "status": "present",
+      "example_body_ids": [
+        720575941485863746,
+        720575941492490700,
+        720575941513159377,
+        720575941513788881,
+        720575941520798899
+      ],
+      "side_distribution": {
+        "L": 13,
+        "R": 9
+      },
+      "nt_distribution": {
+        "acetylcholine": 22
+      },
+      "matched_types": {
+        "ORN_DC4": 22
+      }
+    },
+    {
+      "name": "ORN_DL1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DL1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 29,
+      "status": "present",
+      "example_body_ids": [
+        720575941426779988,
+        720575941427997012,
+        720575941430409391,
+        720575941441744219,
+        720575941442227663
+      ],
+      "side_distribution": {
+        "L": 27,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 29
+      },
+      "matched_types": {
+        "ORN_DL1": 29
+      }
+    },
+    {
+      "name": "ORN_DL2d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DL2d$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 19,
+      "status": "present",
+      "example_body_ids": [
+        720575941354378032,
+        720575941431303160,
+        720575941431354465,
+        720575941439596255,
+        720575941444074410
+      ],
+      "side_distribution": {
+        "L": 11,
+        "R": 8
+      },
+      "nt_distribution": {
+        "acetylcholine": 19
+      },
+      "matched_types": {
+        "ORN_DL2d": 19
+      }
+    },
+    {
+      "name": "ORN_DL2v",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DL2v$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 25,
+      "status": "present",
+      "example_body_ids": [
+        720575941414779796,
+        720575941427755348,
+        720575941430629513,
+        720575941441460927,
+        720575941448841397
+      ],
+      "side_distribution": {
+        "L": 15,
+        "R": 10
+      },
+      "nt_distribution": {
+        "acetylcholine": 25
+      },
+      "matched_types": {
+        "ORN_DL2v": 25
+      }
+    },
+    {
+      "name": "ORN_DL3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DL3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 16,
+      "status": "present",
+      "example_body_ids": [
+        720575941439685183,
+        720575941444034986,
+        720575941458990918,
+        720575941469928925,
+        720575941477408798
+      ],
+      "side_distribution": {
+        "L": 12,
+        "R": 4
+      },
+      "nt_distribution": {
+        "acetylcholine": 16
+      },
+      "matched_types": {
+        "ORN_DL3": 16
+      }
+    },
+    {
+      "name": "ORN_DL4",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DL4$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 20,
+      "status": "present",
+      "example_body_ids": [
+        720575941433219086,
+        720575941454848563,
+        720575941467840278,
+        720575941481095843,
+        720575941482703811
+      ],
+      "side_distribution": {
+        "L": 6,
+        "R": 14
+      },
+      "nt_distribution": {
+        "acetylcholine": 20
+      },
+      "matched_types": {
+        "ORN_DL4": 20
+      }
+    },
+    {
+      "name": "ORN_DL5",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DL5$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 26,
+      "status": "present",
+      "example_body_ids": [
+        720575941431309304,
+        720575941433537806,
+        720575941460757188,
+        720575941496399742,
+        720575941501205899
+      ],
+      "side_distribution": {
+        "L": 14,
+        "R": 12
+      },
+      "nt_distribution": {
+        "acetylcholine": 26
+      },
+      "matched_types": {
+        "ORN_DL5": 26
+      }
+    },
+    {
+      "name": "ORN_DM1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DM1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 76,
+      "status": "present",
+      "example_body_ids": [
+        720575941408399663,
+        720575941410065199,
+        720575941410449067,
+        720575941413632404,
+        720575941416130076
+      ],
+      "side_distribution": {
+        "L": 39,
+        "R": 37
+      },
+      "nt_distribution": {
+        "acetylcholine": 76
+      },
+      "matched_types": {
+        "ORN_DM1": 76
+      }
+    },
+    {
+      "name": "ORN_DM2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DM2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 49,
+      "status": "present",
+      "example_body_ids": [
+        720575941391982084,
+        720575941404901488,
+        720575941413627796,
+        720575941416294940,
+        720575941435926560
+      ],
+      "side_distribution": {
+        "L": 29,
+        "R": 20
+      },
+      "nt_distribution": {
+        "acetylcholine": 49
+      },
+      "matched_types": {
+        "ORN_DM2": 49
+      }
+    },
+    {
+      "name": "ORN_DM3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DM3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 32,
+      "status": "present",
+      "example_body_ids": [
+        720575941407599790,
+        720575941412147627,
+        720575941426792020,
+        720575941432083849,
+        720575941439057964
+      ],
+      "side_distribution": {
+        "L": 24,
+        "R": 8
+      },
+      "nt_distribution": {
+        "acetylcholine": 32
+      },
+      "matched_types": {
+        "ORN_DM3": 32
+      }
+    },
+    {
+      "name": "ORN_DM4",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DM4$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 49,
+      "status": "present",
+      "example_body_ids": [
+        720575941432238606,
+        720575941439761493,
+        720575941439858517,
+        720575941466224406,
+        720575941468857309
+      ],
+      "side_distribution": {
+        "L": 31,
+        "R": 18
+      },
+      "nt_distribution": {
+        "acetylcholine": 49
+      },
+      "matched_types": {
+        "ORN_DM4": 49
+      }
+    },
+    {
+      "name": "ORN_DM5",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DM5$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 34,
+      "status": "present",
+      "example_body_ids": [
+        720575941353462832,
+        720575941411763055,
+        720575941432410721,
+        720575941439705663,
+        720575941441854555
+      ],
+      "side_distribution": {
+        "L": 19,
+        "R": 15
+      },
+      "nt_distribution": {
+        "acetylcholine": 34
+      },
+      "matched_types": {
+        "ORN_DM5": 34
+      }
+    },
+    {
+      "name": "ORN_DM6",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DM6$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 44,
+      "status": "present",
+      "example_body_ids": [
+        720575941405216624,
+        720575941408361646,
+        720575941436710542,
+        720575941437367840,
+        720575941440714075
+      ],
+      "side_distribution": {
+        "L": 22,
+        "R": 22
+      },
+      "nt_distribution": {
+        "acetylcholine": 44
+      },
+      "matched_types": {
+        "ORN_DM6": 44
+      }
+    },
+    {
+      "name": "ORN_DP1l",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DP1l$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 32,
+      "status": "present",
+      "example_body_ids": [
+        720575941407739695,
+        720575941430480120,
+        720575941432205838,
+        720575941444696746,
+        720575941453374889
+      ],
+      "side_distribution": {
+        "L": 18,
+        "R": 14
+      },
+      "nt_distribution": {
+        "acetylcholine": 32
+      },
+      "matched_types": {
+        "ORN_DP1l": 32
+      }
+    },
+    {
+      "name": "ORN_DP1m",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_DP1m$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 10,
+      "status": "present",
+      "example_body_ids": [
+        720575941440892507,
+        720575941479643778,
+        720575941482046605,
+        720575941502947927,
+        720575941509806096
+      ],
+      "side_distribution": {
+        "L": 7,
+        "R": 3
+      },
+      "nt_distribution": {
+        "acetylcholine": 10
+      },
+      "matched_types": {
+        "ORN_DP1m": 10
+      }
+    },
+    {
+      "name": "ORN_V",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_V$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 72,
+      "status": "present",
+      "example_body_ids": [
+        720575941408873519,
+        720575941409103407,
+        720575941411789167,
+        720575941413083503,
+        720575941413821844
+      ],
+      "side_distribution": {
+        "L": 38,
+        "R": 34
+      },
+      "nt_distribution": {
+        "acetylcholine": 72
+      },
+      "matched_types": {
+        "ORN_V": 72
+      }
+    },
+    {
+      "name": "ORN_VA1d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA1d$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 69,
+      "status": "present",
+      "example_body_ids": [
+        720575941401912611,
+        720575941402109731,
+        720575941408599343,
+        720575941432422241,
+        720575941433534222
+      ],
+      "side_distribution": {
+        "L": 50,
+        "R": 19
+      },
+      "nt_distribution": {
+        "acetylcholine": 69
+      },
+      "matched_types": {
+        "ORN_VA1d": 69
+      }
+    },
+    {
+      "name": "ORN_VA1v",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA1v$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 90,
+      "status": "present",
+      "example_body_ids": [
+        720575941405191280,
+        720575941408510638,
+        720575941409039022,
+        720575941413783151,
+        720575941414599316
+      ],
+      "side_distribution": {
+        "L": 59,
+        "R": 31
+      },
+      "nt_distribution": {
+        "acetylcholine": 90
+      },
+      "matched_types": {
+        "ORN_VA1v": 90
+      }
+    },
+    {
+      "name": "ORN_VA2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 69,
+      "status": "present",
+      "example_body_ids": [
+        720575941407977263,
+        720575941412681583,
+        720575941430295544,
+        720575941434323982,
+        720575941437598738
+      ],
+      "side_distribution": {
+        "L": 33,
+        "R": 36
+      },
+      "nt_distribution": {
+        "acetylcholine": 69
+      },
+      "matched_types": {
+        "ORN_VA2": 69
+      }
+    },
+    {
+      "name": "ORN_VA3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 56,
+      "status": "present",
+      "example_body_ids": [
+        720575941392624388,
+        720575941412529007,
+        720575941430923512,
+        720575941431034505,
+        720575941431720952
+      ],
+      "side_distribution": {
+        "L": 28,
+        "R": 28
+      },
+      "nt_distribution": {
+        "acetylcholine": 56
+      },
+      "matched_types": {
+        "ORN_VA3": 56
+      }
+    },
+    {
+      "name": "ORN_VA4",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA4$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 38,
+      "status": "present",
+      "example_body_ids": [
+        720575941407901870,
+        720575941414046865,
+        720575941431296649,
+        720575941432002263,
+        720575941436366624
+      ],
+      "side_distribution": {
+        "L": 18,
+        "R": 20
+      },
+      "nt_distribution": {
+        "acetylcholine": 38
+      },
+      "matched_types": {
+        "ORN_VA4": 38
+      }
+    },
+    {
+      "name": "ORN_VA5",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA5$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 15,
+      "status": "present",
+      "example_body_ids": [
+        720575941431652015,
+        720575941440592981,
+        720575941463141316,
+        720575941478108993,
+        720575941486562701
+      ],
+      "side_distribution": {
+        "L": 8,
+        "R": 7
+      },
+      "nt_distribution": {
+        "acetylcholine": 15
+      },
+      "matched_types": {
+        "ORN_VA5": 15
+      }
+    },
+    {
+      "name": "ORN_VA6",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA6$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 54,
+      "status": "present",
+      "example_body_ids": [
+        720575941352825904,
+        720575941393413014,
+        720575941409988911,
+        720575941412851823,
+        720575941427239252
+      ],
+      "side_distribution": {
+        "L": 33,
+        "R": 21
+      },
+      "nt_distribution": {
+        "acetylcholine": 54
+      },
+      "matched_types": {
+        "ORN_VA6": 54
+      }
+    },
+    {
+      "name": "ORN_VA7l",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA7l$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 1,
+      "status": "present",
+      "example_body_ids": [
+        720575941594369899
+      ],
+      "side_distribution": {
+        "L": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 1
+      },
+      "matched_types": {
+        "ORN_VA7l": 1
+      }
+    },
+    {
+      "name": "ORN_VA7m",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VA7m$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 28,
+      "status": "present",
+      "example_body_ids": [
+        720575941352972848,
+        720575941411777647,
+        720575941414410900,
+        720575941414773393,
+        720575941439133202
+      ],
+      "side_distribution": {
+        "L": 13,
+        "R": 15
+      },
+      "nt_distribution": {
+        "acetylcholine": 28
+      },
+      "matched_types": {
+        "ORN_VA7m": 28
+      }
+    },
+    {
+      "name": "ORN_VC1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VC1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 30,
+      "status": "present",
+      "example_body_ids": [
+        720575941429890697,
+        720575941431173880,
+        720575941437906194,
+        720575941439262783,
+        720575941449953870
+      ],
+      "side_distribution": {
+        "L": 13,
+        "R": 17
+      },
+      "nt_distribution": {
+        "acetylcholine": 30
+      },
+      "matched_types": {
+        "ORN_VC1": 30
+      }
+    },
+    {
+      "name": "ORN_VC2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VC2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 23,
+      "status": "present",
+      "example_body_ids": [
+        720575941392923798,
+        720575941411771247,
+        720575941439406677,
+        720575941448795061,
+        720575941461636307
+      ],
+      "side_distribution": {
+        "L": 10,
+        "R": 13
+      },
+      "nt_distribution": {
+        "acetylcholine": 23
+      },
+      "matched_types": {
+        "ORN_VC2": 23
+      }
+    },
+    {
+      "name": "ORN_VC3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VC3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 36,
+      "status": "present",
+      "example_body_ids": [
+        720575941404054896,
+        720575941426798164,
+        720575941431388847,
+        720575941435810702,
+        720575941439400021
+      ],
+      "side_distribution": {
+        "L": 17,
+        "R": 19
+      },
+      "nt_distribution": {
+        "acetylcholine": 36
+      },
+      "matched_types": {
+        "ORN_VC3": 36
+      }
+    },
+    {
+      "name": "ORN_VC4",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VC4$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 42,
+      "status": "present",
+      "example_body_ids": [
+        720575941432443785,
+        720575941434033166,
+        720575941436168992,
+        720575941447481620,
+        720575941456886509
+      ],
+      "side_distribution": {
+        "L": 27,
+        "R": 15
+      },
+      "nt_distribution": {
+        "acetylcholine": 42
+      },
+      "matched_types": {
+        "ORN_VC4": 42
+      }
+    },
+    {
+      "name": "ORN_VC5",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VC5$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 24,
+      "status": "present",
+      "example_body_ids": [
+        720575941412137839,
+        720575941430297592,
+        720575941431112289,
+        720575941445429162,
+        720575941449355869
+      ],
+      "side_distribution": {
+        "L": 13,
+        "R": 11
+      },
+      "nt_distribution": {
+        "acetylcholine": 24
+      },
+      "matched_types": {
+        "ORN_VC5": 24
+      }
+    },
+    {
+      "name": "ORN_VL1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VL1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 102,
+      "status": "present",
+      "example_body_ids": [
+        720575941392873476,
+        720575941392897796,
+        720575941393548694,
+        720575941407863726,
+        720575941414677908
+      ],
+      "side_distribution": {
+        "L": 59,
+        "R": 43
+      },
+      "nt_distribution": {
+        "acetylcholine": 102
+      },
+      "matched_types": {
+        "ORN_VL1": 102
+      }
+    },
+    {
+      "name": "ORN_VL2a",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VL2a$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 45,
+      "status": "present",
+      "example_body_ids": [
+        720575941412796271,
+        720575941432458633,
+        720575941432611721,
+        720575941435837070,
+        720575941441017567
+      ],
+      "side_distribution": {
+        "L": 30,
+        "R": 15
+      },
+      "nt_distribution": {
+        "acetylcholine": 45
+      },
+      "matched_types": {
+        "ORN_VL2a": 45
+      }
+    },
+    {
+      "name": "ORN_VL2p",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VL2p$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 29,
+      "status": "present",
+      "example_body_ids": [
+        720575941392768004,
+        720575941408677679,
+        720575941414040212,
+        720575941478042649,
+        720575941479018561
+      ],
+      "side_distribution": {
+        "L": 21,
+        "R": 8
+      },
+      "nt_distribution": {
+        "acetylcholine": 29
+      },
+      "matched_types": {
+        "ORN_VL2p": 29
+      }
+    },
+    {
+      "name": "ORN_VM1",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM1$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 29,
+      "status": "present",
+      "example_body_ids": [
+        720575941394966934,
+        720575941400884771,
+        720575941410220715,
+        720575941441020623,
+        720575941449707086
+      ],
+      "side_distribution": {
+        "L": 17,
+        "R": 12
+      },
+      "nt_distribution": {
+        "acetylcholine": 29
+      },
+      "matched_types": {
+        "ORN_VM1": 29
+      }
+    },
+    {
+      "name": "ORN_VM2",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM2$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 43,
+      "status": "present",
+      "example_body_ids": [
+        720575941411763311,
+        720575941411860651,
+        720575941431226799,
+        720575941432439137,
+        720575941441484991
+      ],
+      "side_distribution": {
+        "L": 23,
+        "R": 20
+      },
+      "nt_distribution": {
+        "acetylcholine": 43
+      },
+      "matched_types": {
+        "ORN_VM2": 43
+      }
+    },
+    {
+      "name": "ORN_VM3",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM3$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 49,
+      "status": "present",
+      "example_body_ids": [
+        720575941400896291,
+        720575941409601583,
+        720575941410223787,
+        720575941432083593,
+        720575941432459768
+      ],
+      "side_distribution": {
+        "L": 26,
+        "R": 23
+      },
+      "nt_distribution": {
+        "acetylcholine": 49
+      },
+      "matched_types": {
+        "ORN_VM3": 49
+      }
+    },
+    {
+      "name": "ORN_VM4",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM4$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 50,
+      "status": "present",
+      "example_body_ids": [
+        720575941403237411,
+        720575941409103663,
+        720575941412528043,
+        720575941413618324,
+        720575941417958428
+      ],
+      "side_distribution": {
+        "L": 27,
+        "R": 23
+      },
+      "nt_distribution": {
+        "acetylcholine": 50
+      },
+      "matched_types": {
+        "ORN_VM4": 50
+      }
+    },
+    {
+      "name": "ORN_VM5d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM5d$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 67,
+      "status": "present",
+      "example_body_ids": [
+        720575941391958020,
+        720575941413376913,
+        720575941415630737,
+        720575941415664412,
+        720575941431138223
+      ],
+      "side_distribution": {
+        "L": 36,
+        "R": 31
+      },
+      "nt_distribution": {
+        "acetylcholine": 67
+      },
+      "matched_types": {
+        "ORN_VM5d": 67
+      }
+    },
+    {
+      "name": "ORN_VM5v",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM5v$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 39,
+      "status": "present",
+      "example_body_ids": [
+        720575941352084784,
+        720575941352539440,
+        720575941391953156,
+        720575941410240939,
+        720575941413608084
+      ],
+      "side_distribution": {
+        "L": 25,
+        "R": 14
+      },
+      "nt_distribution": {
+        "acetylcholine": 39
+      },
+      "matched_types": {
+        "ORN_VM5v": 39
+      }
+    },
+    {
+      "name": "ORN_VM6",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM6$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941499038537,
+        720575941642076959
+      ],
+      "side_distribution": {
+        "L": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "ORN_VM6": 2
+      }
+    },
+    {
+      "name": "ORN_VM6l",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM6l$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 30,
+      "status": "present",
+      "example_body_ids": [
+        720575941428253524,
+        720575941431412183,
+        720575941435848846,
+        720575941448826037,
+        720575941448837813
+      ],
+      "side_distribution": {
+        "L": 11,
+        "R": 19
+      },
+      "nt_distribution": {
+        "acetylcholine": 30
+      },
+      "matched_types": {
+        "ORN_VM6l": 30
+      }
+    },
+    {
+      "name": "ORN_VM6m",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM6m$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 14,
+      "status": "present",
+      "example_body_ids": [
+        720575941391928580,
+        720575941413568657,
+        720575941466683414,
+        720575941467622166,
+        720575941469183709
+      ],
+      "side_distribution": {
+        "L": 9,
+        "R": 5
+      },
+      "nt_distribution": {
+        "acetylcholine": 14
+      },
+      "matched_types": {
+        "ORN_VM6m": 14
+      }
+    },
+    {
+      "name": "ORN_VM6v",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM6v$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 31,
+      "status": "present",
+      "example_body_ids": [
+        720575941427819348,
+        720575941432254222,
+        720575941448791733,
+        720575941449715534,
+        720575941451967815
+      ],
+      "side_distribution": {
+        "L": 18,
+        "R": 13
+      },
+      "nt_distribution": {
+        "acetylcholine": 31
+      },
+      "matched_types": {
+        "ORN_VM6v": 31
+      }
+    },
+    {
+      "name": "ORN_VM7d",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM7d$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 30,
+      "status": "present",
+      "example_body_ids": [
+        720575941431026095,
+        720575941432815118,
+        720575941454003763,
+        720575941462814477,
+        720575941466667286
+      ],
+      "side_distribution": {
+        "L": 13,
+        "R": 17
+      },
+      "nt_distribution": {
+        "acetylcholine": 30
+      },
+      "matched_types": {
+        "ORN_VM7d": 30
+      }
+    },
+    {
+      "name": "ORN_VM7v",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^ORN_VM7v$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "sensory_input",
+      "literature": "Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.",
+      "confidence": "exact",
+      "notes": "Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.",
+      "source": "https://elifesciences.org/articles/69896",
+      "evidence_class": "",
+      "read_only": false,
+      "count": 45,
+      "status": "present",
+      "example_body_ids": [
+        720575941394065814,
+        720575941404249200,
+        720575941408269486,
+        720575941414421652,
+        720575941431530593
+      ],
+      "side_distribution": {
+        "L": 23,
+        "R": 22
+      },
+      "nt_distribution": {
+        "": 6,
+        "acetylcholine": 39
+      },
+      "matched_types": {
+        "ORN_VM7v": 45
+      }
+    },
+    {
+      "name": "AMMC-B1-candidate",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^(?:CB1078|CB1542|SAD053)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing",
+      "confidence": "proxy",
+      "notes": "Primary candidate from the task-supplied external annotation report: aPN1/AMMC-B1 maps to CB1078/CB1542 with additional SAD053 members. Annotation membership takes priority over connectivity ranking; do not merge with AMMC-B1-candidate-graph. Literature link is atlas context, not crosswalk provenance.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "annotation crosswalk, external report, REPORTED",
+      "read_only": false,
+      "count": 38,
+      "status": "present",
+      "example_body_ids": [
+        720575941402511984,
+        720575941413646993,
+        720575941413776495,
+        720575941441909183,
+        720575941441951183
+      ],
+      "side_distribution": {
+        "L": 21,
+        "R": 17
+      },
+      "nt_distribution": {
+        "": 1,
+        "acetylcholine": 37
+      },
+      "matched_types": {
+        "CB1078": 28,
+        "CB1542": 6,
+        "SAD053": 4
+      }
+    },
+    {
+      "name": "AMMC-B1-candidate-graph",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^(?:CB1076|CB1125|CB2789)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing",
+      "confidence": "proxy",
+      "notes": "Secondary sensitivity population from lane k2 connectivity discovery; not an annotation synonym for the primary AMMC-B1 candidate. Literature link is atlas context, not crosswalk provenance.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "graph connectivity, lane k2",
+      "read_only": false,
+      "count": 26,
+      "status": "present",
+      "example_body_ids": [
+        720575941460024902,
+        720575941466509910,
+        720575941475769393,
+        720575941484236941,
+        720575941484859322
+      ],
+      "side_distribution": {
+        "L": 13,
+        "R": 13
+      },
+      "nt_distribution": {
+        "": 1,
+        "acetylcholine": 24,
+        "dopamine": 1
+      },
+      "matched_types": {
+        "CB1076": 6,
+        "CB1125": 18,
+        "CB2789": 2
+      }
+    },
+    {
+      "name": "A2-candidate",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^CB1817[ab]$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing",
+      "confidence": "proxy",
+      "notes": "Modern AMMC-A2 identity is UNRESOLVED. Read-only diagnostic population; not a drive or hook target. Literature link is atlas context, not crosswalk provenance.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "graph connectivity, lane k2",
+      "read_only": true,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941529137830,
+        720575941530522315
+      ],
+      "side_distribution": {
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 2
+      },
+      "matched_types": {
+        "CB1817a": 1,
+        "CB1817b": 1
+      }
+    },
+    {
+      "name": "vpoDN-GABA-input",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^AVLP008$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing",
+      "confidence": "proxy",
+      "notes": "Task-supplied graph report: GABAergic input to DNp37 and pC1. Connectivity signature is distinct from the reported vpoIN alias CB1385. Literature link is atlas context, not crosswalk provenance.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "graph connectivity, lane k2",
+      "read_only": false,
+      "count": 8,
+      "status": "present",
+      "example_body_ids": [
+        720575941475556913,
+        720575941477368606,
+        720575941480152800,
+        720575941527966285,
+        720575941565582390
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 4
+      },
+      "nt_distribution": {
+        "": 1,
+        "gaba": 7
+      },
+      "matched_types": {
+        "AVLP008": 8
+      }
+    },
+    {
+      "name": "aLN-m",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^CB3880$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing",
+      "confidence": "proxy",
+      "notes": "Task-supplied external report: female CB3880 corresponds to male WED191 (aLN(m)); BANC uses the female type spelling. Matching labels and GABA annotations do not establish cell-for-cell homology. Literature link is atlas context, not crosswalk provenance.",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "annotation crosswalk, external report, REPORTED",
+      "read_only": false,
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941477524801,
+        720575941480648322
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "CB3880": 2
+      }
+    }
+  ]
+}

@@ -63,6 +63,8 @@ class Entry:
     confidence: str
     notes: str
     source: str
+    evidence_class: str = ""
+    read_only: bool = False
 
     def to_dict(self):
         return asdict(self)
@@ -149,7 +151,9 @@ def entries(dataset):
             "Functional evidence is from males; matching a female type does not establish song production.")
     add("vpoDN", r"^(?:DNp37|vpoDN)$", "readout", "dn", "vpoDN (DNp37) controls female vaginal plate opening")
     for name in ("vpoEN", "vpoIN"):
-        add(name, rf"^{name}$", "state", "vpo", "excitatory/inhibitory song pathways regulate female receptivity",
+        # Legacy vpoIN selector: ^vpoIN$
+        # 0 cells in FAFB v783 and BANC v888; renamed 2026-09-16
+        add(name, r"^CB1385$" if name == "vpoIN" and dataset != "male" else rf"^{name}$", "state", "vpo", "excitatory/inhibitory song pathways regulate female receptivity",
             notes="Sex-shared label is not evidence of a shared behavioural output.")
     sag = {"male": r"^SAG$", "female": r"^(?:SAG|SpsP)$", "banc": r"^ANXXX983$"}[dataset]
     add("SAG", sag, "state", "banc", "ANXXX983/SAG carries reproductive-tract state toward pC1",
@@ -198,4 +202,43 @@ def entries(dataset):
         name = "ORN_" + glomerulus
         add(name, rf"^{name}$", "sensory_input", "orn", "glomerular labels distinguish olfactory input classes",
             notes="Glomerular class, not a receptor-expression measurement; overlaps ORN and possibly receptor proxies.")
+    # E3 report mappings are hypotheses, not verified driver identities.
+    # Literature links provide context; the supplied external report itself
+    # has no supplied bibliographic identifier or independently checked roots.
+    def add_e3(name, pattern, evidence, notes, read_only=False):
+        title, url = SOURCES["atlas"]
+        result.append(Entry(
+            name, dataset, Selector(pattern), "readout", title, "proxy",
+            notes + " Literature link is atlas context, not crosswalk provenance.",
+            url, evidence, read_only))
+
+    crosswalk = "annotation crosswalk, external report, REPORTED"
+    connectivity = "graph connectivity, lane k2"
+    add_e3("AMMC-B1-candidate", r"^(?:CB1078|CB1542|SAD053)$", crosswalk,
+           "Primary candidate from the task-supplied external annotation report: "
+           "aPN1/AMMC-B1 maps to CB1078/CB1542 with additional SAD053 members. "
+           "Annotation membership takes priority over connectivity ranking; "
+           "do not merge with AMMC-B1-candidate-graph.")
+    add_e3("AMMC-B1-candidate-graph", r"^(?:CB1076|CB1125|CB2789)$", connectivity,
+           "Secondary sensitivity population from lane k2 connectivity discovery; "
+           "not an annotation synonym for the primary AMMC-B1 candidate.")
+    add_e3("A2-candidate", r"^CB1817[ab]$", connectivity,
+           "Modern AMMC-A2 identity is UNRESOLVED. Read-only diagnostic population; "
+           "not a drive or hook target.", read_only=True)
+    add_e3("vpoDN-GABA-input", r"^AVLP008$", connectivity,
+           "Task-supplied graph report: GABAergic input to DNp37 and pC1. "
+           "Connectivity signature is distinct from the reported vpoIN alias CB1385.")
+    add_e3("aLN-m", {"female": r"^CB3880$", "banc": r"^CB3880$",
+                     "male": r"^WED191$"}[dataset], crosswalk,
+           "Task-supplied external report: female CB3880 corresponds to male WED191 "
+           "(aLN(m)); BANC uses the female type spelling. Matching labels and "
+           "GABA annotations do not establish cell-for-cell homology.")
+    # Keep the established vpoIN role/source while recording E3 provenance.
+    from dataclasses import replace
+    result = [replace(entry, evidence_class=crosswalk,
+                      notes=entry.notes + " Task-supplied external report maps vpoIN "
+                      "to CB1385 in female/BANC; legacy ^vpoIN$: 0 cells in FAFB v783 and BANC v888; "
+                      "renamed 2026-09-16. MaleCNS retains ^vpoIN$ (five cells). "
+                      "AVLP008 is a separate connectivity population.")
+              if entry.name == "vpoIN" else entry for entry in result]
     return tuple(result)

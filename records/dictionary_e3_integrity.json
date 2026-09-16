@@ -1,0 +1,157 @@
+{
+  "head": "392cec9",
+  "existing_definitions": {
+    "female": {
+      "old_keys": 112,
+      "new_keys": 117,
+      "removed": [],
+      "changed_selectors": [
+        "vpoIN"
+      ],
+      "changed_existing_metadata_except_vpoIN": [],
+      "added": [
+        "A2-candidate",
+        "AMMC-B1-candidate",
+        "AMMC-B1-candidate-graph",
+        "aLN-m",
+        "vpoDN-GABA-input"
+      ]
+    },
+    "banc": {
+      "old_keys": 112,
+      "new_keys": 117,
+      "removed": [],
+      "changed_selectors": [
+        "vpoIN"
+      ],
+      "changed_existing_metadata_except_vpoIN": [],
+      "added": [
+        "A2-candidate",
+        "AMMC-B1-candidate",
+        "AMMC-B1-candidate-graph",
+        "aLN-m",
+        "vpoDN-GABA-input"
+      ]
+    },
+    "male": {
+      "old_keys": 112,
+      "new_keys": 117,
+      "removed": [],
+      "changed_selectors": [],
+      "changed_existing_metadata_except_vpoIN": [],
+      "added": [
+        "A2-candidate",
+        "AMMC-B1-candidate",
+        "AMMC-B1-candidate-graph",
+        "aLN-m",
+        "vpoDN-GABA-input"
+      ]
+    }
+  },
+  "files": {
+    "docs/dictionary.md": {
+      "bytes": 88799,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "7e68d5d89e866e2bf479ea1b131aa841d059f3b16875e0bbc2f5ce19292076dd"
+    },
+    "flybench/dictionary/api.py": {
+      "bytes": 1901,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "b1a8521840f299d6b6b79d526422e345cf62187cc5ce25b326085041ac3aa1fa"
+    },
+    "flybench/dictionary/entries.py": {
+      "bytes": 16520,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "2c901103b5977de037f90969f9a90bc4aa77b2f8e1c6ff31402590d7a656411d"
+    },
+    "records/dictionary_e3_measurements.json": {
+      "bytes": 27324,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "620d83aa498b8dfd15b7a6e37d5a79312f50c12746b8aa67645c4273fd4ef38c"
+    },
+    "records/dictionary_e3_report.md": {
+      "bytes": 7296,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "93cee3289502557304abb267006b36930cc7b4ce64fc80dc1a86d83a6abaacc9"
+    },
+    "records/dictionary_e3_suite.json": {
+      "bytes": 387,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "ef1a8c2e10a6fcae52f66175408c056b996059b81f1a71ce050b2055f2e67e19"
+    },
+    "tests/fixtures/graph/dictionary_banc.json": {
+      "bytes": 146342,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "c98939d60de26923400f827ef0e93d502510efd9f29d574df009fd6359b2e4ef"
+    },
+    "tests/fixtures/graph/dictionary_female.json": {
+      "bytes": 135516,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "a803e35ee2f164650326331dc2e6ac20c3b13a7b75547e7bcb51e1d199ea254d"
+    },
+    "tests/fixtures/graph/dictionary_male.json": {
+      "bytes": 124371,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "3898f479d8aea367193b7b13f6eb36e68cbbf8cb31f5a2c72a0bad1ef486998c"
+    },
+    "tests/fixtures/graph/generate.py": {
+      "bytes": 4070,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "cc09b20e1189646e7308daea2080dda458df0c4c5735ab7898bf9544c42495c3"
+    },
+    "tests/test_dictionary.py": {
+      "bytes": 11747,
+      "utf8_no_bom": true,
+      "no_host_paths": true,
+      "in_scope": true,
+      "sha256": "b21f2f19d0c62fe811f7b83f3ea0d989a65aa6e390c74ec00f8c003c4af54959"
+    }
+  },
+  "no_git_write_commands": true,
+  "restricted_source_trees_inspected": false,
+  "runtime_uses_explicitly_supplied_dependency_directory": true,
+  "snapshot_generation": {
+    "command": "python -B tests/fixtures/graph/generate.py --dictionary-snapshots",
+    "exit_code": 0,
+    "generator_sha256": "cc09b20e1189646e7308daea2080dda458df0c4c5735ab7898bf9544c42495c3",
+    "outputs": {
+      "dictionary_banc.json": "c98939d60de26923400f827ef0e93d502510efd9f29d574df009fd6359b2e4ef",
+      "dictionary_female.json": "a803e35ee2f164650326331dc2e6ac20c3b13a7b75547e7bcb51e1d199ea254d",
+      "dictionary_male.json": "3898f479d8aea367193b7b13f6eb36e68cbbf8cb31f5a2c72a0bad1ef486998c"
+    }
+  },
+  "failure_probe": {
+    "mode": "probe",
+    "exit_code": 1,
+    "summaries": [
+      "1 failed in 0.13s"
+    ],
+    "elapsed_seconds": 0.344,
+    "python": "3.12.14",
+    "locale": "LC_ALL=C; LANG=C",
+    "pytest_plugin_autoload": false,
+    "bytecode": false,
+    "pytest_cache": false,
+    "command": "python -B -m pytest -p no:cacheprovider --tb=short -q tests/test_dictionary.py::test_harness_failure_probe"
+  }
+}

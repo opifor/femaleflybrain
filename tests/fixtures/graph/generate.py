@@ -1,4 +1,4 @@
-"""Recreate these tiny synthetic fixtures; no external data is read."""
+"""Recreate synthetic fixtures or explicitly requested real-graph dictionary snapshots."""
 
 from pathlib import Path
 import pandas as pd
@@ -62,4 +62,15 @@ def generate():
 
 
 if __name__ == "__main__":
-    generate()
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dictionary-snapshots", action="store_true")
+    args = parser.parse_args()
+    if args.dictionary_snapshots:
+        from flybench.dictionary.build import build
+
+        for dataset in ("female", "banc", "male"):
+            build(dataset, data_dir="build", out_dir=ROOT)
+    else:
+        generate()

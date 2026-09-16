@@ -1,0 +1,14 @@
+{
+  "mode": "suite",
+  "exit_code": 0,
+  "summaries": [
+    "294 passed, 18 skipped, 3 xfailed, 1 warning in 87.83s (0:01:27)"
+  ],
+  "elapsed_seconds": 88.64,
+  "python": "3.12.14",
+  "locale": "LC_ALL=C; LANG=C",
+  "pytest_plugin_autoload": false,
+  "bytecode": false,
+  "pytest_cache": false,
+  "command": "python -B -m pytest -p no:cacheprovider --tb=short -q tests"
+}

@@ -37,8 +37,9 @@ dictionary: indices from another snapshot are not interchangeable. Calls do not
 cache graphs. Groups overlap, especially ORN subtypes and receptor proxies.
 
 `groups` retains absent groups as empty int64 arrays. `drive_targets` raises
-`ValueError` for absent groups and `KeyError` for unknown names; it supports
-all roles for perturbation experiments. Missing graph files and required
+`ValueError` for absent groups or read-only diagnostic populations and
+`KeyError` for unknown names. Other groups support perturbation experiments.
+Missing graph files and required
 annotation columns raise errors rather than becoming silent empty results.
 
 ## Matching contract and limitations
@@ -138,7 +139,12 @@ in the full table and JSON. Zero is displayed as `absent`.
 | TN1A | 22 | absent | absent |
 | vpoDN | absent | 2 | 2 |
 | vpoEN | 4 | 4 | 6 |
-| vpoIN | 5 | absent | absent |
+| vpoIN | 5 | 6 | 4 |
+| AMMC-B1-candidate | 12 | 39 | 38 |
+| AMMC-B1-candidate-graph | 11 | 23 | 26 |
+| A2-candidate | absent | 4 | 2 |
+| vpoDN-GABA-input | absent | 10 | 8 |
+| aLN-m | 2 | 2 | 2 |
 | SAG | absent | 7 | 2 |
 | oviDN | absent | 6 | 6 |
 | DNp13/pMN1 | 2 | 2 | 2 |
@@ -219,6 +225,11 @@ exit 1; unset it before acceptance. Execution evidence is recorded in
 | vpoDN | male | `{"type_re": "^(?:DNp37&#124;vpoDN)$"}` | 0 (absent) | exact | [Marin et al. (2025), descending/ascending comparison: vpoDN (DNp37) controls female vaginal plate opening.](https://doi.org/10.1038/s41586-025-08925-z) |
 | vpoEN | male | `{"type_re": "^vpoEN$"}` | 4 | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
 | vpoIN | male | `{"type_re": "^vpoIN$"}` | 5 | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
+| AMMC-B1-candidate | male | `{"type_re": "^(?:CB1078&#124;CB1542&#124;SAD053)$"}` | 12 | proxy | annotation crosswalk, external report, REPORTED; [E3 evidence](../records/dictionary_e3_report.md) |
+| AMMC-B1-candidate-graph | male | `{"type_re": "^(?:CB1076&#124;CB1125&#124;CB2789)$"}` | 11 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| A2-candidate | male | `{"type_re": "^CB1817[ab]$"}` | 0 (absent) | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| vpoDN-GABA-input | male | `{"type_re": "^AVLP008$"}` | 0 (absent) | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| aLN-m | male | `{"type_re": "^WED191$"}` | 2 | proxy | annotation crosswalk, external report, REPORTED; [E3 evidence](../records/dictionary_e3_report.md) |
 | SAG | male | `{"type_re": "^SAG$"}` | 0 (absent) | exact | [BANC, distributed brain-and-cord control circuits: ANXXX983/SAG carries reproductive-tract state toward pC1.](https://doi.org/10.1038/s41586-026-10735-w) |
 | oviDN | male | `{"type_re": "^oviDN(?:[ab](?:_[ab])?)?$"}` | 0 (absent) | family | [Marin et al. (2025), descending/ascending comparison: oviDN pathways participate in oviposition.](https://doi.org/10.1038/s41586-025-08925-z) |
 | DNp13/pMN1 | male | `{"type_re": "^(?:DNp13&#124;pMN1)$"}` | 2 | exact | [Marin et al. (2025), descending/ascending comparison: DNp13/pMN1 drives female ovipositor extrusion and has sex-specific VNC targets.](https://doi.org/10.1038/s41586-025-08925-z) |
@@ -330,7 +341,12 @@ exit 1; unset it before acceptance. Execution evidence is recorded in
 | TN1A | female | `{"type_re": "^TN1a(?:_[a-i])?$"}` | 0 (absent) | family | [Lillvis et al. (2024), nested song circuits: identified descending/VNC circuits participate in male song.](https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/) |
 | vpoDN | female | `{"type_re": "^(?:DNp37&#124;vpoDN)$"}` | 2 | exact | [Marin et al. (2025), descending/ascending comparison: vpoDN (DNp37) controls female vaginal plate opening.](https://doi.org/10.1038/s41586-025-08925-z) |
 | vpoEN | female | `{"type_re": "^vpoEN$"}` | 4 | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
-| vpoIN | female | `{"type_re": "^vpoIN$"}` | 0 (absent) | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
+| vpoIN | female | `{"type_re": "^CB1385$"}` | 6 | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
+| AMMC-B1-candidate | female | `{"type_re": "^(?:CB1078&#124;CB1542&#124;SAD053)$"}` | 39 | proxy | annotation crosswalk, external report, REPORTED; [E3 evidence](../records/dictionary_e3_report.md) |
+| AMMC-B1-candidate-graph | female | `{"type_re": "^(?:CB1076&#124;CB1125&#124;CB2789)$"}` | 23 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| A2-candidate | female | `{"type_re": "^CB1817[ab]$"}` | 4 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| vpoDN-GABA-input | female | `{"type_re": "^AVLP008$"}` | 10 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| aLN-m | female | `{"type_re": "^CB3880$"}` | 2 | proxy | annotation crosswalk, external report, REPORTED; [E3 evidence](../records/dictionary_e3_report.md) |
 | SAG | female | `{"type_re": "^(?:SAG&#124;SpsP)$"}` | 7 | proxy | [BANC, distributed brain-and-cord control circuits: ANXXX983/SAG carries reproductive-tract state toward pC1.](https://doi.org/10.1038/s41586-026-10735-w) |
 | oviDN | female | `{"type_re": "^oviDN(?:[ab](?:_[ab])?)?$"}` | 6 | family | [Marin et al. (2025), descending/ascending comparison: oviDN pathways participate in oviposition.](https://doi.org/10.1038/s41586-025-08925-z) |
 | DNp13/pMN1 | female | `{"type_re": "^(?:DNp13&#124;pMN1)$"}` | 2 | exact | [Marin et al. (2025), descending/ascending comparison: DNp13/pMN1 drives female ovipositor extrusion and has sex-specific VNC targets.](https://doi.org/10.1038/s41586-025-08925-z) |
@@ -442,7 +458,12 @@ exit 1; unset it before acceptance. Execution evidence is recorded in
 | TN1A | banc | `{"type_re": "^TN1a(?:_[a-i])?$"}` | 0 (absent) | family | [Lillvis et al. (2024), nested song circuits: identified descending/VNC circuits participate in male song.](https://pmc.ncbi.nlm.nih.gov/articles/PMC11452343/) |
 | vpoDN | banc | `{"type_re": "^(?:DNp37&#124;vpoDN)$"}` | 2 | exact | [Marin et al. (2025), descending/ascending comparison: vpoDN (DNp37) controls female vaginal plate opening.](https://doi.org/10.1038/s41586-025-08925-z) |
 | vpoEN | banc | `{"type_re": "^vpoEN$"}` | 6 | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
-| vpoIN | banc | `{"type_re": "^vpoIN$"}` | 0 (absent) | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
+| vpoIN | banc | `{"type_re": "^CB1385$"}` | 4 | exact | [Wang et al. (2021), female sexual receptivity circuits: excitatory/inhibitory song pathways regulate female receptivity.](https://doi.org/10.1038/s41586-020-2972-7) |
+| AMMC-B1-candidate | banc | `{"type_re": "^(?:CB1078&#124;CB1542&#124;SAD053)$"}` | 38 | proxy | annotation crosswalk, external report, REPORTED; [E3 evidence](../records/dictionary_e3_report.md) |
+| AMMC-B1-candidate-graph | banc | `{"type_re": "^(?:CB1076&#124;CB1125&#124;CB2789)$"}` | 26 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| A2-candidate | banc | `{"type_re": "^CB1817[ab]$"}` | 2 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| vpoDN-GABA-input | banc | `{"type_re": "^AVLP008$"}` | 8 | proxy | graph connectivity, lane k2; [E3 evidence](../records/dictionary_e3_report.md) |
+| aLN-m | banc | `{"type_re": "^CB3880$"}` | 2 | proxy | annotation crosswalk, external report, REPORTED; [E3 evidence](../records/dictionary_e3_report.md) |
 | SAG | banc | `{"type_re": "^ANXXX983$"}` | 2 | exact | [BANC, distributed brain-and-cord control circuits: ANXXX983/SAG carries reproductive-tract state toward pC1.](https://doi.org/10.1038/s41586-026-10735-w) |
 | oviDN | banc | `{"type_re": "^oviDN(?:[ab](?:_[ab])?)?$"}` | 6 | family | [Marin et al. (2025), descending/ascending comparison: oviDN pathways participate in oviposition.](https://doi.org/10.1038/s41586-025-08925-z) |
 | DNp13/pMN1 | banc | `{"type_re": "^(?:DNp13&#124;pMN1)$"}` | 2 | exact | [Marin et al. (2025), descending/ascending comparison: DNp13/pMN1 drives female ovipositor extrusion and has sex-specific VNC targets.](https://doi.org/10.1038/s41586-025-08925-z) |
@@ -522,3 +543,50 @@ exit 1; unset it before acceptance. Execution evidence is recorded in
 | ORN_VM6v | banc | `{"type_re": "^ORN_VM6v$"}` | 31 | exact | [Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.](https://elifesciences.org/articles/69896) |
 | ORN_VM7d | banc | `{"type_re": "^ORN_VM7d$"}` | 30 | exact | [Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.](https://elifesciences.org/articles/69896) |
 | ORN_VM7v | banc | `{"type_re": "^ORN_VM7v$"}` | 45 | exact | [Systematic morphology of identified ORNs (2021): glomerular labels distinguish olfactory input classes.](https://elifesciences.org/articles/69896) |
+
+## E3 additions (2026-09-16)
+
+`AMMC-B1-candidate` is the primary population: annotation membership from the
+external crosswalk takes priority over connectivity ranking. Its reported
+aPN1/AMMC-B1 members are CB1078 and CB1542, plus SAD053. The external report was
+supplied as a task summary without its original root-ID list or bibliographic
+identifier; REPORTED is not independently verified biological identity. The
+atlas literature link supplies context, not proof of this crosswalk.
+`AMMC-B1-candidate-graph` is a separate secondary sensitivity population from
+lane k2. The lists are disjoint in all three snapshots and must not be merged.
+
+A2-candidate is read-only. CB1817a/b is a graph-connectivity hypothesis;
+the modern AMMC-A2 type remains UNRESOLVED, and literal AMMC-A2 matches no cells
+in any snapshot. This population is not a drive or hook target. `drive_targets` rejects it with
+ValueError ("read-only diagnostic population") before loading a graph.
+
+The female/BANC vpoIN selector is now `^CB1385$`. Legacy selector `^vpoIN$`:
+"0 cells in FAFB v783 and BANC v888; renamed 2026-09-16".
+The six-cell, L3/R3 observation applies to FAFB; BANC has four, L2/R2.
+D1 retains the original MaleCNS `^vpoIN$` selector: five cells (L2/R3). `vpoDN-GABA-input` selects AVLP008 separately
+and does not establish an annotation synonym for vpoIN.
+
+The source report links female CB3880 to male WED191 as aLN(m); both populations
+contain two GABA-labelled cells. BANC CB3880 also has two. The separate reported
+vPN1 types AVLP761m/762m/763m select eleven male cells and no female/BANC cells;
+this observation adds no vPN1 dictionary key.
+
+New definitions expose `evidence_class` and `read_only` in their serialized
+metadata. Existing definitions default to empty evidence class and false
+read-only status; vpoIN carries the E3 crosswalk evidence class.
+
+| Population | Selector | FAFB v783 | BANC v888 | MaleCNS v1.0 | Evidence class |
+| --- | --- | ---: | ---: | ---: | --- |
+| AMMC-B1-candidate | `^(?:CB1078&#124;CB1542&#124;SAD053)$` | 39 | 38 | 12 | annotation crosswalk, external report, REPORTED |
+| AMMC-B1-candidate-graph | `^(?:CB1076&#124;CB1125&#124;CB2789)$` | 23 | 26 | 11 | graph connectivity, lane k2 |
+| A2-candidate | `^CB1817[ab]$` | 4 | 2 | 0 | graph connectivity, lane k2 |
+| vpoIN | `^CB1385$ (female/BANC); ^vpoIN$ (male)` | 6 | 4 | 5 | annotation crosswalk, external report, REPORTED |
+| vpoDN-GABA-input | `^AVLP008$` | 10 | 8 | 0 | graph connectivity, lane k2 |
+| aLN-m | `^CB3880$ (female/BANC); ^WED191$ (male)` | 2 | 2 | 2 | annotation crosswalk, external report, REPORTED |
+
+Counts not explicitly supplied by the brief are labelled observed baselines in
+the tests; supplied expectations remain fixed. NT labels are not overwritten:
+FAFB CB1385 includes one unknown NT and AVLP008 includes three; BANC's
+secondary B1 population includes one dopamine-labelled and one unknown cell.
+See [the E3 evidence report](../records/dictionary_e3_report.md) for counts,
+side distributions, synapses, provenance limits and acceptance status.
