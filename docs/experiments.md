@@ -168,3 +168,35 @@ Acceptance: benchmark plus reference/fast-backend tests reported 56 passed,
 probe reported 1 failed, 7 deselected, exit 1. See the
 [delivery checks](../records/shiu_benchmarks_v1_checks.json) and
 [native process exits](../records/shiu_benchmarks_v1_execution.json).
+
+## Two-body courtship
+
+The [courtship_v1 preregistration](../experiments/courtship_v1.md) connects
+MaleCNS and FAFB brains to the observable-only world. Four paired conditions
+cross virgin/mated female SAG state with live/muted male song. Female scent
+and vision are disabled. Male sensory inputs come only from geometry; both
+bodies move, and emitted male song reaches the female one window later.
+
+Run `python -m flybench.experiment.courtship quick`, then
+`python -m flybench.experiment.courtship full` and
+`python -m flybench.experiment.courtship report`. If the quick timing projects
+more than 40 minutes, `full --partial` uses five seeds with unassessed full
+predictions. Quick uses two seeds and 60 windows; full uses ten seeds and
+400 windows, always excluding the first 40 windows from summaries.
+
+The experiment-local adapter gives each GPU batch column its own world input;
+the simulator and world implementations are unchanged. Run
+`python -m pytest -q -p no:cacheprovider tests/test_courtship.py` for wiring,
+seed-column and verdict checks. The opt-in `FLYBENCH_FAIL_PROBE=1` probe must
+report a failure and exit 1.
+
+Compact summaries and the generated report are in `records/courtship_v1_*`;
+window and group-cell data are compressed under `build/records-raw/`.
+P1 activity, approach and ignition are descriptive. vpoDN is a neural readout,
+not an acceptance or mating decision.
+
+See the [courtship report](../records/courtship_v1_report.md) and
+[seed summaries](../records/courtship_v1_full.json) for measured results and
+execution limitations. The male ppk23 group is empty in this dictionary;
+no substitute contact population is introduced. Paired seeds do not imply
+bitwise numerical reproducibility on the recorded CUDA execution chain.
