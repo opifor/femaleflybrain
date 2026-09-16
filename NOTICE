@@ -1,0 +1,8 @@
+The model parameters and differential equations are attributed to Shiu et al.
+(2024), Nature, and the MIT-licensed Drosophila_brain_model reference:
+https://github.com/philshiu/Drosophila_brain_model
+Reference locations: model.py lines 22-52, 85-103, 160-183;
+Readme.md lines 7-13, 16-31. The numerical implementation is independent.
+
+Connectome data from Janelia, Google, and FlyWire carry CC-BY 4.0 attribution
+requirements. No connectome datasets are included in this repository.
