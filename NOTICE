@@ -4,5 +4,8 @@ https://github.com/philshiu/Drosophila_brain_model
 Reference locations: model.py lines 22-52, 85-103, 160-183;
 Readme.md lines 7-13, 16-31. The numerical implementation is independent.
 
-Connectome data from Janelia, Google, and FlyWire carry CC-BY 4.0 attribution
-requirements. No connectome datasets are included in this repository.
+Connectome data are used under their own terms and are not included in this
+repository: MaleCNS (Janelia, Google) under CC BY 4.0; FlyWire FAFB under
+CC BY-NC 4.0 (attribution, non-commercial); FlyWire BANC under the terms of its
+release. Follow the FlyWire citation guidelines when using results derived from
+those data.
