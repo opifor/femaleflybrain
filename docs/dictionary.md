@@ -590,3 +590,73 @@ FAFB CB1385 includes one unknown NT and AVLP008 includes three; BANC's
 secondary B1 population includes one dopamine-labelled and one unknown cell.
 See [the E3 evidence report](../records/dictionary_e3_report.md) for counts,
 side distributions, synapses, provenance limits and acceptance status.
+
+## vpoEN inputs (E3b)
+
+The ten `vpoEN-input:<type>` entries and `vpoEN-input-top10` are read-only
+diagnostic populations for the E5 reading column. The fixed type list follows
+the FAFB direct-input ranking in
+[vpoen_inputs_v1](../records/vpoen_inputs_v1_report.md), including its
+"Sign convention notes (added after review)". It is not reranked per dataset.
+Each definition has `group="vpoen-input"`, `confidence="exact"`,
+`read_only=True`, and `evidence_class="records/vpoen_inputs_v1_report.md"`.
+The added group metadata is serialized only for these new entries; existing
+definitions retain their original fields and values. The atlas source link
+provides annotation context, while the local record supplies rank evidence.
+The note on every new entry is: "anatomical input rank in vpoen_inputs_v1;
+not a drive target; function unknown". `drive_targets` raises `ValueError`
+for every new entry, including when its population is absent.
+
+Selectors match the exact, case-sensitive labels in all three datasets.
+Zero means absent in this snapshot; no cross-dataset alias or biological
+absence is inferred. The union includes every cell of the ten named types,
+including cells with no direct edge to vpoEN, and overlaps the ten individual
+entries. It is not a drive decision or a functional classification.
+
+`A2-candidate` already selects `^CB1817[ab]$`, covering both CB1817a and
+CB1817b. Its definition is unchanged; no `A2-candidate-path` is needed.
+The existing B1 lists, vpoIN and SAG definitions are also unchanged.
+
+Measurements use positive CSR counts, with presynaptic rows. Cell `sign`
+and NT distributions are separate: FAFB uses `shiu2024-parquet`, while BANC
+and MaleCNS use `shiu2024`. Cross-graph signs are not like-for-like evidence.
+See [E3b evidence](../records/dictionary_e3b_report.md) for L/R counts, NT,
+signs, direct JO-A/JO-B inputs, direct vpoEN/vpoIN/vpoDN outputs and hashes.
+
+The following rows supplement the existing full measured selector table.
+
+| Group | Dataset | Selector (AND) | Count | Confidence | Source |
+| --- | --- | --- | ---: | --- | --- |
+| vpoEN-input:CB1484 | female | `{"type_re": "^(?:CB1484)$"}` | 6 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2364 | female | `{"type_re": "^(?:CB2364)$"}` | 8 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1383 | female | `{"type_re": "^(?:CB1383)$"}` | 6 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:WED104 | female | `{"type_re": "^(?:WED104)$"}` | 2 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:AN_AVLP_8 | female | `{"type_re": "^(?:AN_AVLP_8)$"}` | 2 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2633 | female | `{"type_re": "^(?:CB2633)$"}` | 4 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:PVLP021 | female | `{"type_re": "^(?:PVLP021)$"}` | 4 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1869 | female | `{"type_re": "^(?:CB1869)$"}` | 3 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2449 | female | `{"type_re": "^(?:CB2449)$"}` | 6 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1614 | female | `{"type_re": "^(?:CB1614)$"}` | 2 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input-top10 | female | `{"type_re": "^(?:CB1484&#124;CB2364&#124;CB1383&#124;WED104&#124;AN_AVLP_8&#124;CB2633&#124;PVLP021&#124;CB1869&#124;CB2449&#124;CB1614)$"}` | 43 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1484 | banc | `{"type_re": "^(?:CB1484)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2364 | banc | `{"type_re": "^(?:CB2364)$"}` | 8 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1383 | banc | `{"type_re": "^(?:CB1383)$"}` | 4 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:WED104 | banc | `{"type_re": "^(?:WED104)$"}` | 1 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:AN_AVLP_8 | banc | `{"type_re": "^(?:AN_AVLP_8)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2633 | banc | `{"type_re": "^(?:CB2633)$"}` | 2 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:PVLP021 | banc | `{"type_re": "^(?:PVLP021)$"}` | 4 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1869 | banc | `{"type_re": "^(?:CB1869)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2449 | banc | `{"type_re": "^(?:CB2449)$"}` | 7 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1614 | banc | `{"type_re": "^(?:CB1614)$"}` | 5 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input-top10 | banc | `{"type_re": "^(?:CB1484&#124;CB2364&#124;CB1383&#124;WED104&#124;AN_AVLP_8&#124;CB2633&#124;PVLP021&#124;CB1869&#124;CB2449&#124;CB1614)$"}` | 31 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1484 | male | `{"type_re": "^(?:CB1484)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2364 | male | `{"type_re": "^(?:CB2364)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1383 | male | `{"type_re": "^(?:CB1383)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:WED104 | male | `{"type_re": "^(?:WED104)$"}` | 2 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:AN_AVLP_8 | male | `{"type_re": "^(?:AN_AVLP_8)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2633 | male | `{"type_re": "^(?:CB2633)$"}` | 4 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:PVLP021 | male | `{"type_re": "^(?:PVLP021)$"}` | 4 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1869 | male | `{"type_re": "^(?:CB1869)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB2449 | male | `{"type_re": "^(?:CB2449)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input:CB1614 | male | `{"type_re": "^(?:CB1614)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+| vpoEN-input-top10 | male | `{"type_re": "^(?:CB1484&#124;CB2364&#124;CB1383&#124;WED104&#124;AN_AVLP_8&#124;CB2633&#124;PVLP021&#124;CB1869&#124;CB2449&#124;CB1614)$"}` | 10 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |

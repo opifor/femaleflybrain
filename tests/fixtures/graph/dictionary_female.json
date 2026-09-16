@@ -4603,6 +4603,421 @@
       "matched_types": {
         "CB3880": 2
       }
+    },
+    {
+      "name": "vpoEN-input:CB1484",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB1484)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 6,
+      "status": "present",
+      "example_body_ids": [
+        720575940618900358,
+        720575940620450031,
+        720575940622906887,
+        720575940625422867,
+        720575940628412732
+      ],
+      "side_distribution": {
+        "L": 3,
+        "R": 3
+      },
+      "nt_distribution": {
+        "acetylcholine": 6
+      },
+      "matched_types": {
+        "CB1484": 6
+      }
+    },
+    {
+      "name": "vpoEN-input:CB2364",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB2364)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 8,
+      "status": "present",
+      "example_body_ids": [
+        720575940602914988,
+        720575940619783518,
+        720575940620195719,
+        720575940622065432,
+        720575940623987982
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 4
+      },
+      "nt_distribution": {
+        "gaba": 8
+      },
+      "matched_types": {
+        "CB2364": 8
+      }
+    },
+    {
+      "name": "vpoEN-input:CB1383",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB1383)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 6,
+      "status": "present",
+      "example_body_ids": [
+        720575940620402902,
+        720575940621146771,
+        720575940622065622,
+        720575940631535073,
+        720575940632865178
+      ],
+      "side_distribution": {
+        "L": 3,
+        "R": 3
+      },
+      "nt_distribution": {
+        "gaba": 6
+      },
+      "matched_types": {
+        "CB1383": 6
+      }
+    },
+    {
+      "name": "vpoEN-input:WED104",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:WED104)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575940624336647,
+        720575940627439592
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "WED104": 2
+      }
+    },
+    {
+      "name": "vpoEN-input:AN_AVLP_8",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:AN_AVLP_8)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575940628552699,
+        720575940630107855
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "AN_AVLP_8": 2
+      }
+    },
+    {
+      "name": "vpoEN-input:CB2633",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB2633)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 4,
+      "status": "present",
+      "example_body_ids": [
+        720575940605190078,
+        720575940607455171,
+        720575940621263966,
+        720575940637776189
+      ],
+      "side_distribution": {
+        "L": 2,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 4
+      },
+      "matched_types": {
+        "CB2633": 4
+      }
+    },
+    {
+      "name": "vpoEN-input:PVLP021",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:PVLP021)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 4,
+      "status": "present",
+      "example_body_ids": [
+        720575940621067204,
+        720575940621365236,
+        720575940629192975,
+        720575940634823449
+      ],
+      "side_distribution": {
+        "L": 2,
+        "R": 2
+      },
+      "nt_distribution": {
+        "gaba": 4
+      },
+      "matched_types": {
+        "PVLP021": 4
+      }
+    },
+    {
+      "name": "vpoEN-input:CB1869",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB1869)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 3,
+      "status": "present",
+      "example_body_ids": [
+        720575940618958040,
+        720575940630020968,
+        720575940631242514
+      ],
+      "side_distribution": {
+        "L": 2,
+        "R": 1
+      },
+      "nt_distribution": {
+        "acetylcholine": 3
+      },
+      "matched_types": {
+        "CB1869": 3
+      }
+    },
+    {
+      "name": "vpoEN-input:CB2449",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB2449)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 6,
+      "status": "present",
+      "example_body_ids": [
+        720575940613943413,
+        720575940617117656,
+        720575940622699196,
+        720575940623787495,
+        720575940627350060
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 2
+      },
+      "nt_distribution": {
+        "acetylcholine": 6
+      },
+      "matched_types": {
+        "CB2449": 6
+      }
+    },
+    {
+      "name": "vpoEN-input:CB1614",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB1614)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575940620062633,
+        720575940628489516
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "CB1614": 2
+      }
+    },
+    {
+      "name": "vpoEN-input-top10",
+      "dataset": "female",
+      "selector": {
+        "type_re": "^(?:CB1484|CB2364|CB1383|WED104|AN_AVLP_8|CB2633|PVLP021|CB1869|CB2449|CB1614)$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-input",
+      "count": 43,
+      "status": "present",
+      "example_body_ids": [
+        720575940602914988,
+        720575940605190078,
+        720575940607455171,
+        720575940613943413,
+        720575940617117656
+      ],
+      "side_distribution": {
+        "L": 23,
+        "R": 20
+      },
+      "nt_distribution": {
+        "acetylcholine": 19,
+        "gaba": 24
+      },
+      "matched_types": {
+        "AN_AVLP_8": 2,
+        "CB1383": 6,
+        "CB1484": 6,
+        "CB1614": 2,
+        "CB1869": 3,
+        "CB2364": 8,
+        "CB2449": 6,
+        "CB2633": 4,
+        "PVLP021": 4,
+        "WED104": 2
+      }
     }
   ]
 }

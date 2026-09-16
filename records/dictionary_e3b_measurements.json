@@ -1,0 +1,1225 @@
+{
+  "female": {
+    "graph_file": "graph_female.npz",
+    "sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+    "sign_rule": "shiu2024-parquet",
+    "rows": {
+      "vpoEN-input:CB1484": {
+        "count": 6,
+        "status": "present",
+        "sides": {
+          "L": 3,
+          "R": 3
+        },
+        "nt": {
+          "acetylcholine": 6
+        },
+        "sign": {
+          "1": 6
+        },
+        "types": {
+          "CB1484": 6
+        },
+        "body_ids": [
+          720575940618900358,
+          720575940620450031,
+          720575940622906887,
+          720575940625422867,
+          720575940628412732,
+          720575940628498426
+        ],
+        "jo_a_synapses": 23,
+        "jo_b_synapses": 29,
+        "outputs": {
+          "vpoEN": 704,
+          "vpoIN": 1,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 704
+        }
+      },
+      "vpoEN-input:CB2364": {
+        "count": 8,
+        "status": "present",
+        "sides": {
+          "L": 4,
+          "R": 4
+        },
+        "nt": {
+          "gaba": 8
+        },
+        "sign": {
+          "-1": 8
+        },
+        "types": {
+          "CB2364": 8
+        },
+        "body_ids": [
+          720575940602914988,
+          720575940619783518,
+          720575940620195719,
+          720575940622065432,
+          720575940623987982,
+          720575940629283659,
+          720575940631425965,
+          720575940634508174
+        ],
+        "jo_a_synapses": 44,
+        "jo_b_synapses": 8,
+        "outputs": {
+          "vpoEN": 563,
+          "vpoIN": 34,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 563,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1383": {
+        "count": 6,
+        "status": "present",
+        "sides": {
+          "L": 3,
+          "R": 3
+        },
+        "nt": {
+          "gaba": 6
+        },
+        "sign": {
+          "-1": 6
+        },
+        "types": {
+          "CB1383": 6
+        },
+        "body_ids": [
+          720575940620402902,
+          720575940621146771,
+          720575940622065622,
+          720575940631535073,
+          720575940632865178,
+          720575940637627206
+        ],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 1,
+        "outputs": {
+          "vpoEN": 321,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 321,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:WED104": {
+        "count": 2,
+        "status": "present",
+        "sides": {
+          "L": 1,
+          "R": 1
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "sign": {
+          "-1": 2
+        },
+        "types": {
+          "WED104": 2
+        },
+        "body_ids": [
+          720575940624336647,
+          720575940627439592
+        ],
+        "jo_a_synapses": 1,
+        "jo_b_synapses": 3,
+        "outputs": {
+          "vpoEN": 297,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 297,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:AN_AVLP_8": {
+        "count": 2,
+        "status": "present",
+        "sides": {
+          "L": 1,
+          "R": 1
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "sign": {
+          "-1": 2
+        },
+        "types": {
+          "AN_AVLP_8": 2
+        },
+        "body_ids": [
+          720575940628552699,
+          720575940630107855
+        ],
+        "jo_a_synapses": 4,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 288,
+          "vpoIN": 1,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 288,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2633": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 4
+        },
+        "sign": {
+          "1": 4
+        },
+        "types": {
+          "CB2633": 4
+        },
+        "body_ids": [
+          720575940605190078,
+          720575940607455171,
+          720575940621263966,
+          720575940637776189
+        ],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 278,
+          "vpoIN": 3,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 278
+        }
+      },
+      "vpoEN-input:PVLP021": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "gaba": 4
+        },
+        "sign": {
+          "-1": 4
+        },
+        "types": {
+          "PVLP021": 4
+        },
+        "body_ids": [
+          720575940621067204,
+          720575940621365236,
+          720575940629192975,
+          720575940634823449
+        ],
+        "jo_a_synapses": 8,
+        "jo_b_synapses": 10,
+        "outputs": {
+          "vpoEN": 215,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 215,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1869": {
+        "count": 3,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 1
+        },
+        "nt": {
+          "acetylcholine": 3
+        },
+        "sign": {
+          "1": 3
+        },
+        "types": {
+          "CB1869": 3
+        },
+        "body_ids": [
+          720575940618958040,
+          720575940630020968,
+          720575940631242514
+        ],
+        "jo_a_synapses": 17,
+        "jo_b_synapses": 7,
+        "outputs": {
+          "vpoEN": 184,
+          "vpoIN": 1,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 184
+        }
+      },
+      "vpoEN-input:CB2449": {
+        "count": 6,
+        "status": "present",
+        "sides": {
+          "L": 4,
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 6
+        },
+        "sign": {
+          "1": 6
+        },
+        "types": {
+          "CB2449": 6
+        },
+        "body_ids": [
+          720575940613943413,
+          720575940617117656,
+          720575940622699196,
+          720575940623787495,
+          720575940627350060,
+          720575940634126949
+        ],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 140,
+          "vpoIN": 3,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 140
+        }
+      },
+      "vpoEN-input:CB1614": {
+        "count": 2,
+        "status": "present",
+        "sides": {
+          "L": 1,
+          "R": 1
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "sign": {
+          "-1": 2
+        },
+        "types": {
+          "CB1614": 2
+        },
+        "body_ids": [
+          720575940620062633,
+          720575940628489516
+        ],
+        "jo_a_synapses": 17,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 139,
+          "vpoIN": 59,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 139,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input-top10": {
+        "count": 43,
+        "status": "present",
+        "sides": {
+          "L": 23,
+          "R": 20
+        },
+        "nt": {
+          "acetylcholine": 19,
+          "gaba": 24
+        },
+        "sign": {
+          "-1": 24,
+          "1": 19
+        },
+        "types": {
+          "AN_AVLP_8": 2,
+          "CB1383": 6,
+          "CB1484": 6,
+          "CB1614": 2,
+          "CB1869": 3,
+          "CB2364": 8,
+          "CB2449": 6,
+          "CB2633": 4,
+          "PVLP021": 4,
+          "WED104": 2
+        },
+        "body_ids": [
+          720575940602914988,
+          720575940605190078,
+          720575940607455171,
+          720575940613943413,
+          720575940617117656,
+          720575940618900358,
+          720575940618958040,
+          720575940619783518,
+          720575940620062633,
+          720575940620195719,
+          720575940620402902,
+          720575940620450031,
+          720575940621067204,
+          720575940621146771,
+          720575940621263966,
+          720575940621365236,
+          720575940622065432,
+          720575940622065622,
+          720575940622699196,
+          720575940622906887,
+          720575940623787495,
+          720575940623987982,
+          720575940624336647,
+          720575940625422867,
+          720575940627350060,
+          720575940627439592,
+          720575940628412732,
+          720575940628489516,
+          720575940628498426,
+          720575940628552699,
+          720575940629192975,
+          720575940629283659,
+          720575940630020968,
+          720575940630107855,
+          720575940631242514,
+          720575940631425965,
+          720575940631535073,
+          720575940632865178,
+          720575940634126949,
+          720575940634508174,
+          720575940634823449,
+          720575940637627206,
+          720575940637776189
+        ],
+        "jo_a_synapses": 114,
+        "jo_b_synapses": 58,
+        "outputs": {
+          "vpoEN": 3129,
+          "vpoIN": 102,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 1823,
+          "0": 0,
+          "1": 1306
+        }
+      },
+      "A2-candidate": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 4
+        },
+        "sign": {
+          "1": 4
+        },
+        "types": {
+          "CB1817a": 2,
+          "CB1817b": 2
+        },
+        "body_ids": [
+          720575940625146122,
+          720575940629133071,
+          720575940632649697,
+          720575940638214461
+        ],
+        "jo_a_synapses": 266,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 19,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 19
+        }
+      }
+    }
+  },
+  "banc": {
+    "graph_file": "graph_banc.npz",
+    "sha256": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+    "sign_rule": "shiu2024",
+    "rows": {
+      "vpoEN-input:CB1484": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2364": {
+        "count": 8,
+        "status": "present",
+        "sides": {
+          "L": 3,
+          "R": 5
+        },
+        "nt": {
+          "gaba": 8
+        },
+        "sign": {
+          "-1": 8
+        },
+        "types": {
+          "CB2364": 8
+        },
+        "body_ids": [
+          720575941508453410,
+          720575941541364605,
+          720575941555451034,
+          720575941569414132,
+          720575941590727820,
+          720575941602245817,
+          720575941642527570,
+          720575941652001041
+        ],
+        "jo_a_synapses": 93,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 335,
+          "vpoIN": 10,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 335,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1383": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "gaba": 4
+        },
+        "sign": {
+          "-1": 4
+        },
+        "types": {
+          "CB1383": 4
+        },
+        "body_ids": [
+          720575941413746324,
+          720575941439842901,
+          720575941505903410,
+          720575941616816085
+        ],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 8,
+        "outputs": {
+          "vpoEN": 92,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 92,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:WED104": {
+        "count": 1,
+        "status": "present",
+        "sides": {
+          "L": 1
+        },
+        "nt": {
+          "gaba": 1
+        },
+        "sign": {
+          "-1": 1
+        },
+        "types": {
+          "WED104": 1
+        },
+        "body_ids": [
+          720575941544127517
+        ],
+        "jo_a_synapses": 4,
+        "jo_b_synapses": 1,
+        "outputs": {
+          "vpoEN": 78,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 78,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:AN_AVLP_8": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2633": {
+        "count": 2,
+        "status": "present",
+        "sides": {
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 2
+        },
+        "sign": {
+          "1": 2
+        },
+        "types": {
+          "CB2633": 2
+        },
+        "body_ids": [
+          720575941504688983,
+          720575941538233330
+        ],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 21,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 21
+        }
+      },
+      "vpoEN-input:PVLP021": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "gaba": 4
+        },
+        "sign": {
+          "-1": 4
+        },
+        "types": {
+          "PVLP021": 4
+        },
+        "body_ids": [
+          720575941536652888,
+          720575941586874502,
+          720575941594551847,
+          720575941611542249
+        ],
+        "jo_a_synapses": 16,
+        "jo_b_synapses": 22,
+        "outputs": {
+          "vpoEN": 55,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 55,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1869": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2449": {
+        "count": 7,
+        "status": "present",
+        "sides": {
+          "L": 5,
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 7
+        },
+        "sign": {
+          "1": 7
+        },
+        "types": {
+          "CB2449": 7
+        },
+        "body_ids": [
+          720575941353402928,
+          720575941392876036,
+          720575941466906134,
+          720575941548122248,
+          720575941575937128,
+          720575941614634972,
+          720575941654539793
+        ],
+        "jo_a_synapses": 3,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 62,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 62
+        }
+      },
+      "vpoEN-input:CB1614": {
+        "count": 5,
+        "status": "present",
+        "sides": {
+          "L": 4,
+          "R": 1
+        },
+        "nt": {
+          "gaba": 5
+        },
+        "sign": {
+          "-1": 5
+        },
+        "types": {
+          "CB1614": 5
+        },
+        "body_ids": [
+          720575941461957828,
+          720575941490524366,
+          720575941533631461,
+          720575941538815613,
+          720575941543437573
+        ],
+        "jo_a_synapses": 1,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 81,
+          "vpoIN": 1,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 81,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input-top10": {
+        "count": 31,
+        "status": "present",
+        "sides": {
+          "L": 17,
+          "R": 14
+        },
+        "nt": {
+          "acetylcholine": 9,
+          "gaba": 22
+        },
+        "sign": {
+          "-1": 22,
+          "1": 9
+        },
+        "types": {
+          "CB1383": 4,
+          "CB1614": 5,
+          "CB2364": 8,
+          "CB2449": 7,
+          "CB2633": 2,
+          "PVLP021": 4,
+          "WED104": 1
+        },
+        "body_ids": [
+          720575941353402928,
+          720575941392876036,
+          720575941413746324,
+          720575941439842901,
+          720575941461957828,
+          720575941466906134,
+          720575941490524366,
+          720575941504688983,
+          720575941505903410,
+          720575941508453410,
+          720575941533631461,
+          720575941536652888,
+          720575941538233330,
+          720575941538815613,
+          720575941541364605,
+          720575941543437573,
+          720575941544127517,
+          720575941548122248,
+          720575941555451034,
+          720575941569414132,
+          720575941575937128,
+          720575941586874502,
+          720575941590727820,
+          720575941594551847,
+          720575941602245817,
+          720575941611542249,
+          720575941614634972,
+          720575941616816085,
+          720575941642527570,
+          720575941652001041,
+          720575941654539793
+        ],
+        "jo_a_synapses": 117,
+        "jo_b_synapses": 31,
+        "outputs": {
+          "vpoEN": 724,
+          "vpoIN": 11,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 641,
+          "0": 0,
+          "1": 83
+        }
+      },
+      "A2-candidate": {
+        "count": 2,
+        "status": "present",
+        "sides": {
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 2
+        },
+        "sign": {
+          "1": 2
+        },
+        "types": {
+          "CB1817a": 1,
+          "CB1817b": 1
+        },
+        "body_ids": [
+          720575941529137830,
+          720575941530522315
+        ],
+        "jo_a_synapses": 1104,
+        "jo_b_synapses": 4,
+        "outputs": {
+          "vpoEN": 5,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 5
+        }
+      }
+    }
+  },
+  "male": {
+    "graph_file": "graph_male.npz",
+    "sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+    "sign_rule": "shiu2024",
+    "rows": {
+      "vpoEN-input:CB1484": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2364": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1383": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:WED104": {
+        "count": 2,
+        "status": "present",
+        "sides": {
+          "L": 1,
+          "R": 1
+        },
+        "nt": {
+          "gaba": 2
+        },
+        "sign": {
+          "-1": 2
+        },
+        "types": {
+          "WED104": 2
+        },
+        "body_ids": [
+          520792,
+          531583
+        ],
+        "jo_a_synapses": 18,
+        "jo_b_synapses": 12,
+        "outputs": {
+          "vpoEN": 571,
+          "vpoIN": 2,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 571,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:AN_AVLP_8": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2633": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "acetylcholine": 4
+        },
+        "sign": {
+          "1": 4
+        },
+        "types": {
+          "CB2633": 4
+        },
+        "body_ids": [
+          22744,
+          37651,
+          55705,
+          555742
+        ],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 3,
+        "outputs": {
+          "vpoEN": 268,
+          "vpoIN": 2,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 268
+        }
+      },
+      "vpoEN-input:PVLP021": {
+        "count": 4,
+        "status": "present",
+        "sides": {
+          "L": 2,
+          "R": 2
+        },
+        "nt": {
+          "gaba": 4
+        },
+        "sign": {
+          "-1": 4
+        },
+        "types": {
+          "PVLP021": 4
+        },
+        "body_ids": [
+          13794,
+          15815,
+          65991,
+          526031
+        ],
+        "jo_a_synapses": 35,
+        "jo_b_synapses": 1,
+        "outputs": {
+          "vpoEN": 315,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 315,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1869": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB2449": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input:CB1614": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      },
+      "vpoEN-input-top10": {
+        "count": 10,
+        "status": "present",
+        "sides": {
+          "L": 5,
+          "R": 5
+        },
+        "nt": {
+          "acetylcholine": 4,
+          "gaba": 6
+        },
+        "sign": {
+          "-1": 6,
+          "1": 4
+        },
+        "types": {
+          "CB2633": 4,
+          "PVLP021": 4,
+          "WED104": 2
+        },
+        "body_ids": [
+          13794,
+          15815,
+          22744,
+          37651,
+          55705,
+          65991,
+          520792,
+          526031,
+          531583,
+          555742
+        ],
+        "jo_a_synapses": 53,
+        "jo_b_synapses": 16,
+        "outputs": {
+          "vpoEN": 1154,
+          "vpoIN": 4,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 886,
+          "0": 0,
+          "1": 268
+        }
+      },
+      "A2-candidate": {
+        "count": 0,
+        "status": "absent",
+        "sides": {},
+        "nt": {},
+        "sign": {},
+        "types": {},
+        "body_ids": [],
+        "jo_a_synapses": 0,
+        "jo_b_synapses": 0,
+        "outputs": {
+          "vpoEN": 0,
+          "vpoIN": 0,
+          "vpoDN": 0
+        },
+        "vpoen_sign_synapses": {
+          "-1": 0,
+          "0": 0,
+          "1": 0
+        }
+      }
+    }
+  }
+}

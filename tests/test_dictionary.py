@@ -238,3 +238,136 @@ def test_e3_selector_definitions_and_exact_boundaries(dataset):
     assert definitions["A2-candidate"].read_only
     assert not definitions["AMMC-B1-candidate"].read_only
     assert "0 cells in FAFB v783 and BANC v888; renamed 2026-09-16" in definitions["vpoIN"].notes
+
+
+# Fixed roadmap values, independent of the production selector allowlist.
+E3B_INPUTS = {
+    "CB1484": 704, "CB2364": 563, "CB1383": 321, "WED104": 297,
+    "AN_AVLP_8": 288, "CB2633": 278, "PVLP021": 215, "CB1869": 184,
+    "CB2449": 140, "CB1614": 139,
+}
+E3B_NAMES = ["vpoEN-input:" + name for name in E3B_INPUTS] + ["vpoEN-input-top10"]
+
+
+@pytest.fixture
+def e3b_graph():
+    types = list(E3B_INPUTS) + ["CB1484", "CB1817a", "CB1817b"]
+    types += [variant for name in E3B_INPUTS
+              for variant in ("x" + name, name + "-like", name.lower(), name + "0")]
+    return {"type": np.array(types), "body_id": np.arange(9001, 9001 + len(types)),
+            "superclass": np.full(len(types), "cb_intrinsic"),
+            "class": np.full(len(types), ""), "nt": np.full(len(types), ""),
+            "side": np.full(len(types), "")}
+
+
+@pytest.mark.parametrize("dataset", DATASETS)
+def test_e3b_exact_selection_and_metadata(dataset, e3b_graph):
+    definitions = {entry.name: entry for entry in entries(dataset)}
+    selected = groups(dataset, graph=e3b_graph)
+    for i, cell_type in enumerate(E3B_INPUTS):
+        expected = [0, 10] if i == 0 else [i]
+        np.testing.assert_array_equal(selected["vpoEN-input:" + cell_type], expected)
+    np.testing.assert_array_equal(selected["vpoEN-input-top10"], np.arange(11))
+    np.testing.assert_array_equal(selected["A2-candidate"], [11, 12])
+    assert "A2-candidate-path" not in definitions
+    for name in E3B_NAMES:
+        entry = definitions[name]
+        assert entry.read_only and entry.confidence == "exact"
+        assert entry.group == entry.to_dict()["group"] == "vpoen-input"
+        assert entry.evidence_class == "records/vpoen_inputs_v1_report.md"
+        assert entry.notes == "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown"
+        for graph in (e3b_graph, {"type": np.array(["unrelated"]), "body_id": np.array([1])}):
+            with pytest.raises(ValueError, match="read-only diagnostic population"):
+                drive_targets(dataset, name, graph=graph)
+    assert "group" not in definitions["A2-candidate"].to_dict()
+
+
+def e3b_measure(graph, selected):
+    """Measure raw directed synapses without sign cancellation or simulation."""
+    from flybench.dictionary.build import distribution
+    from scipy.sparse import csr_matrix
+
+    n = len(graph["body_id"])
+    counts = csr_matrix((graph["count"], graph["indices"], graph["indptr"]), shape=(n, n))
+    rows = {}
+    for name in E3B_NAMES + ["A2-candidate"]:
+        indices = selected[name]
+        rows[name] = {
+            "count": len(indices), "status": "present" if len(indices) else "absent",
+            "sides": distribution(graph["side"][indices]),
+            "nt": distribution(graph["nt"][indices]),
+            "sign": distribution(graph["sign"][indices]),
+            "types": distribution(graph["type"][indices]),
+            "body_ids": graph["body_id"][indices].tolist(),
+            "jo_a_synapses": int(counts[selected["JO-A"]][:, indices].sum()),
+            "jo_b_synapses": int(counts[selected["JO-B"]][:, indices].sum()),
+            "outputs": {target: int(counts[indices][:, selected[target]].sum())
+                        for target in ("vpoEN", "vpoIN", "vpoDN")},
+            "vpoen_sign_synapses": {
+                str(sign): int(counts[indices[graph["sign"][indices] == sign]][:, selected["vpoEN"]].sum())
+                for sign in (-1, 0, 1)},
+        }
+    return rows
+
+
+def test_e3b_measure_direction_and_sign(e3b_graph):
+    from scipy.sparse import csr_matrix
+
+    n = len(e3b_graph["body_id"])
+    # Reverse edge 91 must not contaminate JO-A input 7; negative source
+    # signs must not turn raw outgoing count 11 into -11 or remove it.
+    matrix = csr_matrix(([7, 91, 11, 13, 17], ([11, 0, 0, 0, 0], [0, 11, 12, 13, 14])), shape=(n, n))
+    graph = dict(e3b_graph, count=matrix.data, indices=matrix.indices, indptr=matrix.indptr,
+                 side=np.array(["L"] * n), nt=np.array(["gaba"] * n), sign=np.full(n, -1))
+    selected = groups("female", graph=graph)
+    selected.update({"JO-A": np.array([11]), "JO-B": np.array([15]),
+                     "vpoEN": np.array([12]), "vpoIN": np.array([13]), "vpoDN": np.array([14])})
+    row = e3b_measure(graph, selected)["vpoEN-input:CB1484"]
+    assert row["jo_a_synapses"] == 7 and row["jo_b_synapses"] == 0
+    assert row["outputs"] == {"vpoEN": 11, "vpoIN": 13, "vpoDN": 17}
+    assert row["sign"] == {"-1": 2}
+    assert row["vpoen_sign_synapses"] == {"-1": 11, "0": 0, "1": 0}
+
+
+def test_e3b_roadmap_synapses_and_snapshot_metadata(e3_snapshot):
+    dataset, graph, selected = e3_snapshot
+    rows = e3b_measure(graph, selected)
+    report = json.loads((Path(__file__).parent / "fixtures" / "graph" /
+                         f"dictionary_{dataset}.json").read_text(encoding="utf-8"))
+    exported = {entry["name"]: entry for entry in report["entries"]}
+    for name in E3B_NAMES:
+        assert exported[name]["read_only"] is True
+        assert exported[name]["group"] == "vpoen-input"
+        assert exported[name]["count"] == rows[name]["count"]
+    if dataset == "female":
+        assert {cell_type: rows["vpoEN-input:" + cell_type]["outputs"]["vpoEN"]
+                for cell_type in E3B_INPUTS} == E3B_INPUTS
+    np.testing.assert_array_equal(selected["vpoEN-input-top10"],
+                                  np.flatnonzero(np.isin(graph["type"], list(E3B_INPUTS))))
+
+
+def write_e3b_measurements():
+    """Reproduce the delivery measurements with the task's Python environment."""
+    from flybench.dictionary.build import sha256
+
+    measured = {}
+    for dataset in ("female", "banc", "male"):
+        path = Path("build") / f"graph_{dataset}.npz"
+        graph = load(path)
+        measured[dataset] = {
+            "graph_file": path.name, "sha256": sha256(path),
+            "sign_rule": graph["meta"]["sign_rule"],
+            "rows": e3b_measure(graph, groups(dataset, graph=graph)),
+        }
+        print(dataset, {name: row["count"] for name, row in measured[dataset]["rows"].items()}, flush=True)
+        del graph
+    destination = Path("records/dictionary_e3b_measurements.json")
+    destination.write_text(json.dumps(measured, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+
+if __name__ == "__main__":
+    import sys
+
+    if sys.argv[1:] != ["--e3b-measurements"]:
+        raise SystemExit("usage: python tests/test_dictionary.py --e3b-measurements")
+    write_e3b_measurements()

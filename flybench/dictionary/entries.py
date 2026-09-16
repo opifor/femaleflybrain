@@ -91,6 +91,19 @@ def literals(names):
     return "^(?:" + "|".join(re.escape(n) for n in names) + ")$"
 
 
+@dataclass(frozen=True)
+class VpoENInputEntry(Entry):
+    """Anatomical diagnostic group; existing Entry serialization is unchanged."""
+
+    group: str = "vpoen-input"
+
+
+VPOEN_INPUT_TYPES = (
+    "CB1484", "CB2364", "CB1383", "WED104", "AN_AVLP_8",
+    "CB2633", "PVLP021", "CB1869", "CB2449", "CB1614",
+)
+
+
 def entries(dataset):
     """Return new immutable definitions; counts are measured by build.audit."""
     if dataset not in DATASETS:
@@ -241,4 +254,16 @@ def entries(dataset):
                       "renamed 2026-09-16. MaleCNS retains ^vpoIN$ (five cells). "
                       "AVLP008 is a separate connectivity population.")
               if entry.name == "vpoIN" else entry for entry in result]
+    # The rank is from FAFB v783; literal labels in other graphs are not aliases.
+    for name, pattern in (
+        *(("vpoEN-input:" + cell_type, literals((cell_type,)))
+          for cell_type in VPOEN_INPUT_TYPES),
+        ("vpoEN-input-top10", literals(VPOEN_INPUT_TYPES)),
+    ):
+        result.append(VpoENInputEntry(
+            name, dataset, Selector(pattern), "readout",
+            SOURCES["atlas"][0] + ": annotation context only; rank evidence is vpoen_inputs_v1.",
+            "exact",
+            "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+            SOURCES["atlas"][1], "records/vpoen_inputs_v1_report.md", True))
     return tuple(result)

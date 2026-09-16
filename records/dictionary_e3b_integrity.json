@@ -1,0 +1,827 @@
+{
+  "head": "722590cad423f82294bbdfd2995913999b678441",
+  "branch": "lane-e3b",
+  "graphs": {
+    "female": {
+      "sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+      "matches_roadmap": true,
+      "sign_rule": "shiu2024-parquet"
+    },
+    "banc": {
+      "sha256": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+      "matches_roadmap": true,
+      "sign_rule": "shiu2024"
+    },
+    "male": {
+      "sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+      "matches_roadmap": true,
+      "sign_rule": "shiu2024"
+    }
+  },
+  "files": {
+    "flybench/dictionary/entries.py": {
+      "sha256": "bdd6473bbd80a40fba58cfdb95b08f1f828f4a6c66affd47366644a4b5d0e5c6",
+      "bytes": 17500,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "docs/dictionary.md": {
+      "sha256": "2b808f69cf4330050a3b398baee24c01bb0f85e9bcd0f9a11ea8fe6d92bae0f9",
+      "bytes": 98352,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "tests/test_dictionary.py": {
+      "sha256": "dccbb70777b7b7877523581d0220c999e6002550c769316bdd49504f4b46bfc2",
+      "bytes": 18218,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/generate.py": {
+      "sha256": "cc09b20e1189646e7308daea2080dda458df0c4c5735ab7898bf9544c42495c3",
+      "bytes": 4070,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "records/dictionary_e3b_report.md": {
+      "sha256": "34d348b14b50e7a4b1e5d86ab7729e61feb326a9089f89134ffcf06d9ea36785",
+      "bytes": 11378,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "records/dictionary_e3b_measurements.json": {
+      "sha256": "22e005b26703f225d7398dfbd3e432be452ff86ce2722b2d0b5b17a865304bf2",
+      "bytes": 25649,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "records/dictionary_e3b_suite.json": {
+      "sha256": "5850ffeaf7d1a1640b44c6a33a89ccf772bc11faa812f55104eed66325deb06c",
+      "bytes": 13225,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "records/vpoen_inputs_v1_report.md": {
+      "sha256": "0570a06afac45806697975d3b2a743ad8b4c1c9c6ee229fc64161784a63e9bec",
+      "bytes": 140309,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "records/vpoen_inputs_v1_results.json": {
+      "sha256": "69859957b07d0541b2fd923c20d5a3b85ac630c737f76368dc2e88992adff96f",
+      "bytes": 4330711,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/dictionary_female.json": {
+      "sha256": "807c8c18838aafe35571c07d5de3ef24219b9b44c52bf67b6e753d895bcbf552",
+      "bytes": 142918,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/dictionary_banc.json": {
+      "sha256": "ad991a7fded3d3ee15bf5f1004c291076219565f09c03cba2be03c2c901b7e62",
+      "bytes": 152712,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/dictionary_male.json": {
+      "sha256": "ee456ffaef7b6b368b4e1d717e208f127fb414832954095903bf7affd314592f",
+      "bytes": 130747,
+      "utf8_no_bom": true,
+      "lf_only": true
+    },
+    "build/dictionary_female.json": {
+      "sha256": "8290068cb6bcc18a858b66b2ecf83d11b425d2f0d7b914ae39c0e66df7325a9b",
+      "bytes": 147941,
+      "utf8_no_bom": true,
+      "lf_only": false
+    },
+    "build/dictionary_banc.json": {
+      "sha256": "0fcc94e93cc135dc687f92d3c78dd49444fe0e37c51b69cafaf3c8c246ca1cf6",
+      "bytes": 158223,
+      "utf8_no_bom": true,
+      "lf_only": false
+    },
+    "build/dictionary_male.json": {
+      "sha256": "872df1ff051a250f65a2a6b7bdee358085e5bf59e27f8b5b64a6aa348b666d6e",
+      "bytes": 135427,
+      "utf8_no_bom": true,
+      "lf_only": false
+    }
+  },
+  "existing_definitions": {
+    "female": {
+      "old_count": 117,
+      "new_count": 128,
+      "existing_entries_equal": true,
+      "added": [
+        "vpoEN-input:CB1484",
+        "vpoEN-input:CB2364",
+        "vpoEN-input:CB1383",
+        "vpoEN-input:WED104",
+        "vpoEN-input:AN_AVLP_8",
+        "vpoEN-input:CB2633",
+        "vpoEN-input:PVLP021",
+        "vpoEN-input:CB1869",
+        "vpoEN-input:CB2449",
+        "vpoEN-input:CB1614",
+        "vpoEN-input-top10"
+      ],
+      "build_fixture_equal": true,
+      "build_normalized_bytes_equal": true
+    },
+    "banc": {
+      "old_count": 117,
+      "new_count": 128,
+      "existing_entries_equal": true,
+      "added": [
+        "vpoEN-input:CB1484",
+        "vpoEN-input:CB2364",
+        "vpoEN-input:CB1383",
+        "vpoEN-input:WED104",
+        "vpoEN-input:AN_AVLP_8",
+        "vpoEN-input:CB2633",
+        "vpoEN-input:PVLP021",
+        "vpoEN-input:CB1869",
+        "vpoEN-input:CB2449",
+        "vpoEN-input:CB1614",
+        "vpoEN-input-top10"
+      ],
+      "build_fixture_equal": true,
+      "build_normalized_bytes_equal": true
+    },
+    "male": {
+      "old_count": 117,
+      "new_count": 128,
+      "existing_entries_equal": true,
+      "added": [
+        "vpoEN-input:CB1484",
+        "vpoEN-input:CB2364",
+        "vpoEN-input:CB1383",
+        "vpoEN-input:WED104",
+        "vpoEN-input:AN_AVLP_8",
+        "vpoEN-input:CB2633",
+        "vpoEN-input:PVLP021",
+        "vpoEN-input:CB1869",
+        "vpoEN-input:CB2449",
+        "vpoEN-input:CB1614",
+        "vpoEN-input-top10"
+      ],
+      "build_fixture_equal": true,
+      "build_normalized_bytes_equal": true
+    }
+  },
+  "direct_comparisons": [
+    {
+      "dataset": "female",
+      "type": "CB1484",
+      "target": "vpoEN",
+      "expected": 704,
+      "observed": 704
+    },
+    {
+      "dataset": "female",
+      "type": "CB1484",
+      "target": "vpoIN",
+      "expected": 1,
+      "observed": 1
+    },
+    {
+      "dataset": "female",
+      "type": "CB1484",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB2364",
+      "target": "vpoEN",
+      "expected": 563,
+      "observed": 563
+    },
+    {
+      "dataset": "female",
+      "type": "CB2364",
+      "target": "vpoIN",
+      "expected": 34,
+      "observed": 34
+    },
+    {
+      "dataset": "female",
+      "type": "CB2364",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB1383",
+      "target": "vpoEN",
+      "expected": 321,
+      "observed": 321
+    },
+    {
+      "dataset": "female",
+      "type": "CB1383",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB1383",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "WED104",
+      "target": "vpoEN",
+      "expected": 297,
+      "observed": 297
+    },
+    {
+      "dataset": "female",
+      "type": "WED104",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "WED104",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "AN_AVLP_8",
+      "target": "vpoEN",
+      "expected": 288,
+      "observed": 288
+    },
+    {
+      "dataset": "female",
+      "type": "AN_AVLP_8",
+      "target": "vpoIN",
+      "expected": 1,
+      "observed": 1
+    },
+    {
+      "dataset": "female",
+      "type": "AN_AVLP_8",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB2633",
+      "target": "vpoEN",
+      "expected": 278,
+      "observed": 278
+    },
+    {
+      "dataset": "female",
+      "type": "CB2633",
+      "target": "vpoIN",
+      "expected": 3,
+      "observed": 3
+    },
+    {
+      "dataset": "female",
+      "type": "CB2633",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "PVLP021",
+      "target": "vpoEN",
+      "expected": 215,
+      "observed": 215
+    },
+    {
+      "dataset": "female",
+      "type": "PVLP021",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "PVLP021",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB1869",
+      "target": "vpoEN",
+      "expected": 184,
+      "observed": 184
+    },
+    {
+      "dataset": "female",
+      "type": "CB1869",
+      "target": "vpoIN",
+      "expected": 1,
+      "observed": 1
+    },
+    {
+      "dataset": "female",
+      "type": "CB1869",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB2449",
+      "target": "vpoEN",
+      "expected": 140,
+      "observed": 140
+    },
+    {
+      "dataset": "female",
+      "type": "CB2449",
+      "target": "vpoIN",
+      "expected": 3,
+      "observed": 3
+    },
+    {
+      "dataset": "female",
+      "type": "CB2449",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "female",
+      "type": "CB1614",
+      "target": "vpoEN",
+      "expected": 139,
+      "observed": 139
+    },
+    {
+      "dataset": "female",
+      "type": "CB1614",
+      "target": "vpoIN",
+      "expected": 59,
+      "observed": 59
+    },
+    {
+      "dataset": "female",
+      "type": "CB1614",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1484",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1484",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1484",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2364",
+      "target": "vpoEN",
+      "expected": 335,
+      "observed": 335
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2364",
+      "target": "vpoIN",
+      "expected": 10,
+      "observed": 10
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2364",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1383",
+      "target": "vpoEN",
+      "expected": 92,
+      "observed": 92
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1383",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1383",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "WED104",
+      "target": "vpoEN",
+      "expected": 78,
+      "observed": 78
+    },
+    {
+      "dataset": "banc",
+      "type": "WED104",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "WED104",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "AN_AVLP_8",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "AN_AVLP_8",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "AN_AVLP_8",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2633",
+      "target": "vpoEN",
+      "expected": 21,
+      "observed": 21
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2633",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2633",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "PVLP021",
+      "target": "vpoEN",
+      "expected": 55,
+      "observed": 55
+    },
+    {
+      "dataset": "banc",
+      "type": "PVLP021",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "PVLP021",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1869",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1869",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1869",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2449",
+      "target": "vpoEN",
+      "expected": 62,
+      "observed": 62
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2449",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB2449",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1614",
+      "target": "vpoEN",
+      "expected": 81,
+      "observed": 81
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1614",
+      "target": "vpoIN",
+      "expected": 1,
+      "observed": 1
+    },
+    {
+      "dataset": "banc",
+      "type": "CB1614",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1484",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1484",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1484",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2364",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2364",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2364",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1383",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1383",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1383",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "WED104",
+      "target": "vpoEN",
+      "expected": 571,
+      "observed": 571
+    },
+    {
+      "dataset": "male",
+      "type": "WED104",
+      "target": "vpoIN",
+      "expected": 2,
+      "observed": 2
+    },
+    {
+      "dataset": "male",
+      "type": "WED104",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "AN_AVLP_8",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "AN_AVLP_8",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "AN_AVLP_8",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2633",
+      "target": "vpoEN",
+      "expected": 268,
+      "observed": 268
+    },
+    {
+      "dataset": "male",
+      "type": "CB2633",
+      "target": "vpoIN",
+      "expected": 2,
+      "observed": 2
+    },
+    {
+      "dataset": "male",
+      "type": "CB2633",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "PVLP021",
+      "target": "vpoEN",
+      "expected": 315,
+      "observed": 315
+    },
+    {
+      "dataset": "male",
+      "type": "PVLP021",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "PVLP021",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1869",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1869",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1869",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2449",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2449",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB2449",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1614",
+      "target": "vpoEN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1614",
+      "target": "vpoIN",
+      "expected": 0,
+      "observed": 0
+    },
+    {
+      "dataset": "male",
+      "type": "CB1614",
+      "target": "vpoDN",
+      "expected": 0,
+      "observed": 0
+    }
+  ],
+  "direct_comparisons_matched": 90,
+  "docs_existing_bytes_preserved": true,
+  "readme_unchanged": true,
+  "snapshot_generation": {
+    "build_command": "python -m flybench.dictionary.build --data build --out build",
+    "fixture_command": "python -B tests/fixtures/graph/generate.py --dictionary-snapshots",
+    "exit_codes": [
+      0,
+      0
+    ],
+    "fixture_lf_normalized": true,
+    "build_crlf_preserved": true
+  },
+  "environment_workaround": false,
+  "no_git_write_commands": true,
+  "restricted_source_trees_inspected": false,
+  "runtime_uses_explicitly_supplied_dependency_directory": true,
+  "integrity_self_hash": "Excluded to avoid a recursive digest.",
+  "hash_basis": "lf",
+  "line_ending_normalisation": "Orchestrator converted any CRLF to LF before commit per records/hash_basis_note.md."
+}
