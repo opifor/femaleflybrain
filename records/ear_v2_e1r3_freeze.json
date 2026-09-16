@@ -1,0 +1,20 @@
+{
+  "frozen_at_utc": "2026-09-16T20:55:31.409345+00:00",
+  "freeze_stage": "before round-3 implementation and candidate evaluation",
+  "round1_sha256": "c053c84283c74facad59e0b546322b8d1224ad4c4284b511c6d3acdebb0f8b69",
+  "round2_sha256": "f4b29a780558f148c9cf3a35390dc0d247f3ddc1850974858d516f50d464b064",
+  "historical_round12_sha256": "3d477af62ddc609153897e45890364487172e1f3552e3d0b1d227b090bc13681",
+  "checkout_line_endings": "CRLF; original checkout prefix preserved byte-for-byte",
+  "round12_sha256": "60f55ad3f3c4f5d0da40251728e5bb4eac5826160ee503ff69324d5d50f1e1b3",
+  "round12_bytes": 14432,
+  "round3_sha256": "e611cd74154a1c936cb9b06c73efe22fe232a2744b30a9c88917219e47b6dde8",
+  "combined_sha256": "f525f2abbcc53551eb2243d9f53dd2975e4e7b2375752c7b1d4a19102254d927",
+  "ledger_v11_sha256": "8bd44ce467b72c0aa792f2bb2dc2d1fa9340f266141fe96ac75950811eae750f",
+  "ledger_current_sha256": "b43ae2c8b8b2db0edb019e13fde696cbe65eb77512fa39f761718905ad08e6ca",
+  "ledger_current_version": "1.2",
+  "all_v11_measurements_equal": true,
+  "fit_policy_equal": true,
+  "ledger_full_bytes_equal_v11": false,
+  "original_ear2_sha256": "8ca49d3aaf836d675cd179a35bcb9bc6ec48936504eaa1af42ead9081e947936",
+  "original_tests_sha256": "dcc1c93862600492b206c43040c8a2496057b647bc0b467582ad44a90bb645c0"
+}

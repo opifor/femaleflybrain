@@ -14,7 +14,7 @@ from .song import SAMPLE_RATE
 
 InputMode = Literal["particle_velocity_mm_s", "arista_displacement_um"]
 INPUT_MODES = ("particle_velocity_mm_s", "arista_displacement_um")
-FAMILIES = ("legacy", "energy_feedback", "asymmetric_energy")
+FAMILIES = ("legacy", "energy_feedback", "asymmetric_energy", "rectified_state")
 
 
 def _mode(mode: str) -> str:
@@ -81,6 +81,7 @@ class Config:
     tau_up_ms: float = 5.0
     tau_down_ms: float = 20.0
     strength: float = 1.0
+    sigma: float = 1.0
     jo_absolute_rate_calibrated: bool = field(default=False, init=False)
     jo_rate_ceiling_hz: None = field(default=None, init=False)
     jo_refractory_ms: None = field(default=None, init=False)
@@ -94,6 +95,8 @@ class Config:
                 raise ValueError("Adaptation times must be finite and positive")
         if not np.isfinite(self.strength) or self.strength <= 0:
             raise ValueError("Feedback strength must be finite and positive")
+        if not np.isfinite(self.sigma) or self.sigma <= 0:
+            raise ValueError("Sigma must be finite and positive")
 
 
 def reported_channels():
@@ -212,6 +215,18 @@ class Ear2:
                 divisor, div_state = lfilter([1 - self._a_div], [1, -self._a_div],
                                             filtered**2, axis=-1, zi=self._div_state)
                 graded = np.abs(residual / (1.0 + self.config.strength * divisor))
+            elif self.config.family == "rectified_state":
+                # Rectified residual drives d; store d itself across chunks.
+                divisor = np.empty_like(rectified)
+                div_state = self._div_state.copy()
+                for k, row in enumerate(rectified):
+                    d = float(div_state[k, 0])
+                    for n, value in enumerate(row):
+                        a = self._a_up if value > d else self._a_down
+                        d = a*d + (1-a)*value
+                        divisor[k, n] = d
+                    div_state[k, 0] = d
+                graded = rectified / (self.config.sigma + self.config.strength * divisor)
             else:
                 # This family's state stores d itself, not lfilter's scaled zi.
                 divisor = np.empty_like(filtered)

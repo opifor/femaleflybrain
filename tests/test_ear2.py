@@ -563,3 +563,120 @@ def test_round2_default_is_selected_winner():
                   config=Config(family='energy_feedback',tau_sub_ms=5,tau_div_ms=10,strength=1))
     assert np.array_equal(bank.process(x,input_mode=MODE).r_graded,
                           explicit.process(x,input_mode=MODE).r_graded)
+
+
+# Round-3 additions; all earlier tests and diagnostic definitions are unchanged.
+@pytest.mark.parametrize('mode', INPUT_MODES)
+def test_round3_causal_chunks_and_reset(mode):
+    config = Config(family='rectified_state', sigma=.3, strength=3,
+                    tau_up_ms=2, tau_down_ms=50)
+    with patch(__name__+'.fixture_channels', reported_channels):
+        m = causal_chunk_metrics(config)
+        assert m['causal_bit_equal'] and m['phase_bit_equal']
+        assert m['chunk_max_error'] == 0 and m['signed_chunk_max_error'] == 0
+        x = np.random.default_rng(1802).normal(size=4001)
+        bounds = [0, 0, 1, 19, 1102, 1103, 2099, 4001]
+        bank = ear(config, mode)
+        whole = ear(config, mode).process(x, input_mode=mode)
+        chunks = [bank.process(x[a:b], input_mode=mode)
+                  for a,b in zip(bounds[:-1], bounds[1:])]
+        for key in ('r_graded', 'phase_sign', 'r_signed'):
+            assert np.array_equal(getattr(whole, key),
+                                  np.concatenate([getattr(r,key) for r in chunks], axis=1))
+        assert [r.start_sample for r in chunks] == bounds[:-1]
+        bank.reset()
+        assert bank.samples_processed == 0
+        assert np.array_equal(whole.r_graded, bank.process(x, input_mode=mode).r_graded)
+        restarted = np.concatenate([ear(config,mode).process(x[a:b],input_mode=mode).r_graded
+                                   for a,b in zip(bounds[:-1],bounds[1:])], axis=1)
+        assert np.max(abs(whole.r_graded-restarted)) > .01
+
+
+def test_round3_independent_recurrence():
+    config = Config(family='rectified_state', tau_sub_ms=5, tau_up_ms=2,
+                    tau_down_ms=30, sigma=.3, strength=3)
+    x = np.random.default_rng(1801).normal(size=701)
+    actual = response(x, config)
+    expected = np.empty_like(actual.r_graded)
+    signs = np.empty_like(expected)
+    branches = set()
+    for k, channel in enumerate(fixture_channels()):
+        b,a = channel.coefficients()
+        x1=x2=y1=y2=base=d=0.
+        for n,sample in enumerate(x):
+            y = b[0]*sample+b[1]*x1+b[2]*x2-a[1]*y1-a[2]*y2
+            sub = np.exp(-1000/(FS*config.tau_sub_ms))
+            base = sub*base+(1-sub)*y
+            u = y-base
+            v = abs(u)
+            rising = v>d
+            branches.add(rising)
+            decay = np.exp(-1000/(FS*(config.tau_up_ms if rising else config.tau_down_ms)))
+            d = decay*d+(1-decay)*v
+            expected[k,n] = v/(config.sigma+config.strength*d)
+            signs[k,n] = np.sign(u)
+            x2,x1,y2,y1 = x1,sample,y1,y
+    assert branches == {False,True}
+    np.testing.assert_allclose(actual.r_graded,expected,atol=1e-12,rtol=1e-12)
+    assert np.array_equal(actual.phase_sign,signs)
+    assert np.array_equal(abs(actual.r_signed),actual.r_graded)
+
+
+@pytest.mark.parametrize('sigma', [0, -1, np.nan, np.inf, -np.inf])
+def test_round3_invalid_sigma(sigma):
+    with pytest.raises(ValueError, match='Sigma'):
+        Config(family='rectified_state', sigma=sigma)
+
+
+@pytest.mark.parametrize('family', ['legacy', 'energy_feedback', 'asymmetric_energy'])
+def test_round3_sigma_unused_by_existing_families(family):
+    x = np.random.default_rng(1801).normal(size=1001)
+    first = response(x,Config(family=family,sigma=.1))
+    second = response(x,Config(family=family,sigma=3))
+    assert np.array_equal(first.r_graded,second.r_graded)
+    assert np.array_equal(first.phase_sign,second.phase_sign)
+
+
+def g5_diagnostic_ratios(y, active):
+    """Diagnostic, not a gate: masked mean/peak and full-window peak/peak."""
+    early, late = slice(0,round(.05*FS)), slice(-round(.1*FS),None)
+    return dict(T1=float(y[late][active[late]].mean()/y[early][active[early]].max()),
+                T2=float(y[late].max()/y[early].max()))
+
+
+def duty_cycle_diagnostics(config):
+    energy = quad(lambda t: (4*(.5-.5*np.cos(2*np.pi*t/.004))*np.sin(2*np.pi*300*t))**2,
+                  0,.004,epsabs=1e-12)[0]
+    continuous = sine(.5,np.sqrt(2*energy/.036))
+    pulsed, starts = pulse_train(36,count=14,duration=.5,onset=0)
+    active = np.zeros(len(pulsed),dtype=bool)
+    t = np.arange(len(pulse()))/FS
+    hann_positive = (.5-.5*np.cos(2*np.pi*t/.004)) > 0
+    for start in starts:
+        stop = min(len(pulsed),start+len(hann_positive))
+        if start < len(pulsed):
+            active[start:stop] |= hann_positive[:stop-start]
+    with patch(__name__+'.fixture_channels', reported_channels):
+        c = response(continuous,config).r_graded.mean(axis=0)
+        p = response(pulsed,config).r_graded.mean(axis=0)
+    return dict(label='diagnostic, not a gate',
+                continuous=g5_diagnostic_ratios(c,np.ones(len(c),dtype=bool)),
+                pulsed=g5_diagnostic_ratios(p,active),
+                nominal_duty_cycle=4/36, sampled_active_fraction=float(active.mean()),
+                late_active_samples=int(active[-round(.1*FS):].sum()),
+                late_total_samples=round(.1*FS),
+                early_active_samples=int(active[:round(.05*FS)].sum()))
+
+
+def test_round3_diagnostic_oracles():
+    # Inactive-bin dilution and a late peak must produce distinct statistics.
+    y = np.zeros(round(.5*FS))
+    active = np.zeros(len(y),dtype=bool)
+    y[1] = 4
+    active[1] = True
+    y[-10], y[-8] = 1,3
+    active[-10] = active[-8] = True
+    m = g5_diagnostic_ratios(y,active)
+    assert m == {'T1':.5,'T2':.75}
+    y[-9] = 8  # Outside Hann support: T1 ignores it; full-window T2 sees it.
+    assert g5_diagnostic_ratios(y,active) == {'T1':.5,'T2':2.}

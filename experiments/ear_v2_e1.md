@@ -230,3 +230,59 @@ pytest plugin autoload disabled. Prove harness failure with an intentional
 assertion and read test counts as well as exit codes. Store raw reproducible
 drivers/logs under build/records-raw; summaries under ear_v2_e1r2_* <=2 MB.
 No git mutation, protected-tree inspection or network simulation.
+
+
+## Round 3 amendment
+
+Frozen before round-3 implementation or candidate evaluation, 2026-09-16.
+All preceding round-1 and round-2 bytes remain unchanged. Gate definitions,
+stimuli, seeds 1801--1803, 16 phase realizations, analytic RMS convention,
+1 ms analysis bins, fitting windows and validity thresholds remain unchanged.
+
+The new rectified_state family follows this causal sample recurrence:
+b[n] = a_sub*b[n-1] + (1-a_sub)*filtered[n]; u = filtered-b; v = abs(u).
+Preserve phase_sign = sign(u) separately. The divisive state is driven by v,
+not filtered energy: d[n] = a*d[n-1] + (1-a)*v[n], where a = a_up if
+v[n] > d[n-1], otherwise a_down. Output r = v/(sigma + strength*d).
+Every decay is exp(-1000/(sample_rate*tau_ms)); states start at zero.
+sigma is a finite positive arbitrary graded-unit floor, default 1.0,
+used only by this family. Existing family equations remain unchanged.
+
+Fix tau_sub=5 ms as the round-2 design choice. Enumerate the complete
+Cartesian grid: tau_up_ms {2,5,10}, tau_down_ms {10,15,20,30,50},
+sigma {0.1,0.3,1,3}, strength {0.3,1,3}: 180 candidates, four fitted
+parameters. Use exactly the original objective: squared distances of G3
+up/down taus outside [5,20], divided by 15 ms before squaring, plus
+((recovery_tau-30)/10)^2, plus 1 if up>=down and 10 per invalid fit.
+Fit only G3 and recovery, never G4/G5/G7. Select the minimum objective
+within this family, ties by ascending (tau_up,tau_down,sigma,strength).
+Compare this winner with both frozen round-2 family winners using G1--G7
+pass count, then fewer fitted parameters, then retain the round-2 winner.
+Change Config defaults only if the new family passes strictly more gates.
+Report objective <= minimum + 1 parameter ranges; not a confidence interval.
+No refinement, new biological uncertainty or changed thresholds.
+
+G5 remains mean(last 100 ms)/peak(first 50 ms), continuous < pulsed.
+Add two diagnostics, each explicitly diagnostic, not a gate, for all three
+family winners. T1 restricts the pulsed numerator and denominator to samples
+where the actual sampled Hann window is strictly greater than zero; retain
+the same last 100 ms and first 50 ms windows. Continuous T1 is unchanged.
+T2 uses peak(last 100 ms)/peak(first 50 ms) for both conditions, with full
+windows and no pulse mask. Neither diagnostic produces a pass/fail verdict
+or participates in fitting or selection. Report pulse duty cycle and sampled
+window occupancy to distinguish duty-cycle dilution from peak adaptation.
+
+Use the unchanged round-2 five-channel bank and G6 conditional placement.
+The checkout contains ledger v1.2. Verify every v1.1 measurement and fitting
+policy against the local git v1.1 blob; do not modify the ledger or use the
+later entries. Full ledger byte equality to v1.1 is not claimed.
+
+The round-2 drivers are absent. Reconstruct ear_v2_e1r3_run.py and
+ear_v2_e1r3_finalize.py under build/records-raw and execute from repo root,
+respecting the explicit write allowlist. Record this location deviation.
+Use the prescribed interpreter/dependency chain, locale C, no bytecode,
+no plugin autoload, and pytest -p no:cacheprovider tests/test_ear2.py.
+Verify an intentional failing test and inspect exit codes and count lines.
+Keep raw evidence under build/records-raw and round-3 summaries <=2 MB.
+Budget is 45 minutes from first inspection; report partial completion if
+exhausted. No git writes, protected source inspection or network simulation.

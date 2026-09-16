@@ -1,0 +1,132 @@
+{
+  "finalized_at_utc": "2026-09-16T20:59:36.680072+00:00",
+  "head": "8577c48c7310b7493f31957caa6c8cf2a38d8e4a",
+  "git_status": [
+    " M experiments/ear_v2_e1.md",
+    " M flybench/ear2.py",
+    " M tests/test_ear2.py",
+    "?? records/ear_v2_e1r3_audit.json",
+    "?? records/ear_v2_e1r3_fit.json",
+    "?? records/ear_v2_e1r3_freeze.json",
+    "?? records/ear_v2_e1r3_report.md"
+  ],
+  "changed_files": [
+    "experiments/ear_v2_e1.md",
+    "flybench/ear2.py",
+    "tests/test_ear2.py",
+    "records/ear_v2_e1r3_audit.json",
+    "records/ear_v2_e1r3_fit.json",
+    "records/ear_v2_e1r3_freeze.json",
+    "records/ear_v2_e1r3_report.md"
+  ],
+  "git_operations": "read only",
+  "scope_passed": true,
+  "preregistration_checkout_prefix_byte_equal": true,
+  "historical_round12_hashes_equal": true,
+  "round3_amendment_hash_equal": true,
+  "ledger_unchanged": true,
+  "ledger_v11_records_equal": true,
+  "ledger_v11_full_bytes_equal": false,
+  "fit_policy_equal": true,
+  "old_tests_unchanged": true,
+  "bom_free": true,
+  "machine_path_scan_passed": true,
+  "file_sha256": {
+    "experiments/ear_v2_e1.md": "f525f2abbcc53551eb2243d9f53dd2975e4e7b2375752c7b1d4a19102254d927",
+    "flybench/ear2.py": "187fa9ec6fb1019d50efbea0b758a68a12fef195b6b6588800f26feb24928834",
+    "tests/test_ear2.py": "c15283ed689a6f5bc6183215976c4b2ae23df76b24e0c43206167002c486d458",
+    "records/ear_v2_e1r3_fit.json": "c3c446102ee8666ee14f2b7ceefcd8ed357bec7d8eee728057647c5287dede5e",
+    "records/ear_v2_e1r3_freeze.json": "004ebaaf0d72771f9ae58d7fa3ea8997d71f1921d0375934af733397a072bb5b",
+    "records/ear_v2_e1r3_report.md": "7ecf8073a5b16161b306bb459e66491dfe77898c36a9176b9fd05f174964e41d"
+  },
+  "raw_sha256": {
+    "build/records-raw/ear_v2_e1r3_finalize.py": "6a119eb14ab354e54e78964cb621485aa06b10d1beb2e48c373ad986bd964211",
+    "build/records-raw/ear_v2_e1r3_freeze.py": "80986e3ff4bd9c1d8844932d13a905539bff640cb2890369255553d95b0490d8",
+    "build/records-raw/ear_v2_e1r3_grid.jsonl": "c3658e3efeef619cdbe0c4f91b01a338eaac496d9f751509a5f1143bbdaf187f",
+    "build/records-raw/ear_v2_e1r3_harness.log": "7e2d730cc7e2e88265649c6843255bef041291fb45f973f99297eccce3d29053",
+    "build/records-raw/ear_v2_e1r3_harness_probe.py": "0de6e2c83a15f87807c6050f0b9a7c1faa0eb16245f184e876500ba7551adc57",
+    "build/records-raw/ear_v2_e1r3_multisine.npy": "0db2f7efea810a4db09104890496c88784b098a3808bbb1cf62c6b5304f3c9f1",
+    "build/records-raw/ear_v2_e1r3_pytest.log": "dcb0fc1f7d625c1fcd5472316df2c287da4fcd46e413dde2fa47d4231169c762",
+    "build/records-raw/ear_v2_e1r3_run.py": "48591838c879bf37b639de325caf957f94c3ca463e2ae872f24ab9f5d0d4dfe1"
+  },
+  "summary_files": {
+    "ear_v2_e1r3_fit.json": 750656,
+    "ear_v2_e1r3_freeze.json": 1318,
+    "ear_v2_e1r3_report.md": 10682,
+    "ear_v2_e1r3_audit.json": 4668
+  },
+  "verification": {
+    "pytest": {
+      "command": [
+        "<python>",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "tests/test_ear2.py"
+      ],
+      "exit_code": 0,
+      "counts": {
+        "passed": 52,
+        "skipped": 1,
+        "xfailed": 3
+      }
+    },
+    "harness": {
+      "command": [
+        "<python>",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "build/records-raw/ear_v2_e1r3_harness_probe.py"
+      ],
+      "exit_code": 1,
+      "counts": {
+        "failed": 1
+      }
+    },
+    "prior_family_bit_parity": [
+      {
+        "family": "legacy",
+        "mode": "particle_velocity_mm_s",
+        "bit_equal": true
+      },
+      {
+        "family": "legacy",
+        "mode": "arista_displacement_um",
+        "bit_equal": true
+      },
+      {
+        "family": "energy_feedback",
+        "mode": "particle_velocity_mm_s",
+        "bit_equal": true
+      },
+      {
+        "family": "energy_feedback",
+        "mode": "arista_displacement_um",
+        "bit_equal": true
+      },
+      {
+        "family": "asymmetric_energy",
+        "mode": "particle_velocity_mm_s",
+        "bit_equal": true
+      },
+      {
+        "family": "asymmetric_energy",
+        "mode": "arista_displacement_um",
+        "bit_equal": true
+      }
+    ],
+    "round2_winner_metrics_exact_equal": true
+  },
+  "deviations": [
+    "drivers stored under authorized raw directory",
+    "checkout ledger v1.2; v1.1 records and fit policy equal",
+    "checkout CRLF; historical LF hashes verified separately",
+    "initial parent AGENTS filename enumeration; no returned content opened"
+  ],
+  "summary_total_bytes": 767324
+}
