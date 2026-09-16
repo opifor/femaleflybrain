@@ -229,3 +229,17 @@ Seconds per trial-second divides wall time by simulated duration times B.
 The four-trial row simulates one second in every column; rates range from
 336.35 to 372.61 Hz/neuron. Setup took 2.130 s (CPU), 3.813 s (CUDA B=1), and
 3.734 s (CUDA B=4). Peak CUDA reserved memory was 396 and 472 MiB respectively.
+
+## Dictionary
+
+Build source-labelled neuron groups with
+`python -m flybench.dictionary.build --data build --out build`.
+The three `dictionary_<dataset>.json` reports record selectors, measured counts,
+body-ID examples, side/NT distributions, confidence and literature sources.
+`flybench.dictionary.groups(dataset, graph=graph)` returns indices for the
+simulator's `groups=` parameter; `drive_targets(dataset, name, graph=graph)`
+returns a selected drive population and rejects absent groups. Without a loaded
+graph, use `data_dir=`, `FLYBENCH_DATA`, or the default `build/` graph directory.
+See [the measured dictionary and matching limitations](docs/dictionary.md),
+including explicit absent groups and the conservative MaleCNS P1 proxy.
+Run `python -m pytest -q -p no:cacheprovider tests/test_dictionary.py`.
