@@ -1,0 +1,1238 @@
+{
+  "Result": {
+    "calibration": {
+      "a": [
+        {
+          "dose": 60,
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          },
+          "vpoDN": {
+            "mean": 0.0625,
+            "se": 0.0625,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.625,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          }
+        },
+        {
+          "dose": 180,
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          },
+          "vpoDN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          }
+        },
+        {
+          "dose": 360,
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          },
+          "vpoDN": {
+            "mean": -0.125,
+            "se": 0.2429563289518875,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.625,
+              0.625,
+              0.625,
+              -0.625,
+              -1.875,
+              -0.625
+            ],
+            "verdict": "not supported"
+          }
+        },
+        {
+          "dose": 720,
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          },
+          "vpoDN": {
+            "mean": -0.4375,
+            "se": 0.2802838343140356,
+            "n": 10,
+            "paired_values": [
+              -1.25,
+              -1.25,
+              0.625,
+              1.25,
+              0.0,
+              -1.25,
+              -1.25,
+              0.0,
+              -0.625,
+              -0.625
+            ],
+            "verdict": "not supported"
+          }
+        }
+      ],
+      "b": [
+        {
+          "state": "virgin",
+          "dose": 0,
+          "realized_vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          },
+          "vpoDN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          }
+        },
+        {
+          "state": "virgin",
+          "dose": 60,
+          "realized_vpoEN": {
+            "mean": 59.1875,
+            "se": 1.2776456755384968,
+            "n": 10,
+            "paired_values": [
+              61.25,
+              60.0,
+              60.9375,
+              64.0625,
+              64.375,
+              56.5625,
+              51.875,
+              56.25,
+              61.25,
+              55.3125
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 59.1875,
+            "se": 1.2776456755384968,
+            "n": 10,
+            "paired_values": [
+              61.25,
+              60.0,
+              60.9375,
+              64.0625,
+              64.375,
+              56.5625,
+              51.875,
+              56.25,
+              61.25,
+              55.3125
+            ],
+            "verdict": "supported"
+          },
+          "vpoDN": {
+            "mean": 18.125,
+            "se": 0.8122328620674136,
+            "n": 10,
+            "paired_values": [
+              23.125,
+              18.125,
+              18.75,
+              21.25,
+              16.875,
+              17.5,
+              18.125,
+              13.75,
+              16.875,
+              16.875
+            ],
+            "verdict": "supported"
+          }
+        },
+        {
+          "state": "virgin",
+          "dose": 180,
+          "realized_vpoEN": {
+            "mean": 178.15625,
+            "se": 2.0066350443936956,
+            "n": 10,
+            "paired_values": [
+              188.125,
+              180.0,
+              176.875,
+              183.75,
+              174.0625,
+              173.4375,
+              185.0,
+              168.75,
+              180.3125,
+              171.25
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 178.15625,
+            "se": 2.0066350443936956,
+            "n": 10,
+            "paired_values": [
+              188.125,
+              180.0,
+              176.875,
+              183.75,
+              174.0625,
+              173.4375,
+              185.0,
+              168.75,
+              180.3125,
+              171.25
+            ],
+            "verdict": "supported"
+          },
+          "vpoDN": {
+            "mean": 52.0,
+            "se": 1.238839062276542,
+            "n": 10,
+            "paired_values": [
+              60.0,
+              51.25,
+              51.25,
+              54.375,
+              51.25,
+              46.875,
+              55.625,
+              46.875,
+              51.25,
+              51.25
+            ],
+            "verdict": "supported"
+          }
+        },
+        {
+          "state": "virgin",
+          "dose": 360,
+          "realized_vpoEN": {
+            "mean": 358.90625,
+            "se": 2.577888246705043,
+            "n": 10,
+            "paired_values": [
+              373.4375,
+              362.5,
+              356.875,
+              359.6875,
+              349.375,
+              350.3125,
+              353.75,
+              351.875,
+              370.0,
+              361.25
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 358.90625,
+            "se": 2.577888246705043,
+            "n": 10,
+            "paired_values": [
+              373.4375,
+              362.5,
+              356.875,
+              359.6875,
+              349.375,
+              350.3125,
+              353.75,
+              351.875,
+              370.0,
+              361.25
+            ],
+            "verdict": "supported"
+          },
+          "vpoDN": {
+            "mean": 81.3125,
+            "se": 1.092310560743194,
+            "n": 10,
+            "paired_values": [
+              88.75,
+              78.75,
+              78.125,
+              82.5,
+              83.125,
+              78.125,
+              83.75,
+              77.5,
+              81.25,
+              81.25
+            ],
+            "verdict": "supported"
+          }
+        },
+        {
+          "state": "mated",
+          "dose": 0,
+          "realized_vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          },
+          "vpoDN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "not supported"
+          }
+        },
+        {
+          "state": "mated",
+          "dose": 60,
+          "realized_vpoEN": {
+            "mean": 59.1875,
+            "se": 1.2776456755384968,
+            "n": 10,
+            "paired_values": [
+              61.25,
+              60.0,
+              60.9375,
+              64.0625,
+              64.375,
+              56.5625,
+              51.875,
+              56.25,
+              61.25,
+              55.3125
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 59.1875,
+            "se": 1.2776456755384968,
+            "n": 10,
+            "paired_values": [
+              61.25,
+              60.0,
+              60.9375,
+              64.0625,
+              64.375,
+              56.5625,
+              51.875,
+              56.25,
+              61.25,
+              55.3125
+            ],
+            "verdict": "supported"
+          },
+          "vpoDN": {
+            "mean": 16.0,
+            "se": 0.6795627679291704,
+            "n": 10,
+            "paired_values": [
+              16.875,
+              15.625,
+              17.5,
+              19.375,
+              16.875,
+              13.75,
+              13.125,
+              15.625,
+              18.125,
+              13.125
+            ],
+            "verdict": "supported"
+          }
+        },
+        {
+          "state": "mated",
+          "dose": 180,
+          "realized_vpoEN": {
+            "mean": 178.15625,
+            "se": 2.0066350443936956,
+            "n": 10,
+            "paired_values": [
+              188.125,
+              180.0,
+              176.875,
+              183.75,
+              174.0625,
+              173.4375,
+              185.0,
+              168.75,
+              180.3125,
+              171.25
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 178.15625,
+            "se": 2.0066350443936956,
+            "n": 10,
+            "paired_values": [
+              188.125,
+              180.0,
+              176.875,
+              183.75,
+              174.0625,
+              173.4375,
+              185.0,
+              168.75,
+              180.3125,
+              171.25
+            ],
+            "verdict": "supported"
+          },
+          "vpoDN": {
+            "mean": 66.125,
+            "se": 0.7839536550927824,
+            "n": 10,
+            "paired_values": [
+              68.75,
+              66.25,
+              69.375,
+              66.875,
+              64.375,
+              65.0,
+              67.5,
+              61.875,
+              68.125,
+              63.125
+            ],
+            "verdict": "supported"
+          }
+        },
+        {
+          "state": "mated",
+          "dose": 360,
+          "realized_vpoEN": {
+            "mean": 358.90625,
+            "se": 2.577888246705043,
+            "n": 10,
+            "paired_values": [
+              373.4375,
+              362.5,
+              356.875,
+              359.6875,
+              349.375,
+              350.3125,
+              353.75,
+              351.875,
+              370.0,
+              361.25
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoEN": {
+            "mean": 358.90625,
+            "se": 2.577888246705043,
+            "n": 10,
+            "paired_values": [
+              373.4375,
+              362.5,
+              356.875,
+              359.6875,
+              349.375,
+              350.3125,
+              353.75,
+              351.875,
+              370.0,
+              361.25
+            ],
+            "verdict": "supported"
+          },
+          "vpoDN": {
+            "mean": 105.0,
+            "se": 0.4658474953124562,
+            "n": 10,
+            "paired_values": [
+              106.875,
+              104.375,
+              105.0,
+              105.625,
+              103.75,
+              104.375,
+              104.375,
+              102.5,
+              107.5,
+              105.625
+            ],
+            "verdict": "supported"
+          }
+        }
+      ],
+      "c": [
+        {
+          "gain": 1.0,
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoDN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "descriptive"
+          }
+        },
+        {
+          "gain": 1.3,
+          "vpoEN": {
+            "mean": 0.0,
+            "se": 0.0,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "verdict": "descriptive"
+          },
+          "vpoDN": {
+            "mean": 0.0625,
+            "se": 1.4235433588213757,
+            "n": 10,
+            "paired_values": [
+              0.0,
+              -3.125,
+              6.25,
+              -5.625,
+              3.75,
+              -8.125,
+              2.5,
+              1.25,
+              0.0,
+              3.75
+            ],
+            "verdict": "descriptive"
+          }
+        }
+      ]
+    },
+    "frozen": {
+      "jo": {
+        "dose": 720,
+        "rule": "no transfer",
+        "fallback": true
+      },
+      "vpoEN": {
+        "dose": 60,
+        "rule": "lowest dose with difference > 2 SE",
+        "fallback": false
+      },
+      "protocol_sha256": "dbbe6e754142ef1ff5d0f6449e31a09ea46b0f98b2be924d60a276f696ea3476",
+      "graph_sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+      "calibration_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "test_seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "created_utc": "2026-09-16T12:48:48.695925+00:00",
+      "calibration_sha256": "f6791a8b6a84e799320bcdc62f204ecd2eef70e508750dfacad0c97950d226ec"
+    },
+    "pre_registered_test": {
+      "T1": {
+        "mean": -0.15625,
+        "se": 0.2827082080892817,
+        "n": 20,
+        "paired_values": [
+          0.0,
+          -1.25,
+          0.0,
+          0.625,
+          1.25,
+          0.0,
+          -0.625,
+          1.25,
+          0.0,
+          0.625,
+          1.25,
+          -0.625,
+          0.625,
+          -0.625,
+          -0.625,
+          -0.625,
+          -0.625,
+          -0.625,
+          -4.375,
+          1.25
+        ],
+        "verdict": "not supported"
+      },
+      "T2": {
+        "mean": 17.84375,
+        "se": 0.5954787851406895,
+        "n": 20,
+        "paired_values": [
+          20.625,
+          18.75,
+          24.375,
+          20.0,
+          18.75,
+          15.0,
+          16.875,
+          18.125,
+          19.375,
+          20.625,
+          18.75,
+          15.625,
+          15.625,
+          16.875,
+          16.25,
+          16.875,
+          13.75,
+          17.5,
+          13.125,
+          20.0
+        ],
+        "verdict": "supported"
+      },
+      "T3": {
+        "mean": -0.84375,
+        "se": 0.5155377717286556,
+        "n": 20,
+        "paired_values": [
+          0.0,
+          3.125,
+          -5.0,
+          -1.25,
+          1.25,
+          0.625,
+          -3.125,
+          -3.75,
+          -2.5,
+          -1.875,
+          -1.25,
+          -2.5,
+          -1.25,
+          -1.25,
+          -1.25,
+          -1.25,
+          -1.875,
+          0.625,
+          5.0,
+          0.625
+        ],
+        "verdict": "descriptive"
+      },
+      "T3_mated_relay": {
+        "mean": 17.0,
+        "se": 0.6259860642471036,
+        "n": 20,
+        "paired_values": [
+          20.625,
+          21.875,
+          19.375,
+          18.75,
+          20.0,
+          15.625,
+          13.75,
+          14.375,
+          16.875,
+          18.75,
+          17.5,
+          13.125,
+          14.375,
+          15.625,
+          15.0,
+          15.625,
+          11.875,
+          18.125,
+          18.125,
+          20.625
+        ],
+        "verdict": "descriptive"
+      },
+      "T3_mated_smaller": true,
+      "T4": {
+        "mean": 1.375,
+        "se": 1.1102838660261143,
+        "n": 20,
+        "paired_values": [
+          -0.625,
+          -3.75,
+          7.5,
+          -6.875,
+          1.25,
+          0.0,
+          10.0,
+          -4.375,
+          0.625,
+          0.0,
+          4.375,
+          -1.875,
+          -1.25,
+          1.25,
+          7.5,
+          12.5,
+          -3.75,
+          3.75,
+          0.625,
+          0.625
+        ],
+        "verdict": "descriptive"
+      }
+    },
+    "ignition": {
+      "calibration": [
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 60,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 60,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 360,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 360,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 720,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 720,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 60,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 180,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 360,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 60,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 180,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 360,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        }
+      ],
+      "pre_registered_test": [
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 720,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 720,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 60,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 60,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.0
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "virgin",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": false,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        },
+        {
+          "condition": {
+            "state": "mated",
+            "song": true,
+            "jo_max_hz": 180,
+            "direct_vpoEN_hz": 0,
+            "excitatory_gain": 1.3
+          },
+          "fraction": 0.0
+        }
+      ]
+    },
+    "elapsed_seconds": {
+      "calibration": 162.0540607999974,
+      "test": 116.12365549999959
+    },
+    "evidence_sha256": {
+      "female_hearing_v1_calibration.json": "f6791a8b6a84e799320bcdc62f204ecd2eef70e508750dfacad0c97950d226ec",
+      "female_hearing_v1_test.json": "cfb2982f4be8fc6c2e35be644ce070c4569fb89b8856a63bd2c0e185ea710eed",
+      "female_hearing_v1_frozen.json": "4b1c8a57b8a26ec6ede01df4c5ac3a99a9a8cc463a445402d07db815cbb4e2d4"
+    }
+  }
+}

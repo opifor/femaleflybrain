@@ -8,3 +8,8 @@ __pycache__/
 *.log
 .pytest_cache/
 *.egg-info/
+
+# raw per-trial dumps stay out of git; summaries live in records/
+records/*_calibration.json
+records/*_test.json
+records/*_raw*.json

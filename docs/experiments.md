@@ -75,3 +75,44 @@ from these isolated neuronal outputs.
 For the harness probe, set `FLYBENCH_FAIL_PROBE=1` and run only
 `tests/test_experiment.py::test_harness_failure_probe`. It must report one
 failure with exit code 1. Remove that variable for acceptance tests.
+
+## female_hearing_v1
+
+The [hearing ladder preregistration](../experiments/female_hearing_v1.md) fixes
+JO dose calibration, direct vpoEN positive controls, and positive-edge gain
+sensitivity before collection. It uses the existing Shiu fast_gpu engine and
+BatchRates adapter without changing the earlier experiment. Run in order:
+
+```sh
+python -m flybench.experiment.hearing quick
+python -m flybench.experiment.hearing calibration
+python -m flybench.experiment.hearing freeze
+python -m flybench.experiment.hearing test
+python -m flybench.experiment.hearing report
+python -m pytest -q -p no:cacheprovider tests/test_hearing.py tests/test_experiment.py
+```
+
+Quick seeds 0,1 are preliminary. Calibration uses only seeds 0-9; freeze reads
+the saved calibration and selects the lowest dose passing the strict paired
+mean >2 SE rule (JO: vpoEN; direct drive: virgin vpoDN). Fallbacks are 720 and
+360 Hz with a no-transfer flag. Freeze refuses to overwrite a decision. The
+separate test process uses only seeds 10-29 and verifies protocol, graph and
+calibration hashes against that decision. T1 and T2 receive verdicts; T3 is
+mated-minus-virgin relay difference and T4 is gain-1.3 auditory response,
+both descriptive. No dose selection uses held-out data.
+
+Gain scales only positive CSR values before simulator construction. All four
+drive groups, including zero-rate vpoEN, remain targeted in every condition
+to preserve paired streams. This adds targets relative to female_no_v1 and
+therefore changes its random stream and the backend's target refractory
+convention; cross-experiment bitwise agreement is not claimed. Full gain
+controls cover all four state/song combinations. Identical configurations
+within a stage are simulated once and reused by identity.
+
+Each trial stores group and individual vpoEN/vpoDN/pC1 firing, total network
+spikes and mean rate, and per-target requested/sampled/delivered drive for
+every 5 ms slice. Means and ignition exclude the first four windows.
+Outputs are `records/female_hearing_v1_{calibration,frozen,test}.json`;
+the JSON report contains a `Result` object. The Markdown report is rendered
+from that saved JSON, with calibration and pre-registered test sections.
+Quick output and execution evidence are under `build/`.

@@ -246,6 +246,8 @@ Run `python -m pytest -q -p no:cacheprovider tests/test_dictionary.py`.
 
 ## Experiments
 
+The [female_hearing_v1 hearing ladder](experiments/female_hearing_v1.md) separates dose calibration, frozen choices and held-out tests; see the [experiment guide](docs/experiments.md#female_hearing_v1).
+
 Run the preregistered female-only experiment with
 `python -m flybench.experiment.runner --quick`, then
 `python -m flybench.experiment.runner` for ten paired seeds per condition.
