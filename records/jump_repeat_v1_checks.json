@@ -1,0 +1,1439 @@
+{
+  "schema_version": "jump_repeat_v1.checks.2",
+  "completed_repeats": 6,
+  "frozen_inputs_unchanged": true,
+  "raw_hashes_equal": true,
+  "raw_reconstruction_equal": true,
+  "observer_equal": true,
+  "slice_coverage": true,
+  "process_ids": {
+    "inproc1": 46848,
+    "inproc2": 46848,
+    "inproc3": 46848,
+    "separate1": 10376,
+    "separate2": 42252,
+    "separate3": 39048
+  },
+  "kernels": {
+    "shiu": {
+      "classification": "fully reproducible",
+      "equality_matrix": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      ],
+      "rate_equality_matrix": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      ],
+      "historical_equal": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "readouts_equal": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seed_group_values_per_repeat": 80,
+      "mismatches": []
+    },
+    "jump": {
+      "classification": "run-to-run divergent",
+      "equality_matrix": [
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "rate_equality_matrix": [
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "historical_equal": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "readouts_equal": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "seed_group_values_per_repeat": 80,
+      "mismatches": [
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "inproc1",
+          "left_hz": 208.75,
+          "right_hz": 203.125,
+          "delta_hz": -5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "inproc3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate2",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "inproc2",
+          "left_hz": 208.75,
+          "right_hz": 203.125,
+          "delta_hz": -5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "inproc3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate2",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "inproc3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "inproc3",
+          "right": "separate1",
+          "left_hz": 208.75,
+          "right_hz": 203.125,
+          "delta_hz": -5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "separate1",
+          "left_hz": 208.75,
+          "right_hz": 203.125,
+          "delta_hz": -5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "separate1",
+          "right": "separate2",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "separate1",
+          "right": "separate3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "separate2",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "separate3",
+          "left_hz": 203.125,
+          "right_hz": 208.75,
+          "delta_hz": 5.625
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "historical",
+          "right": "inproc1",
+          "left_hz": 5.375,
+          "right_hz": 2.0,
+          "delta_hz": -3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "inproc3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "separate2",
+          "left_hz": 2.0,
+          "right_hz": 6.5,
+          "delta_hz": 4.5
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "separate3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "historical",
+          "right": "inproc2",
+          "left_hz": 5.375,
+          "right_hz": 2.0,
+          "delta_hz": -3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "inproc3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "separate2",
+          "left_hz": 2.0,
+          "right_hz": 6.5,
+          "delta_hz": 4.5
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "separate3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "readouts",
+          "right": "inproc3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc3",
+          "right": "separate1",
+          "left_hz": 5.375,
+          "right_hz": 2.0,
+          "delta_hz": -3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "inproc3",
+          "right": "separate2",
+          "left_hz": 5.375,
+          "right_hz": 6.5,
+          "delta_hz": 1.125
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "historical",
+          "right": "separate1",
+          "left_hz": 5.375,
+          "right_hz": 2.0,
+          "delta_hz": -3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "separate1",
+          "right": "separate2",
+          "left_hz": 2.0,
+          "right_hz": 6.5,
+          "delta_hz": 4.5
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "separate1",
+          "right": "separate3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "historical",
+          "right": "separate2",
+          "left_hz": 5.375,
+          "right_hz": 6.5,
+          "delta_hz": 1.125
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "readouts",
+          "right": "separate2",
+          "left_hz": 2.0,
+          "right_hz": 6.5,
+          "delta_hz": 4.5
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "separate2",
+          "right": "separate3",
+          "left_hz": 6.5,
+          "right_hz": 5.375,
+          "delta_hz": -1.125
+        },
+        {
+          "condition": "virgin_song",
+          "seed": 4,
+          "group": "pC1",
+          "left": "readouts",
+          "right": "separate3",
+          "left_hz": 2.0,
+          "right_hz": 5.375,
+          "delta_hz": 3.375
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "inproc1",
+          "left_hz": 203.75,
+          "right_hz": 204.375,
+          "delta_hz": 0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate1",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate2",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "inproc2",
+          "left_hz": 203.75,
+          "right_hz": 204.375,
+          "delta_hz": 0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate1",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate2",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "inproc3",
+          "left_hz": 203.75,
+          "right_hz": 204.375,
+          "delta_hz": 0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "inproc3",
+          "right": "separate1",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "inproc3",
+          "right": "separate2",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "separate1",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "separate1",
+          "right": "separate3",
+          "left_hz": 203.75,
+          "right_hz": 204.375,
+          "delta_hz": 0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "separate2",
+          "left_hz": 204.375,
+          "right_hz": 203.75,
+          "delta_hz": -0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "separate2",
+          "right": "separate3",
+          "left_hz": 203.75,
+          "right_hz": 204.375,
+          "delta_hz": 0.625
+        },
+        {
+          "condition": "mated_song",
+          "seed": 0,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "separate3",
+          "left_hz": 203.75,
+          "right_hz": 204.375,
+          "delta_hz": 0.625
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "inproc1",
+          "left_hz": 194.375,
+          "right_hz": 195.625,
+          "delta_hz": 1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "inproc3",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate1",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate2",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate3",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "inproc2",
+          "left_hz": 194.375,
+          "right_hz": 195.625,
+          "delta_hz": 1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "inproc3",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate1",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate2",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate3",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "inproc3",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "separate1",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "separate2",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "separate3",
+          "left_hz": 195.625,
+          "right_hz": 194.375,
+          "delta_hz": -1.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "readouts",
+          "right": "inproc1",
+          "left_hz": 2.5,
+          "right_hz": 2.75,
+          "delta_hz": 0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "inproc3",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "separate1",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "separate2",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "separate3",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "readouts",
+          "right": "inproc2",
+          "left_hz": 2.5,
+          "right_hz": 2.75,
+          "delta_hz": 0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "inproc3",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "separate1",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "separate2",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "separate3",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "historical",
+          "right": "inproc3",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "historical",
+          "right": "separate1",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "historical",
+          "right": "separate2",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 3,
+          "group": "pC1",
+          "left": "historical",
+          "right": "separate3",
+          "left_hz": 2.75,
+          "right_hz": 2.5,
+          "delta_hz": -0.25
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "inproc1",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "inproc2",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "inproc3",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "separate1",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "separate2",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "historical",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "vpoDN",
+          "left": "readouts",
+          "right": "separate3",
+          "left_hz": 208.125,
+          "right_hz": 185.625,
+          "delta_hz": -22.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "inproc1",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "inproc2",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "inproc3",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "separate1",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "separate2",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "historical",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        },
+        {
+          "condition": "virgin_silence",
+          "seed": 5,
+          "group": "pC1",
+          "left": "readouts",
+          "right": "separate3",
+          "left_hz": 0.5,
+          "right_hz": 0.0,
+          "delta_hz": -0.5
+        }
+      ]
+    }
+  },
+  "status": "Complete descriptive measurement; equality outcomes are not acceptance gates",
+  "gpu_driver_unchanged": true,
+  "raw_body_ids_verified": true,
+  "pytest": {
+    "command": "python -B -m pytest tests/test_jump_repeat.py -p no:cacheprovider -q",
+    "passed": 5,
+    "skipped": 1,
+    "exit_code": 0,
+    "deliberate_failure_probe": {
+      "environment_flag": "FLYBENCH_JUMP_REPEAT_FAIL_PROBE=1",
+      "selection": "-k deliberate_failure_probe",
+      "failed": 1,
+      "deselected": 5,
+      "exit_code": 1
+    }
+  },
+  "acceptance_chain": "Operator-supplied Python and dependency directory; CUDA; no environment workaround",
+  "summary": {
+    "shiu": {
+      "classification": "fully reproducible",
+      "equal_values": {
+        "historical": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "readouts": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ]
+      },
+      "max_trial_pair_l1_spikes": 0,
+      "max_abs_bin_spikes": 0,
+      "differing_trial_pairs": 0,
+      "rate_matrix": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      ],
+      "raw_and_rate_matrix": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      ],
+      "group_ignition_range": {
+        "vpoDN": [
+          0.0,
+          0.75
+        ],
+        "pC1": [
+          0.0,
+          0.625
+        ]
+      }
+    },
+    "jump": {
+      "classification": "run-to-run divergent",
+      "equal_values": {
+        "historical": [
+          77,
+          77,
+          77,
+          76,
+          77,
+          75
+        ],
+        "readouts": [
+          78,
+          78,
+          78,
+          79,
+          77,
+          76
+        ]
+      },
+      "max_trial_pair_l1_spikes": 60,
+      "max_abs_bin_spikes": 2,
+      "differing_trial_pairs": 32,
+      "rate_matrix": [
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "raw_and_rate_matrix": [
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "group_ignition_range": {
+        "vpoDN": [
+          0.0,
+          1.0
+        ],
+        "pC1": [
+          0.0,
+          0.25
+        ]
+      }
+    }
+  }
+}
