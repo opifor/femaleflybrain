@@ -120,11 +120,8 @@
       "experiments/eye_v2_e1.md",
       "records/eye_v2_e1_report.md"
     ],
-    "change": "the phrase 'requiring Akif's seal' replaced by 'requiring its own pre-registration and decision' (maintainer name removed); no other bytes changed",
-    "preregistration_sha256_before_edit": {
-      "sha256": "3478e7e62c214405cdc68b5d87a62f46a779ec2f76f7c1c2cb0fb89a34ac1f74",
-      "path": "experiments/eye_v2_e1.md"
-    },
+    "change": "a phrase naming a person as the decision holder was replaced by 'requiring its own pre-registration and decision'; no other bytes changed",
+    "preregistration_sha256_before_edit": "3478e7e62c214405cdc68b5d87a62f46a779ec2f76f7c1c2cb0fb89a34ac1f74",
     "preregistration_sha256_after_edit": "3f1f0e26fd3c69977407644112ef5f7775da878200738856baf35caf77410438",
     "report_sha256_after_edit": "adc5e7f115f9bd00dddbf64f635adbd519441de80bd9d521936790f8ff7cd636",
     "hash_basis": "lf"
