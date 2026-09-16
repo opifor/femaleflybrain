@@ -1,0 +1,24 @@
+{
+  "status": "sealed",
+  "protocol": "experiments/vpoen_inputs_v1.md",
+  "protocol_sha256": "d3f6c994b229591a01d6b376baa1673604a749437307c8ec91372b2359527293",
+  "graph_sha256": {
+    "female": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+    "banc": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+    "male": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d"
+  },
+  "frozen_utc": "2026-09-16T21:52:48.0796878Z",
+  "dictionary_sha256": {
+    "female": "42bf4851f94e96108b88eef6d70373f5924c2db5dfa280c2d46eb82cab7a2ea7",
+    "banc": "203438c8da299c441d45879069b79adf086f5e8db7c8c58ad1cccc9816de1009",
+    "male": "00e7bdfa0e890d1267ca08a69c0c49a32464a7b38db5c0832ca1f42c596d6473"
+  },
+  "inputs_frozen_utc": "2026-09-16T21:56:09.209198+00:00",
+  "hash_basis": "lf",
+  "post_delivery_edits": {
+    "records/vpoen_inputs_v1_report.md": "review notes on sign convention inserted before the female section",
+    "tests/test_vpoen_inputs.py": "witness sign assertion and a forward-order sign test added after the audit",
+    "report_sha256_after_edit": "0570a06afac45806697975d3b2a743ad8b4c1c9c6ee229fc64161784a63e9bec",
+    "tests_sha256_after_edit": "40c4994d972d647039afc11bacc1da159e5b490581d1876e905cb610311575c0"
+  }
+}
