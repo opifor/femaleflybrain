@@ -279,6 +279,17 @@ Run `python -m pytest -q -p no:cacheprovider tests/test_dictionary.py`.
 
 ## Experiments
 
+Scope note on the ear (2026-09-16): the auditory front end in `flybench/ear.py`
+is a windowed energy mapping with an engineering rate ceiling (`JO_MAX_HZ`),
+not a calibrated transducer. That ceiling has no biological source, the band
+assignment does not follow the JO subtype literature, and the AMMC-B1 relay is
+known to be graded and largely electrical, which a spike-only chemical model
+cannot represent. Every hearing result recorded so far (`female_no_v1` song
+conditions, `female_hearing_v1`, `courtship_v1` hearing readouts) is therefore
+a stress test of this front end, not a measurement of the female's hearing.
+The records stand as run; their claims are narrowed to that. A replacement
+front end will be pre-registered before any new hearing number is produced.
+
 The [shiu_benchmarks_v1 controls](experiments/shiu_benchmarks_v1.md) reproduce feeding and grooming directions with explicit [results and drive audits](records/shiu_benchmarks_v1_report.md).
 
 The [female_hearing_v1 hearing ladder](experiments/female_hearing_v1.md) separates dose calibration, frozen choices and held-out tests; see the [experiment guide](docs/experiments.md#female_hearing_v1).

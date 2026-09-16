@@ -3,7 +3,7 @@ import numpy as np
 from scipy.signal import butter, sosfiltfilt
 from .song import Song, SAMPLE_RATE
 
-JO_MAX_HZ = 180.0
+JO_MAX_HZ = 180.0  # engineering ceiling, not calibrated; see README "Scope note on the ear"
 BANDS = {"JO-A": (100, 500), "JO-B": (500, 2500)}
 FILTERS = {name: butter(4, band, btype="bandpass", fs=SAMPLE_RATE, output="sos")
            for name, band in BANDS.items()}
