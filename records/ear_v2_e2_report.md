@@ -120,3 +120,7 @@ the requested numerical gate widths are used without that conversion.
 The continuity fixture's common-grid delay alignment is disclosed above.
 No graph, network simulation, noise, E1 biological fit or E5 integration was
 attempted. The model omits active mechanisms from the source paper by design.
+
+## Note on graph-access denial (added after review)
+
+The sealed protection for this fit asked for operating-system-level read denial on the graph files with open/close evidence in the lane record. The operator's session applied an ACL deny on the main build directory before the lane started and removed it afterwards, but that command output was not captured into this record; the audit file evidences only in-process guards (3 denied file probes, 4 denied imports) inside a worktree without build files. Later fits must capture the ACL evidence in their audit.

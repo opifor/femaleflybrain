@@ -5,6 +5,7 @@ Status: COMPLETE
 Differences are paired Hz/neuron, mean +/- SE; classes use fixed effect bounds.
 Zero SE is expected with constant deterministic input and no random drive.
 A silent K0 creates a firing-rate floor: equivalence cannot refute inhibitory connectivity.
+Grid note (added after review): the three ceilings collapse the 18 gamma-by-ceiling points to 8 distinct flux levels per arm, and the ten seeds are deterministic replicates (seed_columns_identical is true in every condition), so the 18/18 count describes 8 distinct experiments and a zero SE is arithmetic, not sampling evidence.
 
 | gamma | ceiling | arm | vpoEN delta +/- SE | class | vpoDN delta +/- SE | class | ignition | max target loss |
 |---:|---|---|---|---|---|---|---:|---:|
