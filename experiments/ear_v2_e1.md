@@ -143,3 +143,90 @@ If source has BOM, record the conflict rather than silently changing bytes.
 No git mutation. No legacy front-end, core, world, dictionary, or experiment
 runner edits. Missing calibration and failed descriptive gates are visible
 limitations, never converted into scientific acceptance by green unit tests.
+
+
+## Round 2 amendment
+
+Frozen before implementation or candidate evaluation, 2026-09-16.
+The original bytes above remain the round-1 preregistration. This appendix
+supersedes only the explicitly changed round-2 choices below.
+
+Two alternative families will be evaluated on the same declared stimuli:
+
+1. energy_feedback: causal bandpass y; fast subtractive baseline b with
+   tau_sub=5 ms; u=y-b. A spike-independent, calcium-like proxy d is a causal
+   exponential average of y squared, with tau_div in [10,20,30] ms. Output
+   is abs(u/(1+strength*d)), strength in [1,4,16]. This is an engineering
+   energy feedback state, not a measured calcium concentration. Two fitted
+   parameters; rectification occurs after signed divisive feedback.
+2. asymmetric_energy: identical signed path and output, but the feedback
+   average of y squared uses tau_up in [5,10] ms when y squared exceeds the
+   previous d, and tau_down in [20,30] ms otherwise. Strength in [1,4,16].
+   Three fitted parameters. No stimulus labels, spike block, or lookahead.
+
+For both families, times and strength are fit jointly to the observable
+R3_006 adaptation range and R3_007 recovery target using the original E1
+objective (including invalid-fit penalties and up/down-order penalty).
+Strength has no directly measured biological target; it is an arbitrary-unit
+nuisance parameter constrained only by those observable kinetics. Fixed
+tau_sub and filter gains are not fitted physiological constants. Enumerate
+all 9 and 12 respective grid points without refinement. Within each family,
+select minimum objective, breaking ties by ascending parameter tuple.
+Then choose the family with the largest G1--G7 pass count; ties choose fewer
+fitted adaptation parameters, then the order above. Report all grid points
+and both family winners; freeze only the selected winner as Config defaults.
+Legacy equations remain available through family="legacy". Existing legacy
+equation tests explicitly select that family, preserving their oracle.
+
+Use a common five-channel conditional bank: functional centers 100,125,225,
+600 Hz (R6_008--R6_011), Q=1 and gain=1 as fixed design conventions.
+Their anatomical identities remain unresolved. Add one JO-A aggregate
+component covering approximately 100--1200 Hz (R6_001): prewarp both edges,
+use their geometric mean as analog center and their difference as bandwidth,
+then inverse-warp its digital center. These are half-power design edges,
+not measured half-power boundaries. For the overlap check only, the 100/125
+functional components are provisional B-associated candidates (R6_005),
+not established anatomical assignments. No F component, no 8 Hz component
+in this audio fixture; retain both findings in the ledger. Fit only centers
+by direct target placement; no fit to gains, downstream outputs or networks.
+All G1--G7 round-2 metrics use this common bank.
+
+G1/G2 retain bit-equal causality, <1e-9 graded/signed chunk error and equal
+phase, tested for each family and winner. G3 retains valid exponential fits,
+R2>=0.8, nonzero transient, 5<=tau_up<tau_down<=20 ms. G4 retains peak10/peak1
+>=0.9 at 36 ms and <0.9 at 10 ms. Recovery [20,40] ms and R2>=0.8 remains a
+separate diagnostic. G5 retains the original equal-analytic-RMS continuous
+sustained/peak < pulsed sustained/peak definition, including its duty-cycle
+confound. No gate thresholds or analysis windows will be changed after fit.
+
+G6: peaks of the four functional filters within 15% of reported preferences;
+JO-A half-power design edges within 15% of 100/1200 Hz; a frequency below
+500 Hz with JO-A and at least one provisional B component each >=0.5 of
+its own peak; no F. Report this as conditional target-placement evidence,
+not full biological tuning validation or an identified anatomy mapping.
+
+G7 explicitly CHANGES the round-1 600 Hz/DC >0.05 gate to the requested
+600 Hz/300 Hz >0.5 in the rectified compound signal. Use the same 0.5 s
+300 Hz tone and last 0.2 s FFT. Report both ratios. For a 300 Hz amplitude
+below 1e-12 times DC, report the denominator as unresolved at the numerical
+floor and a conservative ratio lower bound using that floor; require the
+lower bound >0.5. Both phase signs and exact signed-magnitude reconstruction
+are required. This new ratio alone does not establish a strong 600 Hz/DC.
+
+Grid uncertainty: for each family report parameter ranges for objective
+<=minimum+1 and all gate counts over the grid. These are sensitivity ranges,
+not confidence intervals; no invented biological n, SEM or bootstrap units.
+The source is the supplied section-2 secondary report only. New R6 IDs are
+an identifier namespace, not authorization to fit reserved biological rung 6;
+entries use rung 3. All new evidence is REPORTED, with unavailable metadata
+null and note "as read by external research model". Explicit task authority
+permits this conditional fit; inherited fit_allowed=false is unchanged.
+The original ledger has schema_version=1.0 but no ledger_version field;
+retain that schema and add ledger_version=1.1, treating the frozen original
+as the v1.0 snapshot. Preserve every existing record and metadata value.
+
+Run the prescribed interpreter/dependency chain with locale C, bytecode and
+pytest plugin autoload disabled. Prove harness failure with an intentional
+assertion and read test counts as well as exit codes. Store raw reproducible
+drivers/logs under build/records-raw; summaries under ear_v2_e1r2_* <=2 MB.
+No git mutation, protected-tree inspection or network simulation.

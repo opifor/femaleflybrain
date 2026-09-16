@@ -1,0 +1,34 @@
+{
+  "head": "3dadb57cb587c0114a9fe52b2ca64687fc2dc357",
+  "git_status": [
+    "experiments/ear_v2_e1.md",
+    "flybench/ear2.py",
+    "reference/README.md",
+    "reference/calibration_ledger.json",
+    "tests/test_ear2.py",
+    "records/ear_v2_e1r2_fit.json",
+    "records/ear_v2_e1r2_freeze.json",
+    "records/ear_v2_e1r2_report.md"
+  ],
+  "scope_passed": true,
+  "bom_free": true,
+  "machine_path_scan_passed": true,
+  "existing_ledger_records_unchanged": true,
+  "existing_ledger_other_metadata_unchanged": true,
+  "preregistration_prefix_unchanged": true,
+  "amendment_hash_unchanged": true,
+  "git_operations": "read only",
+  "summary_files": {
+    "ear_v2_e1r2_fit.json": 214779,
+    "ear_v2_e1r2_freeze.json": 551,
+    "ear_v2_e1r2_report.md": 8034
+  },
+  "raw_driver_sha256": {
+    "ear_v2_e1r2_finalize.py": "947a2fba439627622eddcff9fecfdf849b04d8ef6846dbc7b3745bc5b43ec880",
+    "ear_v2_e1r2_freeze.py": "b126bb11832c6ccd86563b19cf6bd2b0f443c5835b07ed576cddb03b13085b8a",
+    "ear_v2_e1r2_harness_probe.py": "49cffd3ace6d8d7e53ba918e396ceb1f89e9aba83d6f6ef12c298d7b034bb171",
+    "ear_v2_e1r2_ledger.py": "3aadb9662ea72784eddf11cee2ac2d6076b81fc715fa4bf7008151bb67996876",
+    "ear_v2_e1r2_run.py": "5bfc33b771c7f9669d55e8e3bc154b8c3678e30fa29c5a00a2630f17977e1759"
+  },
+  "summary_total_bytes": 224714
+}

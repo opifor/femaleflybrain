@@ -20,3 +20,19 @@ tuning defaults can be established from this snapshot. B1 is not JO.
 The conditional synthetic-channel fit is not a biological calibration.
 CAP kinetics and graded response kinetics use different observation models;
 the numerical comparison is provisional. No downstream targets are fitted.
+
+
+## Round 2 ledger extension
+
+The original snapshot description above is historical. Version 1.1 adds
+16 REPORTED records R6_001--R6_016 from section 2 of the supplied JO
+subtype report. Existing entries and policies are unchanged. The original
+had schema_version 1.0 and no ledger_version field; the new field is 1.1.
+R6 is an ID namespace; these auditory entries belong to rung 3.
+Unknown modality, preparation details, sample sizes, figures and unique
+earlier-work DOI assignments remain null or explicitly unextracted.
+No primary source was reverified. Functional preferences are calcium
+classes, not uniquely identified anatomical subtypes or individual rates.
+The round-2 amendment authorizes conditional target placement despite
+the preserved fit_allowed=false snapshot policy. See round-2 freeze
+and fit records for original/current hashes and limitations.

@@ -19,6 +19,8 @@ def fixture_channels():
 
 
 def ear(config=None, mode=MODE):
+    if config is None:
+        config = Config(family="legacy", tau_sub_ms=30, tau_div_ms=50)
     return Ear2(input_mode=mode, channels=fixture_channels(), config=config)
 
 
@@ -237,7 +239,7 @@ def test_g5_continuous():
 
 
 def test_g6_jo_tuning_unassessed():
-    pytest.skip("G6 unassessed: JO subtype tuning centers not in ledger; F absent")
+    pytest.skip("Historical round-1 fixture: no JO identities; round-2 placement tested separately")
 
 
 def test_filter_transfer_and_synthetic_overlap():
@@ -349,7 +351,7 @@ def test_exponential_oracle():
 
 def test_sample_equations_against_independent_recurrence():
     # A swapped adaptation stage or rectifying before subtraction breaks this.
-    config = Config(tau_sub_ms=10, tau_div_ms=20)
+    config = Config(family="legacy", tau_sub_ms=10, tau_div_ms=20)
     x = np.random.default_rng(1901).normal(size=401)
     actual = response(x, config)
     expected = np.empty_like(actual.r_graded)
@@ -380,3 +382,184 @@ def test_bank_contract_rejections():
         Ear2(input_mode=MODE, channels=[channels[0]]*4)
     with pytest.raises(ValueError, match="mode"):
         Ear2(input_mode="arbitrary", channels=channels)
+
+
+# Round-2 diagnostics reuse the frozen stimuli and observation mapping.
+from unittest.mock import patch
+from flybench.ear2 import reported_channels
+
+ROUND2_FAMILIES = ("energy_feedback", "asymmetric_energy")
+
+
+def gate3(up, down):
+    return bool(up["valid"] and down["valid"] and
+                5 <= up["tau_ms"] < down["tau_ms"] <= 20)
+
+
+def gate4(r36, r10):
+    return bool(r36 >= .9 and r10 < .9)
+
+
+def gate5(continuous, pulsed):
+    return bool(continuous < pulsed)
+
+
+def harmonic_metrics(r):
+    y = r.r_graded[:, -round(.2*FS):].mean(axis=0)
+    spectrum = abs(np.fft.rfft(y))
+    freq = np.fft.rfftfreq(len(y), 1/FS)
+    dc, a300, a600 = (float(spectrum[np.argmin(abs(freq-f))]) for f in (0,300,600))
+    floor = 1e-12*dc
+    ratio = a600/max(a300, floor) if dc > 0 else 0.
+    signs = bool(np.any(r.phase_sign < 0) and np.any(r.phase_sign > 0))
+    reconstructed = bool(np.array_equal(abs(r.r_signed), r.r_graded))
+    return dict(amplitude_300=a300, amplitude_600=a600, dc=dc,
+                ratio_600_over_300_or_lower_bound=ratio,
+                denominator_below_floor=bool(a300 < floor),
+                ratio_600_over_dc=a600/dc if dc > 0 else 0.,
+                both_signs=signs, reconstructed=reconstructed,
+                passed=bool(ratio > .5 and signs and reconstructed and dc > 0))
+
+
+def reported_tuning_metrics(channels=None):
+    from pathlib import Path
+    import json
+    ledger = json.loads((Path(__file__).resolve().parents[1]/'reference/calibration_ledger.json').read_text('utf-8'))
+    entries = {e['id']: e for e in ledger['measurements']}
+    channels = reported_channels() if channels is None else channels
+    frequencies = np.arange(20,2001, dtype=float)
+    magnitudes = np.array([abs(freqz(*c.coefficients(), worN=frequencies, fs=FS)[1]) for c in channels])
+    relative = magnitudes/magnitudes.max(axis=1)[:,None]
+    peaks = frequencies[magnitudes.argmax(axis=1)]
+    targets = np.array([entries[c.ledger_id]['value'] for c in channels[:4]])
+    peak_ok = bool(np.all(abs(peaks[:4]/targets-1) <= .15))
+    band = frequencies[relative[4] >= 1/np.sqrt(2)]
+    edges = [float(band[0]),float(band[-1])] if len(band) else [0.,0.]
+    edge_ok = bool(np.all(abs(np.array(edges)/entries['R6_001']['value']-1) <= .15))
+    overlap = frequencies[(frequencies < 500) & (relative[4] >= .5) &
+                          ((relative[0] >= .5) | (relative[1] >= .5))]
+    no_f = not any(c.subtype in ('F','JO-F') for c in channels)
+    return dict(peaks_hz=peaks.tolist(), targets_hz=targets.tolist(),
+                a_half_power_edges_hz=edges, overlap_below_500_hz=overlap.tolist(),
+                no_f=no_f, passed=bool(peak_ok and edge_ok and len(overlap) and no_f),
+                biological_validation='unassessed; conditional placement only',
+                anatomy='100/125 components provisionally B-associated; no unique mapping')
+
+
+def round2_metrics(config, trials=None):
+    with patch(__name__+'.fixture_channels', reported_channels):
+        causal = causal_chunk_metrics(config)
+        adaptation = adaptation_metrics(config, trials)
+        recovery = recovery_metrics(config)
+        pulses = pulse_metrics(config)
+        continuous = continuous_metrics(config)
+        harmonic = harmonic_metrics(response(sine(.5), config))
+    tuning = reported_tuning_metrics()
+    gates = dict(G1=causal['causal_bit_equal'],
+                 G2=bool(causal['chunk_max_error'] < 1e-9 and
+                         causal['signed_chunk_max_error'] < 1e-9 and causal['phase_bit_equal']),
+                 G3=gate3(adaptation['up'], adaptation['down']),
+                 G4=gate4(pulses['36']['ratio'], pulses['10']['ratio']),
+                 G5=gate5(continuous['continuous']['ratio'], continuous['pulsed']['ratio']),
+                 G6=tuning['passed'], G7=harmonic['passed'])
+    return dict(gates=gates, causal=causal, adaptation=adaptation, recovery=recovery,
+                pulses=pulses, continuous=continuous, tuning=tuning, harmonic=harmonic)
+
+
+@pytest.mark.parametrize('family', ROUND2_FAMILIES)
+def test_round2_causal_and_chunks(family):
+    config = Config(family=family)
+    with patch(__name__+'.fixture_channels', reported_channels):
+        m = causal_chunk_metrics(config)
+        assert m['causal_bit_equal'] and m['phase_bit_equal']
+        assert m['chunk_max_error'] < 1e-9 and m['signed_chunk_max_error'] < 1e-9
+        x = np.random.default_rng(24).normal(size=1600)
+        bank = ear(config)
+        bounds = [0,0,1,37,900,901,1600]
+        chunks = [bank.process(x[a:b], input_mode=MODE) for a,b in zip(bounds[:-1],bounds[1:])]
+        expected = response(x,config)
+        assert np.array_equal(expected.r_graded,np.concatenate([r.r_graded for r in chunks],axis=1))
+        bank.reset()
+        assert np.array_equal(expected.r_graded,bank.process(x,input_mode=MODE).r_graded)
+        restarted = np.concatenate([response(x[a:b],config).r_graded for a,b in zip(bounds[:-1],bounds[1:])],axis=1)
+        assert np.max(abs(expected.r_graded-restarted)) > .01
+
+
+@pytest.mark.parametrize('family', ROUND2_FAMILIES)
+def test_round2_independent_recurrence(family):
+    config = Config(family=family, tau_div_ms=30, tau_up_ms=10, tau_down_ms=20, strength=4)
+    x = np.random.default_rng(71).normal(size=351)
+    actual = response(x, config)
+    expected = np.empty_like(actual.r_graded)
+    for k, channel in enumerate(fixture_channels()):
+        b,a = channel.coefficients()
+        x1=x2=y1=y2=base=d=0.
+        for n,sample in enumerate(x):
+            y=b[0]*sample+b[1]*x1+b[2]*x2-a[1]*y1-a[2]*y2
+            sub=np.exp(-1000/(FS*config.tau_sub_ms))
+            base=sub*base+(1-sub)*y
+            tau=config.tau_div_ms if family=='energy_feedback' else (
+                config.tau_up_ms if y*y>d else config.tau_down_ms)
+            decay=np.exp(-1000/(FS*tau))
+            d=decay*d+(1-decay)*y*y
+            expected[k,n]=abs((y-base)/(1+config.strength*d))
+            x2,x1,y2,y1=x1,sample,y1,y
+    np.testing.assert_allclose(actual.r_graded,expected,atol=1e-12,rtol=1e-12)
+
+
+def test_round2_gate_oracles():
+    valid=lambda tau: dict(valid=True,tau_ms=tau)
+    assert gate3(valid(5),valid(20))
+    assert not gate3(valid(20),valid(5))
+    assert not gate3(valid(4.99),valid(20))
+    assert not gate3(dict(valid=False,tau_ms=5),valid(20))
+    assert gate4(.9,.899) and not gate4(.899,.8) and not gate4(.99,.9)
+    assert gate5(.1,.2) and not gate5(.2,.1) and not gate5(.1,.1)
+    from flybench.ear2 import GradedResponse
+    t=np.arange(round(.2*FS))/FS
+    signs=np.sign(np.sin(2*np.pi*300*t))[None,:]
+    signs[signs==0]=1
+    def synthetic(a600):
+        y=(1+.2*np.cos(2*np.pi*300*t)+a600*np.cos(2*np.pi*600*t))[None,:]
+        return GradedResponse(y,signs,('synthetic',),MODE,0)
+    assert harmonic_metrics(synthetic(.11))['passed']
+    assert not harmonic_metrics(synthetic(.09))['passed']
+    zero=GradedResponse(np.zeros_like(signs),signs,('synthetic',),MODE,0)
+    assert not harmonic_metrics(zero)['passed']
+    assert reported_tuning_metrics()['passed']
+    from dataclasses import replace
+    bad=list(reported_channels())
+    bad[0]=replace(bad[0],center_hz=180)
+    assert not reported_tuning_metrics(bad)['passed']
+
+
+@pytest.mark.parametrize('family', ROUND2_FAMILIES)
+def test_round2_gate_calculations(family):
+    # Scientific misses remain data; these assertions test calculation consistency.
+    with patch(__name__+'.fixture_channels', reported_channels):
+        config=Config(family=family)
+        p=pulse_metrics(config)
+        assert p['passed']==gate4(p['36']['ratio'],p['10']['ratio'])
+        c=continuous_metrics(config)
+        assert c['passed']==gate5(c['continuous']['ratio'],c['pulsed']['ratio'])
+        h=harmonic_metrics(response(sine(.5),config))
+        assert h['both_signs'] and h['reconstructed']
+
+
+@pytest.mark.parametrize('kwargs', [dict(family='unknown'),dict(strength=0),
+    dict(strength=np.nan),dict(tau_up_ms=0),dict(tau_down_ms=np.inf)])
+def test_round2_invalid_config(kwargs):
+    with pytest.raises(ValueError):
+        Config(**kwargs)
+
+
+def test_round2_default_is_selected_winner():
+    # A default-family or fitted-parameter drift must break this regression.
+    c=Config()
+    assert (c.family,c.tau_sub_ms,c.tau_div_ms,c.strength)==('energy_feedback',5,10,1)
+    x=sine(.03)
+    bank=Ear2(input_mode=MODE,channels=reported_channels())
+    explicit=Ear2(input_mode=MODE,channels=reported_channels(),
+                  config=Config(family='energy_feedback',tau_sub_ms=5,tau_div_ms=10,strength=1))
+    assert np.array_equal(bank.process(x,input_mode=MODE).r_graded,
+                          explicit.process(x,input_mode=MODE).r_graded)

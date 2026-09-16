@@ -1,7 +1,7 @@
 """Causal stateful graded transduction; no calibrated JO rates or spikes.
 
-Channel parameters must be supplied explicitly: the E1 reference snapshot
-does not contain JO subtype tuning centers. No biological defaults exist.
+Channel parameters must be supplied explicitly. The round-2 conditional bank
+places reported functional preferences without claiming resolved anatomy.
 Input samples already carry the physical units named by ``input_mode``.
 """
 from dataclasses import dataclass, field
@@ -14,6 +14,7 @@ from .song import SAMPLE_RATE
 
 InputMode = Literal["particle_velocity_mm_s", "arista_displacement_um"]
 INPUT_MODES = ("particle_velocity_mm_s", "arista_displacement_um")
+FAMILIES = ("legacy", "energy_feedback", "asymmetric_energy")
 
 
 def _mode(mode: str) -> str:
@@ -67,19 +68,48 @@ class Channel:
 
 @dataclass(frozen=True)
 class Config:
-    """Adaptation initializations are design choices, not measurements."""
+    """Defaults are the conditional round-2 grid winner, not measured constants.
 
-    tau_sub_ms: float = 30.0
-    tau_div_ms: float = 50.0
+    Legacy round-1 initialization is explicit: family="legacy",
+    tau_sub_ms=30, tau_div_ms=50. Up/down constants are used only by
+    asymmetric_energy; tau_div_ms is unused by that family.
+    """
+
+    tau_sub_ms: float = 5.0
+    tau_div_ms: float = 10.0
+    family: str = "energy_feedback"
+    tau_up_ms: float = 5.0
+    tau_down_ms: float = 20.0
+    strength: float = 1.0
     jo_absolute_rate_calibrated: bool = field(default=False, init=False)
     jo_rate_ceiling_hz: None = field(default=None, init=False)
     jo_refractory_ms: None = field(default=None, init=False)
     allow_uncalibrated_spike_drive: bool = field(default=False, init=False)
 
     def __post_init__(self):
-        for tau in (self.tau_sub_ms, self.tau_div_ms):
+        if self.family not in FAMILIES:
+            raise ValueError(f"Unknown adaptation family: {self.family}")
+        for tau in (self.tau_sub_ms, self.tau_div_ms, self.tau_up_ms, self.tau_down_ms):
             if not np.isfinite(tau) or tau <= 0:
                 raise ValueError("Adaptation times must be finite and positive")
+        if not np.isfinite(self.strength) or self.strength <= 0:
+            raise ValueError("Feedback strength must be finite and positive")
+
+
+def reported_channels():
+    """Conditional target placement; Q/gain and B association are provisional.
+
+    Calcium functional classes do not uniquely map to anatomical A/B cells.
+    The aggregate A edges are reported response extents, not measured -3 dB
+    points; using them as design edges is declared in the round-2 amendment.
+    """
+    edges = 2*SAMPLE_RATE*np.tan(np.pi*np.array([100., 1200.])/SAMPLE_RATE)
+    omega = float(np.sqrt(np.prod(edges)))
+    center = float(SAMPLE_RATE/np.pi*np.arctan(omega/(2*SAMPLE_RATE)))
+    functional = tuple(Channel(f"functional_{f}", f, 1., 1., ledger_id=f"R6_{i:03d}")
+                       for i, f in enumerate((100, 125, 225, 600), 8))
+    return functional + (Channel("A_aggregate", center, omega/float(np.diff(edges)[0]),
+                                 1., subtype="A", ledger_id="R6_001"),)
 
 
 @dataclass(frozen=True)
@@ -107,7 +137,7 @@ class Ear2:
     def __init__(self, *, input_mode: InputMode, channels=None, config=None):
         self._input_mode = _mode(input_mode)
         if channels is None:
-            raise ValueError("JO subtype tuning centers not in ledger; explicit channels required")
+            raise ValueError("Resolved channel anatomy/gains not in ledger; explicit channels required")
         self._channels = tuple(channels)
         if len(self._channels) < 4 or not all(isinstance(c, Channel) for c in self._channels):
             raise ValueError("At least four explicit Channel objects required")
@@ -119,6 +149,8 @@ class Ear2:
         self._coefficients = tuple(c.coefficients() for c in self._channels)
         self._a_sub = np.exp(-1000.0 / (SAMPLE_RATE * self.config.tau_sub_ms))
         self._a_div = np.exp(-1000.0 / (SAMPLE_RATE * self.config.tau_div_ms))
+        self._a_up = np.exp(-1000.0 / (SAMPLE_RATE * self.config.tau_up_ms))
+        self._a_down = np.exp(-1000.0 / (SAMPLE_RATE * self.config.tau_down_ms))
         self.reset()
 
     @property
@@ -172,9 +204,26 @@ class Ear2:
             residual = filtered - baseline
             signs = np.sign(residual)
             rectified = np.abs(residual)
-            divisor, div_state = lfilter([1 - self._a_div], [1, -self._a_div],
-                                        rectified, axis=-1, zi=self._div_state)
-            graded = rectified / (1.0 + divisor)
+            if self.config.family == "legacy":
+                divisor, div_state = lfilter([1 - self._a_div], [1, -self._a_div],
+                                            rectified, axis=-1, zi=self._div_state)
+                graded = rectified / (1.0 + divisor)
+            elif self.config.family == "energy_feedback":
+                divisor, div_state = lfilter([1 - self._a_div], [1, -self._a_div],
+                                            filtered**2, axis=-1, zi=self._div_state)
+                graded = np.abs(residual / (1.0 + self.config.strength * divisor))
+            else:
+                # This family's state stores d itself, not lfilter's scaled zi.
+                divisor = np.empty_like(filtered)
+                div_state = self._div_state.copy()
+                for k, row in enumerate(filtered**2):
+                    d = float(div_state[k, 0])
+                    for n, energy in enumerate(row):
+                        a = self._a_up if energy > d else self._a_down
+                        d = a*d + (1-a)*energy
+                        divisor[k, n] = d
+                    div_state[k, 0] = d
+                graded = np.abs(residual / (1.0 + self.config.strength * divisor))
             if not (np.isfinite(graded).all() and np.isfinite(filter_state).all()
                     and np.isfinite(sub_state).all() and np.isfinite(div_state).all()):
                 raise ValueError("Numerical overflow; state was not advanced")

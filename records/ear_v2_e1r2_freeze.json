@@ -1,0 +1,9 @@
+{
+  "preregistration_v1_sha256": "c053c84283c74facad59e0b546322b8d1224ad4c4284b511c6d3acdebb0f8b69",
+  "preregistration_v1_bytes": 8708,
+  "amendment_sha256": "f4b29a780558f148c9cf3a35390dc0d247f3ddc1850974858d516f50d464b064",
+  "preregistration_combined_sha256": "3d477af62ddc609153897e45890364487172e1f3552e3d0b1d227b090bc13681",
+  "ledger_v1.0_sha256": "e972119894af09fef6bd32e0d0c000a3397156e68f5461b455cb6eac61b81e01",
+  "ledger_version_original_field": null,
+  "freeze_stage": "before round-2 implementation and candidate evaluation"
+}
