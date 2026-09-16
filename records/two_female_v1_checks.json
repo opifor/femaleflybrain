@@ -1,0 +1,212 @@
+{
+  "schema_version": "two_female_v1.checks.1",
+  "status": "complete",
+  "runner_refactor": "no refactor",
+  "bit_equality": "not applicable: runner unchanged; no FAFB simulation rerun",
+  "head": "262c49abf4cb22af3b5ca30c929e8638de023e6b",
+  "tracked_diff": [],
+  "staged_diff": [],
+  "unchanged_inputs": {
+    "flybench/experiment/runner.py": {
+      "sha256": "dc07daf0b80d99622cca1336c880f32945840007acde29e9bc190c5bd0cfe11f",
+      "matches_HEAD_after_line_ending_normalization": true
+    },
+    "experiments/female_no_v1.md": {
+      "sha256": "9b1e9032b3c3d9e07197a784aeafca1dbba1c7586a585fa1c365ac4b87cb0805",
+      "matches_HEAD_after_line_ending_normalization": true
+    },
+    "records/female_no_v1_experiment.json": {
+      "sha256": "d41f06b12e63affe414b02f2960493a6ac349bb709130c3f453692c1dcc4e3e3",
+      "matches_HEAD_after_line_ending_normalization": true
+    },
+    "records/female_no_v1_report.md": {
+      "sha256": "221b7daa058aa2e7cbec39bbbfe1b18eff81e240399a0196a7c0c69f853e859b",
+      "matches_HEAD_after_line_ending_normalization": true
+    }
+  },
+  "acceptance": {
+    "files": [
+      "tests/test_two_female.py",
+      "tests/test_experiment.py",
+      "tests/test_ear_song.py"
+    ],
+    "passed": 15,
+    "skipped": 1,
+    "warnings": 1,
+    "exit_code": 0,
+    "skip_reason": "opt-in intentional-failure probe",
+    "probe_failed": 1,
+    "probe_exit_code": 1
+  },
+  "execution": {
+    "tests": {
+      "stage": "tests",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "--basetemp=build/records-raw/two_female_v1/pytest-temp",
+        "tests/test_two_female.py",
+        "tests/test_experiment.py",
+        "tests/test_ear_song.py"
+      ],
+      "started_utc": "2026-09-16T21:22:04.503926+00:00",
+      "completed_utc": "2026-09-16T21:22:11.198942+00:00",
+      "elapsed_seconds": 6.696119899999758,
+      "exit_code": 0,
+      "combined_output": "............s...                                                         [100%]\n============================== warnings summary ===============================\ntests/test_two_female.py::test_saved_record_path_and_exact_windows\n  <repository>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at <external-build-source>)\n    self.delivery = torch.sparse_csr_tensor(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n15 passed, 1 skipped, 1 warning in 6.02s\n",
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "chain": "task-specified Python 3.12 and dependency directory; no environment substitution",
+      "log_path_normalization": "Repository, dependency and external build-source absolute paths replaced with placeholders"
+    },
+    "probe": {
+      "stage": "probe",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "tests/test_experiment.py::test_harness_failure_probe"
+      ],
+      "started_utc": "2026-09-16T21:22:18.069941+00:00",
+      "completed_utc": "2026-09-16T21:22:20.592309+00:00",
+      "elapsed_seconds": 2.521999599997798,
+      "exit_code": 1,
+      "combined_output": "F                                                                        [100%]\n================================== FAILURES ===================================\n_________________________ test_harness_failure_probe __________________________\ntests\\test_experiment.py:106: in test_harness_failure_probe\n    assert False, \"Intentional failure: harness must return exit 1\"\nE   AssertionError: Intentional failure: harness must return exit 1\nE   assert False\n=========================== short test summary info ===========================\nFAILED tests/test_experiment.py::test_harness_failure_probe - AssertionError:...\n1 failed in 1.93s\n",
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "chain": "task-specified Python 3.12 and dependency directory; no environment substitution",
+      "log_path_normalization": "Repository, dependency and external build-source absolute paths replaced with placeholders"
+    },
+    "freeze": {
+      "stage": "freeze",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "flybench.experiment.two_female",
+        "--freeze"
+      ],
+      "started_utc": "2026-09-16T21:22:26.571967+00:00",
+      "completed_utc": "2026-09-16T21:22:30.663054+00:00",
+      "elapsed_seconds": 4.091059200000018,
+      "exit_code": 0,
+      "combined_output": "Preregistration frozen: a6a5ddddb04d345d893468c82fbaf0e0d4c80992576e5173145e8f90eb76acef\n",
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "chain": "task-specified Python 3.12 and dependency directory; no environment substitution",
+      "log_path_normalization": "Repository, dependency and external build-source absolute paths replaced with placeholders"
+    },
+    "quick": {
+      "stage": "quick",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "flybench.experiment.two_female",
+        "--quick"
+      ],
+      "started_utc": "2026-09-16T21:22:38.167240+00:00",
+      "completed_utc": "2026-09-16T21:22:56.495454+00:00",
+      "elapsed_seconds": 18.32898059999934,
+      "exit_code": 0,
+      "combined_output": "<repository>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at <external-build-source>)\n  self.delivery = torch.sparse_csr_tensor(\nshiu virgin_song: 2 seeds complete; 2.2 s\nshiu mated_song: 2 seeds complete; 4.0 s\nshiu virgin_silence: 2 seeds complete; 5.8 s\nshiu mated_silence: 2 seeds complete; 7.6 s\njump virgin_song: 2 seeds complete; 9.7 s\njump mated_song: 2 seeds complete; 11.5 s\njump virgin_silence: 2 seeds complete; 13.4 s\njump mated_silence: 2 seeds complete; 15.3 s\n{\"mode\": \"quick\", \"elapsed_seconds\": 15.258045700000366}\n",
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "chain": "task-specified Python 3.12 and dependency directory; no environment substitution",
+      "log_path_normalization": "Repository, dependency and external build-source absolute paths replaced with placeholders"
+    },
+    "full": {
+      "stage": "full",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "flybench.experiment.two_female"
+      ],
+      "started_utc": "2026-09-16T21:23:08.077817+00:00",
+      "completed_utc": "2026-09-16T21:24:15.983728+00:00",
+      "elapsed_seconds": 67.90607380000074,
+      "exit_code": 0,
+      "combined_output": "<repository>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at <external-build-source>)\n  self.delivery = torch.sparse_csr_tensor(\nshiu virgin_song: 10 seeds complete; 8.6 s\nshiu mated_song: 10 seeds complete; 16.8 s\nshiu virgin_silence: 10 seeds complete; 25.1 s\nshiu mated_silence: 10 seeds complete; 33.0 s\njump virgin_song: 10 seeds complete; 40.9 s\njump mated_song: 10 seeds complete; 48.7 s\njump virgin_silence: 10 seeds complete; 56.5 s\njump mated_silence: 10 seeds complete; 64.2 s\n{\"mode\": \"full\", \"elapsed_seconds\": 64.23059509999803}\n",
+      "locale": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "chain": "task-specified Python 3.12 and dependency directory; no environment substitution",
+      "log_path_normalization": "Repository, dependency and external build-source absolute paths replaced with placeholders"
+    }
+  },
+  "evidence_class": "acceptance evidence on the task-specified Python/dependency/CUDA chain",
+  "environment_difference": null,
+  "verification": {
+    "freeze_precedes_simulation": true,
+    "quick_precedes_full": true,
+    "frozen_input_hashes_match": true,
+    "raw_records_validate": true,
+    "complete_quick_trials": 16,
+    "complete_full_trials": 80,
+    "window_means_independently_recomputed": true,
+    "strict_30_hz_ignition_independently_recomputed": true,
+    "saved_summaries_and_paired_contrasts_recomputed": true,
+    "FAFB_and_BANC_parameters_ear_and_timing_identical": true,
+    "preregistration_bytes_embedded_verbatim": true,
+    "FAFB_baseline_read_only": true
+  },
+  "deviations": [
+    "The cited central_brain_intrinsic note was absent from the local E3 report. The supplied BANC NPZ is unchanged; the superclass filter applies to pC1, not the entire network. Actual graph population and VNC coverage are disclosed."
+  ],
+  "clean_room": "No restricted source tree or archive was opened. Only the expressly supplied dependency directory was used by the runtime.",
+  "git_writes": false,
+  "report_generation": "Saved experiment JSON rendered by two_female.render, then saved checks appended by build/records-raw/two_female_v1/audit_delivery.py. Byte export preserves the frozen preregistration line endings on Windows.",
+  "evidence_scripts_sha256": {
+    "run_stage.py": "dd2daef12181fed909b4b3e4dbb86759cbf0265dcc368bd9539babbce7f6b48a",
+    "audit_delivery.py": "dfec00b31f0b0337a978ce88463766a4f666346056c5b91c5eac18138fbe7abd"
+  },
+  "artifacts": {
+    "experiments/two_female_v1.md": {
+      "bytes": 20760,
+      "sha256": "a6a5ddddb04d345d893468c82fbaf0e0d4c80992576e5173145e8f90eb76acef"
+    },
+    "flybench/experiment/two_female.py": {
+      "bytes": 17700,
+      "sha256": "f7305a38e9f9fb0ab45853dfc1716cf8a6eaa55a200e0b28a5a92d104dc63231"
+    },
+    "tests/test_two_female.py": {
+      "bytes": 5680,
+      "sha256": "4ffc134baf57d677da5707071302b2b1c43d5b4a84b725823749c346358ea2da"
+    },
+    "records/two_female_v1_experiment.json": {
+      "bytes": 133596,
+      "sha256": "28cbc7de2c573032ea8bcc2c44c080a143b3fad972a4656bce15a92872585e5f"
+    },
+    "records/two_female_v1_freeze.json": {
+      "bytes": 43027,
+      "sha256": "82c1475040fd426706bb889b9a6362cbe144eb69adb5fa3e2f38d041bfc7f70e"
+    },
+    "records/two_female_v1_report.md": {
+      "bytes": 42473,
+      "sha256": "ded4317209fb24ca05d00a1f35874c37a573121467ec7145027063ed720ad2d2"
+    }
+  },
+  "encoding": "UTF-8 without BOM; checked",
+  "machine_paths_in_delivery": false
+}
