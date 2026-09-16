@@ -106,4 +106,4 @@ Report verbatim preregistration, full coverage table, G1-G5, biological status,
 all design constants and source limitations, scope note, test counts/exits,
 hashes, git status, and deviations. An audit omits its own recursive hash and
 records that exclusion. No external literature claims or downloads are added.
-Next step: network delivery is a separate round requiring Akif's seal.
+Next step: network delivery is a separate round requiring its own pre-registration and decision.

@@ -7,7 +7,7 @@
       "utf8_without_bom": true
     },
     "experiments/eye_v2_e1.md": {
-      "sha256": "3478e7e62c214405cdc68b5d87a62f46a779ec2f76f7c1c2cb0fb89a34ac1f74",
+      "sha256": "3f1f0e26fd3c69977407644112ef5f7775da878200738856baf35caf77410438",
       "bytes": 6729,
       "utf8_without_bom": true
     },
@@ -40,7 +40,7 @@
       "sha256_crlf_at_delivery": "9b71b67d958b35b947a340441a02bfc9f93f3614b42b8f8e00296052d314f710"
     },
     "records/eye_v2_e1_report.md": {
-      "sha256": "4a4c3bc80231776b59bbe9a885660c5404401433644ae1cedfb505e2791a258b",
+      "sha256": "adc5e7f115f9bd00dddbf64f635adbd519441de80bd9d521936790f8ff7cd636",
       "bytes": 932807,
       "utf8_without_bom": true,
       "sha256_crlf_at_delivery": "653ea6efa887c1b9bfcf4b01ce6577b28fdf01d7bc25d8fa2710e450abfabe8d"
@@ -114,5 +114,19 @@
   "summary_within_limit": true,
   "audit_utf8_without_bom": true,
   "hash_basis": "lf",
-  "line_ending_normalisation": "Orchestrator converted CRLF to LF in the delivered text files before commit, per records/hash_basis_note.md; sha256 fields were recomputed on LF bytes and the delivery-time CRLF digests are kept as sha256_crlf_at_delivery. Files normalised: records/eye_v2_e1_report.md, records/eye_v2_e1_coverage.json, records/eye_v2_e1_freeze.json, records/eye_v2_e1_metrics.json"
+  "line_ending_normalisation": "Orchestrator converted CRLF to LF in the delivered text files before commit, per records/hash_basis_note.md; sha256 fields were recomputed on LF bytes and the delivery-time CRLF digests are kept as sha256_crlf_at_delivery. Files normalised: records/eye_v2_e1_report.md, records/eye_v2_e1_coverage.json, records/eye_v2_e1_freeze.json, records/eye_v2_e1_metrics.json",
+  "post_delivery_wording_edit": {
+    "files": [
+      "experiments/eye_v2_e1.md",
+      "records/eye_v2_e1_report.md"
+    ],
+    "change": "the phrase 'requiring Akif's seal' replaced by 'requiring its own pre-registration and decision' (maintainer name removed); no other bytes changed",
+    "preregistration_sha256_before_edit": {
+      "sha256": "3478e7e62c214405cdc68b5d87a62f46a779ec2f76f7c1c2cb0fb89a34ac1f74",
+      "path": "experiments/eye_v2_e1.md"
+    },
+    "preregistration_sha256_after_edit": "3f1f0e26fd3c69977407644112ef5f7775da878200738856baf35caf77410438",
+    "report_sha256_after_edit": "adc5e7f115f9bd00dddbf64f635adbd519441de80bd9d521936790f8ff7cd636",
+    "hash_basis": "lf"
+  }
 }

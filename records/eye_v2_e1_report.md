@@ -196,7 +196,7 @@ self-consistency and permutation control in place of the draft note's proposal.
 The requested metadata identifiers and phrase 'declared convention, uncalibrated'
 are retained as explicit task exceptions to the prohibited affirmative vocabulary.
 
-Next step: network delivery is a separate round requiring Akif's seal.
+Next step: network delivery is a separate round requiring its own pre-registration and decision.
 
 ## Assignment-file coverage
 
@@ -17962,5 +17962,5 @@ Report verbatim preregistration, full coverage table, G1-G5, biological status,
 all design constants and source limitations, scope note, test counts/exits,
 hashes, git status, and deviations. An audit omits its own recursive hash and
 records that exclusion. No external literature claims or downloads are added.
-Next step: network delivery is a separate round requiring Akif's seal.
+Next step: network delivery is a separate round requiring its own pre-registration and decision.
 ```
