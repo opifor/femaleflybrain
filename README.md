@@ -243,3 +243,21 @@ graph, use `data_dir=`, `FLYBENCH_DATA`, or the default `build/` graph directory
 See [the measured dictionary and matching limitations](docs/dictionary.md),
 including explicit absent groups and the conservative MaleCNS P1 proxy.
 Run `python -m pytest -q -p no:cacheprovider tests/test_dictionary.py`.
+
+## Experiments
+
+Run the preregistered female-only experiment with
+`python -m flybench.experiment.runner --quick`, then
+`python -m flybench.experiment.runner` for ten paired seeds per condition.
+The [protocol](experiments/female_no_v1.md) fixes song synthesis, auditory
+transduction, reproductive-state input and predictions before simulation.
+The [experiment guide](docs/experiments.md) describes records, validation,
+and interpretation. Full JSON and its generated report are written to
+`records/female_no_v1_experiment.json` and `records/female_no_v1_report.md`.
+## World
+
+The two-body world connects geometry-only scent, silhouette vision, and sound
+to independent persistent brains using the fast GPU backend. Motor commands
+update a planar arena; records keep sensory evidence, neural readouts, movement,
+and contact separate. See [world assumptions and usage](docs/world.md).
+Run python -m pytest -q -p no:cacheprovider tests/test_world.py for synthetic acceptance.
