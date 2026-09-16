@@ -1,0 +1,162 @@
+{
+  "hash_basis": "lf",
+  "head": "af368926d00583a53c22d31b07c8951be23c4335",
+  "branch": "lane-e3c",
+  "environment_deviation": false,
+  "formatting_deviation": "Build snapshots retain CRLF from the authorized unchanged writer; tracked deliveries use LF.",
+  "files": {
+    "flybench/dictionary/entries.py": {
+      "sha256": "4333ee18e6576535fbdfa18e6748b77eb45092607856a1aff456bcb3632ddfa8",
+      "utf8_no_bom": true,
+      "normalized_bytes": 17913,
+      "lf_only": true
+    },
+    "docs/dictionary.md": {
+      "sha256": "7d068aedf1af71b2b24184b316ac1d1a28e4b1a1103eeb693b7a1179318a439e",
+      "utf8_no_bom": true,
+      "normalized_bytes": 99082,
+      "lf_only": true
+    },
+    "tests/test_dictionary.py": {
+      "sha256": "b2ad1892afec75c69e094041e695413374c8735c025a450d33c993801ce737cd",
+      "utf8_no_bom": true,
+      "normalized_bytes": 26373,
+      "lf_only": true
+    },
+    "records/dictionary_e3c_report.md": {
+      "sha256": "39c84cca572278e500ac917b3201fb716386fef3dbd53af0e23c77ea674ad201",
+      "utf8_no_bom": true,
+      "normalized_bytes": 5436,
+      "lf_only": true
+    },
+    "records/dictionary_e3c_measurements.json": {
+      "sha256": "91980d63eeb492b1c4ee2b2ef862e92df2c178bea5818963dde2b5280513c9b5",
+      "utf8_no_bom": true,
+      "normalized_bytes": 8872,
+      "lf_only": true
+    },
+    "records/dictionary_e3c_suite.json": {
+      "sha256": "59d83602b65c764458533e575878653e48a272a6159499606dead59306efd4bb",
+      "utf8_no_bom": true,
+      "normalized_bytes": 3214,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/dictionary_female.json": {
+      "sha256": "bd309bf4123292e4eff8dcac1385275bf8908a6790646fe19e63ccd1bf50eabd",
+      "utf8_no_bom": true,
+      "normalized_bytes": 143927,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/dictionary_banc.json": {
+      "sha256": "96fb99d17d5c0eaef5c9882bc65f481c46982a38699d6f619ce2b0c5b790e0bd",
+      "utf8_no_bom": true,
+      "normalized_bytes": 153719,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/dictionary_male.json": {
+      "sha256": "b25ee6434171ff31d4b4a73b49bc3df3cd9aa82c8c11ec4b2c47972c46e8935c",
+      "utf8_no_bom": true,
+      "normalized_bytes": 131697,
+      "lf_only": true
+    },
+    "tests/fixtures/graph/generate.py": {
+      "sha256": "cc09b20e1189646e7308daea2080dda458df0c4c5735ab7898bf9544c42495c3",
+      "utf8_no_bom": true,
+      "normalized_bytes": 4070,
+      "lf_only": true
+    },
+    "records/vpoen_inputs_v1_report.md": {
+      "sha256": "0570a06afac45806697975d3b2a743ad8b4c1c9c6ee229fc64161784a63e9bec",
+      "utf8_no_bom": true,
+      "normalized_bytes": 140309,
+      "lf_only": true
+    },
+    "records/vpoen_inputs_v1_results.json": {
+      "sha256": "69859957b07d0541b2fd923c20d5a3b85ac630c737f76368dc2e88992adff96f",
+      "utf8_no_bom": true,
+      "normalized_bytes": 4330711,
+      "lf_only": true
+    },
+    "build/dictionary_female.json": {
+      "sha256": "bd309bf4123292e4eff8dcac1385275bf8908a6790646fe19e63ccd1bf50eabd",
+      "utf8_no_bom": true,
+      "normalized_bytes": 143927,
+      "lf_only": false
+    },
+    "build/dictionary_banc.json": {
+      "sha256": "96fb99d17d5c0eaef5c9882bc65f481c46982a38699d6f619ce2b0c5b790e0bd",
+      "utf8_no_bom": true,
+      "normalized_bytes": 153719,
+      "lf_only": false
+    },
+    "build/dictionary_male.json": {
+      "sha256": "b25ee6434171ff31d4b4a73b49bc3df3cd9aa82c8c11ec4b2c47972c46e8935c",
+      "utf8_no_bom": true,
+      "normalized_bytes": 131697,
+      "lf_only": false
+    }
+  },
+  "existing_entries": {
+    "female": {
+      "old_count": 128,
+      "new_count": 129,
+      "existing_entries_equal": true,
+      "top10_unchanged": true,
+      "build_fixture_equal": true,
+      "build_fixture_lf_hash_equal": true
+    },
+    "banc": {
+      "old_count": 128,
+      "new_count": 129,
+      "existing_entries_equal": true,
+      "top10_unchanged": true,
+      "build_fixture_equal": true,
+      "build_fixture_lf_hash_equal": true
+    },
+    "male": {
+      "old_count": 128,
+      "new_count": 129,
+      "existing_entries_equal": true,
+      "top10_unchanged": true,
+      "build_fixture_equal": true,
+      "build_fixture_lf_hash_equal": true
+    }
+  },
+  "graphs": {
+    "female": {
+      "two_edge_via_avlp083": {
+        "paths": 4392,
+        "flow": 36546,
+        "maximum": 41
+      },
+      "sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+      "verified_witnesses": 9,
+      "matches_roadmap": true,
+      "hash_basis": "binary"
+    },
+    "banc": {
+      "two_edge_via_avlp083": {
+        "paths": 4309,
+        "flow": 20330,
+        "maximum": 29
+      },
+      "sha256": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+      "verified_witnesses": 6,
+      "matches_roadmap": true,
+      "hash_basis": "binary"
+    },
+    "male": {
+      "two_edge_via_avlp083": {
+        "paths": 2760,
+        "flow": 39894,
+        "maximum": 54
+      },
+      "sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+      "verified_witnesses": 7,
+      "matches_roadmap": true,
+      "hash_basis": "binary"
+    }
+  },
+  "git_diff_check_exit": 0,
+  "integrity_validation": "Python JSON comparison; prior PowerShell JSON parser rejected empty annotation keys and its comparisons were discarded."
+}

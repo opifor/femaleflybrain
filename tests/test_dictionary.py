@@ -365,6 +365,155 @@ def write_e3b_measurements():
     destination.write_text(json.dumps(measured, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
+@pytest.mark.parametrize("dataset", DATASETS)
+def test_e3c_gate_definition_boundaries_and_read_only(dataset):
+    definition = next(e for e in entries(dataset) if e.name == "vpoEN-gate:AVLP083")
+    assert definition.selector.type_re == r"^AVLP083$"
+    assert definition.read_only is True
+    assert definition.group == "vpoen-gate"
+    assert definition.confidence == "exact"
+    assert definition.evidence_class == "records/vpoen_inputs_v1_report.md"
+    labels = ["AVLP083", "AVLP083", "AVLP083-like", "xAVLP083", "avlp083", "AVLP0830"]
+    graph = {"type": np.array(labels), "body_id": np.arange(len(labels))}
+    np.testing.assert_array_equal(definition.selector.select(graph), [0, 1])
+    for labels in (["AVLP083"], ["unrelated"]):
+        with pytest.raises(ValueError, match="read-only diagnostic population"):
+            drive_targets(dataset, definition.name,
+                          graph={"type": np.array(labels), "body_id": np.arange(len(labels))})
+
+
+def e3c_measure(graph, selected):
+    """Raw directed counts, independent of signed weights and path flow."""
+    from flybench.dictionary.build import distribution
+    from scipy.sparse import csr_matrix
+
+    n = len(graph["body_id"])
+    counts = csr_matrix((graph["count"], graph["indices"], graph["indptr"]), shape=(n, n))
+    indices = selected["vpoEN-gate:AVLP083"]
+    return {
+        "count": len(indices), "status": "present" if len(indices) else "absent",
+        "sides": distribution(graph["side"][indices]),
+        "nt": distribution(graph["nt"][indices]),
+        "sign": distribution(graph["sign"][indices]),
+        "body_ids": graph["body_id"][indices].tolist(),
+        "inputs": {source: int(counts[selected[source]][:, indices].sum())
+                   for source in ("JO-A", "JO-B", "AMMC-B1-candidate", "AMMC-B1-candidate-graph")},
+        "outputs": {target: int(counts[indices][:, selected[target]].sum())
+                    for target in ("vpoEN", "vpoIN", "vpoDN")},
+        "b1_by_type": {str(label): int(counts[np.flatnonzero(graph["type"] == label)][:, indices].sum())
+                       for label in ("CB1078", "CB1542", "SAD053", "CB1076", "CB1125", "CB2789")},
+        "cb1614_vpoin_synapses": int(counts[selected["vpoEN-input:CB1614"]][:, selected["vpoIN"]].sum()),
+    }
+
+
+def test_e3c_snapshot_matches_literal_population(e3_snapshot):
+    dataset, graph, selected = e3_snapshot
+    indices = np.flatnonzero(graph["type"] == "AVLP083")
+    np.testing.assert_array_equal(selected["vpoEN-gate:AVLP083"], indices)
+    snapshot = json.loads((Path(__file__).parent / "fixtures" / "graph" /
+                           f"dictionary_{dataset}.json").read_text(encoding="utf-8"))
+    record = next(e for e in snapshot["entries"] if e["name"] == "vpoEN-gate:AVLP083")
+    from flybench.dictionary.build import distribution
+    assert record["count"] == len(indices)
+    assert record["read_only"] is True
+    assert record["group"] == "vpoen-gate"
+    assert record["side_distribution"] == distribution(graph["side"][indices])
+    assert record["nt_distribution"] == distribution(graph["nt"][indices])
+    assert record["example_body_ids"] == graph["body_id"][indices[:5]].tolist()
+    row = e3c_measure(graph, selected)
+    if dataset == "female":
+        assert row["outputs"]["vpoEN"] == 124
+        assert row["cb1614_vpoin_synapses"] == 59
+
+
+def test_e3c_measure_direction_and_raw_counts():
+    from scipy.sparse import csr_matrix
+
+    matrix = csr_matrix(([7, 91, 11, 13, 17, 19, 23, 59],
+                         ([1, 0, 0, 0, 0, 5, 6, 7], [0, 1, 2, 3, 4, 0, 0, 3])), shape=(8, 8))
+    graph = dict(body_id=np.arange(8), type=np.array(["AVLP083", "JO-A", "vpoEN", "vpoIN",
+                 "vpoDN", "CB1078", "CB1076", "CB1614"]), side=np.full(8, "L"),
+                 nt=np.full(8, "gaba"), sign=np.full(8, -1), count=matrix.data,
+                 indices=matrix.indices, indptr=matrix.indptr)
+    selected = {name: np.array([i]) for name, i in
+                (("vpoEN-gate:AVLP083", 0), ("JO-A", 1), ("vpoEN", 2), ("vpoIN", 3),
+                 ("vpoDN", 4), ("AMMC-B1-candidate", 5), ("AMMC-B1-candidate-graph", 6),
+                 ("vpoEN-input:CB1614", 7))}
+    selected["JO-B"] = np.array([], dtype=np.int64)
+    row = e3c_measure(graph, selected)
+    assert row["inputs"] == {"JO-A": 7, "JO-B": 0, "AMMC-B1-candidate": 19,
+                             "AMMC-B1-candidate-graph": 23}
+    assert row["outputs"] == {"vpoEN": 11, "vpoIN": 13, "vpoDN": 17}
+    assert row["cb1614_vpoin_synapses"] == 59
+
+
+def write_e3c_measurements():
+    """Reproduce E3c counts and verify existing roadmap cell witnesses."""
+    import re
+    from flybench.dictionary.build import sha256
+    from scipy.sparse import csr_matrix
+
+    report = Path("records/vpoen_inputs_v1_report.md").read_text(encoding="utf-8")
+    roadmap = json.loads(Path("records/vpoen_inputs_v1_results.json").read_text(encoding="utf-8"))
+    measured = {}
+    for dataset in ("female", "banc", "male"):
+        path = Path("build") / f"graph_{dataset}.npz"
+        graph = load(path)
+        row = e3c_measure(graph, groups(dataset, graph=graph))
+        row.update(graph_file=path.name, sha256=sha256(path), sign_rule=graph["meta"]["sign_rule"])
+        n = len(graph["body_id"])
+        counts = csr_matrix((graph["count"], graph["indices"], graph["indptr"]), shape=(n, n))
+        selected = groups(dataset, graph=graph)
+        targets = set(map(int, selected["vpoEN"]))
+        incoming = counts.tocsc()
+        paths, flow, maximum = 0, 0, 0
+        for middle in selected["vpoEN-gate:AVLP083"]:
+            for offset in range(counts.indptr[middle], counts.indptr[middle + 1]):
+                target = int(counts.indices[offset])
+                if target not in targets or target == middle:
+                    continue
+                for pre_offset in range(incoming.indptr[middle], incoming.indptr[middle + 1]):
+                    source = int(incoming.indices[pre_offset])
+                    if source in (middle, target):
+                        continue
+                    strength = min(int(incoming.data[pre_offset]), int(counts.data[offset]))
+                    paths += 1
+                    flow += strength
+                    maximum = max(maximum, strength)
+        row["two_edge_via_avlp083"] = dict(paths=paths, flow=flow, maximum=maximum)
+        expected = next(r for r in roadmap["datasets"][dataset]["M2"] if r["type"] == "AVLP083")
+        assert row["sha256"] == roadmap["graph_sha256"][dataset]
+        assert row["two_edge_via_avlp083"] == {key: expected[key] for key in ("paths", "flow", "maximum")}
+        lookup = {int(body): i for i, body in enumerate(graph["body_id"])}
+        witnesses = []
+        for match in re.finditer(r"([^|\n]+?) \(([+0-]+); min=(\d+); IDs=([\d,]+)\)", report):
+            types, signs, minimum, ids = match.groups()
+            if " -> AVLP083 -> vpoEN" not in types:
+                continue
+            bodies = list(map(int, ids.split(",")))
+            if not all(body in lookup for body in bodies):
+                continue
+            vertices = [lookup[body] for body in bodies]
+            observed = [int(counts[a, b]) for a, b in zip(vertices, vertices[1:])]
+            actual_signs = "".join({-1: "-", 0: "0", 1: "+"}[int(graph["sign"][v])] for v in vertices[:-1])
+            assert min(observed) == int(minimum) and actual_signs == signs
+            assert [str(graph["type"][v]) or "unnamed" for v in vertices] == types.strip().split(" -> ")
+            witness = dict(types=types.strip(), body_ids=bodies, counts=observed,
+                           signs=actual_signs, bottleneck=min(observed))
+            if witness not in witnesses:
+                witnesses.append(witness)
+        row["verified_roadmap_witnesses"] = witnesses
+        measured[dataset] = row
+        print(dataset, json.dumps(row), flush=True)
+    Path("records/dictionary_e3c_measurements.json").write_text(
+        json.dumps(measured, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+
+if __name__ == "__main__" and "--e3c-measurements" in __import__("sys").argv:
+    write_e3c_measurements()
+    raise SystemExit(0)
+
+
 if __name__ == "__main__":
     import sys
 

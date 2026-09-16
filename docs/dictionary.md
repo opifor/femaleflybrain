@@ -660,3 +660,16 @@ The following rows supplement the existing full measured selector table.
 | vpoEN-input:CB2449 | male | `{"type_re": "^(?:CB2449)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
 | vpoEN-input:CB1614 | male | `{"type_re": "^(?:CB1614)$"}` | 0 (absent) | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
 | vpoEN-input-top10 | male | `{"type_re": "^(?:CB1484&#124;CB2364&#124;CB1383&#124;WED104&#124;AN_AVLP_8&#124;CB2633&#124;PVLP021&#124;CB1869&#124;CB2449&#124;CB1614)$"}` | 10 | exact | [Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.](https://doi.org/10.1038/s41586-024-07686-5) |
+### E3c: AVLP083 diagnostic gate
+
+`vpoEN-gate:AVLP083` selects `^AVLP083$` in all three datasets, with
+`read_only=True`, `group="vpoen-gate"` and `confidence="exact"`. Its evidence
+is [vpoen_inputs_v1](../records/vpoen_inputs_v1_report.md); the atlas link
+is annotation context only. This anatomical intermediate is not a drive
+target; function is unknown. The E3b top-ten definitions and union are unchanged.
+CB1614 receives no new entry; its FAFB output to vpoIN is remeasured as 59
+synapses. See [E3c measurements](../records/dictionary_e3c_report.md).
+
+| Group | Selector | Female cells | BANC cells | Male cells | Confidence |
+| --- | --- | ---: | ---: | ---: | --- |
+| vpoEN-gate:AVLP083 | `^AVLP083$` | 2 | 2 | 1 | exact |

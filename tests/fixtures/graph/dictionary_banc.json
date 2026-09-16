@@ -5506,6 +5506,41 @@
         "PVLP021": 4,
         "WED104": 1
       }
+    },
+    {
+      "name": "vpoEN-gate:AVLP083",
+      "dataset": "banc",
+      "selector": {
+        "type_re": "^AVLP083$",
+        "side": null,
+        "superclass": null,
+        "nt": null,
+        "cell_class": null
+      },
+      "role": "readout",
+      "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; path evidence is vpoen_inputs_v1.",
+      "confidence": "exact",
+      "notes": "anatomical intermediate in vpoen_inputs_v1; not a drive target; function unknown",
+      "source": "https://doi.org/10.1038/s41586-024-07686-5",
+      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "read_only": true,
+      "group": "vpoen-gate",
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        720575941644360018,
+        720575941645936801
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "AVLP083": 2
+      }
     }
   ]
 }

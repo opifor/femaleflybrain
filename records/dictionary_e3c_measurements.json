@@ -1,0 +1,452 @@
+{
+  "female": {
+    "count": 2,
+    "status": "present",
+    "sides": {
+      "L": 1,
+      "R": 1
+    },
+    "nt": {
+      "gaba": 2
+    },
+    "sign": {
+      "-1": 2
+    },
+    "body_ids": [
+      720575940624377224,
+      720575940644632087
+    ],
+    "inputs": {
+      "JO-A": 2,
+      "JO-B": 0,
+      "AMMC-B1-candidate": 4,
+      "AMMC-B1-candidate-graph": 26
+    },
+    "outputs": {
+      "vpoEN": 124,
+      "vpoIN": 3,
+      "vpoDN": 0
+    },
+    "b1_by_type": {
+      "CB1078": 1,
+      "CB1542": 2,
+      "SAD053": 1,
+      "CB1076": 26,
+      "CB1125": 0,
+      "CB2789": 0
+    },
+    "cb1614_vpoin_synapses": 59,
+    "graph_file": "graph_female.npz",
+    "sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+    "sign_rule": "shiu2024-parquet",
+    "two_edge_via_avlp083": {
+      "paths": 4392,
+      "flow": 36546,
+      "maximum": 41
+    },
+    "verified_roadmap_witnesses": [
+      {
+        "types": "CB1569 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940659399809,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          44,
+          41
+        ],
+        "signs": "+-",
+        "bottleneck": 41
+      },
+      {
+        "types": "CB1206 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940638202320,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          57,
+          41
+        ],
+        "signs": "+-",
+        "bottleneck": 41
+      },
+      {
+        "types": "CB3245 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940616121408,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          26,
+          41
+        ],
+        "signs": "--",
+        "bottleneck": 26
+      },
+      {
+        "types": "CB2449 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940627350060,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          61,
+          41
+        ],
+        "signs": "+-",
+        "bottleneck": 41
+      },
+      {
+        "types": "unnamed -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940632015699,
+          720575940644632087,
+          720575940635403230
+        ],
+        "counts": [
+          20,
+          31
+        ],
+        "signs": "--",
+        "bottleneck": 20
+      },
+      {
+        "types": "CB2426 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940623290957,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          76,
+          41
+        ],
+        "signs": "--",
+        "bottleneck": 41
+      },
+      {
+        "types": "CB1908 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940605488305,
+          720575940644632087,
+          720575940635403230
+        ],
+        "counts": [
+          26,
+          31
+        ],
+        "signs": "+-",
+        "bottleneck": 26
+      },
+      {
+        "types": "CB1143 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940610215032,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          43,
+          41
+        ],
+        "signs": "+-",
+        "bottleneck": 41
+      },
+      {
+        "types": "CB2114 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575940630353682,
+          720575940624377224,
+          720575940632385943
+        ],
+        "counts": [
+          32,
+          41
+        ],
+        "signs": "--",
+        "bottleneck": 32
+      }
+    ]
+  },
+  "banc": {
+    "count": 2,
+    "status": "present",
+    "sides": {
+      "L": 1,
+      "R": 1
+    },
+    "nt": {
+      "gaba": 2
+    },
+    "sign": {
+      "-1": 2
+    },
+    "body_ids": [
+      720575941644360018,
+      720575941645936801
+    ],
+    "inputs": {
+      "JO-A": 1,
+      "JO-B": 0,
+      "AMMC-B1-candidate": 32,
+      "AMMC-B1-candidate-graph": 0
+    },
+    "outputs": {
+      "vpoEN": 76,
+      "vpoIN": 1,
+      "vpoDN": 0
+    },
+    "b1_by_type": {
+      "CB1078": 29,
+      "CB1542": 2,
+      "SAD053": 1,
+      "CB1076": 0,
+      "CB1125": 0,
+      "CB2789": 0
+    },
+    "cb1614_vpoin_synapses": 1,
+    "graph_file": "graph_banc.npz",
+    "sha256": "e403ff72a0666d4335f77a2cb03ddb3ce94159dc2f681cd41384fb9c5e965e49",
+    "sign_rule": "shiu2024",
+    "two_edge_via_avlp083": {
+      "paths": 4309,
+      "flow": 20330,
+      "maximum": 29
+    },
+    "verified_roadmap_witnesses": [
+      {
+        "types": "AVLP339 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575941691235480,
+          720575941644360018,
+          720575941474113066
+        ],
+        "counts": [
+          42,
+          29
+        ],
+        "signs": "+-",
+        "bottleneck": 29
+      },
+      {
+        "types": "CB2108 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575941628084537,
+          720575941644360018,
+          720575941474113066
+        ],
+        "counts": [
+          53,
+          29
+        ],
+        "signs": "+-",
+        "bottleneck": 29
+      },
+      {
+        "types": "CB2449 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575941392876036,
+          720575941644360018,
+          720575941474113066
+        ],
+        "counts": [
+          37,
+          29
+        ],
+        "signs": "+-",
+        "bottleneck": 29
+      },
+      {
+        "types": "CB1206 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575941669517223,
+          720575941644360018,
+          720575941474113066
+        ],
+        "counts": [
+          58,
+          29
+        ],
+        "signs": "+-",
+        "bottleneck": 29
+      },
+      {
+        "types": "CB2426 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575941613026150,
+          720575941644360018,
+          720575941626128074
+        ],
+        "counts": [
+          18,
+          25
+        ],
+        "signs": "0-",
+        "bottleneck": 18
+      },
+      {
+        "types": "CB3184 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          720575941516639993,
+          720575941644360018,
+          720575941474113066
+        ],
+        "counts": [
+          82,
+          29
+        ],
+        "signs": "+-",
+        "bottleneck": 29
+      }
+    ]
+  },
+  "male": {
+    "count": 1,
+    "status": "present",
+    "sides": {
+      "R": 1
+    },
+    "nt": {
+      "gaba": 1
+    },
+    "sign": {
+      "-1": 1
+    },
+    "body_ids": [
+      10307
+    ],
+    "inputs": {
+      "JO-A": 0,
+      "JO-B": 0,
+      "AMMC-B1-candidate": 2,
+      "AMMC-B1-candidate-graph": 12
+    },
+    "outputs": {
+      "vpoEN": 107,
+      "vpoIN": 2,
+      "vpoDN": 0
+    },
+    "b1_by_type": {
+      "CB1078": 0,
+      "CB1542": 1,
+      "SAD053": 1,
+      "CB1076": 12,
+      "CB1125": 0,
+      "CB2789": 0
+    },
+    "cb1614_vpoin_synapses": 0,
+    "graph_file": "graph_male.npz",
+    "sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+    "sign_rule": "shiu2024",
+    "two_edge_via_avlp083": {
+      "paths": 2760,
+      "flow": 39894,
+      "maximum": 54
+    },
+    "verified_roadmap_witnesses": [
+      {
+        "types": "CB1139 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          465143833,
+          10307,
+          16559
+        ],
+        "counts": [
+          55,
+          54
+        ],
+        "signs": "+-",
+        "bottleneck": 54
+      },
+      {
+        "types": "unnamed -> AVLP083 -> vpoEN",
+        "body_ids": [
+          40088,
+          10307,
+          16559
+        ],
+        "counts": [
+          61,
+          54
+        ],
+        "signs": "+-",
+        "bottleneck": 54
+      },
+      {
+        "types": "WED117 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          522865,
+          10307,
+          16559
+        ],
+        "counts": [
+          97,
+          54
+        ],
+        "signs": "+-",
+        "bottleneck": 54
+      },
+      {
+        "types": "CB4173 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          145380,
+          10307,
+          16559
+        ],
+        "counts": [
+          125,
+          54
+        ],
+        "signs": "+-",
+        "bottleneck": 54
+      },
+      {
+        "types": "WED092 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          18257,
+          10307,
+          16559
+        ],
+        "counts": [
+          127,
+          54
+        ],
+        "signs": "+-",
+        "bottleneck": 54
+      },
+      {
+        "types": "CB4116 -> AVLP083 -> vpoEN",
+        "body_ids": [
+          33431,
+          10307,
+          16559
+        ],
+        "counts": [
+          54,
+          54
+        ],
+        "signs": "+-",
+        "bottleneck": 54
+      },
+      {
+        "types": "AVLP203_a -> AVLP083 -> vpoEN",
+        "body_ids": [
+          16411,
+          10307,
+          16559
+        ],
+        "counts": [
+          59,
+          54
+        ],
+        "signs": "--",
+        "bottleneck": 54
+      }
+    ]
+  }
+}

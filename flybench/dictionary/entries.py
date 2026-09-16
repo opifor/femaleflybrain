@@ -266,4 +266,11 @@ def entries(dataset):
             "exact",
             "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
             SOURCES["atlas"][1], "records/vpoen_inputs_v1_report.md", True))
+    result.append(VpoENInputEntry(
+        "vpoEN-gate:AVLP083", dataset, Selector(r"^AVLP083$"), "readout",
+        SOURCES["atlas"][0] + ": annotation context only; path evidence is vpoen_inputs_v1.",
+        "exact",
+        "anatomical intermediate in vpoen_inputs_v1; not a drive target; function unknown",
+        SOURCES["atlas"][1], "records/vpoen_inputs_v1_report.md", True,
+        group="vpoen-gate"))
     return tuple(result)

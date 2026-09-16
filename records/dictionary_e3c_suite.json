@@ -1,0 +1,46 @@
+{
+    "environment":  {
+                        "LANG":  "C",
+                        "python":  "CPython 3.12, task-specified executable",
+                        "LC_ALL":  "C",
+                        "PYTHONDONTWRITEBYTECODE":  "1",
+                        "dependencies":  "task-specified runtime directory plus repository root",
+                        "PYTEST_DISABLE_PLUGIN_AUTOLOAD":  "1",
+                        "workaround":  false
+                    },
+    "runs":  [
+                 {
+                     "output":  "male: 105 present, 24 absent\nfemale: 109 present, 20 absent\nbanc: 112 present, 17 absent",
+                     "command":  "python -m flybench.dictionary.build --data build --out build",
+                     "exit_code":  0
+                 },
+                 {
+                     "output":  "",
+                     "command":  "python -B tests/fixtures/graph/generate.py --dictionary-snapshots",
+                     "exit_code":  0
+                 },
+                 {
+                     "output":  "F                                                                        [100%]\n================================== FAILURES ===================================\n_________________________ test_harness_failure_probe __________________________\n\n    @pytest.mark.skipif(os.environ.get(\"FLYBENCH_DICTIONARY_FAIL_PROBE\") != \"1\", reason=\"opt-in failure probe\")\n    def test_harness_failure_probe():\n\u003e       assert False, \"deliberate dictionary harness failure\"\nE       AssertionError: deliberate dictionary harness failure\nE       assert False\n\ntests\\test_dictionary.py:155: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_dictionary.py::test_harness_failure_probe - AssertionError:...\n1 failed in 0.15s",
+                     "environment":  {
+                                         "FLYBENCH_DICTIONARY_FAIL_PROBE":  "1"
+                                     },
+                     "command":  "python -m pytest -q -p no:cacheprovider tests/test_dictionary.py::test_harness_failure_probe",
+                     "exit_code":  1
+                 },
+                 {
+                     "output":  "............s.....................................................       [100%]\n65 passed, 1 skipped in 43.13s",
+                     "command":  "python -m pytest -q -p no:cacheprovider tests/test_dictionary.py tests/test_vpoen_inputs.py",
+                     "exit_code":  0
+                 },
+                 {
+                     "output":  "............s......................................................      [100%]\n66 passed, 1 skipped in 48.68s",
+                     "command":  "python -m pytest -q -p no:cacheprovider tests/test_dictionary.py tests/test_vpoen_inputs.py",
+                     "exit_code":  0
+                 },
+                 {
+                     "output":  "All three graph hashes and AVLP083 M2 paths/flow/maximum match roadmap; 22 distinct original witnesses verified.",
+                     "command":  "python -B tests/test_dictionary.py --e3c-measurements",
+                     "exit_code":  0
+                 }
+             ]
+}
