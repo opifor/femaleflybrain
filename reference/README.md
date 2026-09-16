@@ -50,3 +50,5 @@ remain unchanged. The original snapshot paragraphs above are historical.
 The E2 preregistration authorizes the conditional fit; source-wide metadata
 and historical fit policies are preserved. See experiments/ear_v2_e2.md and
 records/ear_v2_e2_freeze.json for scope and hashes.
+See [Hash basis note](../records/hash_basis_note.md) for historical LF/CRLF hash provenance.
+Future text hashes use LF-normalized bytes and freeze records declare `hash_basis: "lf"`.
