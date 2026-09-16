@@ -13,7 +13,7 @@ unique, and preserved as int64 (never routed through floating point).
 | `count` | int32, E | Positive, unscaled raw synapse counts, summed per ordered pair |
 | `data` | int32, E | Exactly `sign[src] * count`; explicit zero-valued edges remain |
 | `body_id` | int64, N | Dataset-specific body/root IDs |
-| `sign` | int8, N | +1, -1, or 0 from presynaptic NT and rule v1 |
+| `sign` | int8, N | +1, -1, or 0 from the recorded rule or Shiu parquet |
 | `type` | Unicode string, N | Primary type; missing values become `""` |
 | `side` | Unicode string, N | L, R, M, or `""`; left/right/midline normalized |
 | `nt` | Unicode string, N | Normalized NT; unknown labels retained; missing becomes `""` |
@@ -30,51 +30,60 @@ The population remains fixed when changing `min_syn`.
 
 ## Population contract and the raw-segment distinction
 
-These builders produce induced graphs on the supplied annotation populations:
+The population is explicit and independent of `min_syn`:
 
-- MaleCNS: all `body-annotations.feather.bodyId` values; no status/type filter.
-- FAFB: union of IDs in neurons, classification, and consolidated cell types.
-- BANC: all `banc_888_meta.feather.banc_888_id` values; no proofread filter.
-  `root_id` can refer to a later segmentation; it is deliberately not the key.
+- MaleCNS: `body-annotations.status == "Traced"` by default. Python `status`
+  accepts a string or sequence; `--status Traced Orphan` and repeated `--status`
+  select multiple statuses. Missing status is not selected by default.
+- FAFB `source="shiu"` (default): IDs in `Completeness_783.csv` (`Unnamed: 0`
+  column), including nodes with no outgoing edges. Counts come exclusively from
+  `Connectivity_783.parquet` (`Presynaptic_ID`, `Postsynaptic_ID`, `Connectivity`).
+  ID columns are FlyWire root IDs, not the parquet's index columns. Codex
+  neurons/classification/consolidated types supply annotations by root ID;
+  missing annotations stay empty. `--shiu-data` optionally supplies a separate
+  directory for the two Shiu files; otherwise they reside under `--data`.
+- FAFB `source="codex"`: union of Codex annotation IDs; connections from
+  `connections_princeton.csv.gz`. The real export already excludes pairs with
+  fewer than five synapses. `min_syn=1` cannot restore those missing pairs.
+- BANC: `proofread` OR `roughly_proofread` TRUE, excluding status strings
+  containing NOT_A_NEURON, GLIA, TOO_SMALL or UNROOTED, and `super_class=glia`.
+  Identity is `banc_888_id`, not a later `root_id` mapping.
 
-`min_syn=1` removes no connection **within this population**. It does not claim
-that every raw segment is a neuron. The supplied MaleCNS full segment graph has
-88,384,522 endpoint IDs versus 211,577 annotation IDs. Including all segments
-would be a different graph. Edges with either endpoint outside the annotation
-population are excluded and explicitly counted in metadata. This is a scope
-decision, not a synapse threshold; it is a deviation if “no edge removal” means
-all raw segments. No such outside-population edges were found in the supplied
-FAFB and BANC inputs. Official published neuron totals refer to more curated
-populations and must not be compared as if the selection criteria were identical.
-
-Inputs are not silently supplemented from other versions or comparisons.
-`min_syn=1` cannot recover connections already absent from an upstream export.
+Edges with either endpoint outside the selected population are dropped and
+accounted for. Default `min_syn=1` retains every positive pair within it.
 
 ## NT and sign provenance
 
-Rule name `v1` is immutable: acetylcholine +1; GABA and glutamate -1;
-dopamine, serotonin, octopamine, other/unknown/missing labels 0. ACH, GABA, GLUT,
-DA, SER, OCT abbreviations are normalized case-insensitively. Histamine,
-tyramine and unclear retain their labels and receive 0.
+Immutable rule names and versions are recorded separately (`sign_rule_version="1"`):
 
-[Shiu et al. (2024)](https://doi.org/10.1038/s41586-024-07763-9) supports the
-inhibitory GABA/glutamate assumption. **The requested v1 policy differs from
-that paper:** the paper treats dopamine, serotonin and octopamine as excitatory;
-flybench deliberately assigns 0. Thus v1 is not an exact reproduction of the
-paper's complete NT rule. Any changed assignment requires a new rule version.
+| Rule | ACh | GABA | Glutamate | Dopamine / serotonin / octopamine | Other / missing |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `shiu2024` (default) | +1 | -1 | -1 | +1 | 0 |
+| `monoamine-zero` | +1 | -1 | -1 | 0 | 0 |
 
-- MaleCNS uses `consensus_nt`. `predicted_nt_confidence` is retained only when
-  `predicted_nt == consensus_nt`; it is not presented as confidence in a
-  different consensus label. Otherwise confidence is NaN.
-- FAFB uses `neurons.nt_type` and `nt_type_score`, not the NT column repeated
-  across connections. This also supports neurons without outgoing edges.
-- BANC uses `neurotransmitter_predicted` and `neurotransmitter_score`.
-  `neurotransmitter_verified` is not substituted: it can contain multi-NT labels.
+The Python-only legacy alias `v1` retains the old monoamine-zero assignments.
+ACH/GABA/GLUT/DA/SER/OCT abbreviations are normalized case-insensitively.
+[Shiu 2024 Methods](https://www.nature.com/articles/s41586-024-07763-9)
+classifies the three monoamines as excitatory. Histamine, tyramine and unclear
+have no observations in the Codex/parquet join: zero is an explicit conservative
+extension, **not** a parquet-verified biological assignment.
+
+FAFB Shiu uses `shiu2024-parquet`, version 1: the `Excitatory` column directly
+determines each presynaptic neuron's sign. Every outgoing row, including rows
+below `min_syn`, participates in the consistency check. Conflicting signs abort
+the build. Neurons without outgoing rows receive 0 and are counted explicitly.
+`--sign-rule monoamine-zero` is rejected with Shiu source rather than silently
+overriding its signs; select Codex to use an NT-derived alternative rule.
+
+MaleCNS NT is `consensus_nt`; confidence is `predicted_nt_confidence` only where
+the predicted and consensus labels agree (otherwise NaN). FAFB annotations use
+`neurons.nt_type` / `nt_type_score`. BANC uses `neurotransmitter_predicted` /
+`neurotransmitter_score`; potentially multi-NT verified labels are not substituted.
 
 ## Metadata
 
 Required provenance: `schema_version`, `dataset`, `version`, `min_syn`,
-`sign_rule`, `created_utc` (UTC ISO 8601), `sources` (each file's basename and
+`sign_rule`, `sign_rule_version`, `created_utc` (UTC ISO 8601), `sources` (each file's basename and
 SHA-256 of its actual bytes, including gzip compression), `license`,
 `population`, and `nt_policy`. There are no absolute machine paths.
 
@@ -84,6 +93,9 @@ Counts: `neuron_count`, `edge_count` (distinct ordered pairs), `synapse_count`,
 `aggregated_duplicate_rows`, `below_min_syn_edges`, `below_min_syn_synapses`.
 
 `input_synapses = synapse_count + outside_population_synapses + below_min_syn_synapses`.
+`dropped` also exposes outside-population rows/synapses and below-threshold synapses.
+Dataset-specific metadata records status counts, proofreading filter counts, source
+choice, unmatched Codex IDs, sign conflicts and NT/parquet sign distributions.
 Counts in `nt_distribution` cover all graph nodes, including isolated nodes.
 An empty-string key denotes missing NT. Type coverage is nonempty `type` / N.
 
@@ -131,76 +143,80 @@ do not claim that a filename proves a release's authenticity.
 
 ## Tests and measured builds
 
-Synthetic fixtures are six-neuron tables under `tests/fixtures/graph/`, with a
-seventh, deliberately out-of-population edge endpoint to test accounting. The
-sixth neuron is isolated. The fixture generator reads no external data. Feather
-and gzip CSV exercise the three builders; a tiny parquet holds independently
-specified expected pairs in the Shiu comparison schema.
+Six-neuron synthetic Feather, CSV and parquet fixtures test CSR orientation,
+counts, hashes, both rules, status/proofreading filters, source choice and sign
+conflict rejection. Run `python -m pytest -q -p no:cacheprovider tests/test_graph.py`.
+Set `FLYBENCH_GRAPH_FAIL_PROBE=1` and run only `test_harness_failure_probe` to
+verify a deliberate failure returns exit 1; unset before acceptance.
 
-Run `python -m pytest -q -p no:cacheprovider tests/test_graph.py`. To test failure
-propagation, set `FLYBENCH_GRAPH_FAIL_PROBE=1` and run only
-`tests/test_graph.py::test_harness_failure_probe`; require both `1 failed` and
-exit code 1, then unset the variable before acceptance.
+### TUR-2 real-data acceptance (2026-09-16)
 
-Real builds are separate commands documented in README. This lane's measured
-artifacts and independent comparison evidence are in gitignored `build/`.
+User-specified Windows CPython 3.12 and library-only PYTHONPATH; fresh process
+per builder, min_syn=1, no alternate-environment workaround. NPZ files and
+metadata are in `build/graph_{male,female,banc}.npz` and `build/*-tur2.json`.
 
-### Real-data acceptance record (2026-09-16)
-
-User-specified Windows CPython 3.12, with the specified library-only PYTHONPATH;
-fresh process per builder, `min_syn=1`. No sandbox or alternate-environment
-workaround was used. The output archives were reopened and checked independently.
-
-| Output | Annotation IDs | Edges | Synapses | Typed | Seconds | Peak working set GiB |
+| Dataset | Neurons | Edges | Synapses | Typed | Seconds | Peak working set GiB |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `build/graph_male.npz` | 211,577 | 26,028,386 | 125,365,933 | 77.7523% | 58.16 | 5.071 |
-| `build/graph_female.npz` | 139,255 | 3,732,460 | 50,666,648 | 99.3336% | 9.56 | 0.342 |
-| `build/graph_banc.npz` | 188,508 | 13,620,865 | 42,309,621 | 62.9936% | 17.16 | 1.291 |
+| male | 165,122 | 25,563,197 | 124,025,046 | 98.4224% | 35.99 | 5.065 |
+| female | 138,639 | 15,091,983 | 54,492,922 | 99.3667% | 14.74 | 0.747 |
+| banc | 137,791 | 12,260,970 | 37,964,689 | 75.7118% | 11.72 | 1.237 |
 
-NT distributions (counts of annotation IDs, not synapses):
-
-| NT | MaleCNS | FAFB | BANC |
+| NT | MaleCNS | FAFB Shiu | BANC |
 | --- | ---: | ---: | ---: |
-| acetylcholine | 104,173 | 82,298 | 87,059 |
-| gaba | 22,186 | 16,017 | 21,686 |
-| glutamate | 29,443 | 19,605 | 25,099 |
-| dopamine | 396 | 584 | 8,344 |
-| serotonin | 48 | 1,021 | 1,936 |
-| octopamine | 101 | 72 | 2,303 |
-| histamine | 8,024 | 0 | 7,411 |
-| tyramine | 0 | 0 | 215 |
-| unclear | 22,645 | 0 | 0 |
-| missing | 24,561 | 19,658 | 34,455 |
+| missing | 502 | 19,042 | 3,639 |
+| acetylcholine | 103,718 | 82,298 | 77,174 |
+| dopamine | 392 | 584 | 7,688 |
+| gaba | 22,055 | 16,017 | 20,184 |
+| glutamate | 29,296 | 19,605 | 21,866 |
+| histamine | 5,910 | 0 | 3,522 |
+| octopamine | 101 | 72 | 1,968 |
+| serotonin | 48 | 1,021 | 1,540 |
+| tyramine | 0 | 0 | 210 |
+| unclear | 3,100 | 0 | 0 |
 
-Reference differences and limitations:
+MaleCNS status counts: Traced 165,122; Orphan 15,925; Glia 11,864;
+Unimportant 10,751; missing 5,472; Assign 1,832; Anchor 611. Traced selection
+is 1,578 below the 166,700 Codex reference. Dropped: 126,293,487 raw rows /
+187,808,197 synapses, including unannotated segments and non-Traced bodies.
 
-- MaleCNS: +44,877 IDs against the 166,700-neuron reference; this graph retains
-  every annotation, including glia and non-Traced statuses. The supplied status
-  column contains 165,122 `Traced` records. Of 151,856,684 raw rows / 311,833,243
-  synapses, 125,828,298 rows / 186,467,310 synapses have an endpoint outside the
-  annotation universe. They are explicitly excluded, so this is **partial
-  evidence for the literal all-segments/no-edge-removal requirement**.
-- FAFB: the neuron total exactly matches 139,255; synapses exceed the rounded
-  50-million reference by 666,648 (1.33%). No input synapses were discarded.
-  The minimum resulting pair count is 5 despite builder `min_syn=1`; the
-  supplied export therefore does not demonstrate retention of counts 1–4.
-- BANC: +32,592 annotation IDs against the published 155,916 proofread-plus-
-  roughly-proofread reference; this graph intentionally has no proofread filter.
-  The local metadata has 150,952 `proofread=TRUE` rows; it is not identical to
-  the paper's strict snapshot definition. The union of local `proofread=TRUE`
-  and `roughly_proofread=TRUE` has 156,012 IDs (+96 against the publication).
-  No input synapses were discarded.
+FAFB Shiu: 15,091,983 input rows, minimum count 1; all 54,492,922 synapses retained.
+138,639 completeness IDs are 616 below the 139,255 FAFB reference; synapses are
+4,492,922 above the rounded 50M reference (the paper also reports 54.5M).
+No unmatched Codex neuron IDs, no inconsistent presynaptic signs; 634 nodes have
+no outgoing sign evidence and receive 0. Nonempty type coverage differs from
+ID matching: matched IDs can have missing labels.
 
-The independent Shiu comparison parquet contains 138,639 endpoint IDs,
-15,091,983 pairs and 54,492,922 synapses (minimum count 1). Its completeness
-file has 138,639 rows, all marked completed. Against the supplied Codex export:
-3,667,935 shared pairs, 11,424,048 Shiu-only pairs, 64,525 Codex-only pairs;
-3,275,348 shared pairs have different counts. The sources are not interchangeable
-and were not merged or silently substituted. Source hashes, output hashes, and
-exact audit results are in `build/graph-audit.json`; the per-build metadata is
-also embedded in each NPZ and copied to `build/{male,female,banc}-stdout.json`.
+BANC: 150,952 proofread + 5,060 roughly proofread = 156,012 union IDs.
+The requested exclusions remove 18,221 union IDs, leaving 137,791, which is
+18,125 below the paper's 155,916. The unfiltered union is 96 above the paper.
+These are different selection contracts; the target is not forced by relaxing
+the requested filter. Dropped: 1,359,895 rows / 4,344,932 synapses.
+Within the union, overlapping exclusion-reason counts are UNROOTED 17,515,
+TOO_SMALL 816, NOT_A_NEURON 107, GLIA 101 and glia superclass 146.
+Codex contains 5,342,446 neuropil rows (minimum row count 1), but its
+3,732,460 aggregated ordered pairs have minimum count 5: the upstream
+threshold applies to pairs, not individual neuropil rows.
 
-Synthetic acceptance: `26 passed in 1.53s`, exit 0. Deliberate failure probe:
-`1 failed in 0.60s`, exit 1. UTF-8/BOM, scope and clean-room read-file evidence:
-`build/graph-delivery-checks.json`. No add, commit, or push was run. The parallel
-simulation lane's files and README section were not edited by this lane.
+### Codex NT versus Shiu parquet signs (unique presynaptic neurons)
+
+| Codex NT | +1 | -1 |
+| --- | ---: | ---: |
+| acetylcholine | 82,067 | 231 |
+| gaba | 43 | 15,974 |
+| glutamate | 199 | 19,406 |
+| dopamine | 584 | 0 |
+| serotonin | 1,021 | 0 |
+| octopamine | 72 | 0 |
+| histamine | 0 | 0 |
+| tyramine | 0 | 0 |
+| unclear | 0 | 0 |
+| missing | 12,686 | 5,722 |
+
+Zero observations for histamine/tyramine/unclear provide no sign evidence.
+473 ACh/GABA/glutamate labels disagree with the simple NT rule; parquet signs
+are retained exactly. The current Codex labels need not reproduce the older
+per-synapse prediction procedure used by Shiu.
+
+Acceptance: `38 passed in 2.09s`, exit 0; deliberate probe `1 failed in 0.52s`, exit 1.
+Only the allowed data files were read outside this repository; no external
+project code, add/commit/push, or simulation-lane edits were used.

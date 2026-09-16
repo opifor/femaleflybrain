@@ -16,7 +16,7 @@ import pyarrow.parquet as parquet
 from scipy.sparse import coo_matrix
 
 from .schema import SCHEMA_VERSION, validate
-from .signs import SIGN_RULE, normalize, signs
+from .signs import SIGN_RULE, SIGN_RULE_VERSION, normalize, signs
 
 CHUNK = 1_000_000
 INT32_MAX = np.iinfo(np.int32).max
@@ -101,7 +101,8 @@ def peak_rss_bytes():
 
 
 def build_graph(*, root, out, dataset, version, nodes, edge_name, edge_columns,
-                source_names, min_syn, started, population, details=None):
+                source_names, min_syn, started, population, details=None,
+                sign_rule=SIGN_RULE, extra_meta=None):
     if isinstance(min_syn, bool) or not isinstance(min_syn, (int, np.integer)) or min_syn < 1:
         raise ValueError("min_syn must be an integer >= 1")
     out = Path(out)
@@ -124,7 +125,8 @@ def build_graph(*, root, out, dataset, version, nodes, edge_name, edge_columns,
         elif key == "side":
             values = values.map(canonical_side)
         graph[key] = values.to_numpy(dtype=str)
-    graph["sign"] = signs(graph["nt"])
+    graph["sign"] = (nodes["sign"].to_numpy(dtype=np.int8) if sign_rule == "shiu2024-parquet"
+                     else signs(graph["nt"], sign_rule))
     if "nt_conf" in nodes:
         graph["nt_conf"] = nodes["nt_conf"].to_numpy(dtype=np.float32)
     rows, cols, counts = [], [], []
@@ -172,7 +174,7 @@ def build_graph(*, root, out, dataset, version, nodes, edge_name, edge_columns,
         graph["data"][start:stop] *= graph["sign"][src]
     nt_names, nt_counts = np.unique(graph["nt"], return_counts=True)
     meta = dict(schema_version=SCHEMA_VERSION, dataset=dataset, version=version,
-                min_syn=int(min_syn), sign_rule=SIGN_RULE,
+                min_syn=int(min_syn), sign_rule=sign_rule, sign_rule_version=SIGN_RULE_VERSION,
                 created_utc=datetime.now(timezone.utc).isoformat(),
                 neuron_count=n, edge_count=len(graph["count"]),
                 synapse_count=int(graph["count"].sum(dtype=np.int64)),
@@ -185,6 +187,10 @@ def build_graph(*, root, out, dataset, version, nodes, edge_name, edge_columns,
                 aggregated_duplicate_rows=input_rows - outside_rows - before_edges,
                 sources=[dict(name=p.name, sha256=sha256(p)) for p in sources],
                 nt_policy=details or {}, license="CC-BY-4.0")
+    meta["dropped"] = dict(outside_population_rows=outside_rows,
+                           outside_population_synapses=outside_synapses,
+                           below_min_syn_synapses=meta["below_min_syn_synapses"])
+    meta.update(extra_meta or {})
     validate(graph)
     out.parent.mkdir(parents=True, exist_ok=True)
     # Append metadata after writing arrays, so elapsed includes compression and I/O.
@@ -213,5 +219,17 @@ def cli(builder, description):
     parser.add_argument("--data", help="Data directory; defaults to FLYBENCH_DATA")
     parser.add_argument("--out", required=True)
     parser.add_argument("--min-syn", type=int, default=1)
+    parser.add_argument("--sign-rule", choices=["shiu2024", "monoamine-zero"], default=SIGN_RULE)
+    import inspect
+    parameters = inspect.signature(builder).parameters
+    if "status" in parameters:
+        parser.add_argument("--status", action="append", nargs="+")
+    if "source" in parameters:
+        parser.add_argument("--source", choices=["shiu", "codex"], default="shiu")
+        parser.add_argument("--shiu-data", help="Directory holding Shiu parquet and completeness CSV; defaults to --data")
     args = parser.parse_args()
-    print(json.dumps(builder(args.data, args.out, args.min_syn), ensure_ascii=False, indent=2))
+    options = vars(args)
+    options["data_dir"] = options.pop("data")
+    if "status" in options:
+        options["status"] = [v for group in options["status"] for v in group] if options["status"] else ["Traced"]
+    print(json.dumps(builder(**options), ensure_ascii=False, indent=2))

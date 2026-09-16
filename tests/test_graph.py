@@ -43,7 +43,7 @@ def test_build(module, threshold, edges, total, tmp_path):
     assert meta["aggregated_duplicate_rows"] == 1
     assert meta["below_min_syn_synapses"] == 18 - total
     assert meta["min_syn"] == threshold
-    assert meta["sign_rule"] == "v1"
+    assert meta["sign_rule"] == ("shiu2024-parquet" if module is female else "shiu2024")
     assert meta["schema_version"] == "1"
     assert meta["dataset"] == {male: "MaleCNS", female: "FAFB", banc: "BANC"}[module]
     assert meta["version"] == {male: "1.0", female: "783", banc: "888"}[module]
@@ -54,7 +54,7 @@ def test_build(module, threshold, edges, total, tmp_path):
         ["acetylcholine", "gaba", "glutamate", "dopamine", "serotonin", "octopamine"], 1)
     for source in meta["sources"]:
         assert source["sha256"] == hashlib.sha256((root / source["name"]).read_bytes()).hexdigest()
-    np.testing.assert_array_equal(graph["sign"], [1, -1, -1, 0, 0, 0])
+    np.testing.assert_array_equal(graph["sign"], [1, -1, -1, 1, 1, 0] if module is female else [1, -1, -1, 1, 1, 1])
     np.testing.assert_array_equal(graph["side"], ["L", "R", "M", "", "L", "R"])
     np.testing.assert_array_equal(graph["type"], ["A_L", "A_R", "B", "", "C", "D"])
     np.testing.assert_array_equal(graph["body_id"], np.array([10, 20, 30, 40, 50, 60], np.int64)
@@ -73,7 +73,7 @@ def test_build(module, threshold, edges, total, tmp_path):
             actual[(row, int(graph["indices"][j]))] = int(graph["count"][j])
             signed[(row, int(graph["indices"][j]))] = int(graph["data"][j])
     assert actual == expected
-    assert signed == {key: value * [1, -1, -1, 0, 0, 0][key[0]] for key, value in expected.items()}
+    assert signed == {key: value * ([1, -1, -1, 1, 1, 0] if module is female else [1, -1, -1, 1, 1, 1])[key[0]] for key, value in expected.items()}
     assert graph["indptr"][-2] == graph["indptr"][-1]  # isolated sixth neuron survives
     if threshold == 1:
         np.testing.assert_array_equal(graph["indptr"], [0, 2, 3, 5, 6, 7, 7])
@@ -94,7 +94,7 @@ def test_selector(tmp_path):
 
 def test_sign_policy():
     np.testing.assert_array_equal(signs(["ACH", "GABA", "GLUT", "DA", "SER", "OCT", "other", "", "unknown"]),
-                                  [1, -1, -1, 0, 0, 0, 0, 0, 0])
+                                  [1, -1, -1, 1, 1, 1, 0, 0, 0])
     with pytest.raises(ValueError):
         signs(["ACH"], rule="v2")
 
@@ -176,3 +176,77 @@ def test_optional_annotations(module, tmp_path):
 
 def test_harness_failure_probe():
     assert os.environ.get("FLYBENCH_GRAPH_FAIL_PROBE") != "1", "deliberate graph harness failure"
+
+
+def test_both_sign_rules():
+    labels = ["ACH", "GABA", "GLUT", "DA", "SER", "OCT", "histamine", "tyramine", "unclear"]
+    np.testing.assert_array_equal(signs(labels, "shiu2024"), [1, -1, -1, 1, 1, 1, 0, 0, 0])
+    np.testing.assert_array_equal(signs(labels, "monoamine-zero"), [1, -1, -1, 0, 0, 0, 0, 0, 0])
+
+
+def test_male_status(tmp_path):
+    root = tmp_path / "male"
+    shutil.copytree(FIXTURE / "male", root)
+    path = root / "body-annotations.feather"
+    nodes = pd.read_feather(path)
+    nodes.loc[1, "status"] = "Orphan"
+    nodes.to_feather(path)
+    meta = male.build(root, tmp_path / "g.npz")
+    assert meta["neuron_count"] == 5
+    assert meta["synapse_count"] == 13
+    assert meta["outside_population_synapses"] == 12
+    assert male.build(root, tmp_path / "all.npz", status=["Traced", "Orphan"])["synapse_count"] == 18
+
+
+@pytest.mark.parametrize("field,value", [("status", "NOT_A_NEURON"), ("status", "X,GLIA"),
+    ("status", "TOO_SMALL"), ("status", "UNROOTED"), ("super_class", "glia"), ("proofread", "FALSE")])
+def test_banc_filter(field, value, tmp_path):
+    root = tmp_path / "banc"
+    shutil.copytree(FIXTURE / "banc", root)
+    path = root / "banc_888_meta.feather"
+    nodes = pd.read_feather(path)
+    nodes.loc[1, field] = value
+    nodes.to_feather(path)
+    meta = banc.build(root, tmp_path / "g.npz")
+    assert meta["neuron_count"] == 5  # roughly-proofread isolated node remains
+    assert meta["synapse_count"] == 13
+    assert meta["outside_population_synapses"] == 12
+
+
+def test_shiu_sign_conflict_and_missing_labels(tmp_path):
+    root = tmp_path / "female"
+    shutil.copytree(FIXTURE / "female", root)
+    path = root / "neurons.csv.gz"
+    pd.read_csv(path).iloc[1:].to_csv(path, index=False)
+    meta = female.build(root, tmp_path / "g.npz")
+    assert meta["unmatched_codex_neurons"] == 1
+    assert meta["inconsistent_sign_neurons"] == 0
+    assert load(tmp_path / "g.npz")["sign"][0] == 1
+    path = root / "Connectivity_783.parquet"
+    edges = pd.read_parquet(path)
+    edges.loc[1, "Excitatory"] = -1
+    edges.to_parquet(path)
+    with pytest.raises(ValueError, match="Inconsistent.*1 neurons"):
+        female.build(root, tmp_path / "bad.npz")
+    assert not (tmp_path / "bad.npz").exists()
+
+
+def test_codex_source_and_zero_rule(tmp_path):
+    meta = female.build(FIXTURE / "female", tmp_path / "g.npz", source="codex", sign_rule="monoamine-zero")
+    assert meta["sign_rule"] == "monoamine-zero"
+    np.testing.assert_array_equal(load(tmp_path / "g.npz")["sign"], [1, -1, -1, 0, 0, 0])
+
+
+def test_cli_multiple_statuses(tmp_path):
+    out = tmp_path / "g.npz"
+    result = subprocess.run([sys.executable, "-m", "flybench.graph.male", "--data", str(FIXTURE / "male"),
+        "--out", str(out), "--status", "Traced", "Orphan", "--status", "Assign"], capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
+    assert load(out)["meta"]["selected_status"] == ["Traced", "Orphan", "Assign"]
+    assert load(out)["meta"]["synapse_count"] == 18
+
+
+def test_shiu_rule_override_rejected(tmp_path):
+    with pytest.raises(ValueError, match="requires parquet signs"):
+        female.build(FIXTURE / "female", tmp_path / "g.npz", sign_rule="monoamine-zero")
+    assert not (tmp_path / "g.npz").exists()

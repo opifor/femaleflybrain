@@ -4,13 +4,16 @@ import time
 from ._build import build_graph, cli, data_root, frame
 
 
-def build(data_dir, out, min_syn=1):
+def build(data_dir, out, min_syn=1, *, status=("Traced",), sign_rule="shiu2024"):
     started = time.perf_counter()
     root = data_root(data_dir)
     names = ["connectome-weights.feather", "body-annotations.feather", "body-neurotransmitters.feather"]
-    nodes = frame(root / names[1], ["bodyId", "type", "somaSide", "superclass", "class"], "bodyId",
+    nodes = frame(root / names[1], ["bodyId", "status", "type", "somaSide", "superclass", "class"], "bodyId",
                   optional=["type", "somaSide", "superclass", "class"])
     nodes = nodes.rename(columns={"somaSide": "side"})
+    status = [status] if isinstance(status, str) else list(status)
+    distribution = nodes.status.fillna("").value_counts().to_dict()
+    nodes = nodes[nodes.status.isin(status)]
     nt = frame(root / names[2], ["body", "consensus_nt", "predicted_nt", "predicted_nt_confidence"], "body",
                optional=["predicted_nt", "predicted_nt_confidence"])
     nt["nt"] = nt["consensus_nt"]
@@ -21,7 +24,8 @@ def build(data_dir, out, min_syn=1):
     return build_graph(root=root, out=out, dataset="MaleCNS", version="1.0", nodes=nodes,
                        edge_name=names[0], edge_columns=["body_pre", "body_post", "weight"],
                        source_names=names, min_syn=min_syn, started=started,
-                       population="all body-annotations IDs; induced graph; no status/type filter",
+                       population="body-annotations status in selected statuses; induced graph",
+                       sign_rule=sign_rule, extra_meta={"selected_status": status, "status_distribution": distribution},
                        details={"label": "consensus_nt", "confidence": "predicted_nt_confidence only when predicted_nt equals consensus_nt"})
 
 

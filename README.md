@@ -77,7 +77,7 @@ Download the indicated release, preserving these local filenames:
 | Dataset | Official download source | Required local files |
 | --- | --- | --- |
 | MaleCNS v1.0 | [Janelia release](https://male-cns.janelia.org/download/) | `connectome-weights.feather`, `body-annotations.feather`, `body-neurotransmitters.feather` |
-| FlyWire FAFB v783 | [Codex downloads](https://codex.flywire.ai/api/download?dataset=fafb) | `connections_princeton.csv.gz`, `neurons.csv.gz`, `classification.csv.gz`, `consolidated_cell_types.csv.gz` |
+| FlyWire FAFB v783 | [Codex downloads](https://codex.flywire.ai/api/download?dataset=fafb) | `neurons.csv.gz`, `classification.csv.gz`, `consolidated_cell_types.csv.gz`; Shiu: `Connectivity_783.parquet`, `Completeness_783.csv`; Codex alternative: `connections_princeton.csv.gz` |
 | BANC v888 | [BANC Codex](https://codex.flywire.ai/banc), [static data archive](https://doi.org/10.7910/DVN/7WTH1N) | `banc_888_edgelist_simple_v3.feather`, `banc_888_meta.feather` |
 
 Janelia's release filenames are
@@ -88,6 +88,9 @@ The release's `minconf-0.5` is an upstream synapse confidence setting, distinct
 from this builder's `min_syn`. Codex annotations can change; preserve the
 downloaded files and their hashes for reproducibility.
 
+Shiu data are distributed with the [paper's model repository](https://github.com/philshiu/Drosophila_brain_model).
+Place its two data files alongside Codex annotations or pass `--shiu-data /data/shiu`.
+
 Point `--data` directly at the directory holding each dataset's files:
 
 ```sh
@@ -97,13 +100,16 @@ python -m flybench.graph.banc --data /data/banc --out build/graph_banc.npz
 ```
 
 Omit `--data` to use `FLYBENCH_DATA`. Python APIs expose
-`build(data_dir, out, min_syn=1)`; pass `None` for `data_dir` to use the environment.
+`build(data_dir, out, min_syn=1, **options)`; pass `None` for `data_dir` to use the environment.
 Use `--min-syn 2` or `3` to explicitly filter weak connections after aggregating
 duplicate pairs. The default retains every positive-count pair within the
 documented annotation population, including connections with zero signed weight.
 MaleCNS's raw file also contains millions of unannotated segments: those are
 outside this graph population, and their excluded edges/synapses are reported
-in metadata. There is no hidden proofread, type, self-loop, or sign filter.
+in metadata. MaleCNS defaults to `--status Traced` (multiple values/repeated flags supported).
+BANC selects proofread OR roughly_proofread, excluding NOT_A_NEURON/GLIA/TOO_SMALL/UNROOTED
+statuses and glia superclass. FAFB defaults to `--source shiu`; `--source codex`
+uses the upstream >=5-synapse export. There is no type, self-loop or sign filter.
 
 ```python
 from flybench.graph import load, where
@@ -116,10 +122,13 @@ left_dn = where(graph, type_re=r"^DN", side="L")
 ```
 
 Rows are presynaptic; `count` retains raw synapse counts and `data` is
-`sign[src] * count`. The simulator applies `w_syn`. Rule `v1` assigns ACH +1,
-GABA/glutamate -1, and other/unknown NT 0. Its zero treatment of monoamines is
-an explicit departure from Shiu 2024. The [schema](docs/graph-schema.md)
-documents population choices, NT confidence, source hashes, and measurement.
+`sign[src] * count`. The simulator applies `w_syn`. Default rule `shiu2024` version 1 assigns ACh and dopamine/serotonin/octopamine +1,
+GABA/glutamate -1, other/unknown NT 0. `--sign-rule monoamine-zero` sets the
+monoamines to zero. FAFB Shiu instead preserves parquet `Excitatory` signs under
+`shiu2024-parquet` version 1, rejects conflicts, and records nodes without
+outgoing sign evidence as 0. Its signs can differ from current Codex NT labels.
+The [schema and measured results](docs/graph-schema.md) document population
+differences, missing evidence, NT confidence, source hashes and measurements.
 Run synthetic tests with `python -m pytest -q -p no:cacheprovider tests/test_graph.py`;
 the three commands above are the separate real-data runs.
 
