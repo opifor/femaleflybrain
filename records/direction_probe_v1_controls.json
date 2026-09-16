@@ -1,0 +1,37 @@
+{
+  "quick_wall_seconds": 58.988494599998376,
+  "full_wall_seconds": 632.7514704999994,
+  "b1_spikes": {
+    "K1": {
+      "0.01": 0,
+      "0.03": 0,
+      "0.1": 0,
+      "0.3": 0,
+      "1.0": 0,
+      "3.0": 1630,
+      "0.45454545454545453": 0,
+      "0.2": 0
+    },
+    "K2": {
+      "0.01": 0,
+      "0.03": 0,
+      "0.1": 0,
+      "0.3": 2260,
+      "1.0": 5410,
+      "3.0": 10730,
+      "0.45454545454545453": 3190,
+      "0.2": 1380
+    }
+  },
+  "all_warmup_equal": true,
+  "all_outgoing_inert": true,
+  "target_loss_raw": "build/records-raw/direction_probe_v1_full/target_loss.json",
+  "target_loss_sha256": "cd4ebbff59e1eacba432607abda1ded89edba75863869ebc7614c34b4fbd2d09",
+  "max_ignition": 0.0,
+  "max_target_loss": 0.7677273866199378,
+  "quick_and_full_same_implementation": true,
+  "environment_difference": false,
+  "graph_sha256": "35e5c3b4cca86b27392a144a4d6bcb37de2f3f97f29d71f5c0a5c20b1cd593b8",
+  "clean_room_excluded_trees_inspected": false,
+  "git_mutations": false
+}

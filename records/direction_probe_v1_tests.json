@@ -1,0 +1,7 @@
+{
+  "normal_exit": 0,
+  "normal_output": "...............                                                          [100%]\n15 passed in 0.23s\n",
+  "failure_exit": 1,
+  "failure_output": "F                                                                        [100%]\n=========================== short test summary info ===========================\nFAILED tests/test_direction_probe.py::test_harness_failure_probe - AssertionE...\n1 failed, 14 deselected in 0.19s\n",
+  "tests_sha256": "05800eb4b03406e42b3e4aa26237e91d91c9b7d7d8e7072f173bbd217ab96939"
+}

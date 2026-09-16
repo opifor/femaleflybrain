@@ -1,0 +1,97 @@
+{
+  "raw_conditions_verified": 17,
+  "rows": 36,
+  "summaries": [
+    {
+      "arm": "K0",
+      "flux": 0.0,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 0.01,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 0.01,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 0.03,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 0.03,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 0.1,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 0.1,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 0.3,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 0.3,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 1.0,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 1.0,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 3.0,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 3.0,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 0.45454545454545453,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 0.45454545454545453,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K1",
+      "flux": 0.2,
+      "seed_columns_identical": true
+    },
+    {
+      "arm": "K2",
+      "flux": 0.2,
+      "seed_columns_identical": true
+    }
+  ],
+  "warmup_exact": true,
+  "outgoing_inert": true,
+  "source_hashes_verified": true,
+  "utf8_no_bom": true,
+  "no_machine_paths": true,
+  "records_bytes_before_audit": 425021
+}
