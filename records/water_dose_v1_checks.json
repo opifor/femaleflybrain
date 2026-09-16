@@ -1,0 +1,74 @@
+{
+  "commands": [
+    {
+      "label": "pytest",
+      "args": [
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "--tb=short",
+        "tests/test_water_dose.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.75545559999955,
+      "output": "..........s                                                              [100%]\n10 passed, 1 skipped in 1.29s\n"
+    },
+    {
+      "label": "failure_probe",
+      "args": [
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "--tb=short",
+        "tests/test_water_dose.py",
+        "-k",
+        "intentional_failure_probe"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 1.6826514000003954,
+      "output": "F                                                                        [100%]\n================================== FAILURES ===================================\n_______________________ test_intentional_failure_probe ________________________\ntests\\test_water_dose.py:101: in test_intentional_failure_probe\n    assert False, 'Intentional harness failure'\nE   AssertionError: Intentional harness failure\nE   assert False\n=========================== short test summary info ===========================\nFAILED tests/test_water_dose.py::test_intentional_failure_probe - AssertionEr...\n1 failed, 10 deselected in 1.27s\n"
+    },
+    {
+      "label": "quick",
+      "args": [
+        "-m",
+        "flybench.experiment.water_dose",
+        "--quick"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 67.85376619999988,
+      "output": "{\"water\": {\"requested_count\": 18, \"missing_ids\": [], \"count\": 18, \"status\": \"present\", \"body_ids\": [720575940612950568, 720575940631898285, 720575940606002609, 720575940612579053, 720575940622902535, 720575940616177458, 720575940660292225, 720575940622486922, 720575940613786774, 720575940629852866, 720575940625861168, 720575940613996959, 720575940617857694, 720575940644965399, 720575940625203504, 720575940630553415, 720575940635172191, 720575940634796536], \"types\": [\"LB2d\", \"LB3\"], \"sides\": {\"L\": 18, \"R\": 0, \"M\": 0, \"unknown\": 0}}, \"sugar\": {\"requested_count\": 21, \"missing_ids\": [720575940620900446], \"count\": 20, \"status\": \"present\", \"body_ids\": [720575940624963786, 720575940630233916, 720575940637568838, 720575940638202345, 720575940617000768, 720575940630797113, 720575940632889389, 720575940621754367, 720575940621502051, 720575940640649691, 720575940639332736, 720575940616885538, 720575940639198653, 720575940617937543, 720575940632425919, 720575940633143833, 720575940612670570, 720575940628853239, 720575940629176663, 720575940611875570], \"types\": [\"LB3\"], \"sides\": {\"L\": 20, \"R\": 0, \"M\": 0, \"unknown\": 0}}, \"MN9_ref\": {\"count\": 1, \"status\": \"present\", \"body_ids\": [720575940660219265], \"types\": [\"CB0701\"], \"sides\": {\"L\": 0, \"R\": 1, \"M\": 0, \"unknown\": 0}}, \"MN9_other\": {\"count\": 1, \"status\": \"present\", \"body_ids\": [720575940618238523], \"types\": [\"CB0701\"], \"sides\": {\"L\": 1, \"R\": 0, \"M\": 0, \"unknown\": 0}}}\nbaseline: MN9_ref=0.000; elapsed=4.9s\nwater100: MN9_ref=0.000; elapsed=13.3s\nwater160: MN9_ref=9.375; elapsed=24.2s\nwater200: MN9_ref=36.875; elapsed=34.6s\nwater260: MN9_ref=57.500; elapsed=45.0s\nsugar100: MN9_ref=64.375; elapsed=55.8s\nsugar200: MN9_ref=93.125; elapsed=66.2s\n<workspace>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at <external-build-path>)\n  self.delivery = torch.sparse_csr_tensor(\n"
+    },
+    {
+      "label": "full",
+      "args": [
+        "-m",
+        "flybench.experiment.water_dose"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 65.13553690000026,
+      "output": "{\"water\": {\"requested_count\": 18, \"missing_ids\": [], \"count\": 18, \"status\": \"present\", \"body_ids\": [720575940612950568, 720575940631898285, 720575940606002609, 720575940612579053, 720575940622902535, 720575940616177458, 720575940660292225, 720575940622486922, 720575940613786774, 720575940629852866, 720575940625861168, 720575940613996959, 720575940617857694, 720575940644965399, 720575940625203504, 720575940630553415, 720575940635172191, 720575940634796536], \"types\": [\"LB2d\", \"LB3\"], \"sides\": {\"L\": 18, \"R\": 0, \"M\": 0, \"unknown\": 0}}, \"sugar\": {\"requested_count\": 21, \"missing_ids\": [720575940620900446], \"count\": 20, \"status\": \"present\", \"body_ids\": [720575940624963786, 720575940630233916, 720575940637568838, 720575940638202345, 720575940617000768, 720575940630797113, 720575940632889389, 720575940621754367, 720575940621502051, 720575940640649691, 720575940639332736, 720575940616885538, 720575940639198653, 720575940617937543, 720575940632425919, 720575940633143833, 720575940612670570, 720575940628853239, 720575940629176663, 720575940611875570], \"types\": [\"LB3\"], \"sides\": {\"L\": 20, \"R\": 0, \"M\": 0, \"unknown\": 0}}, \"MN9_ref\": {\"count\": 1, \"status\": \"present\", \"body_ids\": [720575940660219265], \"types\": [\"CB0701\"], \"sides\": {\"L\": 0, \"R\": 1, \"M\": 0, \"unknown\": 0}}, \"MN9_other\": {\"count\": 1, \"status\": \"present\", \"body_ids\": [720575940618238523], \"types\": [\"CB0701\"], \"sides\": {\"L\": 1, \"R\": 0, \"M\": 0, \"unknown\": 0}}}\nbaseline: MN9_ref=0.000; elapsed=8.8s\nwater100: MN9_ref=0.000; elapsed=15.8s\nwater160: MN9_ref=13.250; elapsed=21.9s\nwater200: MN9_ref=34.125; elapsed=29.1s\nwater260: MN9_ref=56.625; elapsed=40.6s\nsugar100: MN9_ref=63.375; elapsed=51.9s\nsugar200: MN9_ref=93.875; elapsed=63.4s\n<workspace>\\flybench\\sim\\fast_gpu.py:31: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at <external-build-path>)\n  self.delivery = torch.sparse_csr_tensor(\n"
+    }
+  ],
+  "environment_difference": false,
+  "wall_seconds": 136.42882660000032,
+  "artifact_validation": {
+    "bom_free": true,
+    "portable_paths": true,
+    "full_trials": 70,
+    "quick_trials": 14,
+    "code_hashes": {
+      "experiments/water_dose_v1.md": "76ec17cba6cfe8e82d18831e6c9c2a73a67b11f8851a9183a4f1f7a9cec958a0",
+      "flybench/experiment/water_dose.py": "0345326d1ec743012c18cc3a240d01f7b1dc7f897ecf96509319ac8d5f11e7a4",
+      "tests/test_water_dose.py": "b99726fd76643c1c32c7344914aba30bae4f0fec02eb7f08ff0d2e62663d9d43"
+    },
+    "deviations": [
+      "Sugar source coverage is 20/21, matching the prior benchmark.",
+      "Before simulation, the runner expected 11 passing tests; actual 10 passing tests were inspected and the runner count corrected. No test or hypothesis was changed."
+    ]
+  }
+}

@@ -6,9 +6,9 @@ put a male and a female brain in the same model and the same world.
 The simulator is an independent reimplementation of the leaky
 integrate-and-fire model of Shiu et al. (2024). It reproduces their
 benchmarks on the female brain: the sugar to MN9 dose response, bitter and
-Ir94e suppression, and the JO-CE to aBN1 response. Water to MN9 was silent
-at the one dose we tried, which is below the doses the paper used, so that
-comparison is still open (see `records/shiu_benchmarks_v1_report.md`). The same bench loads
+Ir94e suppression, the JO-CE to aBN1 response, and the water to MN9 dose
+response once the input matched the paper's doses (see
+`records/shiu_benchmarks_v1_report.md` and `records/water_dose_v1_report.md`). The same bench loads
 the MaleCNS male, the FlyWire FAFB female and the FlyWire BANC female from
 their public releases. No connectome data are bundled.
 
@@ -23,7 +23,8 @@ state gates her answer (a mated state silences pC1 and vpoDN, the "no"
 readout). What has not held: courtship song entering the female's ear does
 not reach vpoDN, and scent or vision entering the male leaves the mapped P1
 population almost silent, at any dose we tried. Scent does raise pIP10, the
-male's song command neuron, by a route we have not identified. So the
+male's song command neuron, and a pre-registered lesion test shows that route
+bypasses P1 (see `records/male_route_v1_report.md`). So the
 picture is not "nothing travels deep": some routes transmit, the ones the
 physiology says should carry courtship signals do not, and the sensory front
 ends (ear bands, eye geometry) are themselves uncalibrated. That is the open
