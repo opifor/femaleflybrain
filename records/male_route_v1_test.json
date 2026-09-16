@@ -1,0 +1,5040 @@
+{
+  "created_utc": "2026-09-16T17:12:12.299577+00:00",
+  "protocol_sha256": "20a1d9be86cbbe0517bbc64e0816075245dbf45868c3db2d0ddb1340ff2449e3",
+  "graph_sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+  "dictionary_sha256": "00e7bdfa0e890d1267ca08a69c0c49a32464a7b38db5c0832ca1f42c596d6473",
+  "source_sha256": {
+    "flybench/experiment/male_route.py": "356c2fa118d924b28dd94709c1503e492896b0430e60dde094650efbc2304adc",
+    "flybench/experiment/male_decides.py": "9a5d451bc74aef1b47edb4332f88c2d792a9d59f22009ad6fedcd4cd06cb9998",
+    "flybench/sim/fast_gpu.py": "7d1ff7ad1f04fc39828c62faf44c67a269f7551ce95c8f0d7c5ff45956f7f066",
+    "flybench/sim/params.py": "0c5161c62d9b4279ae428e874653739787055fc15151b690fa046ebbd2913070",
+    "flybench/dictionary/entries.py": "bb134147137f0c6727427a07a6cfc8deff6d26b1c554daafcbe199337b18b301",
+    "flybench/dictionary/api.py": "2c9f94139231d9b86960f5df4bd1f589632f1119d7a1ef7ff4009729477d4c71"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "stage": "test",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "parameters": {
+    "v_rest": -52.0,
+    "v_reset": -52.0,
+    "v_th": -45.0,
+    "tau_m": 20.0,
+    "tau_s": 5.0,
+    "delay": 1.8,
+    "refractory": 2.2,
+    "w_syn": 0.275,
+    "drive_scale": 250.0,
+    "dt": 0.2
+  },
+  "kernel": "shiu",
+  "backend": "fast_gpu",
+  "batch_size": 1,
+  "windows": 20,
+  "warmup": 4,
+  "neurons": 165122,
+  "target_count": 1961,
+  "readout_counts": {
+    "P1": 46,
+    "pIP10": 2,
+    "Or47b": 130
+  },
+  "random_superclass_matching": false,
+  "trials": [
+    {
+      "seed": 0,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 0,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 10.0,
+        "Or47b": 247.03846153846155,
+        "network": 5.703782657671297,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.68269230769232,
+        "Or47b_delivered_hz": 238.68269230769232,
+        "active_percent": 7.743971124380761
+      }
+    },
+    {
+      "seed": 0,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 11.25,
+        "Or47b": 970.2019230769231,
+        "network": 6.386558120662299,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7980769230769,
+        "Or47b_delivered_hz": 961.7980769230769,
+        "active_percent": 7.69915577572946
+      }
+    },
+    {
+      "seed": 0,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 0,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 6.875,
+        "Or47b": 247.06730769230768,
+        "network": 5.6833129443684065,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.68269230769232,
+        "Or47b_delivered_hz": 238.68269230769232,
+        "active_percent": 7.604680175869963
+      }
+    },
+    {
+      "seed": 0,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.625,
+        "Or47b": 970.2307692307693,
+        "network": 6.401183670255932,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7980769230769,
+        "Or47b_delivered_hz": 961.7980769230769,
+        "active_percent": 7.796659439687019
+      }
+    },
+    {
+      "seed": 0,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 0,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 7.5,
+        "Or47b": 247.01923076923077,
+        "network": 5.6358404694710575,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.68269230769232,
+        "Or47b_delivered_hz": 238.68269230769232,
+        "active_percent": 7.547146958006808
+      }
+    },
+    {
+      "seed": 0,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 9.375,
+        "Or47b": 970.2019230769231,
+        "network": 6.354324378338441,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7980769230769,
+        "Or47b_delivered_hz": 961.7980769230769,
+        "active_percent": 7.750027252576882
+      }
+    },
+    {
+      "seed": 1,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.16304347826086957,
+        "pIP10": 9.375,
+        "Or47b": 248.35576923076923,
+        "network": 5.722450672835843,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.82692307692307,
+        "Or47b_delivered_hz": 239.82692307692307,
+        "active_percent": 7.633749591211347
+      }
+    },
+    {
+      "seed": 1,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 8.75,
+        "Or47b": 966.1057692307693,
+        "network": 6.414264907159555,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.1057692307693,
+        "Or47b_delivered_hz": 958.1057692307693,
+        "active_percent": 7.806954857620426
+      }
+    },
+    {
+      "seed": 1,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 6.875,
+        "Or47b": 248.30769230769232,
+        "network": 5.679058514310631,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.82692307692307,
+        "Or47b_delivered_hz": 239.82692307692307,
+        "active_percent": 7.624665398917164
+      }
+    },
+    {
+      "seed": 1,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.40760869565217395,
+        "pIP10": 10.625,
+        "Or47b": 966.0576923076924,
+        "network": 6.4196624314143484,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.1057692307693,
+        "Or47b_delivered_hz": 958.1057692307693,
+        "active_percent": 7.845108465255993
+      }
+    },
+    {
+      "seed": 1,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 6.875,
+        "Or47b": 248.11538461538458,
+        "network": 5.685636983563668,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.82692307692307,
+        "Or47b_delivered_hz": 239.82692307692307,
+        "active_percent": 7.593173532297332
+      }
+    },
+    {
+      "seed": 1,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.43478260869565216,
+        "pIP10": 11.25,
+        "Or47b": 966.0288461538462,
+        "network": 6.385013807972287,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.1057692307693,
+        "Or47b_delivered_hz": 958.1057692307693,
+        "active_percent": 7.707028742384418
+      }
+    },
+    {
+      "seed": 2,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 2,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 5.625,
+        "Or47b": 249.67307692307693,
+        "network": 5.688740749264181,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.9326923076923,
+        "Or47b_delivered_hz": 240.9326923076923,
+        "active_percent": 7.69915577572946
+      }
+    },
+    {
+      "seed": 2,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 8.75,
+        "Or47b": 966.4903846153846,
+        "network": 6.403061069996729,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 957.8269230769231,
+        "Or47b_delivered_hz": 957.8269230769231,
+        "active_percent": 7.6719031988469135
+      }
+    },
+    {
+      "seed": 2,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 2,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 5.625,
+        "Or47b": 249.59615384615387,
+        "network": 5.693403967975194,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.9326923076923,
+        "Or47b_delivered_hz": 240.9326923076923,
+        "active_percent": 7.64041133222708
+      }
+    },
+    {
+      "seed": 2,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.35326086956521735,
+        "pIP10": 10.0,
+        "Or47b": 966.4711538461538,
+        "network": 6.4238184493889365,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 957.8269230769231,
+        "Or47b_delivered_hz": 957.8269230769231,
+        "active_percent": 7.82209517811073
+      }
+    },
+    {
+      "seed": 2,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 2,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 10.0,
+        "Or47b": 249.4519230769231,
+        "network": 5.69019422003125,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.9326923076923,
+        "Or47b_delivered_hz": 240.9326923076923,
+        "active_percent": 7.6392001065878565
+      }
+    },
+    {
+      "seed": 2,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.43478260869565216,
+        "pIP10": 10.0,
+        "Or47b": 966.4326923076924,
+        "network": 6.403583411053646,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 957.8269230769231,
+        "Or47b_delivered_hz": 957.8269230769231,
+        "active_percent": 7.805743631981202
+      }
+    },
+    {
+      "seed": 3,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 10.0,
+        "Or47b": 249.93269230769232,
+        "network": 5.687749058272066,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.2980769230769,
+        "Or47b_delivered_hz": 241.2980769230769,
+        "active_percent": 7.670086360388077
+      }
+    },
+    {
+      "seed": 3,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.43478260869565216,
+        "pIP10": 11.875,
+        "Or47b": 968.6923076923076,
+        "network": 6.415233887670935,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.8942307692307,
+        "Or47b_delivered_hz": 960.8942307692307,
+        "active_percent": 7.809377308898875
+      }
+    },
+    {
+      "seed": 3,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 6.875,
+        "Or47b": 249.72115384615384,
+        "network": 5.677885139472632,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.2980769230769,
+        "Or47b_delivered_hz": 241.2980769230769,
+        "active_percent": 7.757900219231841
+      }
+    },
+    {
+      "seed": 3,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 11.875,
+        "Or47b": 968.7788461538462,
+        "network": 6.395771005680648,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.8942307692307,
+        "Or47b_delivered_hz": 960.8942307692307,
+        "active_percent": 7.6997613885490725
+      }
+    },
+    {
+      "seed": 3,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 7.5,
+        "Or47b": 249.71153846153845,
+        "network": 5.682684621068059,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.2980769230769,
+        "Or47b_delivered_hz": 241.2980769230769,
+        "active_percent": 7.6858322936979935
+      }
+    },
+    {
+      "seed": 3,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 10.0,
+        "Or47b": 968.6634615384615,
+        "network": 6.397353169171884,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.8942307692307,
+        "Or47b_delivered_hz": 960.8942307692307,
+        "active_percent": 7.841474788338319
+      }
+    },
+    {
+      "seed": 4,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 4,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 6.875,
+        "Or47b": 248.1346153846154,
+        "network": 5.662843231065515,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.92307692307693,
+        "Or47b_delivered_hz": 239.92307692307693,
+        "active_percent": 7.637988880948631
+      }
+    },
+    {
+      "seed": 4,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.40760869565217395,
+        "pIP10": 9.375,
+        "Or47b": 966.2788461538462,
+        "network": 6.415203607029953,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 957.875,
+        "Or47b_delivered_hz": 957.875,
+        "active_percent": 7.782124732016326
+      }
+    },
+    {
+      "seed": 4,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 4,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 6.25,
+        "Or47b": 248.14423076923077,
+        "network": 5.682669480747569,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.92307692307693,
+        "Or47b_delivered_hz": 239.92307692307693,
+        "active_percent": 7.691888421894115
+      }
+    },
+    {
+      "seed": 4,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086956,
+        "pIP10": 11.25,
+        "Or47b": 966.1826923076924,
+        "network": 6.408587286975691,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 957.875,
+        "Or47b_delivered_hz": 957.875,
+        "active_percent": 7.7742517653613685
+      }
+    },
+    {
+      "seed": 4,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 4,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 8.125,
+        "Or47b": 248.125,
+        "network": 5.680269739949855,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.92307692307693,
+        "Or47b_delivered_hz": 239.92307692307693,
+        "active_percent": 7.653734814258548
+      }
+    },
+    {
+      "seed": 4,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4076086956521739,
+        "pIP10": 8.75,
+        "Or47b": 966.2115384615385,
+        "network": 6.407300359734015,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 957.875,
+        "Or47b_delivered_hz": 957.875,
+        "active_percent": 7.773040539722145
+      }
+    },
+    {
+      "seed": 5,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 8.125,
+        "Or47b": 247.28846153846155,
+        "network": 5.681791342159131,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.04807692307693,
+        "Or47b_delivered_hz": 239.04807692307693,
+        "active_percent": 7.64586184760359
+      }
+    },
+    {
+      "seed": 5,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.0,
+        "Or47b": 969.5576923076923,
+        "network": 6.391826952192924,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7884615384614,
+        "Or47b_delivered_hz": 961.7884615384614,
+        "active_percent": 7.737914996184639
+      }
+    },
+    {
+      "seed": 5,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 8.125,
+        "Or47b": 247.18269230769232,
+        "network": 5.655787841717033,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.04807692307693,
+        "Or47b_delivered_hz": 239.04807692307693,
+        "active_percent": 7.539273991351848
+      }
+    },
+    {
+      "seed": 5,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 10.0,
+        "Or47b": 969.5961538461538,
+        "network": 6.399821041411805,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7884615384614,
+        "Or47b_delivered_hz": 961.7884615384614,
+        "active_percent": 7.782124732016326
+      }
+    },
+    {
+      "seed": 5,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 6.875,
+        "Or47b": 247.08653846153845,
+        "network": 5.663024914911398,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.04807692307693,
+        "Or47b_delivered_hz": 239.04807692307693,
+        "active_percent": 7.624059786097552
+      }
+    },
+    {
+      "seed": 5,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.25,
+        "Or47b": 969.5192307692307,
+        "network": 6.403659112656097,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7884615384614,
+        "Or47b_delivered_hz": 961.7884615384614,
+        "active_percent": 7.728225191070845
+      }
+    },
+    {
+      "seed": 6,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 6,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 7.5,
+        "Or47b": 246.21153846153845,
+        "network": 5.683532479015516,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 237.77884615384613,
+        "Or47b_delivered_hz": 237.77884615384613,
+        "active_percent": 7.635566429670184
+      }
+    },
+    {
+      "seed": 6,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 10.0,
+        "Or47b": 963.3076923076924,
+        "network": 6.419200651639394,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 954.7115384615385,
+        "Or47b_delivered_hz": 954.7115384615385,
+        "active_percent": 7.825728855028403
+      }
+    },
+    {
+      "seed": 6,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 6,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 5.625,
+        "Or47b": 246.18269230769232,
+        "network": 5.663486694686354,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 237.77884615384613,
+        "Or47b_delivered_hz": 237.77884615384613,
+        "active_percent": 7.580455663085477
+      }
+    },
+    {
+      "seed": 6,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.25,
+        "Or47b": 963.3846153846155,
+        "network": 6.390782270079093,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 954.7115384615385,
+        "Or47b_delivered_hz": 954.7115384615385,
+        "active_percent": 7.754266542314167
+      }
+    },
+    {
+      "seed": 6,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 6,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 7.5,
+        "Or47b": 246.26923076923077,
+        "network": 5.700270103317548,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 237.77884615384613,
+        "Or47b_delivered_hz": 237.77884615384613,
+        "active_percent": 7.65979094245467
+      }
+    },
+    {
+      "seed": 6,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.46195652173913043,
+        "pIP10": 10.625,
+        "Or47b": 963.3942307692307,
+        "network": 6.388980571940747,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 954.7115384615385,
+        "Or47b_delivered_hz": 954.7115384615385,
+        "active_percent": 7.796659439687019
+      }
+    },
+    {
+      "seed": 7,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 6.875,
+        "Or47b": 250.58653846153845,
+        "network": 5.691004227177481,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.8269230769231,
+        "Or47b_delivered_hz": 241.8269230769231,
+        "active_percent": 7.630115914293674
+      }
+    },
+    {
+      "seed": 7,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 8.75,
+        "Or47b": 972.0096153846154,
+        "network": 6.394158561548431,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 963.8269230769231,
+        "Or47b_delivered_hz": 963.8269230769231,
+        "active_percent": 7.804532406341977
+      }
+    },
+    {
+      "seed": 7,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 9.375,
+        "Or47b": 250.53846153846155,
+        "network": 5.716038747108199,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.8269230769231,
+        "Or47b_delivered_hz": 241.8269230769231,
+        "active_percent": 7.733070093627742
+      }
+    },
+    {
+      "seed": 7,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 10.0,
+        "Or47b": 972.1442307692307,
+        "network": 6.394294824432843,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 963.8269230769231,
+        "Or47b_delivered_hz": 963.8269230769231,
+        "active_percent": 7.730647642349293
+      }
+    },
+    {
+      "seed": 7,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 7.5,
+        "Or47b": 250.43269230769232,
+        "network": 5.690126088589043,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.8269230769231,
+        "Or47b_delivered_hz": 241.8269230769231,
+        "active_percent": 7.674325650125362
+      }
+    },
+    {
+      "seed": 7,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 13.125,
+        "Or47b": 972.0865384615386,
+        "network": 6.40112310897397,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 963.8269230769231,
+        "Or47b_delivered_hz": 963.8269230769231,
+        "active_percent": 7.77182931408292
+      }
+    },
+    {
+      "seed": 8,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 8,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 7.5,
+        "Or47b": 248.4423076923077,
+        "network": 5.684781555455966,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.30769230769232,
+        "Or47b_delivered_hz": 240.30769230769232,
+        "active_percent": 7.577427598987415
+      }
+    },
+    {
+      "seed": 8,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 10.625,
+        "Or47b": 971.3942307692307,
+        "network": 6.397035222441589,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 963.4326923076923,
+        "Or47b_delivered_hz": 963.4326923076923,
+        "active_percent": 7.753055316674944
+      }
+    },
+    {
+      "seed": 8,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 8,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 7.5,
+        "Or47b": 248.44230769230768,
+        "network": 5.6957355773307015,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.30769230769232,
+        "Or47b_delivered_hz": 240.30769230769232,
+        "active_percent": 7.6852266808783805
+      }
+    },
+    {
+      "seed": 8,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 11.25,
+        "Or47b": 971.3461538461538,
+        "network": 6.394484078438973,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 963.4326923076923,
+        "Or47b_delivered_hz": 963.4326923076923,
+        "active_percent": 7.786969634573225
+      }
+    },
+    {
+      "seed": 8,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 8,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 8.125,
+        "Or47b": 248.33653846153845,
+        "network": 5.697840081878853,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.30769230769232,
+        "Or47b_delivered_hz": 240.30769230769232,
+        "active_percent": 7.71308487058054
+      }
+    },
+    {
+      "seed": 8,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.25,
+        "Or47b": 971.2211538461538,
+        "network": 6.404408558520366,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 963.4326923076923,
+        "Or47b_delivered_hz": 963.4326923076923,
+        "active_percent": 7.801504342243917
+      }
+    },
+    {
+      "seed": 9,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 9,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 6.25,
+        "Or47b": 247.33653846153845,
+        "network": 5.677582333062826,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.97115384615384,
+        "Or47b_delivered_hz": 238.97115384615384,
+        "active_percent": 7.641016945046693
+      }
+    },
+    {
+      "seed": 9,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.0,
+        "Or47b": 964.6538461538462,
+        "network": 6.406921851721757,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 956.4326923076923,
+        "Or47b_delivered_hz": 956.4326923076923,
+        "active_percent": 7.768195637165247
+      }
+    },
+    {
+      "seed": 9,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 9,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 5.625,
+        "Or47b": 247.38461538461542,
+        "network": 5.674153050471773,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.97115384615384,
+        "Or47b_delivered_hz": 238.97115384615384,
+        "active_percent": 7.605285788689575
+      }
+    },
+    {
+      "seed": 9,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.43478260869565216,
+        "pIP10": 11.25,
+        "Or47b": 964.5096153846154,
+        "network": 6.389472632356682,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 956.4326923076923,
+        "Or47b_delivered_hz": 956.4326923076923,
+        "active_percent": 7.764561960247575
+      }
+    },
+    {
+      "seed": 9,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 9,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.02717391304347826,
+        "pIP10": 9.375,
+        "Or47b": 247.40384615384613,
+        "network": 5.686083623018132,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.97115384615384,
+        "Or47b_delivered_hz": 238.97115384615384,
+        "active_percent": 7.703395065466746
+      }
+    },
+    {
+      "seed": 9,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.625,
+        "Or47b": 964.6923076923077,
+        "network": 6.391069936168409,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 956.4326923076923,
+        "Or47b_delivered_hz": 956.4326923076923,
+        "active_percent": 7.765167573067187
+      }
+    },
+    {
+      "seed": 10,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 10,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 7.5,
+        "Or47b": 246.96153846153845,
+        "network": 5.680504414917455,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.375,
+        "Or47b_delivered_hz": 238.375,
+        "active_percent": 7.632538365572122
+      }
+    },
+    {
+      "seed": 10,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4619565217391304,
+        "pIP10": 10.0,
+        "Or47b": 968.75,
+        "network": 6.370918169595814,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.2307692307693,
+        "Or47b_delivered_hz": 960.2307692307693,
+        "active_percent": 7.762139508969127
+      }
+    },
+    {
+      "seed": 10,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 10,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 10.0,
+        "Or47b": 246.75,
+        "network": 5.67500090841923,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.375,
+        "Or47b_delivered_hz": 238.375,
+        "active_percent": 7.6531292014389365
+      }
+    },
+    {
+      "seed": 10,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.46195652173913043,
+        "pIP10": 8.75,
+        "Or47b": 968.6346153846154,
+        "network": 6.39562717263599,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.2307692307693,
+        "Or47b_delivered_hz": 960.2307692307693,
+        "active_percent": 7.831179370404913
+      }
+    },
+    {
+      "seed": 10,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 10,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 4.375,
+        "Or47b": 246.875,
+        "network": 5.655961955402672,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 238.375,
+        "Or47b_delivered_hz": 238.375,
+        "active_percent": 7.50051477089667
+      }
+    },
+    {
+      "seed": 10,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 11.25,
+        "Or47b": 968.6442307692307,
+        "network": 6.346489262484709,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.2307692307693,
+        "Or47b_delivered_hz": 960.2307692307693,
+        "active_percent": 7.590751081018883
+      }
+    },
+    {
+      "seed": 11,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 11,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 6.25,
+        "Or47b": 248.80769230769232,
+        "network": 5.689876273300953,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.15384615384613,
+        "Or47b_delivered_hz": 240.15384615384613,
+        "active_percent": 7.612553142524921
+      }
+    },
+    {
+      "seed": 11,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.0,
+        "Or47b": 970.4230769230769,
+        "network": 6.424287799324136,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 962.2884615384617,
+        "Or47b_delivered_hz": 962.2884615384617,
+        "active_percent": 7.738520609004251
+      }
+    },
+    {
+      "seed": 11,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 11,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 8.125,
+        "Or47b": 248.97115384615384,
+        "network": 5.6762954058211506,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.15384615384613,
+        "Or47b_delivered_hz": 240.15384615384613,
+        "active_percent": 7.668875134748852
+      }
+    },
+    {
+      "seed": 11,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 11.875,
+        "Or47b": 970.4134615384614,
+        "network": 6.416051464977411,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 962.2884615384617,
+        "Or47b_delivered_hz": 962.2884615384617,
+        "active_percent": 7.763956347427962
+      }
+    },
+    {
+      "seed": 11,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 11,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.10869565217391304,
+        "pIP10": 8.75,
+        "Or47b": 248.9519230769231,
+        "network": 5.686552972953331,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.15384615384613,
+        "Or47b_delivered_hz": 240.15384615384613,
+        "active_percent": 7.658579716815446
+      }
+    },
+    {
+      "seed": 11,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4347826086956521,
+        "pIP10": 10.0,
+        "Or47b": 970.4230769230769,
+        "network": 6.427944186722544,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 962.2884615384617,
+        "Or47b_delivered_hz": 962.2884615384617,
+        "active_percent": 7.759717057690676
+      }
+    },
+    {
+      "seed": 12,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 12,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 6.875,
+        "Or47b": 249.19230769230768,
+        "network": 5.71011888179649,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.06730769230768,
+        "Or47b_delivered_hz": 241.06730769230768,
+        "active_percent": 7.622848560458327
+      }
+    },
+    {
+      "seed": 12,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 9.375,
+        "Or47b": 968.4326923076924,
+        "network": 6.370093022129092,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.1538461538462,
+        "Or47b_delivered_hz": 960.1538461538462,
+        "active_percent": 7.722169062874723
+      }
+    },
+    {
+      "seed": 12,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 12,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.02717391304347826,
+        "pIP10": 8.75,
+        "Or47b": 249.24038461538464,
+        "network": 5.6820638679279565,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.06730769230768,
+        "Or47b_delivered_hz": 241.06730769230768,
+        "active_percent": 7.662819006552731
+      }
+    },
+    {
+      "seed": 12,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 12.5,
+        "Or47b": 968.4326923076923,
+        "network": 6.404204164193748,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.1538461538462,
+        "Or47b_delivered_hz": 960.1538461538462,
+        "active_percent": 7.764561960247575
+      }
+    },
+    {
+      "seed": 12,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 12,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 7.5,
+        "Or47b": 249.15384615384613,
+        "network": 5.69325256477029,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.06730769230768,
+        "Or47b_delivered_hz": 241.06730769230768,
+        "active_percent": 7.667663909109628
+      }
+    },
+    {
+      "seed": 12,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.43478260869565216,
+        "pIP10": 10.0,
+        "Or47b": 968.5,
+        "network": 6.423682186504523,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.1538461538462,
+        "Or47b_delivered_hz": 960.1538461538462,
+        "active_percent": 7.8493477549932775
+      }
+    },
+    {
+      "seed": 13,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 13,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 9.375,
+        "Or47b": 247.74038461538464,
+        "network": 5.701738714405106,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.03846153846155,
+        "Or47b_delivered_hz": 239.03846153846155,
+        "active_percent": 7.641016945046693
+      }
+    },
+    {
+      "seed": 13,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.0,
+        "Or47b": 966.8173076923076,
+        "network": 6.386043349765628,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.375,
+        "Or47b_delivered_hz": 958.375,
+        "active_percent": 7.737309383365027
+      }
+    },
+    {
+      "seed": 13,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 13,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 8.125,
+        "Or47b": 247.4230769230769,
+        "network": 5.707113528179164,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.03846153846155,
+        "Or47b_delivered_hz": 239.03846153846155,
+        "active_percent": 7.6949164859921755
+      }
+    },
+    {
+      "seed": 13,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 11.25,
+        "Or47b": 966.7115384615385,
+        "network": 6.414416310364458,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.375,
+        "Or47b_delivered_hz": 958.375,
+        "active_percent": 7.753055316674944
+      }
+    },
+    {
+      "seed": 13,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 13,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.02717391304347826,
+        "pIP10": 6.875,
+        "Or47b": 247.52884615384613,
+        "network": 5.67326734172309,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.03846153846155,
+        "Or47b_delivered_hz": 239.03846153846155,
+        "active_percent": 7.555625537481378
+      }
+    },
+    {
+      "seed": 13,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.40760869565217395,
+        "pIP10": 11.25,
+        "Or47b": 966.6634615384614,
+        "network": 6.400661329199016,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.375,
+        "Or47b_delivered_hz": 958.375,
+        "active_percent": 7.780307893557491
+      }
+    },
+    {
+      "seed": 14,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 14,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 8.125,
+        "Or47b": 249.875,
+        "network": 5.6767041944743895,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.59615384615387,
+        "Or47b_delivered_hz": 241.59615384615387,
+        "active_percent": 7.648889911701651
+      }
+    },
+    {
+      "seed": 14,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.875,
+        "Or47b": 967.7788461538462,
+        "network": 6.4025462991000595,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.5673076923076,
+        "Or47b_delivered_hz": 959.5673076923076,
+        "active_percent": 7.753660929494556
+      }
+    },
+    {
+      "seed": 14,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 14,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 6.25,
+        "Or47b": 249.84615384615384,
+        "network": 5.6893842128850185,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.59615384615387,
+        "Or47b_delivered_hz": 241.59615384615387,
+        "active_percent": 7.682804229599932
+      }
+    },
+    {
+      "seed": 14,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.32608695652173914,
+        "pIP10": 11.875,
+        "Or47b": 967.9134615384615,
+        "network": 6.419071958915226,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.5673076923076,
+        "Or47b_delivered_hz": 959.5673076923076,
+        "active_percent": 7.743971124380761
+      }
+    },
+    {
+      "seed": 14,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 14,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 8.125,
+        "Or47b": 249.96153846153845,
+        "network": 5.688816450866632,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 241.59615384615387,
+        "Or47b_delivered_hz": 241.59615384615387,
+        "active_percent": 7.537457152893012
+      }
+    },
+    {
+      "seed": 14,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 10.0,
+        "Or47b": 968.0096153846154,
+        "network": 6.39286406414651,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.5673076923076,
+        "Or47b_delivered_hz": 959.5673076923076,
+        "active_percent": 7.759111444871065
+      }
+    },
+    {
+      "seed": 15,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 15,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 8.75,
+        "Or47b": 249.15384615384613,
+        "network": 5.6872721381766205,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.88461538461542,
+        "Or47b_delivered_hz": 240.88461538461542,
+        "active_percent": 7.633749591211347
+      }
+    },
+    {
+      "seed": 15,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 11.25,
+        "Or47b": 969.1826923076923,
+        "network": 6.409230750596528,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.8173076923077,
+        "Or47b_delivered_hz": 960.8173076923077,
+        "active_percent": 7.784547183294777
+      }
+    },
+    {
+      "seed": 15,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 15,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 6.25,
+        "Or47b": 249.28846153846155,
+        "network": 5.6763786775838465,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.88461538461542,
+        "Or47b_delivered_hz": 240.88461538461542,
+        "active_percent": 7.611947529705308
+      }
+    },
+    {
+      "seed": 15,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4076086956521739,
+        "pIP10": 10.0,
+        "Or47b": 969.3076923076923,
+        "network": 6.392296302128123,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.8173076923077,
+        "Or47b_delivered_hz": 960.8173076923077,
+        "active_percent": 7.709451193662867
+      }
+    },
+    {
+      "seed": 15,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 15,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.16304347826086957,
+        "pIP10": 8.75,
+        "Or47b": 249.10576923076923,
+        "network": 5.685409878756314,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.88461538461542,
+        "Or47b_delivered_hz": 240.88461538461542,
+        "active_percent": 7.673114424486137
+      }
+    },
+    {
+      "seed": 15,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 10.0,
+        "Or47b": 969.2403846153846,
+        "network": 6.412705454149053,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 960.8173076923077,
+        "Or47b_delivered_hz": 960.8173076923077,
+        "active_percent": 7.816039049914608
+      }
+    },
+    {
+      "seed": 16,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 16,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 6.25,
+        "Or47b": 247.78846153846155,
+        "network": 5.670731338040963,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.36538461538464,
+        "Or47b_delivered_hz": 239.36538461538464,
+        "active_percent": 7.628299075834838
+      }
+    },
+    {
+      "seed": 16,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.43478260869565216,
+        "pIP10": 11.25,
+        "Or47b": 967.875,
+        "network": 6.4036439723356064,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.9807692307693,
+        "Or47b_delivered_hz": 959.9807692307693,
+        "active_percent": 7.766984411526023
+      }
+    },
+    {
+      "seed": 16,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 16,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 7.5,
+        "Or47b": 247.82692307692307,
+        "network": 5.6859397899734745,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.36538461538464,
+        "Or47b_delivered_hz": 239.36538461538464,
+        "active_percent": 7.608919465607247
+      }
+    },
+    {
+      "seed": 16,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.25,
+        "Or47b": 967.9230769230769,
+        "network": 6.384536887876843,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.9807692307693,
+        "Or47b_delivered_hz": 959.9807692307693,
+        "active_percent": 7.7742517653613685
+      }
+    },
+    {
+      "seed": 16,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 16,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 7.5,
+        "Or47b": 247.77884615384616,
+        "network": 5.68972487009605,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.36538461538464,
+        "Or47b_delivered_hz": 239.36538461538464,
+        "active_percent": 7.628904688654449
+      }
+    },
+    {
+      "seed": 16,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3532608695652174,
+        "pIP10": 11.25,
+        "Or47b": 967.8365384615386,
+        "network": 6.403939208585167,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.9807692307693,
+        "Or47b_delivered_hz": 959.9807692307693,
+        "active_percent": 7.755477767953392
+      }
+    },
+    {
+      "seed": 17,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 17,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 9.375,
+        "Or47b": 252.18269230769232,
+        "network": 5.708233911895447,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 243.3653846153846,
+        "Or47b_delivered_hz": 243.3653846153846,
+        "active_percent": 7.665847070650791
+      }
+    },
+    {
+      "seed": 17,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.40760869565217395,
+        "pIP10": 11.25,
+        "Or47b": 971.8365384615385,
+        "network": 6.407209517811072,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 964.1057692307693,
+        "Or47b_delivered_hz": 964.1057692307693,
+        "active_percent": 7.771223701263308
+      }
+    },
+    {
+      "seed": 17,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 17,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.1358695652173913,
+        "pIP10": 5.0,
+        "Or47b": 252.0096153846154,
+        "network": 5.689581037051392,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 243.3653846153846,
+        "Or47b_delivered_hz": 243.3653846153846,
+        "active_percent": 7.750632865396495
+      }
+    },
+    {
+      "seed": 17,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4076086956521739,
+        "pIP10": 11.25,
+        "Or47b": 971.7980769230769,
+        "network": 6.410941606811933,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 964.1057692307693,
+        "Or47b_delivered_hz": 964.1057692307693,
+        "active_percent": 7.775462991000594
+      }
+    },
+    {
+      "seed": 17,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 17,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.02717391304347826,
+        "pIP10": 8.125,
+        "Or47b": 251.78846153846155,
+        "network": 5.681306851903441,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 243.3653846153846,
+        "Or47b_delivered_hz": 243.3653846153846,
+        "active_percent": 7.641622557866305
+      }
+    },
+    {
+      "seed": 17,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 12.5,
+        "Or47b": 971.8942307692307,
+        "network": 6.411403386586887,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 964.1057692307693,
+        "Or47b_delivered_hz": 964.1057692307693,
+        "active_percent": 7.7560833807730045
+      }
+    },
+    {
+      "seed": 18,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 18,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 6.25,
+        "Or47b": 248.2019230769231,
+        "network": 5.68594736013372,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.69230769230768,
+        "Or47b_delivered_hz": 239.69230769230768,
+        "active_percent": 7.622242947638716
+      }
+    },
+    {
+      "seed": 18,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 10.0,
+        "Or47b": 967.75,
+        "network": 6.3873681278085295,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.5673076923076,
+        "Or47b_delivered_hz": 959.5673076923076,
+        "active_percent": 7.726408352612007
+      }
+    },
+    {
+      "seed": 18,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 18,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 7.5,
+        "Or47b": 248.4230769230769,
+        "network": 5.703835648793014,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.69230769230768,
+        "Or47b_delivered_hz": 239.69230769230768,
+        "active_percent": 7.625876624556388
+      }
+    },
+    {
+      "seed": 18,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 10.625,
+        "Or47b": 967.7884615384617,
+        "network": 6.3982615884013025,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.5673076923076,
+        "Or47b_delivered_hz": 959.5673076923076,
+        "active_percent": 7.796659439687019
+      }
+    },
+    {
+      "seed": 18,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 18,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 8.125,
+        "Or47b": 248.19230769230768,
+        "network": 5.682434805779969,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 239.69230769230768,
+        "Or47b_delivered_hz": 239.69230769230768,
+        "active_percent": 7.651917975799711
+      }
+    },
+    {
+      "seed": 18,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 9.375,
+        "Or47b": 967.625,
+        "network": 6.388965431620257,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 959.5673076923076,
+        "Or47b_delivered_hz": 959.5673076923076,
+        "active_percent": 7.742154285921925
+      }
+    },
+    {
+      "seed": 19,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 19,
+      "network": "intact",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 5.625,
+        "Or47b": 248.60576923076923,
+        "network": 5.6805119850777,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.78846153846155,
+        "Or47b_delivered_hz": 240.78846153846155,
+        "active_percent": 7.614975593803369
+      }
+    },
+    {
+      "seed": 19,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.25,
+        "Or47b": 964.3461538461538,
+        "network": 6.396581012826879,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 956.2403846153846,
+        "Or47b_delivered_hz": 956.2403846153846,
+        "active_percent": 7.843897239616767
+      }
+    },
+    {
+      "seed": 19,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 19,
+      "network": "p1_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.08152173913043478,
+        "pIP10": 7.5,
+        "Or47b": 248.7980769230769,
+        "network": 5.7052285582781215,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.78846153846155,
+        "Or47b_delivered_hz": 240.78846153846155,
+        "active_percent": 7.6482842988820385
+      }
+    },
+    {
+      "seed": 19,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.3804347826086957,
+        "pIP10": 11.875,
+        "Or47b": 964.375,
+        "network": 6.402357045093931,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 956.2403846153846,
+        "Or47b_delivered_hz": 956.2403846153846,
+        "active_percent": 7.700972614188298
+      }
+    },
+    {
+      "seed": 19,
+      "network": "random_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 19,
+      "network": "random_lesion",
+      "drive": "scent240",
+      "metrics": {
+        "P1": 0.05434782608695652,
+        "pIP10": 7.5,
+        "Or47b": 248.77884615384616,
+        "network": 5.672480045057593,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 240.78846153846155,
+        "Or47b_delivered_hz": 240.78846153846155,
+        "active_percent": 7.621637334819104
+      }
+    },
+    {
+      "seed": 19,
+      "network": "random_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4347826086956521,
+        "pIP10": 8.75,
+        "Or47b": 964.3653846153846,
+        "network": 6.404650803648211,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 956.2403846153846,
+        "Or47b_delivered_hz": 956.2403846153846,
+        "active_percent": 7.7984762781458565
+      }
+    }
+  ],
+  "raw": [
+    {
+      "path": "build/records-raw/male_route_v1_test/0_intact_zero.jsonl.gz",
+      "sha256": "b1723ece02d77d5e007f57797c5e855453b4e95a794b590dd67e0028086a1915",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_intact_scent240.jsonl.gz",
+      "sha256": "fc6f6f574d393c8fd245a0521a141bc921245c1a61b9820b05034a71968090fd",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_intact_scent240_active.npz",
+      "sha256": "d7f20432f217704031767b106cf1c3320b73633b9c87953de00f00c2a091ad8a",
+      "bytes": 20678
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_intact_scent960.jsonl.gz",
+      "sha256": "d98e3b54092f339bb211a785daeafac4577ed3c7ed90acb1a20184bd1316257a",
+      "bytes": 732
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_intact_scent960_active.npz",
+      "sha256": "7c8bb0693e37b4fc987cbc680b6706eaf279061de51de42b21fbcbd00c01c136",
+      "bytes": 20561
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_p1_lesion_zero.jsonl.gz",
+      "sha256": "dd43080a8f1b7b3b7a96490e6eb3ea040301c45ef0e7b91a6c995b17ff5f5731",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_p1_lesion_scent240.jsonl.gz",
+      "sha256": "87c55c3e90bb6af52133ce976d21c26dc74c4f0a7c09c042680bf3d5ffd07015",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_p1_lesion_scent240_active.npz",
+      "sha256": "6bcc2a4d6f806d663c555c64189ab3811e16c2c2595f03b5b4bbbc2cc7ae9fa4",
+      "bytes": 20328
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_p1_lesion_scent960.jsonl.gz",
+      "sha256": "ddb6d62527da569e69d2f9a20547c8d627be02d0ebd6da75ac9f94f39576c464",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_p1_lesion_scent960_active.npz",
+      "sha256": "e11ebbb317057bfb5f1c923b24ea4b8645f6349060abb9b906be3871cfc2bcbd",
+      "bytes": 20804
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_random_lesion_zero.jsonl.gz",
+      "sha256": "a28b6b2f0dcc409a5600851c6a1683ade591d84aea9ef0dd1a3e2f6ea3ca4d9e",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_random_lesion_scent240.jsonl.gz",
+      "sha256": "362fc3471d2a25e410d910432d4b9eca915515528cbbd8eaa0ee2599c01433a9",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_random_lesion_scent240_active.npz",
+      "sha256": "48c49f0a2aabc4fe022476ce5060a6a8cee96cc6800e67046549ad2dd1eb4d2a",
+      "bytes": 20194
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_random_lesion_scent960.jsonl.gz",
+      "sha256": "d4512bfa293b744e27690ea4f78ab95f497b9d193a73019f916b09257e82f808",
+      "bytes": 770
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/0_random_lesion_scent960_active.npz",
+      "sha256": "ddf9ff162310acd51aab517bb2c7c92adbfe611b51be62f4dfccdc884bc98e97",
+      "bytes": 20691
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_intact_zero.jsonl.gz",
+      "sha256": "a3051bffe781c1fd69132ea678fb9e23945d2557174501139d9bc9be71d2c9b9",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_intact_scent240.jsonl.gz",
+      "sha256": "f747f33c748fe6bfa95c07768cd8359735fe5da8ddb8ca310cef3d1be90b33d7",
+      "bytes": 724
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_intact_scent240_active.npz",
+      "sha256": "0cf8ab707ae893b9d350fed789b8c72d86b7b26c4e97b35904759ddb7b7cd9ab",
+      "bytes": 20409
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_intact_scent960.jsonl.gz",
+      "sha256": "06f08590f103d64128b5105d00beef9a97b165d38e05e5601fc9969cae197805",
+      "bytes": 742
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_intact_scent960_active.npz",
+      "sha256": "944310bc9de619c3d919544d9331fced187466b22e9a0aa6d5b13e1199c68fff",
+      "bytes": 20828
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_p1_lesion_zero.jsonl.gz",
+      "sha256": "16374e7672d551f9c95ca7a232674190d09fcc5761506da5fd072790f662c958",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_p1_lesion_scent240.jsonl.gz",
+      "sha256": "587beaf47ef2f77f0ed5e7b2909dfdbadceaa4267b994281cda16e40a101cbd7",
+      "bytes": 712
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_p1_lesion_scent240_active.npz",
+      "sha256": "03ef446f44f12572b3bc22fdd61e46154891ab3ed8d5025e1477a357bfb8618b",
+      "bytes": 20377
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_p1_lesion_scent960.jsonl.gz",
+      "sha256": "e3243c9509a4a265fe3cd6f1e186e1376647e51f21bcc3e6b1a85addc26f4506",
+      "bytes": 743
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_p1_lesion_scent960_active.npz",
+      "sha256": "5faaf7048ac43cd3c63c491008276f0007a0caad7a63e43a3f70196020b1411a",
+      "bytes": 20927
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_random_lesion_zero.jsonl.gz",
+      "sha256": "a359f865ae0e2e67bda30151efdee14be077582afd37263ec3a87906b4ca35eb",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_random_lesion_scent240.jsonl.gz",
+      "sha256": "b711d7b8e4cf9e59e046f44b6d425c9ddc4e1742f6e6712f16701c214506d01b",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_random_lesion_scent240_active.npz",
+      "sha256": "e2d1c02df5aee16b732a57826979968de0e2fdcb616f81d9404c66d23606f62a",
+      "bytes": 20304
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_random_lesion_scent960.jsonl.gz",
+      "sha256": "bbd035bf67b2e76e1e61268e36565fed5f3e0305361807ed037c3649bc22114a",
+      "bytes": 754
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/1_random_lesion_scent960_active.npz",
+      "sha256": "ab016c9d7cb15df105fd92924f1b1ca7ab4a98e4d58ace2ae3fcb7b1a14fad91",
+      "bytes": 20577
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_intact_zero.jsonl.gz",
+      "sha256": "dd48992129f49b33c3cb31fd51d1c239b29eae46766542994f6a30d86c283966",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_intact_scent240.jsonl.gz",
+      "sha256": "894b3a465c3eec13cf7b1610640266d97f3227d55f84e574cf5355b495b475d7",
+      "bytes": 719
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_intact_scent240_active.npz",
+      "sha256": "df1d37bff018605dbd6c8e0795899f43a47935768d475ef76ebcf3957eb0d99c",
+      "bytes": 20566
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_intact_scent960.jsonl.gz",
+      "sha256": "6b4258b3b9f979e0d49e03467cc314aa4f002ce4b9945357d4b1d58da27af1f6",
+      "bytes": 725
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_intact_scent960_active.npz",
+      "sha256": "205e9125686c85632e499faa5d685364307b71f7612117dcbbaf77ff3572a67c",
+      "bytes": 20496
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_p1_lesion_zero.jsonl.gz",
+      "sha256": "bc5cf964a0766b2f8a1362c77f4e052948b43aa3a8fe2113d3ff8f9891350d4c",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_p1_lesion_scent240.jsonl.gz",
+      "sha256": "9a0a65847bee319a3857437f07aa0c043f5a2ead3f69af5140bb89d1d7aec234",
+      "bytes": 717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_p1_lesion_scent240_active.npz",
+      "sha256": "80c4ecad17d1f5190736d56e84b1c86770c13d2a76547da46743b49df001df8b",
+      "bytes": 20415
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_p1_lesion_scent960.jsonl.gz",
+      "sha256": "7b3e39bf138ba6b8f69abeaac74fe5438feca1000925c2e6f7554fde29722146",
+      "bytes": 739
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_p1_lesion_scent960_active.npz",
+      "sha256": "e841e8ea8c05eabfa53312efb4968950c77d88592ccadc244ed1d44b4bccbd85",
+      "bytes": 20874
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_random_lesion_zero.jsonl.gz",
+      "sha256": "a62ae458dfb6bdc4faad0b0e2542113ae39e086a254836dd0d97b16354b45f74",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_random_lesion_scent240.jsonl.gz",
+      "sha256": "3d5c58eb1013d32211a5759506e3e2575a36d50d529c60934996690e66ecf8fe",
+      "bytes": 724
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_random_lesion_scent240_active.npz",
+      "sha256": "27d327d660cb734f664a32675f9a6d719ea14b61cd1bf728e316d9e1e0edbe18",
+      "bytes": 20422
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_random_lesion_scent960.jsonl.gz",
+      "sha256": "0a7eeffb24eb14a6a2410b36a9160ee6d494d6dd0e5f3e870d1cdbecb82db1a9",
+      "bytes": 743
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/2_random_lesion_scent960_active.npz",
+      "sha256": "544a8f0e866076347a48ab97a9dbc267bb9e859d500e4a83e0c4709823369d7d",
+      "bytes": 20839
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_intact_zero.jsonl.gz",
+      "sha256": "7e1ba69aaef26bb54ec29c1eb2f6a3649b814a757d39e5c4d5fc6fefe4d3b7da",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_intact_scent240.jsonl.gz",
+      "sha256": "7c687755ef3e79d4183b75c47e9cf109f6fbeb70916a2733aeaa88dbdd11c4ca",
+      "bytes": 729
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_intact_scent240_active.npz",
+      "sha256": "46758b4aed09899d3d2fe53f18904b81cbf2b784fbb8758cdb84fc2350ad9ffe",
+      "bytes": 20489
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_intact_scent960.jsonl.gz",
+      "sha256": "22233262c06855615b85e8c9f755dfff262d3537a1027b900a8b0aeae90cee91",
+      "bytes": 742
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_intact_scent960_active.npz",
+      "sha256": "54157176279260ef4a9b8af270d69e61ae6fa40ceaba91be624c50d7949b134b",
+      "bytes": 20841
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_p1_lesion_zero.jsonl.gz",
+      "sha256": "8cc56751a892e21a483e56552aaf83c05ef5487f7fc968f12aca5f41c34074f5",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_p1_lesion_scent240.jsonl.gz",
+      "sha256": "6289af0c760d6c3b241d8338df70a4a3a9ce4082fd3e14b2197eaa652cc21479",
+      "bytes": 733
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_p1_lesion_scent240_active.npz",
+      "sha256": "f77b9770066a638cfe9bf396ce4d7d493bf46b5fc2bf9e8aceceabd8f402971b",
+      "bytes": 20708
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_p1_lesion_scent960.jsonl.gz",
+      "sha256": "dacd2d206ea2f8441caa31ee2879ac14c1b53c0d49ce8a4418004e1be07e91bf",
+      "bytes": 736
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_p1_lesion_scent960_active.npz",
+      "sha256": "5c7a8583affac67921fe369d4a80a1b42a046fb68c91818fde0a1987d3a58bd9",
+      "bytes": 20562
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_random_lesion_zero.jsonl.gz",
+      "sha256": "350828bc05d93d1e4342ce41f901c82bc4282a22d303c3ab059da1f1d765880b",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_random_lesion_scent240.jsonl.gz",
+      "sha256": "430144eb563e39e63009c3c5cd925d0778d62b67b8f25ec8f5ee5be7dd2b2cd3",
+      "bytes": 735
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_random_lesion_scent240_active.npz",
+      "sha256": "1abd1cd5463798002d52e680f128fbf2bd4566c04cc45d6435365dfe708c8702",
+      "bytes": 20529
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_random_lesion_scent960.jsonl.gz",
+      "sha256": "76be2cbf0a8d7a483bce50523fc9c2c3f1fca3c8b5265fb4ea0686ae712deb80",
+      "bytes": 730
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/3_random_lesion_scent960_active.npz",
+      "sha256": "4bc35bffd5a445c93d3d75bc34f00276a93696f3690faa0c884fcf98809ee478",
+      "bytes": 20915
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_intact_zero.jsonl.gz",
+      "sha256": "1c4b76df90b7fa289152475336e3431ce16a1d1b5ec9f49f36ca58cf9b2761ff",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_intact_scent240.jsonl.gz",
+      "sha256": "f6191093da63603c482753b4988e1e0b5801d587dd21691bb5d76b96ac81e644",
+      "bytes": 697
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_intact_scent240_active.npz",
+      "sha256": "925b6245e6806bbb7975dddecbb8f315bf8334947530d2a4ae4437fe6bb02b4e",
+      "bytes": 20410
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_intact_scent960.jsonl.gz",
+      "sha256": "c8d1c6d2de551d5caea9c30ddf8b18fd8fcd2827adda087ee91a39fc4d7ba68b",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_intact_scent960_active.npz",
+      "sha256": "9de603443c0f55134da8aa290d49e53101fc37c28b97af5a28fff84f46112b3b",
+      "bytes": 20772
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_p1_lesion_zero.jsonl.gz",
+      "sha256": "6bb2b1705940b7fbe858d19d512846ac3a839027a44c02285268f29a54b9dc27",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_p1_lesion_scent240.jsonl.gz",
+      "sha256": "88356af6886b8c577f9ce7499a95860ca3de6ed92c1c649befc7a679e54000dc",
+      "bytes": 712
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_p1_lesion_scent240_active.npz",
+      "sha256": "545bce4c107e9147daf297344050383797f2bd82cd2d7f49336009618a0fb622",
+      "bytes": 20545
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_p1_lesion_scent960.jsonl.gz",
+      "sha256": "9b42cf0896d59f6ce8e04a78c8d1cfd8c4bff17d4538efb8725f6869a3e8a43e",
+      "bytes": 750
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_p1_lesion_scent960_active.npz",
+      "sha256": "598942ef7240dccab4ef8ad7584488e88af9d80b1bea586586af6c05ef78e441",
+      "bytes": 20754
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_random_lesion_zero.jsonl.gz",
+      "sha256": "8b0f38c9aff95f10ccb95e266e789787fe141840644d4913f3da611423527501",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_random_lesion_scent240.jsonl.gz",
+      "sha256": "408a9487b8b1bf458242966d29611790b65b743858f3973ffc66f9695b2929d2",
+      "bytes": 714
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_random_lesion_scent240_active.npz",
+      "sha256": "bd0c028f31e15403dea95f1b9e7fcdea6aad8bc4b58495eb002d3893f45a86df",
+      "bytes": 20451
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_random_lesion_scent960.jsonl.gz",
+      "sha256": "d29db1d69ab1174de1e2ff42f02f3028f842d33360b97f64379ee71d0b88ffc0",
+      "bytes": 759
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/4_random_lesion_scent960_active.npz",
+      "sha256": "8be4097c01d438859557e5211a2c44566a047cd8aa3cda29ff5a659b64631997",
+      "bytes": 20751
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_intact_zero.jsonl.gz",
+      "sha256": "86e1d25ae1a55d94be8cc6a6a206938f2075db36fd4d847cfafeb83a7ef25c24",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_intact_scent240.jsonl.gz",
+      "sha256": "b9ea3af99e33f89cfbb89525b69da383829c44bfd1471d5b770dfc054bb97ce7",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_intact_scent240_active.npz",
+      "sha256": "f955cf6145ff2a07f216e68bc3c7004907c2f06af6f915e893a7ca62724da697",
+      "bytes": 20430
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_intact_scent960.jsonl.gz",
+      "sha256": "0c1c299d73e322a0b0742f3bfdc48af1a68263040bc5dde2b53981a82713525b",
+      "bytes": 726
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_intact_scent960_active.npz",
+      "sha256": "78ec0621e03991309e2c6954be7897c49e4cc6d8a2bd26292fda6cdb721a8e04",
+      "bytes": 20661
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_p1_lesion_zero.jsonl.gz",
+      "sha256": "568bcc6f7d3cde7940ddbdb9941ef658cc608707062e4406815dbd3d3f0728e1",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_p1_lesion_scent240.jsonl.gz",
+      "sha256": "e9a60271e51d88c58c24094699c6f968c207db1dd791a70d2ff17961b4b8b99d",
+      "bytes": 717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_p1_lesion_scent240_active.npz",
+      "sha256": "c8608cca2849d7c49cf57b6b8f4875607d77d934345bff93bb8c41b65a533cdb",
+      "bytes": 20167
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_p1_lesion_scent960.jsonl.gz",
+      "sha256": "ae8caeab2442cd6ea4cf1d30c2d41939682fd748b1c560d0f99d78087a5486df",
+      "bytes": 738
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_p1_lesion_scent960_active.npz",
+      "sha256": "c36d4a209f5aaa901c61d0adb1bc93df42720b6a9b51bf34cb15893fe73dc43e",
+      "bytes": 20775
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_random_lesion_zero.jsonl.gz",
+      "sha256": "bf73f48a00f97bd5e092cbb0c58d59523d92ddbc5d8a9b94f955b85aa560d2e3",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_random_lesion_scent240.jsonl.gz",
+      "sha256": "12ecffeaf9a2e2ef8882580dec3287952dc7770bebb85b1df7b662c4360ef922",
+      "bytes": 739
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_random_lesion_scent240_active.npz",
+      "sha256": "8110bf2dbc7d6c6d07f90d8dd81ad369d16e5b58755684fac383e5b4ffa119ad",
+      "bytes": 20380
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_random_lesion_scent960.jsonl.gz",
+      "sha256": "5c5f86f211fda2141e1f16d9e187af5ccf14397fe58df0d214e3ec18cb4c386a",
+      "bytes": 735
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/5_random_lesion_scent960_active.npz",
+      "sha256": "9fac43fcd35b6dd899dfd39d7cf621ccebc3f483b202dabcbde091c0f89139ee",
+      "bytes": 20642
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_intact_zero.jsonl.gz",
+      "sha256": "f81747723e7558165c52ed7d32e577838a78c8a91f5d71d36069d430716cb330",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_intact_scent240.jsonl.gz",
+      "sha256": "5ba4204105387924328f26594e06e652007096a501a7e941ed114d88083686ba",
+      "bytes": 717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_intact_scent240_active.npz",
+      "sha256": "3dca30c7683ae0b749d914d5e7919e716ce1a0954798815cfb10b215683a462a",
+      "bytes": 20410
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_intact_scent960.jsonl.gz",
+      "sha256": "5ef3c91fd98ccdae4db0f3c6dbaa306be168fd46cbb049200ff4e70a89b62e69",
+      "bytes": 745
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_intact_scent960_active.npz",
+      "sha256": "935b550c5fb429f6d70b1c675cc840c96581fb9a008c3407e2ed236b8fa723c8",
+      "bytes": 20879
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_p1_lesion_zero.jsonl.gz",
+      "sha256": "c8aa121c71796cc8d02cd9fc9db1d468282b7991db59c9e233d7a731cdb9b09d",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_p1_lesion_scent240.jsonl.gz",
+      "sha256": "7106f99d35ce71958a051b662cebf31956718215a40a449b51ae2e685462d36c",
+      "bytes": 726
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_p1_lesion_scent240_active.npz",
+      "sha256": "85f11fb21a9b45bf23d4ea76bd9497f54aef8a6584984e673821f1548a9bb06e",
+      "bytes": 20270
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_p1_lesion_scent960.jsonl.gz",
+      "sha256": "6e72f65a7866b53c5e2882628ba86ac511d18523f521086980712d2c5b80d483",
+      "bytes": 740
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_p1_lesion_scent960_active.npz",
+      "sha256": "88114a9fc6093ce048098b1c7e70824d9f79bc95f73989f7d0cd28f2533c4813",
+      "bytes": 20703
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_random_lesion_zero.jsonl.gz",
+      "sha256": "c09a9ec990a9aad3eb59884510de84909b764009c60c6de8cab4d086d80594cd",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_random_lesion_scent240.jsonl.gz",
+      "sha256": "b5c792de525c0f4163b2f9bcab5e4221f4fbe88ca948119333c1dd3629041ae3",
+      "bytes": 717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_random_lesion_scent240_active.npz",
+      "sha256": "5029243d88063984474d1f3d8438e2419bd4cca9155c92ff09547731a6df1545",
+      "bytes": 20467
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_random_lesion_scent960.jsonl.gz",
+      "sha256": "139b2ddd1e5cd91e6048ad6807db577f64e1192cb309a02ba8e32ffe98b59dd7",
+      "bytes": 743
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/6_random_lesion_scent960_active.npz",
+      "sha256": "fe2fe4e32458046d610bbcd1e0801e0daeda8f7957e310de2c388779f76ad668",
+      "bytes": 20810
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_intact_zero.jsonl.gz",
+      "sha256": "27270e06f03d37307e6382ee18e0a1f80d2314a7eb904da2f60e80dbd7d8f1c2",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_intact_scent240.jsonl.gz",
+      "sha256": "ff129e75c6b2f7ad51b53717bcf70630967b2458e8d4f1180c4fee957055d358",
+      "bytes": 735
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_intact_scent240_active.npz",
+      "sha256": "115b913158a540eba0717438efc2847d8d76569a752a5ab082a47b3ac85a8db7",
+      "bytes": 20396
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_intact_scent960.jsonl.gz",
+      "sha256": "0b4e7ace02f6f31f807517f9265a5d403c27176384dde939fa758c40307c56c6",
+      "bytes": 741
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_intact_scent960_active.npz",
+      "sha256": "e716f49da2293154f0f68df66794262d5fa1f75065d0b9abca3acfb36dd383d4",
+      "bytes": 20827
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_p1_lesion_zero.jsonl.gz",
+      "sha256": "0debe6e6b023eba167008f764a6169b408439ab57be9ce184f8971b9447792a4",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_p1_lesion_scent240.jsonl.gz",
+      "sha256": "4fe99bc3ea42d25c123fe6532e2cc9c4de4a438a0ef58b345afa96849836b7e9",
+      "bytes": 736
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_p1_lesion_scent240_active.npz",
+      "sha256": "c6d5705f283439d7ad57499ed7e39c74abbc05b112c4a443a68f1f0d1679209d",
+      "bytes": 20647
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_p1_lesion_scent960.jsonl.gz",
+      "sha256": "c5a7a505cad07d6ea99f9721ecca29913c07236dfc805eb6e70f43cc03b4894d",
+      "bytes": 729
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_p1_lesion_scent960_active.npz",
+      "sha256": "2ba1288b81afcece49bd3a045120a19c250717aa647671304469426d31221ef0",
+      "bytes": 20641
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_random_lesion_zero.jsonl.gz",
+      "sha256": "d739956850ae71e1d0ad696acf2f3c19fba8e6a42dfb3a9c45e85087b73d6c10",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_random_lesion_scent240.jsonl.gz",
+      "sha256": "485366687a75bbdcd67cb53a89ef35c44d2c0137115c0e5bb207809d5bef1b80",
+      "bytes": 739
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_random_lesion_scent240_active.npz",
+      "sha256": "8cade48e111c5460fc6ee44f430d44b96f8d166372f64e2cd80038b8a5f141b6",
+      "bytes": 20503
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_random_lesion_scent960.jsonl.gz",
+      "sha256": "95746b54f27e9917c17a01b3333d2fafb3036bdcd2f09bcc022b37aee1c4449d",
+      "bytes": 735
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/7_random_lesion_scent960_active.npz",
+      "sha256": "502804459f635051e2c0d683293759358d64cc874b52f43665a3ff373956d4b4",
+      "bytes": 20748
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_intact_zero.jsonl.gz",
+      "sha256": "5b302a1c2d7be01c8fcf12fe40fd902d54a0dd3fa3e1d10310cef8f8bb26bc9c",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_intact_scent240.jsonl.gz",
+      "sha256": "f6a06831d6c8c2161a099e9a13957117aa20cc8041f3394b9325f762e3002138",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_intact_scent240_active.npz",
+      "sha256": "6c8673abb443f6cc49d3847e29ae6b4ff6da5cb7520da7fa916c01b1731977d3",
+      "bytes": 20268
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_intact_scent960.jsonl.gz",
+      "sha256": "e02a233a1cc100228091f882745d550eba8923d2c41ded646497141def49767d",
+      "bytes": 748
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_intact_scent960_active.npz",
+      "sha256": "16f82979cca00a793e79c9b437808d1825c8955a6903a84be128fae946ff0db9",
+      "bytes": 20690
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_p1_lesion_zero.jsonl.gz",
+      "sha256": "c4b97aad94f85983ac27deb1fc738a0c2b01b53aca010791edcfde837184c044",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_p1_lesion_scent240.jsonl.gz",
+      "sha256": "7e35d4d7883490fb5e834fe6f53b01bec2bfbae5b33bd59c515619de54710636",
+      "bytes": 728
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_p1_lesion_scent240_active.npz",
+      "sha256": "99df7c1d371a1891cb0993eab3e79e042f36eab97ba4e210ab3eb461f3f0ab07",
+      "bytes": 20530
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_p1_lesion_scent960.jsonl.gz",
+      "sha256": "2e462f55563f2c44989976904851b35ec6958ab8bdc077b7b76824df9a020fac",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_p1_lesion_scent960_active.npz",
+      "sha256": "25958b21a2c477a489163882e8380ea782afea91f90c2950bf8310481b90cfc9",
+      "bytes": 20784
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_random_lesion_zero.jsonl.gz",
+      "sha256": "d5ae3954a35a6e94bf52df0b635989db8fa9e93d4a3f060eafc94c237d53683a",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_random_lesion_scent240.jsonl.gz",
+      "sha256": "12ff0bb1fe1f963a54358d4ecd1a3ec64a47e90ff546ac2835fe75c9c9c536c2",
+      "bytes": 717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_random_lesion_scent240_active.npz",
+      "sha256": "052f416c387c89bfe9d467f73e90c6fb151a8b558f134537839189dddea8add4",
+      "bytes": 20602
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_random_lesion_scent960.jsonl.gz",
+      "sha256": "a6f886e0d0ab1bc09ca3369532e2bd0c0cd82ff88daae86501f9460b17352897",
+      "bytes": 758
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/8_random_lesion_scent960_active.npz",
+      "sha256": "1601e71728a1a8412b13281193a3dff26cdaada8b7c13430bb7188774699ec9a",
+      "bytes": 20824
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_intact_zero.jsonl.gz",
+      "sha256": "9b2738118a390254b23640458e1051f1db8c8d37e77a0ac77036b4d23099549c",
+      "bytes": 209
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_intact_scent240.jsonl.gz",
+      "sha256": "fedbc64b5797bf4e0aac401b96a438d1981d9e00aff53ed1247f4dc78229a817",
+      "bytes": 731
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_intact_scent240_active.npz",
+      "sha256": "a4f2df4502de65fd0667edbe703ad48a8d31628907795dc49689c69d3e8668bc",
+      "bytes": 20421
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_intact_scent960.jsonl.gz",
+      "sha256": "a6aaf8af6ea77052875716cf8f126ecc853de12aae76a688ffad82a094cdb492",
+      "bytes": 730
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_intact_scent960_active.npz",
+      "sha256": "a7918da2eb1b7a6e145f8213222bcc2c547ed16f19d9c23851f8598bfe421698",
+      "bytes": 20734
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_p1_lesion_zero.jsonl.gz",
+      "sha256": "2aebf25cfb52d38422a2209405649bbfbf1f502d511697e15d1b22b97da0eb01",
+      "bytes": 212
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_p1_lesion_scent240.jsonl.gz",
+      "sha256": "5d5d5d2fe3c210b652cb71a8e9727a37788c809272f83bd67f0f28a8039a36bd",
+      "bytes": 723
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_p1_lesion_scent240_active.npz",
+      "sha256": "1bc23f80048f5edc85677bcee7e934f40819be19cd50ecd0c61873fb4868fa53",
+      "bytes": 20332
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_p1_lesion_scent960.jsonl.gz",
+      "sha256": "b7befc4994b4fe9e392ba79191784bfc403bae171e29f9333311859fafc02e3e",
+      "bytes": 729
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_p1_lesion_scent960_active.npz",
+      "sha256": "3493abec6a53e5cd1078cc21c7bc96f7f669dacee96fbe6a779bddc3b571e5f9",
+      "bytes": 20733
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_random_lesion_zero.jsonl.gz",
+      "sha256": "ea1170fa3b39f5cd42e1ef4adedfbdeeadb026a04705ff8660ae8f75e8b3e9e0",
+      "bytes": 216
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_random_lesion_scent240.jsonl.gz",
+      "sha256": "bd1bf913b596688bfe0f3f0f45bdaf258b705bcd6f22daad29a77a19e0564b89",
+      "bytes": 725
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_random_lesion_scent240_active.npz",
+      "sha256": "50c122d9b9a80e2d6064f2749dde90ce6b1d2925f480a5916ede90a87530a10a",
+      "bytes": 20580
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_random_lesion_scent960.jsonl.gz",
+      "sha256": "57b0f6d909c31ad89c1d964e5847e0d169d7c5e2b4b6107b55ea50aa1296384a",
+      "bytes": 736
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/9_random_lesion_scent960_active.npz",
+      "sha256": "1be825dacb5b13980fd94d6f99e84167d3a9bf826e2f17442d21455c38b22cf8",
+      "bytes": 20730
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_intact_zero.jsonl.gz",
+      "sha256": "3384936f6ef92af8037cb3062c70a739d27d634e3c29661786fa199de1e8c2cb",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_intact_scent240.jsonl.gz",
+      "sha256": "5ed5366cf7a52820da023e53ab874c9b46bf33ab16dc2661c2898e8c380fc0bb",
+      "bytes": 725
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_intact_scent240_active.npz",
+      "sha256": "6d36b50cc2055fd412c48a82c217199ea2433f9f272129ddd1bf89c4ed7f7fe4",
+      "bytes": 20399
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_intact_scent960.jsonl.gz",
+      "sha256": "435c19d3867ee3802f3ac9f2492fa7f6e398391528ae85a9a42c89273baef5ea",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_intact_scent960_active.npz",
+      "sha256": "09f1374b8565e088cb41bc0c5179b094c1c16da5f460ca8dc7b8ec2e9bcb9993",
+      "bytes": 20724
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_p1_lesion_zero.jsonl.gz",
+      "sha256": "e21f26b88f8e4c63002d9cc1f0d432a3f76d6dc211e51fd3558319105821e287",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_p1_lesion_scent240.jsonl.gz",
+      "sha256": "7826214d45da4139c714d7dd572228c30b1024c3ca92d8b649770ea758b0137e",
+      "bytes": 729
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_p1_lesion_scent240_active.npz",
+      "sha256": "781f25c00d80c0ac4d262a54add7fbdbf9f23a44c96216b07276149f78246e0c",
+      "bytes": 20455
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_p1_lesion_scent960.jsonl.gz",
+      "sha256": "8cfc7ec7237d941ed9178a81b568d7f6a1dbba9f057185cf20524cae9e652702",
+      "bytes": 746
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_p1_lesion_scent960_active.npz",
+      "sha256": "e2537261bf2e069fd71de52e4d0aa4a231072d1a127a2b55520961cb4bf8f6b1",
+      "bytes": 20887
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_random_lesion_zero.jsonl.gz",
+      "sha256": "7e074d4acdeaefc5291cfc96764651b295dcf887b570d9783e31176b24c547c9",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_random_lesion_scent240.jsonl.gz",
+      "sha256": "dee89bd1ad8b6893cbd55f23d03beddae579d7a2d94341d455049378387da32b",
+      "bytes": 732
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_random_lesion_scent240_active.npz",
+      "sha256": "6f65a355a0570473724751253400bd7820ce6ce638d8f77e8d8b412898625768",
+      "bytes": 20072
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_random_lesion_scent960.jsonl.gz",
+      "sha256": "42f163eb5652b0833a59a0e16ce7cefcb89781b1771ed0fd26684ed7d2fdaadd",
+      "bytes": 756
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/10_random_lesion_scent960_active.npz",
+      "sha256": "6c1a2238866f8a8637dd2b247f91215cd048297b25e1021f9c35ec98aaa553a1",
+      "bytes": 20296
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_intact_zero.jsonl.gz",
+      "sha256": "d7504cdec68dd826d364604f11b01828e7a2bea0fdd3313ce1cad6364c8f6a41",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_intact_scent240.jsonl.gz",
+      "sha256": "a14832044dbd562509307e8fc24c87e90d97a52f96c1c57b10a426f5bd49d41a",
+      "bytes": 726
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_intact_scent240_active.npz",
+      "sha256": "27580fc81152f740b5d2928435c8d3f1a7669e538f1179ae1ebfb1fce13db125",
+      "bytes": 20350
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_intact_scent960.jsonl.gz",
+      "sha256": "f8d1c24b98f04a221e6320e6e6d36eb2e5507996fffa8cba6149df38fe57569b",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_intact_scent960_active.npz",
+      "sha256": "ce2084a172586f2f428193cb0f44a5c4f423efb046223bc3d213b1016f01b4dc",
+      "bytes": 20665
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_p1_lesion_zero.jsonl.gz",
+      "sha256": "b59304062d719865c5b5d0fbefb0b1711803daabead9810d3c39237469d19099",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_p1_lesion_scent240.jsonl.gz",
+      "sha256": "430ce34d05b67e1fe95f98ecc24f7fa7461d555c3522922c0e6ff7f297215dd3",
+      "bytes": 706
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_p1_lesion_scent240_active.npz",
+      "sha256": "9363be45ed3103bd9e25d6ec8c02ae48c7d74098e4c9804678e0968182ea6fe8",
+      "bytes": 20489
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_p1_lesion_scent960.jsonl.gz",
+      "sha256": "dd2e50a06923956e273aece7a763591c1cfc30fe9eca1672ff40841a5d97506d",
+      "bytes": 756
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_p1_lesion_scent960_active.npz",
+      "sha256": "85eb92ee96e1c491de1ac3909e4342e3a0cf4903fb74387bac970c3a948a1573",
+      "bytes": 20726
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_random_lesion_zero.jsonl.gz",
+      "sha256": "6e11c5496d2a2e91796ab2225091feaf13ea25516951fbf282e68872d98bf47b",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_random_lesion_scent240.jsonl.gz",
+      "sha256": "a24bbae5cde0d9c3dc1ac61f4d59b67359fceb86ea5018e1a5aed2e8260a387e",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_random_lesion_scent240_active.npz",
+      "sha256": "d0d94a6da004bda344a1abafac634caa351fe142c658e44ae09368f17931b97e",
+      "bytes": 20463
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_random_lesion_scent960.jsonl.gz",
+      "sha256": "8e6889b37d4892cb92ac55294b38a460509b46033f0830c9ebb1a7969c368282",
+      "bytes": 746
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/11_random_lesion_scent960_active.npz",
+      "sha256": "bde4197c4442c62cd1378ae2a13b7a0dd1ec16ddf9b1f7f08064c39f1a8598f7",
+      "bytes": 20715
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_intact_zero.jsonl.gz",
+      "sha256": "08813299c0dea778c37098b7a08d6dbb57b85cfb100a4d2fc3b6e5b3dff73c08",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_intact_scent240.jsonl.gz",
+      "sha256": "0758c76a16b8b084294d3322f57c4170148b8d59f76394aca569c921ea795760",
+      "bytes": 734
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_intact_scent240_active.npz",
+      "sha256": "3d1dee4e7b42c997fc445740cb8417ca6f452cb111fcb84d733bded9777ec8d9",
+      "bytes": 20382
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_intact_scent960.jsonl.gz",
+      "sha256": "88fa0e32c3c7a39ec3dd72d2653c4c6fd85bc59ac6431999d12ee19c704435db",
+      "bytes": 738
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_intact_scent960_active.npz",
+      "sha256": "2e75ea82aa6a46fa74ec351437bc80cdc577f6f5ecfe58053693972239fc39cc",
+      "bytes": 20620
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_p1_lesion_zero.jsonl.gz",
+      "sha256": "c721e7e87543c9e03edbb99bd61a566e7a4c2b9b2e0ceb09fadbb0eb5ea0d815",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_p1_lesion_scent240.jsonl.gz",
+      "sha256": "31c3be9674141cb44099f9696dec97b09c4ebee39a0677c250141b99a7af5b34",
+      "bytes": 731
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_p1_lesion_scent240_active.npz",
+      "sha256": "eec6cb6192fc855ccc37782fbd9a29b92187b47765ae7f04447af1984834fdb3",
+      "bytes": 20481
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_p1_lesion_scent960.jsonl.gz",
+      "sha256": "b01c3ef8842b70f0f796d9a56a2bd359467b9b0f104632230c1a3d1aae1fa78e",
+      "bytes": 754
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_p1_lesion_scent960_active.npz",
+      "sha256": "fca24c827fdd0d7659f412139ea2b2b7bfce08bb63d6bb1892678bb170088e22",
+      "bytes": 20729
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_random_lesion_zero.jsonl.gz",
+      "sha256": "88e45b2cad26450b402ffab2c6890672e15569c99804a456f181a01ac01fc1be",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_random_lesion_scent240.jsonl.gz",
+      "sha256": "50e6da11b0afb6fa089018eb77f128d996f103a7526f50ab79a4f1ea16491c22",
+      "bytes": 736
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_random_lesion_scent240_active.npz",
+      "sha256": "9a238b9aeb6667c96d50d5e31b93983be05bde7caf57760b7674932cab6cb907",
+      "bytes": 20485
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_random_lesion_scent960.jsonl.gz",
+      "sha256": "7a1c4003d515559c7d8815ebf0615c3a9f28a75b2bb7ffdcad99349121293e20",
+      "bytes": 752
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/12_random_lesion_scent960_active.npz",
+      "sha256": "82b3261f52653b1a0af153f8cd59fab339399e0945978324df5449de638c280e",
+      "bytes": 20939
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_intact_zero.jsonl.gz",
+      "sha256": "75c3352c0261764edb0f875e7229fc471dc13d466bf400b62eb8d4b24b4ed54b",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_intact_scent240.jsonl.gz",
+      "sha256": "5aeb5ec56d624e89b620ef8b9d0bdee0221a11c1e9276c9155eb7ba939f353c9",
+      "bytes": 718
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_intact_scent240_active.npz",
+      "sha256": "335775cf3f74fd71ea576192cf3ea9a41bdc04f46584559160b0fd19c9d37c9e",
+      "bytes": 20421
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_intact_scent960.jsonl.gz",
+      "sha256": "8438f64c72fa755a099ce21e47cb17a9808f9b03ffc589d7ac72d29584131400",
+      "bytes": 760
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_intact_scent960_active.npz",
+      "sha256": "0150579e622cdb82ffa6d048f91e22da60cbc362227ac5a158579a392290ab5a",
+      "bytes": 20662
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_p1_lesion_zero.jsonl.gz",
+      "sha256": "966ea7e1aaccdd68fd3ea05ae66696674ce486def0116aea0d9ad63cb672d8b9",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_p1_lesion_scent240.jsonl.gz",
+      "sha256": "9e77837664587d30009efb196b80ae47d35344db87d1662bb16f2555028c34bb",
+      "bytes": 716
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_p1_lesion_scent240_active.npz",
+      "sha256": "868614e4ceec460e81867adf208739548777dc204791c5367e93deabf090a88d",
+      "bytes": 20558
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_p1_lesion_scent960.jsonl.gz",
+      "sha256": "715f13fb94a3be2368305e551bdf59b45da6e8b2ddff2af6a6cb5708a36abbc3",
+      "bytes": 745
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_p1_lesion_scent960_active.npz",
+      "sha256": "0025d89414bdbacaa6d8d3753959324c47a0c6f4eabaeaccd547c1f05590becd",
+      "bytes": 20694
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_random_lesion_zero.jsonl.gz",
+      "sha256": "cbf77e4667530198111bbe097bd7eb3afc971045f0cb289da2103c8bf836c9fc",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_random_lesion_scent240.jsonl.gz",
+      "sha256": "d165bce6e5d8048bb0460ff8b460031afb4f0ea882b82cda89be01db794032c7",
+      "bytes": 732
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_random_lesion_scent240_active.npz",
+      "sha256": "953f41feec8cc73750778a3b738460fb836a7d3451143d2b616b78ffda7e867c",
+      "bytes": 20207
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_random_lesion_scent960.jsonl.gz",
+      "sha256": "6f8fef69a6b37c0b14a5308581a9b24f8460ec7c8567add9a080989a8eedd9f2",
+      "bytes": 746
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/13_random_lesion_scent960_active.npz",
+      "sha256": "31347f7435cd4e75e392e83e8fd00007025a785413d87c851e119f7575014ab2",
+      "bytes": 20768
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_intact_zero.jsonl.gz",
+      "sha256": "a7d29bdce505bda8a7bff029559a370619045b46c02bf95962984801c9f03308",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_intact_scent240.jsonl.gz",
+      "sha256": "62fe864ec2167c8bb8bdd2dbd37bf4c06ff286bc8dab7b06bf66f1b47e5b6cc6",
+      "bytes": 699
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_intact_scent240_active.npz",
+      "sha256": "d903b609084b0d8cb05ccb4c85c7bbfbeeeb5f77f5cc1938a7b9a936a3b48d82",
+      "bytes": 20435
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_intact_scent960.jsonl.gz",
+      "sha256": "4776cadaebb77b18192fbf9e6d5b9a7a374a0748f12438f215feecde24a64da5",
+      "bytes": 749
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_intact_scent960_active.npz",
+      "sha256": "92942639535709bba81bb77f6a7b4484ad42c7d2113e1fe2143826824e4b1a78",
+      "bytes": 20695
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_p1_lesion_zero.jsonl.gz",
+      "sha256": "a78c6a9561265ecfa210c49f6c6d47f69eb88468d7c6e4d374d541a759ccaa76",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_p1_lesion_scent240.jsonl.gz",
+      "sha256": "14113634c89edb56501e0be29d618edd266d0363f54d3fd43902fa82174f918b",
+      "bytes": 703
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_p1_lesion_scent240_active.npz",
+      "sha256": "1cbaad188bee78b76ae144576cf6795bc1710c96d70441c7497064c05376e7db",
+      "bytes": 20528
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_p1_lesion_scent960.jsonl.gz",
+      "sha256": "36f732256b769835e40e2f34d952e6b2f0647d2e530b3ac1fc425e15276b8e94",
+      "bytes": 748
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_p1_lesion_scent960_active.npz",
+      "sha256": "8487d1bf2c4b8c173c9240077d9cd5069e08ef29c1f78e7eb85b8a35ed7ddcfc",
+      "bytes": 20678
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_random_lesion_zero.jsonl.gz",
+      "sha256": "752af8070979324525844a67a4a56b87c7e0e3828398b2c32c80af5c62226f31",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_random_lesion_scent240.jsonl.gz",
+      "sha256": "3a85e12f5dd7bea09c7eb01fe93145da8f8f920bff2acf5537593ac10330d095",
+      "bytes": 717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_random_lesion_scent240_active.npz",
+      "sha256": "4aa2e144e11db6093bec7fc80e1de9b948fe82bba326bdd21ac121b5291fda7a",
+      "bytes": 20157
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_random_lesion_scent960.jsonl.gz",
+      "sha256": "f69daefa69199f644f278ae7b4316a5c7edf4c0ae49b3aab296644558853435a",
+      "bytes": 756
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/14_random_lesion_scent960_active.npz",
+      "sha256": "f37ebc3664ced07e2c2c67039ba6e2715607c423ddb4313f077e2b33737cf56e",
+      "bytes": 20717
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_intact_zero.jsonl.gz",
+      "sha256": "222ac4bbd0e9f98cfde212b0b6dac79803ae2917dbb7fd119523efd5dfc6baf4",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_intact_scent240.jsonl.gz",
+      "sha256": "83f5c5d83b249483b9671c35f7fbec613d6dcb24e832a453a758241f7efedce1",
+      "bytes": 709
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_intact_scent240_active.npz",
+      "sha256": "f58bc5dcb2c57b87fc6f3a411c15bb82863be927ec318ff4b0fdf5ce0588d466",
+      "bytes": 20402
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_intact_scent960.jsonl.gz",
+      "sha256": "eb0d7909a5af5420d55f4608edc28df804f99ee7c07fc9f3eb668bb4f0bd4317",
+      "bytes": 751
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_intact_scent960_active.npz",
+      "sha256": "096493a11e9311c43aa18aa472cb8479311897978195dd2dd6f38fb991ec5f06",
+      "bytes": 20777
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_p1_lesion_zero.jsonl.gz",
+      "sha256": "c55bd8faf1aa596d2939ff46ec8ed09584afc69ee1393daa34f3085c49e192b4",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_p1_lesion_scent240.jsonl.gz",
+      "sha256": "75c478efeb3ad0b4e8e655e30791d1ac903164d24a6b9f8f885e0912680fee63",
+      "bytes": 725
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_p1_lesion_scent240_active.npz",
+      "sha256": "e5eacde7b963491a9494f6f5e3682d760a3625376fbc45155f5c2b2ce4a2e7ac",
+      "bytes": 20351
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_p1_lesion_scent960.jsonl.gz",
+      "sha256": "93704d748347e847722f55f5934e23216ee713c03487c94f2d5a40aa44d39c0a",
+      "bytes": 739
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_p1_lesion_scent960_active.npz",
+      "sha256": "f9ec232d3e26843e89c2307e6e87899898af2bdb931a00bbc19df71668992b05",
+      "bytes": 20593
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_random_lesion_zero.jsonl.gz",
+      "sha256": "41e55bb0bc745f2078ddda4d881bf59c962b3ffa58d214295839f2d52c79df5c",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_random_lesion_scent240.jsonl.gz",
+      "sha256": "1e966e39e6fa662396b504abf8b8ee7d52f99f4a5a91d9a3bdfe2ff3fc13b22e",
+      "bytes": 715
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_random_lesion_scent240_active.npz",
+      "sha256": "29d6854fc9e383ed097a9da09f84c544f1f3040bb0f4b9ab95779a33909d7145",
+      "bytes": 20511
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_random_lesion_scent960.jsonl.gz",
+      "sha256": "d558a688375bc65b48406041d068836d017bb23c483c9e8a5050f1f7080b2063",
+      "bytes": 748
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/15_random_lesion_scent960_active.npz",
+      "sha256": "2c1e5f94a4a2ace0d918fab450bd1fadb2066bf9d8aee7b7cb17880b692c47d4",
+      "bytes": 20854
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_intact_zero.jsonl.gz",
+      "sha256": "00ca8f75ab601e8559705633b4608ccf1e98198adde7fc0f95f1a9d4ca01432f",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_intact_scent240.jsonl.gz",
+      "sha256": "0060a382d8ed666b9746f521a5c2d502096cc60b64566d0f02629eee8091902f",
+      "bytes": 719
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_intact_scent240_active.npz",
+      "sha256": "13530c416902640b8e8d6e6f7c2bdb25ec81cfe52a5a958c1fde596bd786cd1c",
+      "bytes": 20389
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_intact_scent960.jsonl.gz",
+      "sha256": "d65b9748ed73a03f54e3e6474fbdb6650bb22d827583bdbf50f821f81334b7c4",
+      "bytes": 748
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_intact_scent960_active.npz",
+      "sha256": "397f873adf78fb5c8fa6c51daf5fab946c6a4e37423e44c131fbd62ddd9a45f2",
+      "bytes": 20734
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_p1_lesion_zero.jsonl.gz",
+      "sha256": "5371a7ce5429e8e22326d11b3eb934e85896578b5f1a6b454ce0e5ed073d5218",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_p1_lesion_scent240.jsonl.gz",
+      "sha256": "107d63888f9ad7c9d8995d2bbbf4b646e7647831fdb1d75f5f4a28e1f1a80182",
+      "bytes": 713
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_p1_lesion_scent240_active.npz",
+      "sha256": "4f53332b38791d2e3b4865e99f6c383068c6875049290f784f5da09f119167fb",
+      "bytes": 20340
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_p1_lesion_scent960.jsonl.gz",
+      "sha256": "781fe26f3adacfe3368e99612e2dc0b8efc603ea69d618432dceb7a3d73e2621",
+      "bytes": 748
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_p1_lesion_scent960_active.npz",
+      "sha256": "6673fa837bc1accd07e44bc19bcae9b4d6833510311c32eed7006ad32db8c986",
+      "bytes": 20755
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_random_lesion_zero.jsonl.gz",
+      "sha256": "836093c04fd1d9482eb7647a7825cd7707b923a59d9bade90854ffd924880ad8",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_random_lesion_scent240.jsonl.gz",
+      "sha256": "c23317468c58f421898f21c388509e76ae94189892970f8fc0e63854e49fccd0",
+      "bytes": 714
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_random_lesion_scent240_active.npz",
+      "sha256": "e8a8cf927ccbfe7ca4ca7499abaf1ad87fb4f888e319ed8c44656a964e2e0419",
+      "bytes": 20388
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_random_lesion_scent960.jsonl.gz",
+      "sha256": "e0262904cab5695ad6c13d4eb50612996046284981d27b68a76d2e91a1da87af",
+      "bytes": 754
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/16_random_lesion_scent960_active.npz",
+      "sha256": "3c9a9526c6a33eb6c65aa1264173eb6243fff18a205fdf97999427d65f56a2fe",
+      "bytes": 20707
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_intact_zero.jsonl.gz",
+      "sha256": "fde0ea5f20675d348fad7fc117882bd20a54b5561b9c223c07fff5a233b92279",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_intact_scent240.jsonl.gz",
+      "sha256": "6fbebd65805e34b390079d7ee85e9260bfb32b2aac289ab56afa42fd074e2382",
+      "bytes": 727
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_intact_scent240_active.npz",
+      "sha256": "8264c3680285082c66dd113982261462456fc743ecc2a43938ae3d041f87337e",
+      "bytes": 20484
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_intact_scent960.jsonl.gz",
+      "sha256": "4236cd039bdb0e497f8f69701ebc8e4b3c06b8aff2dcc446a2f11599cc864ecc",
+      "bytes": 750
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_intact_scent960_active.npz",
+      "sha256": "2179338759a0bd3fad9d89baf9db54d554ab289bdb4e2b650007fdf118903814",
+      "bytes": 20749
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_p1_lesion_zero.jsonl.gz",
+      "sha256": "eb8d00a92a1a7d1a077a9dd36c88af3a988d3efb255324543bd017b7f210bde2",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_p1_lesion_scent240.jsonl.gz",
+      "sha256": "14227d4677780b8d2f18c10faefa99c409749e82331c1cd273327603df6df3a8",
+      "bytes": 733
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_p1_lesion_scent240_active.npz",
+      "sha256": "9e7b516f2be21b7817a28623240bd22d02a4ea6bd601c450da0c9adb87a057bf",
+      "bytes": 20699
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_p1_lesion_scent960.jsonl.gz",
+      "sha256": "5b47c6243347f21622c41720bb35c5cc2ee3a60915dd588acf11aa8934a706b7",
+      "bytes": 736
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_p1_lesion_scent960_active.npz",
+      "sha256": "7f9f5585ed00ac8212b1ec33368af3559d05e4e047a87c4e60908488ae905f31",
+      "bytes": 20758
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_random_lesion_zero.jsonl.gz",
+      "sha256": "27cd8764dae149994dcc96c5edc08d1bfa21b59a57219a24305079d95a668a25",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_random_lesion_scent240.jsonl.gz",
+      "sha256": "2b33b3e303e97cecaace5e825c6d2fe5cddc163ff13ea3619bfe8924e8fcfb37",
+      "bytes": 728
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_random_lesion_scent240_active.npz",
+      "sha256": "131543bfeb58e66063689979e0e482a2f747035b46a5244e1680fbec82527513",
+      "bytes": 20414
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_random_lesion_scent960.jsonl.gz",
+      "sha256": "a6ccbb8bf254aa8d1d29a991107f2e742ba37edc4f5f616ca9c92906d5536b1d",
+      "bytes": 750
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/17_random_lesion_scent960_active.npz",
+      "sha256": "e1b2f85c886e5bcc9b02c051587d120701e97b8bccd2127c385524ca6331c159",
+      "bytes": 20708
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_intact_zero.jsonl.gz",
+      "sha256": "d2afc501ee99ebdc9d71a767e62d93d22fe0a7b1492aef5893cd54f064a8dee3",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_intact_scent240.jsonl.gz",
+      "sha256": "fe9ca3988fff9c6aebfb4df691803f4e71faf8f08b442b1543d50c4dd9ccdb0b",
+      "bytes": 724
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_intact_scent240_active.npz",
+      "sha256": "058b657dc459ef903f01d0c621e5f3003bbc497eb549c86ad9a3a916d1760d78",
+      "bytes": 20374
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_intact_scent960.jsonl.gz",
+      "sha256": "c6a7f7120af48de1964885daf0cef8aa8123c21ada31559813700093dfc3d5be",
+      "bytes": 752
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_intact_scent960_active.npz",
+      "sha256": "6ccdf36b03bb9d835f0aabba0eb94a4f37e04e7234beece59156907cad915993",
+      "bytes": 20635
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_p1_lesion_zero.jsonl.gz",
+      "sha256": "fba5c8e462230cb48c8b42a4f9c487d30cd20666b9ff4ef0561442c5befd0b56",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_p1_lesion_scent240.jsonl.gz",
+      "sha256": "d81f50e35e86e6cc9431a0d2f25c1a73d8647f8c44c6d6d983a41418c822b9f1",
+      "bytes": 732
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_p1_lesion_scent240_active.npz",
+      "sha256": "5cd15c9f552a3b660f45fc418ebf0e3d2e791dbc8fac272031f577a2417beef7",
+      "bytes": 20389
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_p1_lesion_scent960.jsonl.gz",
+      "sha256": "4ec7eceee39bae8169b4e27a55b2aea4dfe6dae224b2a02acd77672c0b3326cd",
+      "bytes": 752
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_p1_lesion_scent960_active.npz",
+      "sha256": "5301879981b17c127e440e4c30c73f06801ae27c7d9b37ba76ad301eea605772",
+      "bytes": 20809
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_random_lesion_zero.jsonl.gz",
+      "sha256": "07cf113f2a1e07e268eb4b65759342296dfd3939f48a04bf87b899311a8df739",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_random_lesion_scent240.jsonl.gz",
+      "sha256": "ba5833c3682c89f6f93a4e5f7600a01fa41a495ea510cf468f5b4328e8c4317e",
+      "bytes": 747
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_random_lesion_scent240_active.npz",
+      "sha256": "67fc33cb0e2e1d5ce7cd106847f5fe39d7e2ee51a8703386bb72aa16ed0a86d9",
+      "bytes": 20445
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_random_lesion_scent960.jsonl.gz",
+      "sha256": "624e2c7fa22b59fb7d691aa9e33d50c0e7ee460a18c1c0903781cf07957fd904",
+      "bytes": 735
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/18_random_lesion_scent960_active.npz",
+      "sha256": "10c3af37bae745b45aeb36e873e0ff5bfb45b09a20fdb4b268fc3e857602787e",
+      "bytes": 20675
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_intact_zero.jsonl.gz",
+      "sha256": "308451061e0ee6910313bf0b7e9f8390f70be9148def87bf6694f80d31ba5a1d",
+      "bytes": 210
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_intact_scent240.jsonl.gz",
+      "sha256": "f785ab0a3d11b39649c6f0b512d2493b0b9bf5d6796674a4f75517cc6ad11bfd",
+      "bytes": 726
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_intact_scent240_active.npz",
+      "sha256": "ea067a18251577ece19198fc6370651229ffd3aab9c2ff4593293a863b65ff2e",
+      "bytes": 20355
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_intact_scent960.jsonl.gz",
+      "sha256": "4a18303ec36f7d61d46a4f6902f3380e8a98d4e80bb7e076c350f43ae887c1a0",
+      "bytes": 749
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_intact_scent960_active.npz",
+      "sha256": "66a6d535568194805f327d11dec5a3e11bf03b35bed3b44ce9d83483ebcfe010",
+      "bytes": 20927
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_p1_lesion_zero.jsonl.gz",
+      "sha256": "b7d98aaa0f800ad01b8dbbad0f4521fa3324f333b4f5ceac24ced9bcb934cdec",
+      "bytes": 213
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_p1_lesion_scent240.jsonl.gz",
+      "sha256": "b8cbb0b1cac37516ab503cc2c0c10444ad6c24bb4648660fe5cfdd8ade3a5dfd",
+      "bytes": 742
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_p1_lesion_scent240_active.npz",
+      "sha256": "1bdefce17d4b4e2425f9077e9c5b67108fc552a2e4c3a50b16d0225ed7ef8c38",
+      "bytes": 20442
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_p1_lesion_scent960.jsonl.gz",
+      "sha256": "b904cce281839d197ad91a031d898365af23d17f153b480a3443912520eae9db",
+      "bytes": 749
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_p1_lesion_scent960_active.npz",
+      "sha256": "b74a387ab1b9418c7135701d7340b09d5ceb7b9b61d20bacf47b717207385c72",
+      "bytes": 20576
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_random_lesion_zero.jsonl.gz",
+      "sha256": "8de013d5ac329c1bf419a991c2465d3a29a97afd31674562bdc4b3a7a8b67a11",
+      "bytes": 217
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_random_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_random_lesion_scent240.jsonl.gz",
+      "sha256": "20ce75bb800b09e0b1065bb9eec8b5b339f6fd9a723ba42b40b1c51ff70834df",
+      "bytes": 737
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_random_lesion_scent240_active.npz",
+      "sha256": "ec3b529884039a1997caaafa32a1d6a63147e6a5b7782507bf3a920296f23e84",
+      "bytes": 20370
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_random_lesion_scent960.jsonl.gz",
+      "sha256": "5c5dbb75f47d9c6b055d0a361674eef022d8c37d56566047c8a9f9620e171b2d",
+      "bytes": 758
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/19_random_lesion_scent960_active.npz",
+      "sha256": "8ae42d697077a26a111cab09b3833792b5418e53f4d26786ba038b5c21f8e542",
+      "bytes": 20809
+    },
+    {
+      "path": "build/records-raw/male_route_v1_test/targets_lesions.json",
+      "sha256": "d8774e08a984694003cfe16270c7155ea909253961f5e09f5be95b8b135cfb06",
+      "bytes": 94724
+    }
+  ],
+  "complete": true,
+  "elapsed_seconds": 818.4028962000002,
+  "summary": [
+    {
+      "network_kind": "intact",
+      "drive": "zero",
+      "P1": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "network": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "intact",
+      "drive": "scent240",
+      "P1": {
+        "mean": 0.07608695652173914,
+        "se": 0.008947650068430808,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 7.625,
+        "se": 0.32253620767777047,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 248.5754807692308,
+        "se": 0.3163325980322886,
+        "n": 20
+      },
+      "network": {
+        "mean": 5.688794875909934,
+        "se": 0.00319412495268974,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 240.14615384615385,
+        "se": 0.30232669841666626,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 240.14615384615385,
+        "se": 0.30232669841666626,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 7.64189508363513,
+        "se": 0.00764728264926643,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "intact",
+      "drive": "scent960",
+      "P1": {
+        "mean": 0.3695652173913043,
+        "se": 0.00993555745592586,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 10.28125,
+        "se": 0.22431822878035995,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 968.0942307692306,
+        "se": 0.5497212353767132,
+        "n": 20
+      },
+      "network": {
+        "mean": 6.400069342667845,
+        "se": 0.0033387753682415948,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 959.9009615384615,
+        "se": 0.5780476135425768,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 959.9009615384615,
+        "se": 0.5780476135425768,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 7.7632901733263875,
+        "se": 0.009553469615174153,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "p1_lesion",
+      "drive": "zero",
+      "P1": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "network": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "p1_lesion",
+      "drive": "scent240",
+      "P1": {
+        "mean": 0.08423913043478262,
+        "se": 0.009837280485708031,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 7.1875,
+        "se": 0.29559540716466165,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 248.55721153846156,
+        "se": 0.3147381506156733,
+        "n": 20
+      },
+      "network": {
+        "mean": 5.685617679655043,
+        "se": 0.0033334256103513364,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 240.14615384615385,
+        "se": 0.30232669841666626,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 240.14615384615385,
+        "se": 0.30232669841666626,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 7.653553130412663,
+        "se": 0.012632592609680745,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "p1_lesion",
+      "drive": "scent960",
+      "P1": {
+        "mean": 0.36684782608695643,
+        "se": 0.009955096427514219,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 10.96875,
+        "se": 0.20009763241977652,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 968.1,
+        "se": 0.5539528933074823,
+        "n": 20
+      },
+      "network": {
+        "mean": 6.402782109591696,
+        "se": 0.0025359102739646064,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 959.9009615384615,
+        "se": 0.5780476135425768,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 959.9009615384615,
+        "se": 0.5780476135425768,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 7.768498443575052,
+        "se": 0.008914253015984266,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "random_lesion",
+      "drive": "zero",
+      "P1": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "network": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "random_lesion",
+      "drive": "scent240",
+      "P1": {
+        "mean": 0.08016304347826088,
+        "se": 0.008001807374063483,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 7.75,
+        "se": 0.2540785725964147,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 248.5033653846154,
+        "se": 0.30356566241000627,
+        "n": 20
+      },
+      "network": {
+        "mean": 5.681058929155413,
+        "se": 0.003377536549659861,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 240.14615384615385,
+        "se": 0.30232669841666626,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 240.14615384615385,
+        "se": 0.30232669841666626,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 7.631539104419761,
+        "se": 0.012851290214930294,
+        "n": 20
+      }
+    },
+    {
+      "network_kind": "random_lesion",
+      "drive": "scent960",
+      "P1": {
+        "mean": 0.3858695652173913,
+        "se": 0.009974597124807031,
+        "n": 20
+      },
+      "pIP10": {
+        "mean": 10.53125,
+        "se": 0.25357233863545253,
+        "n": 20
+      },
+      "Or47b": {
+        "mean": 968.0826923076922,
+        "se": 0.5492438213613728,
+        "n": 20
+      },
+      "network": {
+        "mean": 6.397506086408837,
+        "se": 0.0043533756088196445,
+        "n": 20
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 20
+      },
+      "Or47b_sampled_hz": {
+        "mean": 959.9009615384615,
+        "se": 0.5780476135425768,
+        "n": 20
+      },
+      "Or47b_delivered_hz": {
+        "mean": 959.9009615384615,
+        "se": 0.5780476135425768,
+        "n": 20
+      },
+      "active_percent": {
+        "mean": 7.767408340499752,
+        "se": 0.012243985994532632,
+        "n": 20
+      }
+    }
+  ],
+  "inference": {
+    "intact": {
+      "mean": 7.625,
+      "se": 0.32253620767777047,
+      "n": 20
+    },
+    "p1_lesion": {
+      "mean": 7.1875,
+      "se": 0.29559540716466165,
+      "n": 20
+    },
+    "random_lesion": {
+      "mean": 7.75,
+      "se": 0.2540785725964147,
+      "n": 20
+    },
+    "difference_of_differences": {
+      "mean": 0.4375,
+      "se": 0.46704734629822114,
+      "n": 20
+    },
+    "control_margin": {
+      "mean": 1.65,
+      "se": 0.4162212531562358,
+      "n": 20
+    },
+    "R0": "supported",
+    "R2": "supported",
+    "R1": "P1 bypass SUPPORTED"
+  },
+  "descriptive960": {
+    "intact": {
+      "mean": 10.28125,
+      "se": 0.22431822878035995,
+      "n": 20
+    },
+    "p1_lesion": {
+      "mean": 10.96875,
+      "se": 0.20009763241977652,
+      "n": 20
+    },
+    "random_lesion": {
+      "mean": 10.53125,
+      "se": 0.25357233863545253,
+      "n": 20
+    },
+    "difference_of_differences": {
+      "mean": -0.6875,
+      "se": 0.24793555508172724,
+      "n": 20
+    },
+    "control_margin": {
+      "mean": 2.30625,
+      "se": 0.34009419651031975,
+      "n": 20
+    },
+    "R0": "supported",
+    "R2": "supported",
+    "R1": "P1 bypass SUPPORTED"
+  }
+}

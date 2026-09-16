@@ -1,0 +1,31 @@
+{
+  "protocol_sha256_before_data": "20a1d9be86cbbe0517bbc64e0816075245dbf45868c3db2d0ddb1340ff2449e3",
+  "pytest": {
+    "command": "python -B -m pytest -q -p no:cacheprovider tests/test_male_route.py",
+    "passed": 9,
+    "skipped": 1,
+    "failed": 0,
+    "exit_code": 0,
+    "reported_seconds": 2.07
+  },
+  "deliberate_failure_probe": {
+    "environment": "FLYBENCH_FAIL_PROBE=1",
+    "command": "python -B -m pytest -q -p no:cacheprovider tests/test_male_route.py -k harness_failure_probe",
+    "failed": 1,
+    "deselected": 9,
+    "exit_code": 1,
+    "reported_seconds": 1.27
+  },
+  "execution_chain": "Supplied native Python 3.12 interpreter and dependency import environment; bytecode and pytest cache writes disabled.",
+  "environment_workaround": false,
+  "post_summary_fix_pytest": {
+    "passed": 10,
+    "skipped": 1,
+    "failed": 0,
+    "exit_code": 0,
+    "reported_seconds": 1.36
+  },
+  "implementation_correction": "Separated network_kind from the network rate summary key and corrected path table formatting. No simulation, parameters, protocol, or per-seed data changed. Execution source is retained in build/records-raw/male_route_v1_execution_source.py; report regenerates summaries from per-seed records.",
+  "clean_room": "Only this repository inspected; supplied dependency import path used without inspecting adjacent project sources.",
+  "git_writes": false
+}

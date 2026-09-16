@@ -1,0 +1,442 @@
+{
+  "created_utc": "2026-09-16T17:10:47.613065+00:00",
+  "protocol_sha256": "20a1d9be86cbbe0517bbc64e0816075245dbf45868c3db2d0ddb1340ff2449e3",
+  "graph_sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+  "dictionary_sha256": "00e7bdfa0e890d1267ca08a69c0c49a32464a7b38db5c0832ca1f42c596d6473",
+  "source_sha256": {
+    "flybench/experiment/male_route.py": "356c2fa118d924b28dd94709c1503e492896b0430e60dde094650efbc2304adc",
+    "flybench/experiment/male_decides.py": "9a5d451bc74aef1b47edb4332f88c2d792a9d59f22009ad6fedcd4cd06cb9998",
+    "flybench/sim/fast_gpu.py": "7d1ff7ad1f04fc39828c62faf44c67a269f7551ce95c8f0d7c5ff45956f7f066",
+    "flybench/sim/params.py": "0c5161c62d9b4279ae428e874653739787055fc15151b690fa046ebbd2913070",
+    "flybench/dictionary/entries.py": "bb134147137f0c6727427a07a6cfc8deff6d26b1c554daafcbe199337b18b301",
+    "flybench/dictionary/api.py": "2c9f94139231d9b86960f5df4bd1f589632f1119d7a1ef7ff4009729477d4c71"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "stage": "quick",
+  "seeds": [
+    100,
+    101
+  ],
+  "parameters": {
+    "v_rest": -52.0,
+    "v_reset": -52.0,
+    "v_th": -45.0,
+    "tau_m": 20.0,
+    "tau_s": 5.0,
+    "delay": 1.8,
+    "refractory": 2.2,
+    "w_syn": 0.275,
+    "drive_scale": 250.0,
+    "dt": 0.2
+  },
+  "kernel": "shiu",
+  "backend": "fast_gpu",
+  "batch_size": 1,
+  "windows": 20,
+  "warmup": 4,
+  "neurons": 165122,
+  "target_count": 1961,
+  "readout_counts": {
+    "P1": 46,
+    "pIP10": 2,
+    "Or47b": 130
+  },
+  "random_superclass_matching": false,
+  "trials": [
+    {
+      "seed": 100,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 100,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.40760869565217395,
+        "pIP10": 11.25,
+        "Or47b": 969.9134615384614,
+        "network": 6.3912667603347835,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7884615384615,
+        "Or47b_delivered_hz": 961.7884615384615,
+        "active_percent": 7.743971124380761
+      }
+    },
+    {
+      "seed": 100,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 100,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.40760869565217395,
+        "pIP10": 11.25,
+        "Or47b": 969.8846153846155,
+        "network": 6.409253461077264,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 961.7884615384615,
+        "Or47b_delivered_hz": 961.7884615384615,
+        "active_percent": 7.771223701263308
+      }
+    },
+    {
+      "seed": 101,
+      "network": "intact",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 101,
+      "network": "intact",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.29891304347826086,
+        "pIP10": 10.0,
+        "Or47b": 967.0096153846155,
+        "network": 6.400941425128087,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.9326923076923,
+        "Or47b_delivered_hz": 958.9326923076923,
+        "active_percent": 7.792420149949734
+      }
+    },
+    {
+      "seed": 101,
+      "network": "p1_lesion",
+      "drive": "zero",
+      "metrics": {
+        "P1": 0.0,
+        "pIP10": 0.0,
+        "Or47b": 0.0,
+        "network": 0.0,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 0.0,
+        "Or47b_delivered_hz": 0.0,
+        "active_percent": 0.0
+      }
+    },
+    {
+      "seed": 101,
+      "network": "p1_lesion",
+      "drive": "scent960",
+      "metrics": {
+        "P1": 0.4076086956521739,
+        "pIP10": 10.0,
+        "Or47b": 967.0288461538462,
+        "network": 6.408912803866232,
+        "ignition": 0.0,
+        "Or47b_sampled_hz": 958.9326923076923,
+        "Or47b_delivered_hz": 958.9326923076923,
+        "active_percent": 7.794842601228183
+      }
+    }
+  ],
+  "raw": [
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_intact_zero.jsonl.gz",
+      "sha256": "3e12e821298faf692932669443422f8b11a275f912bfddeab1f64728aedc503a",
+      "bytes": 211
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_intact_scent960.jsonl.gz",
+      "sha256": "8846fa9ae97bf5f43433a6a382f24125f78f79aadb92afc17167bbb969f780d0",
+      "bytes": 760
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_intact_scent960_active.npz",
+      "sha256": "c423946d86a54f2768c896d9feb3d0df8a71ff26e89ef01d7368a4d8f6a69683",
+      "bytes": 20679
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_p1_lesion_zero.jsonl.gz",
+      "sha256": "e0149c78ff4db89ac30c12ddef62dadfbf035c1151c92223df16b5566a705b8a",
+      "bytes": 214
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_p1_lesion_scent960.jsonl.gz",
+      "sha256": "56b53c7bc243ec06661f20924d7db5ab902c7f526eedd458c94d9e461f39614c",
+      "bytes": 754
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/100_p1_lesion_scent960_active.npz",
+      "sha256": "eedb5ec9edfee1416a75117f7e330489bc174fd8429692814070e74582c41221",
+      "bytes": 20752
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_intact_zero.jsonl.gz",
+      "sha256": "69474aacf679cabb2ef1800e5c320aa54d288e09c77381adc7066a7b16adc78f",
+      "bytes": 211
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_intact_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_intact_scent960.jsonl.gz",
+      "sha256": "9e9e259798cf5905f4ef40ea78b96eb9eee9ac53d12ce54d76f6bdc6e0518436",
+      "bytes": 747
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_intact_scent960_active.npz",
+      "sha256": "81b54320fd5fa26f651e3f6986f11a19d4bed8781575c4fd91bd6d1e5de568b2",
+      "bytes": 20797
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_p1_lesion_zero.jsonl.gz",
+      "sha256": "7d9059e0bbd6022a25465038a0ceec99416b955dccbbe5513d36819db381d33e",
+      "bytes": 214
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_p1_lesion_zero_active.npz",
+      "sha256": "ff070d9cba3e486fca5af99c5b730a1caaf9d36f0f708b18bc64ca6e20d06498",
+      "bytes": 208
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_p1_lesion_scent960.jsonl.gz",
+      "sha256": "4abc5d9d843e3e0f62090566dc7f3bc2c58ca8b8c95f64003d68320b7fa7eb02",
+      "bytes": 749
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/101_p1_lesion_scent960_active.npz",
+      "sha256": "990be01da0047ed715a65053925d6a1c8e12cc5bf3321655686fa14b57fcda13",
+      "bytes": 20803
+    },
+    {
+      "path": "build/records-raw/male_route_v1_quick/targets_lesions.json",
+      "sha256": "6f7e9c1e28c07b221ae48f73286ed385aaae447f6422abd892ea5b54371147b8",
+      "bytes": 66035
+    }
+  ],
+  "complete": true,
+  "elapsed_seconds": 78.25412270000015,
+  "summary": [
+    {
+      "network_kind": "intact",
+      "drive": "zero",
+      "P1": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "pIP10": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "network": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b_sampled_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b_delivered_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "active_percent": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      }
+    },
+    {
+      "network_kind": "intact",
+      "drive": "scent960",
+      "P1": {
+        "mean": 0.3532608695652174,
+        "se": 0.05434782608695654,
+        "n": 2
+      },
+      "pIP10": {
+        "mean": 10.625,
+        "se": 0.625,
+        "n": 2
+      },
+      "Or47b": {
+        "mean": 968.4615384615385,
+        "se": 1.4519230769229805,
+        "n": 2
+      },
+      "network": {
+        "mean": 6.396104092731435,
+        "se": 0.004837332396651738,
+        "n": 2
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b_sampled_hz": {
+        "mean": 960.3605769230769,
+        "se": 1.4278846153846414,
+        "n": 2
+      },
+      "Or47b_delivered_hz": {
+        "mean": 960.3605769230769,
+        "se": 1.4278846153846414,
+        "n": 2
+      },
+      "active_percent": {
+        "mean": 7.768195637165247,
+        "se": 0.024224512784486674,
+        "n": 2
+      }
+    },
+    {
+      "network_kind": "p1_lesion",
+      "drive": "zero",
+      "P1": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "pIP10": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "network": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b_sampled_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b_delivered_hz": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "active_percent": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      }
+    },
+    {
+      "network_kind": "p1_lesion",
+      "drive": "scent960",
+      "P1": {
+        "mean": 0.40760869565217395,
+        "se": 3.925231146709437e-17,
+        "n": 2
+      },
+      "pIP10": {
+        "mean": 10.625,
+        "se": 0.625,
+        "n": 2
+      },
+      "Or47b": {
+        "mean": 968.4567307692308,
+        "se": 1.4278846153846414,
+        "n": 2
+      },
+      "network": {
+        "mean": 6.409083132471748,
+        "se": 0.00017032860551591253,
+        "n": 2
+      },
+      "ignition": {
+        "mean": 0.0,
+        "se": 0.0,
+        "n": 2
+      },
+      "Or47b_sampled_hz": {
+        "mean": 960.3605769230769,
+        "se": 1.4278846153846414,
+        "n": 2
+      },
+      "Or47b_delivered_hz": {
+        "mean": 960.3605769230769,
+        "se": 1.4278846153846414,
+        "n": 2
+      },
+      "active_percent": {
+        "mean": 7.783033151245745,
+        "se": 0.011809449982437492,
+        "n": 2
+      }
+    }
+  ]
+}

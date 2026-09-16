@@ -1,0 +1,763 @@
+{
+  "created_utc": "2026-09-16T17:25:56.950674+00:00",
+  "protocol_sha256": "20a1d9be86cbbe0517bbc64e0816075245dbf45868c3db2d0ddb1340ff2449e3",
+  "graph_sha256": "6afa6161b593b03cfa0f6027b697d5b1ff37afa5028c870f8012122f87d03a3d",
+  "dictionary_sha256": "00e7bdfa0e890d1267ca08a69c0c49a32464a7b38db5c0832ca1f42c596d6473",
+  "source_sha256": {
+    "flybench/experiment/male_route.py": "b74c0fd3d152904c75bab4d1cfbe1df9dcff3dbe71c6c3a3d9d840387723213a",
+    "flybench/experiment/male_decides.py": "9a5d451bc74aef1b47edb4332f88c2d792a9d59f22009ad6fedcd4cd06cb9998",
+    "flybench/sim/fast_gpu.py": "7d1ff7ad1f04fc39828c62faf44c67a269f7551ce95c8f0d7c5ff45956f7f066",
+    "flybench/sim/params.py": "0c5161c62d9b4279ae428e874653739787055fc15151b690fa046ebbd2913070",
+    "flybench/dictionary/entries.py": "bb134147137f0c6727427a07a6cfc8deff6d26b1c554daafcbe199337b18b301",
+    "flybench/dictionary/api.py": "2c9f94139231d9b86960f5df4bd1f589632f1119d7a1ef7ff4009729477d4c71"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "lengths": {
+    "2": {
+      "paths": [
+        {
+          "indices": [
+            83539,
+            2871,
+            1032
+          ],
+          "body_ids": [
+            110791,
+            13068,
+            11116
+          ],
+          "types": [
+            "ORN_VA1v",
+            "PPM1201",
+            "pIP10"
+          ],
+          "edge_counts": [
+            1,
+            1
+          ],
+          "signed_weights": [
+            1,
+            1
+          ],
+          "bottleneck": 1,
+          "through_P1": false
+        }
+      ],
+      "P1_count": 0,
+      "path_count": 1
+    },
+    "3": {
+      "paths": [
+        {
+          "indices": [
+            1062,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            11151,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            49,
+            66,
+            34
+          ],
+          "signed_weights": [
+            49,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            15476,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            27153,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            42,
+            66,
+            34
+          ],
+          "signed_weights": [
+            42,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            52222,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            69845,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            83,
+            66,
+            34
+          ],
+          "signed_weights": [
+            83,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            56614,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            75278,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            86,
+            66,
+            34
+          ],
+          "signed_weights": [
+            86,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            57171,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            75950,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            84,
+            66,
+            34
+          ],
+          "signed_weights": [
+            84,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            62684,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            82811,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            98,
+            66,
+            34
+          ],
+          "signed_weights": [
+            98,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            63793,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            84205,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            67,
+            66,
+            34
+          ],
+          "signed_weights": [
+            67,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            65213,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            86031,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            96,
+            66,
+            34
+          ],
+          "signed_weights": [
+            96,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            65655,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            86602,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            68,
+            66,
+            34
+          ],
+          "signed_weights": [
+            68,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            66183,
+            370,
+            4025,
+            130616
+          ],
+          "body_ids": [
+            87325,
+            10402,
+            14338,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP217m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            79,
+            66,
+            34
+          ],
+          "signed_weights": [
+            79,
+            -66,
+            34
+          ],
+          "bottleneck": 34,
+          "through_P1": false
+        }
+      ],
+      "P1_count": 0,
+      "path_count": 10
+    },
+    "4": {
+      "paths": [
+        {
+          "indices": [
+            52222,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            69845,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            83,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            83,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            56614,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            75278,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            86,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            86,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            57171,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            75950,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            84,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            84,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            62684,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            82811,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            98,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            98,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            63793,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            84205,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            67,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            67,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            65213,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            86031,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            96,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            96,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            65655,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            86602,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            68,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            68,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            66183,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            87325,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            79,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            79,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            68657,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            90580,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            113,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            113,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        },
+        {
+          "indices": [
+            69924,
+            370,
+            1937,
+            6203,
+            130616
+          ],
+          "body_ids": [
+            92261,
+            10402,
+            12071,
+            16767,
+            523998
+          ],
+          "types": [
+            "ORN_VA1v",
+            "MZ_lv2PN",
+            "PVLP149",
+            "AVLP718m",
+            "pIP10"
+          ],
+          "edge_counts": [
+            81,
+            365,
+            63,
+            72
+          ],
+          "signed_weights": [
+            81,
+            -365,
+            63,
+            72
+          ],
+          "bottleneck": 63,
+          "through_P1": false
+        }
+      ],
+      "P1_count": 0,
+      "path_count": 10
+    }
+  },
+  "elapsed_seconds": 17.292093699999896,
+  "ranking": "Minimum unsigned edge count; top ten simple paths per exact length; signs ignored for ranking",
+  "share_denominator": "Returned top paths only, not all anatomical paths"
+}
