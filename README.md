@@ -311,3 +311,63 @@ and contact separate. See [world assumptions and usage](docs/world.md).
 Run python -m pytest -q -p no:cacheprovider tests/test_world.py for synthetic acceptance.
 The [courtship_v1 protocol](experiments/courtship_v1.md) preregisters paired two-fly world trials with live and muted male song.
 The [male_decides_v1 sensory dose ladder](experiments/male_decides_v1.md) freezes male smell, vision and P1 doses before [held-out tests](records/male_decides_v1_report.md).
+
+## Ask your own question
+
+Start with one input group, one intervention and one readout against baseline.
+Choose `male` (MaleCNS), `female` (FAFB) or `banc` (BANC); build and load its
+graph as above. The [dictionary](docs/dictionary.md) lists selectors and limits.
+`flybench.dictionary.groups("female", graph=graph)` supplies readout indices;
+`drive_targets("female", "ORN", graph=graph)` from the same module selects an
+input. Absent groups are empty, not biological absences; drive_targets rejects
+absent and read-only groups. Use indices from the same graph throughout.
+For your own group, replace the case-sensitive `type_re` in this example:
+
+```python
+from flybench.graph import where
+cells = where(graph, type_re=r"^ORN_DA1$", side="L")
+```
+
+`^` and `$` bound the type name; side and superclass filters combine with AND.
+Pass selected indices through `Simulator(..., groups={"readout": cells})`.
+For input, `Drive(targets, 100, mode="poisson")` requests 100 Hz per target;
+compare requested, sampled and delivered drive with output firing rates.
+For a lesion, `flybench.experiment.male_route.lesion_outgoing(graph, cells)`
+returns a graph copy with those outgoing edge counts and weights zeroed;
+incoming edges from other rows remain. Construct the simulator from that copy.
+For graded input, `flybench.sim.release.GradedRelease(source_rows, flux)` is
+passed as `release=`: flux is spike-equivalents/ms over absolute time steps.
+It replaces those rows' spike output, not their integration; see the
+[diagnostic hook contract](docs/release-hook.md), not an electrical-synapse model.
+Keep model parameters, weight scale and calibration fixed across comparisons;
+any gain or calibration change is a separate experimental choice.
+For auditory questions, the ear is not calibrated (see the scope note above).
+These results are neuronal readouts in an isolated brain simulation, not behaviour.
+
+The repo practice is to write `experiments/<name>.md` first (a new protocol),
+record its SHA256, then run. A useful plan fixes selectors, conditions, doses,
+seeds, windows and the decision rule; [water](experiments/water_dose_v1.md) and
+[direction](experiments/direction_probe_v1.md) are small examples. Execution is
+implemented in Python, as in `flybench/experiment/protocol.py` and
+`flybench/experiment/runner.py`; a Markdown file alone does not define a runner.
+
+Read group means as Hz per cell. The [experiment guide](docs/experiments.md)
+uses twenty 50 ms windows, each with ten 5 ms calls carrying state forward;
+discard four warm-up windows. Start each condition from rest with paired seeds,
+average measured windows per seed, then report paired differences as mean
+plus/minus SE (sample SD of differences divided by sqrt(number of seeds)).
+Ignition is the fraction of measured seed-windows above 30 network Hz/neuron.
+
+For example, does water drive MN9? With the protocol's FAFB Shiu graph, CUDA
+and matching benchmark graph/engine hashes, run quick then full:
+
+```sh
+python -m flybench.experiment.water_dose --quick
+python -m flybench.experiment.water_dose
+```
+
+The [existing record](records/water_dose_v1_report.md) reads [200,1000) ms,
+with full seeds 0-9. Water100 gives MN9_ref 0.000 +/- 0.000 Hz; water160 gives
+13.250 +/- 2.060 Hz. The paired water160-minus-baseline difference is also
+13.250 +/- 2.060 Hz, passing its registered mean > 2 SE rule. This supports
+transfer at that dose in this model; silence at 100 Hz does not establish absence.
