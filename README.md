@@ -1,5 +1,33 @@
 # flybench
 
+An open bench for whole-brain simulation of fruit fly connectomes, built to
+put a male and a female brain in the same model and the same world.
+
+The simulator is an independent reimplementation of the leaky
+integrate-and-fire model of Shiu et al. (2024). It reproduces their
+benchmarks on the female brain: the sugar to MN9 dose response, bitter and
+Ir94e suppression, and the JO-CE to aBN1 response (water to MN9 did not
+reproduce; see `records/shiu_benchmarks_v1_report.md`). The same bench loads
+the MaleCNS male, the FlyWire FAFB female and the FlyWire BANC female from
+their public releases. No connectome data are bundled.
+
+Every experiment here is pre-registered before any simulation runs. The
+pre-registration text is stored verbatim and hashed into the record, seeds
+are fixed and shared across conditions, and results that did not hold are
+reported the same way as results that did.
+
+What has held so far, at Shiu's parameters: the male's song command chain
+works (P1 drives pIP10, the song pathway), and the female's reproductive
+state gates her answer (a mated state silences pC1 and vpoDN, the "no"
+readout). What has not held: sensory input does not travel deep. Courtship
+song entering the female's ear does not reach vpoDN, and scent or vision
+entering the male does not reach P1, at any dose we tried. Command and state
+pathways carry; peripheral sensory pathways stop one or two synapses in.
+That gap is the open question this bench exists to work on. Pre-registrations
+are in `experiments/`, results in `records/`.
+
+The rest of this file is the technical reference.
+
 A small NumPy/SciPy simulator for signed connectome networks, with an optional
 Torch backend. No connectome data are bundled. Parameters and equations follow
 Shiu et al. (2024); see NOTICE and the source-line citations in sim/params.py.
