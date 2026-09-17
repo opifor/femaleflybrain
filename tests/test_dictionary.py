@@ -262,24 +262,115 @@ def e3b_graph():
 
 @pytest.mark.parametrize("dataset", DATASETS)
 def test_e3b_exact_selection_and_metadata(dataset, e3b_graph):
+    alias_types = {"female": [], "banc": ["AN17B016"],
+                   "male": ["WED001", "WED055_b", "AVLP005", "AN17B016"]}[dataset]
+    for column, values in e3b_graph.items():
+        extra = (alias_types if column == "type" else
+                 np.arange(10001, 10001 + len(alias_types)) if column == "body_id" else
+                 np.full(len(alias_types), "cb_intrinsic" if column == "superclass" else ""))
+        e3b_graph[column] = np.concatenate((values, np.asarray(extra, dtype=values.dtype)))
     definitions = {entry.name: entry for entry in entries(dataset)}
     selected = groups(dataset, graph=e3b_graph)
+    alias_indices = {
+        "female": {}, "banc": {"AN_AVLP_8": [53]},
+        "male": {"CB2364": [53], "CB1383": [54],
+                 "CB1614": [55], "AN_AVLP_8": [56]},
+    }[dataset]
     for i, cell_type in enumerate(E3B_INPUTS):
-        expected = [0, 10] if i == 0 else [i]
+        expected = alias_indices.get(cell_type, [0, 10] if i == 0 else [i])
         np.testing.assert_array_equal(selected["vpoEN-input:" + cell_type], expected)
-    np.testing.assert_array_equal(selected["vpoEN-input-top10"], np.arange(11))
+    union_expected = list(range(11)) + sorted(i for ids in alias_indices.values() for i in ids)
+    np.testing.assert_array_equal(selected["vpoEN-input-top10"], union_expected)
     np.testing.assert_array_equal(selected["A2-candidate"], [11, 12])
     assert "A2-candidate-path" not in definitions
+    exclusion_notes = {
+        "CB1484": "; no WED118 alias: it groups CB1484 and CB1869 and would silently include CB1869",
+        "CB1869": "; no WED118 alias: it groups CB1484 and CB1869",
+        "CB2449": "; no CB2108/CB2449 to WED063_a/b aliases: cell counts disagree (20 vs 11)",
+        "WED104": "; literal in all three graphs; no alias needed",
+    }
     for name in E3B_NAMES:
         entry = definitions[name]
         assert entry.read_only and entry.confidence == "exact"
         assert entry.group == entry.to_dict()["group"] == "vpoen-input"
-        assert entry.evidence_class == "records/vpoen_inputs_v1_report.md"
-        assert entry.notes == "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown"
+        cell_type = name.removeprefix("vpoEN-input:")
+        # Crosswalk-entry metadata is covered by test_e5_alias_patterns_and_metadata,
+        # including datasets that retain the original literal spelling.
+        if cell_type not in ("CB2364", "CB1383", "CB1614", "AN_AVLP_8"):
+            if name == "vpoEN-input-top10" and dataset != "female":
+                assert entry.evidence_class == "annotation crosswalk, external report 19, REPORTED"
+                assert "not cell-level homology" in entry.notes
+            else:
+                assert entry.evidence_class == "records/vpoen_inputs_v1_report.md"
+                suffix = exclusion_notes.get(cell_type, "")
+                if name == "vpoEN-input-top10":
+                    suffix = "; literal union plus only the opened dataset aliases" + "".join(exclusion_notes.values())
+                assert entry.notes == "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown" + suffix
         for graph in (e3b_graph, {"type": np.array(["unrelated"]), "body_id": np.array([1])}):
             with pytest.raises(ValueError, match="read-only diagnostic population"):
                 drive_targets(dataset, name, graph=graph)
     assert "group" not in definitions["A2-candidate"].to_dict()
+
+
+@pytest.mark.parametrize("dataset,patterns", [
+    ("female", (r"^CB2364$", r"^CB1383$", r"^CB1614$", r"^AN_AVLP_8$")),
+    ("banc", (r"^CB2364$", r"^CB1383$", r"^CB1614$", r"^AN17B016$")),
+    ("male", (r"^WED001$", r"^WED055_b$", r"^AVLP005$", r"^AN17B016$")),
+])
+def test_e5_alias_patterns_and_metadata(dataset, patterns):
+    definitions = {entry.name: entry for entry in entries(dataset)}
+    for cell_type, pattern in zip(("CB2364", "CB1383", "CB1614", "AN_AVLP_8"), patterns):
+        entry = definitions["vpoEN-input:" + cell_type]
+        assert entry.selector.type_re == pattern
+        assert entry.read_only
+        alias_note = ("per-dataset alias from external report 19 (VFB alternative name + "
+                      "connectivity similarity); not cell-level homology; an alias never "
+                      "merges two FAFB types")
+        if pattern == rf"^{cell_type}$":
+            # Literal selection in this dataset: the original E3b provenance is unchanged.
+            assert entry.evidence_class == "records/vpoen_inputs_v1_report.md"
+            assert alias_note not in entry.notes
+        else:
+            assert entry.evidence_class == "annotation crosswalk, external report 19, REPORTED"
+            assert alias_note in entry.notes
+
+
+@pytest.mark.parametrize("dataset", ["banc", "male"])
+def test_e5_ambiguous_aliases_remain_closed(dataset):
+    definitions = {entry.name: entry for entry in entries(dataset)}
+    graph = {"type": np.array(["WED118", "WED063_a", "WED063_b"]),
+             "body_id": np.arange(3)}
+    # CB2108 has no pre-existing selector; do not introduce one for this crosswalk.
+    assert "vpoEN-input:CB2108" not in definitions
+    for cell_type in ("CB1484", "CB1869", "CB2449"):
+        entry = definitions["vpoEN-input:" + cell_type]
+        assert entry.selector.type_re == rf"^(?:{cell_type})$"
+        assert entry.selector.select(graph).size == 0
+        assert "no " in entry.notes
+    assert definitions["vpoEN-input-top10"].selector.select(graph).size == 0
+
+
+def test_e5_wed001_selection_is_dataset_specific():
+    graph = {"type": np.array(["WED001", "WED001-like", "xWED001", "wed001"]),
+             "body_id": np.arange(4)}
+    for dataset, expected in (("male", [0]), ("female", [])):
+        entry = next(e for e in entries(dataset) if e.name == "vpoEN-input:CB2364")
+        np.testing.assert_array_equal(entry.selector.select(graph), expected)
+        with pytest.raises(ValueError, match="read-only diagnostic population"):
+            drive_targets(dataset, entry.name, graph=graph)
+
+
+@pytest.mark.parametrize("dataset,extra", [("female", []), ("banc", [10]),
+                                          ("male", [10, 11, 12, 13])])
+def test_e5_top10_retains_literals_and_adds_only_open_aliases(dataset, extra):
+    labels = list(E3B_INPUTS) + ["AN17B016", "WED001", "WED055_b", "AVLP005",
+                               "WED118", "WED063_a", "WED063_b", "WED001-like"]
+    graph = {"type": np.array(labels), "body_id": np.arange(len(labels))}
+    entry = next(e for e in entries(dataset) if e.name == "vpoEN-input-top10")
+    np.testing.assert_array_equal(entry.selector.select(graph), list(range(10)) + extra)
+    assert entry.read_only
+    if dataset != "female":
+        assert entry.evidence_class == "annotation crosswalk, external report 19, REPORTED"
 
 
 def e3b_measure(graph, selected):

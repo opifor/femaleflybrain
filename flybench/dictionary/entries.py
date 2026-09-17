@@ -254,18 +254,49 @@ def entries(dataset):
                       "renamed 2026-09-16. MaleCNS retains ^vpoIN$ (five cells). "
                       "AVLP008 is a separate connectivity population.")
               if entry.name == "vpoIN" else entry for entry in result]
-    # The rank is from FAFB v783; literal labels in other graphs are not aliases.
+    # The rank is from FAFB v783.
+    # Report 19 aliases are dataset-specific annotation crosswalks, not homology.
+    aliases = {
+        "female": {"CB2364": "CB2364", "CB1383": "CB1383",
+                   "CB1614": "CB1614", "AN_AVLP_8": "AN_AVLP_8"},
+        "banc": {"CB2364": "CB2364", "CB1383": "CB1383",
+                 "CB1614": "CB1614", "AN_AVLP_8": "AN17B016"},
+        "male": {"CB2364": "WED001", "CB1383": "WED055_b",
+                 "CB1614": "AVLP005", "AN_AVLP_8": "AN17B016"},
+    }[dataset]
+    alias_note = (
+        "; per-dataset alias from external report 19 (VFB alternative name + "
+        "connectivity similarity); not cell-level homology; an alias never "
+        "merges two FAFB types")
+    exclusions = {
+        "CB1484": "; no WED118 alias: it groups CB1484 and CB1869 and would silently include CB1869",
+        "CB1869": "; no WED118 alias: it groups CB1484 and CB1869",
+        "CB2449": "; no CB2108/CB2449 to WED063_a/b aliases: cell counts disagree (20 vs 11)",
+        "WED104": "; literal in all three graphs; no alias needed",
+    }
+    union_types = tuple(dict.fromkeys((*VPOEN_INPUT_TYPES, *aliases.values())))
     for name, pattern in (
-        *(("vpoEN-input:" + cell_type, literals((cell_type,)))
+        *(("vpoEN-input:" + cell_type,
+           rf"^{aliases[cell_type]}$" if cell_type in aliases else literals((cell_type,)))
           for cell_type in VPOEN_INPUT_TYPES),
-        ("vpoEN-input-top10", literals(VPOEN_INPUT_TYPES)),
+        ("vpoEN-input-top10", literals(union_types)),
     ):
+        cell_type = name.removeprefix("vpoEN-input:")
+        has_alias = (aliases.get(cell_type, cell_type) != cell_type
+                     or (name == "vpoEN-input-top10" and dataset != "female"))
+        notes = "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown"
+        if has_alias:
+            notes += alias_note
+        notes += exclusions.get(cell_type, "")
+        if name == "vpoEN-input-top10":
+            notes += "; literal union plus only the opened dataset aliases" + "".join(exclusions.values())
         result.append(VpoENInputEntry(
             name, dataset, Selector(pattern), "readout",
             SOURCES["atlas"][0] + ": annotation context only; rank evidence is vpoen_inputs_v1.",
             "exact",
-            "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
-            SOURCES["atlas"][1], "records/vpoen_inputs_v1_report.md", True))
+            notes, SOURCES["atlas"][1],
+            "annotation crosswalk, external report 19, REPORTED" if has_alias
+            else "records/vpoen_inputs_v1_report.md", True))
     result.append(VpoENInputEntry(
         "vpoEN-gate:AVLP083", dataset, Selector(r"^AVLP083$"), "readout",
         SOURCES["atlas"][0] + ": annotation context only; path evidence is vpoen_inputs_v1.",
