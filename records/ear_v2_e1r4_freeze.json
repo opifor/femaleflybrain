@@ -1,0 +1,34 @@
+{
+    "frozen_at_utc":  "2026-09-17T14:41:16.8511491Z",
+    "hash_basis":  "lf",
+    "preregistration_sha256":  "d6f8757a2194b73f24a3f5cd7a3c66a5d5e098713f9f5dfb7b523917c3a65aec",
+    "appendix_sha256":  "91ce1bfeb0819a6077d2ba3e74c59181695fda226ace9baede3f228e694bfd46",
+    "prior_prefix_bytes":  17637,
+    "prior_prefix_sha256":  "e99ed5e699ede0923a4f3a47dee9d035c147222acd8ba4d2e5ea32b3d7d233c5",
+    "prior_prefix_lf_sha256":  "e99ed5e699ede0923a4f3a47dee9d035c147222acd8ba4d2e5ea32b3d7d233c5",
+    "ledger_sha256":  "a02a560b5e5419d8d88a82d32deb62658e5132d4458667bca99da05b5852c5dd",
+    "input_byte_hashes":  {
+                              "experiments/ear_v2_e1.md":  "e99ed5e699ede0923a4f3a47dee9d035c147222acd8ba4d2e5ea32b3d7d233c5",
+                              "tests/test_ear2.py":  "870c99ae6847c750088669d05b8ea740107724ce91b31440dd7f79e85eaf1e67",
+                              "flybench/ear2.py":  "52ec64c4f690737d276601949f8dcf8320fd7778b9edef439430906bfe7e8e78",
+                              "reference/calibration_ledger.json":  "eb00c4654c1dc86a2bf6727f1762050308a00c0738a9e08a261e671827c79cc7",
+                              "records/ear_v2_e1r3_fit.json":  "03e189b3ff6c9584608d0a24f9be4e10300a8ecd27478393306481fee043f762",
+                              "docs/experiments.md":  "3c3cf971d6e5eb4800da28234370532fb9e96eac6f72630a6d6c025317a1b0d4"
+                          },
+    "input_lf_hashes":  {
+                            "experiments/ear_v2_e1.md":  "e99ed5e699ede0923a4f3a47dee9d035c147222acd8ba4d2e5ea32b3d7d233c5",
+                            "tests/test_ear2.py":  "870c99ae6847c750088669d05b8ea740107724ce91b31440dd7f79e85eaf1e67",
+                            "flybench/ear2.py":  "52ec64c4f690737d276601949f8dcf8320fd7778b9edef439430906bfe7e8e78",
+                            "reference/calibration_ledger.json":  "eb00c4654c1dc86a2bf6727f1762050308a00c0738a9e08a261e671827c79cc7",
+                            "records/ear_v2_e1r3_fit.json":  "03e189b3ff6c9584608d0a24f9be4e10300a8ecd27478393306481fee043f762",
+                            "docs/experiments.md":  "3c3cf971d6e5eb4800da28234370532fb9e96eac6f72630a6d6c025317a1b0d4"
+                        },
+    "execution_started":  false,
+    "refit":  false,
+    "family_selection":  false,
+    "deviations":  [
+                       "Input ledger already version 1.2; retained.",
+                       "Historical preregistration CRLF prefix retained byte-for-byte; new appendix LF.",
+                       "Prescribed Python launch blocked by host application-control policy. Freeze created using PowerShell before any model evaluation; acceptance chain pending."
+                   ]
+}

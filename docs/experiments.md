@@ -216,3 +216,7 @@ held-out predictions. Compact seed summaries and frozen choices reside in
 counts are included separately. Ignition is a window fraction, not behavior.
 Run `python -m pytest -q -p no:cacheprovider tests/test_male_decides.py`;
 the opt-in `FLYBENCH_FAIL_PROBE=1` harness probe must fail with exit 1.
+
+## ear_v2 E1
+
+Round 4 re-measures G5 with per-pulse Clemens statistics and corrects G3 evidence classes; no refit or default change. See the [round-4 report](../records/ear_v2_e1r4_report.md).

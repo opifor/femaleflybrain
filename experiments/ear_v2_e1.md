@@ -286,3 +286,81 @@ Verify an intentional failing test and inspect exit codes and count lines.
 Keep raw evidence under build/records-raw and round-3 summaries <=2 MB.
 Budget is 45 minutes from first inspection; report partial completion if
 exhausted. No git writes, protected source inspection or network simulation.
+
+
+## Round 4 amendment
+
+Frozen before round-4 implementation or evaluation, 2026-09-17.
+All preceding bytes remain unchanged. Families, fitted parameters, seeds,
+G1-G4/G6/G7 definitions and thresholds remain unchanged. No refit, candidate
+search, family selection, or Config default change. Reuse exactly the three
+family winners in records/ear_v2_e1r3_fit.json and the round-2 five-channel bank.
+The winner metrics for G1-G4/G6/G7 are carried forward, not re-run; the complete
+existing pytest suite is still executed as a regression check.
+
+G5-legacy retains continuous_metrics exactly: equal analytic whole-train RMS,
+mean(last 100 ms)/peak(first 50 ms), full windows in both conditions.
+Its class is now "descriptive, duty-cycle confounded; not a gate". For a
+nonadapting rectangular response R with duty D=4/36, late mean/early peak
+= D*R/R = 0.111111, approximately 0.11, despite no adaptation. This is a
+limiting illustration, not an exact prediction for finite Hann windows or
+filter tails. Retain its historical direction result and round-3 T1/T2.
+
+G5c (Clemens-faithful gate): 20 pulses at 36 ms onset-to-onset IPI, first
+support onset 50 ms; a 250 Hz Gabor with phi=0, sigma=4.6 ms, and realized
+absolute peak 4 mm/s. Use the printed exp(-(t/sigma)**2), without a factor
+1/2. The reconstruction fixes 16 ms support, centered at sample round(8 ms*fs):
+t=(sample-round(8 ms*fs))/fs, sample=0..round(16 ms*fs)-1. Truncation and
+sampled peak normalization are declared implementation choices because the
+source does not supply the waveform code. Normalize this fixed template
+to absolute peak 4; no response-dependent or whole-train RMS normalization.
+The continuous stimulus is a 0.5 s, 250 Hz sine at onset 50 ms, independently
+fixed to the same realized absolute peak 4 mm/s (sample-grid correction only).
+Pulse boundaries are round((0.05+k*0.036)*fs), k=0..20. The last response
+window ends at the virtual twenty-first onset. Append 200 ms zero input
+after this train boundary; also append 200 ms after the continuous tone.
+
+Observable: mean of rectified graded channels, not CAP; "observable mismatch,
+declared". The paper uses a CAP Hilbert envelope. Do not apply Hilbert to the
+already rectified bench signal. Each pulse peak Pk is the compound maximum
+over [onset_k,onset_(k+1)); each integral Ek is sum(response)/fs in exactly
+that same half-open window. Report P20/P1 and E20/E1; only P20/P1 gates.
+For the continuous condition, use onset-relative [0,10) ms and [300,400) ms
+means; S=mean(300-400)/mean(0-10). Round absolute sample boundaries from
+the specified times. G5c passes iff S < P20/P1. This is a direction gate:
+Clemens supplies no universal numerical cutoff. Nonfinite statistics or
+nonpositive denominators are structural errors, not scientific xfails.
+
+G5c-300 repeats exactly these statistics and timing with the bench's existing
+300 Hz, 4 ms Hann pulse shape and 300 Hz sine. A copy of the pulse template
+and the sine are fixed to realized absolute peak 4 mm/s; existing pulse(),
+sine(), pulse_train(), continuous_metrics() remain unchanged. This is
+"diagnostic, not a gate" and separates the stimulus effect; report S,
+P20/P1, E20/E1 without selection or an additional acceptance criterion.
+
+G3 evidence class correction, with no gate or threshold change: R3_006 and
+R3_007 become REPORTED. Preserve all values and prior metadata, appending:
+"prose range 'on the order of 5-20 ms', individual fits in Fig 1e exceed
+20 ms; 30 ms is a prose statement, not a fitted recovery constant; Fig 1d
+attribution in the paper is a tuning curve". Source: report 17, as read by
+external research model. Add a rung-3 REPORTED Clemens protocol record:
+Fig 3h first/twentieth pulse, Fig 3j individual pulse peaks, Supp Fig 8a,b
+continuous windows (n=5), Supp Fig 8e pulse integrals, 250 Hz Gabor sigma
+4.6 ms IPI 36 ms, CAP Hilbert envelope. Main Fig 3h's exact amplitude
+estimator is unresolved; P20/P1 with onset-to-onset bounds is the declared
+bench reconstruction, not a transcribed universal threshold. Main pulse
+comparison n=6, whereas n=5 belongs to Supp Fig 8a,b. Preserve fit_allowed=false.
+The requested ledger version is 1.2; this checkout already has 1.2, so retain
+it and all unrelated entries rather than manufacture a 1.1 starting state.
+
+Freeze SHA-256 with hash_basis: lf before execution. Preserve the historical
+CRLF byte prefix while writing this new appendix in LF; record both literal
+prefix and LF-normalized hashes. New delivery files are English UTF-8 without
+BOM and LF. Run the prescribed Python/dependency chain with locale C, no
+bytecode and no plugin autoload. Inspect pytest count lines and process exits,
+including an intentional failing assertion. New structural tests cover all
+20 windows, precise continuous windows, realized peak equality within 1e-9,
+Gabor formula, and non-tautological statistic oracles. Each frozen family
+gets an explicit scientific G5c assertion with xfail on a direction miss.
+Save raw drivers, waveforms/responses and logs under build/records-raw/ear_v2_e1r4/;
+save metrics, report, freeze and audit under records/ear_v2_e1r4_*.

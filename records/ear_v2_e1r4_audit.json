@@ -1,0 +1,149 @@
+{
+    "status":  "measured; see test counts",
+    "hash_basis":  "lf",
+    "files":  {
+                  "experiments/ear_v2_e1.md":  {
+                                                   "bytes":  22742,
+                                                   "sha256":  "d6f8757a2194b73f24a3f5cd7a3c66a5d5e098713f9f5dfb7b523917c3a65aec",
+                                                   "lf_sha256":  "d6f8757a2194b73f24a3f5cd7a3c66a5d5e098713f9f5dfb7b523917c3a65aec"
+                                               },
+                  "tests/test_ear2.py":  {
+                                             "bytes":  38414,
+                                             "sha256":  "00abcd54018d8677fadbd94dfa1f695bd577c70718b4e882bdbeebb65fb7f0c3",
+                                             "lf_sha256":  "00abcd54018d8677fadbd94dfa1f695bd577c70718b4e882bdbeebb65fb7f0c3"
+                                         },
+                  "reference/calibration_ledger.json":  {
+                                                            "bytes":  166491,
+                                                            "sha256":  "607889439bae763140c3af4c5b6220800445685e90e71e0658fa619ed409b466",
+                                                            "lf_sha256":  "607889439bae763140c3af4c5b6220800445685e90e71e0658fa619ed409b466"
+                                                        },
+                  "docs/experiments.md":  {
+                                              "bytes":  12740,
+                                              "sha256":  "da3fccac579e5e4478f2fff85e8caee983c8864049c5d0d9501478acebca1263",
+                                              "lf_sha256":  "da3fccac579e5e4478f2fff85e8caee983c8864049c5d0d9501478acebca1263"
+                                          },
+                  "records/ear_v2_e1r4_freeze.json":  {
+                                                          "bytes":  2686,
+                                                          "sha256":  "e423a31bb7d12271e5fac5e98e60b41442c7d1d700a81692fdb01a675697555f",
+                                                          "lf_sha256":  "e423a31bb7d12271e5fac5e98e60b41442c7d1d700a81692fdb01a675697555f"
+                                                      },
+                  "records/ear_v2_e1r4_metrics.json":  {
+                                                           "bytes":  22045,
+                                                           "sha256":  "81c097e36e80621a34831538d0d831e77622543db7f5c97d443f118c0e87b0ff",
+                                                           "lf_sha256":  "81c097e36e80621a34831538d0d831e77622543db7f5c97d443f118c0e87b0ff"
+                                                       },
+                  "records/ear_v2_e1r4_report.md":  {
+                                                        "bytes":  5436,
+                                                        "sha256":  "61477a7205407a0b20fb40ac191ee0cd6462ae28a628c921161d41ba02eb1791",
+                                                        "lf_sha256":  "61477a7205407a0b20fb40ac191ee0cd6462ae28a628c921161d41ba02eb1791"
+                                                    }
+              },
+    "encoding":  {
+                     "experiments/ear_v2_e1.md":  {
+                                                      "utf8_bom":  false,
+                                                      "crlf_count":  0
+                                                  },
+                     "tests/test_ear2.py":  {
+                                                "utf8_bom":  false,
+                                                "crlf_count":  0
+                                            },
+                     "reference/calibration_ledger.json":  {
+                                                               "utf8_bom":  false,
+                                                               "crlf_count":  0
+                                                           },
+                     "docs/experiments.md":  {
+                                                 "utf8_bom":  false,
+                                                 "crlf_count":  0
+                                             },
+                     "records/ear_v2_e1r4_freeze.json":  {
+                                                             "utf8_bom":  false,
+                                                             "crlf_count":  0
+                                                         },
+                     "records/ear_v2_e1r4_metrics.json":  {
+                                                              "utf8_bom":  false,
+                                                              "crlf_count":  0
+                                                          },
+                     "records/ear_v2_e1r4_report.md":  {
+                                                           "utf8_bom":  false,
+                                                           "crlf_count":  0
+                                                       }
+                 },
+    "audit_self_hash_excluded":  true,
+    "preregistration_prefix_byte_equal":  true,
+    "freeze_hashes_match":  true,
+    "old_test_source_lf_prefix_equal":  true,
+    "model_and_round3_fit_byte_equal":  true,
+    "existing_ledger_fields_preserved_except_authorized_status_notes":  true,
+    "ledger_measurements_before":  78,
+    "ledger_measurements_after":  79,
+    "ledger_version_before":  "1.2",
+    "ledger_version_after":  "1.2",
+    "fit_policy_unchanged":  true,
+    "refit":  false,
+    "git_mutation":  false,
+    "git_head":  "c855ac5b44912a78bcef921fad2a264a6b519db4",
+    "git_status":  [
+                       " M docs/experiments.md",
+                       " M experiments/ear_v2_e1.md",
+                       " M reference/calibration_ledger.json",
+                       " M tests/test_ear2.py",
+                       "?? records/ear_v2_e1r4_audit.json",
+                       "?? records/ear_v2_e1r4_freeze.json",
+                       "?? records/ear_v2_e1r4_metrics.json",
+                       "?? records/ear_v2_e1r4_report.md"
+                   ],
+    "tracked_diff_allowlist_passed":  true,
+    "pytest":  {
+                   "command":  [
+                                   "\u003cpython\u003e",
+                                   "-m",
+                                   "pytest",
+                                   "-q",
+                                   "-p",
+                                   "no:cacheprovider",
+                                   "tests/test_ear2.py"
+                               ],
+                   "exit_code":  0,
+                   "counts":  {
+                                  "passed":  59,
+                                  "skipped":  1,
+                                  "xfailed":  3
+                              },
+                   "summary":  "59 passed, 1 skipped, 3 xfailed in 1.48s",
+                   "log":  "build/records-raw/ear_v2_e1r4/pytest.log"
+               },
+    "harness":  {
+                    "command":  [
+                                    "\u003cpython\u003e",
+                                    "-m",
+                                    "pytest",
+                                    "-q",
+                                    "-p",
+                                    "no:cacheprovider",
+                                    "build/records-raw/ear_v2_e1r4/test_harness_probe.py"
+                                ],
+                    "exit_code":  1,
+                    "counts":  {
+                                   "failed":  1
+                               },
+                    "summary":  "1 failed in 0.05s",
+                    "log":  "build/records-raw/ear_v2_e1r4/harness.log"
+                },
+    "acceptance_evidence_available":  true,
+    "environment_workaround":  false,
+    "initial_launch":  {
+                           "executable":  "\u003cprescribed Python 3.12 executable\u003e",
+                           "shell_exit_code":  1,
+                           "process_started":  false,
+                           "error_class":  "host application-control policy",
+                           "native_process_exit_code":  null
+                       },
+    "deviations":  [
+                       "Input ledger already version 1.2; retained.",
+                       "Historical preregistration CRLF prefix retained byte-for-byte; new appendix LF.",
+                       "Prescribed Python launch blocked by host application-control policy. Freeze created using PowerShell before any model evaluation; acceptance chain pending."
+                   ],
+    "source":  "report 17, as read by external research model",
+    "newline_metadata_correction":  "Current prior prefix has zero CRLF pairs (LF); historical round-3 CRLF description in the appendix/freeze does not describe this checkout. Frozen bytes and hash unchanged.",
+    "raw_artifacts":  "build/records-raw/ear_v2_e1r4/ (ignored; retain separately)"
+}

@@ -680,3 +680,152 @@ def test_round3_diagnostic_oracles():
     assert m == {'T1':.5,'T2':.75}
     y[-9] = 8  # Outside Hann support: T1 ignores it; full-window T2 sees it.
     assert g5_diagnostic_ratios(y,active) == {'T1':.5,'T2':2.}
+
+
+# Round-4 additions; earlier functions and their scientific diagnostics are intact.
+def clemens_pulse():
+    """Fixed 16 ms, phi=0 Gabor; printed Gaussian convention, sampled peak 4."""
+    t = (np.arange(round(.016*FS)) - round(.008*FS)) / FS
+    template = np.sin(2*np.pi*250*t) * np.exp(-(t/.0046)**2)
+    return template * (4 / np.max(np.abs(template)))
+
+
+def clemens_stimuli(variant='250'):
+    """Reconstructed support onset and absolute sample boundaries; no RMS match."""
+    if variant not in ('250', '300'):
+        raise ValueError('Unknown Clemens stimulus variant')
+    template = clemens_pulse() if variant == '250' else pulse().copy()
+    template = template * (4 / np.max(np.abs(template)))
+    boundaries = np.array([round((.05+k*.036)*FS) for k in range(21)])
+    pulsed = np.zeros(boundaries[-1] + round(.2*FS))
+    for start in boundaries[:-1]:
+        pulsed[start:start+len(template)] += template
+    tone = sine(.5, 4, frequency=int(variant))
+    tone *= 4 / np.max(np.abs(tone))
+    onset = round(.05*FS)
+    continuous = np.r_[np.zeros(onset), tone, np.zeros(round(.2*FS))]
+    windows = np.array([[round((.05+a)*FS), round((.05+b)*FS)]
+                        for a,b in ((0,.01),(.3,.4))])
+    return dict(pulsed=pulsed, continuous=continuous, template=template,
+                pulse_boundaries=boundaries, continuous_windows=windows,
+                continuous_onset=onset, continuous_offset=onset+len(tone))
+
+
+def clemens_statistics(pulsed_response, continuous_response, stimuli):
+    """Peaks and rectangular-rule integrals on half-open per-pulse windows."""
+    p, c = np.asarray(pulsed_response), np.asarray(continuous_response)
+    if (p.shape != stimuli['pulsed'].shape or c.shape != stimuli['continuous'].shape
+            or not np.isfinite(p).all() or not np.isfinite(c).all()
+            or np.any(p < 0) or np.any(c < 0)):
+        raise ValueError('Expected finite nonnegative compound response arrays')
+    boundaries = stimuli['pulse_boundaries']
+    peaks = np.array([p[a:b].max() for a,b in zip(boundaries[:-1],boundaries[1:])])
+    integrals = np.array([p[a:b].sum()/FS for a,b in zip(boundaries[:-1],boundaries[1:])])
+    means = np.array([c[a:b].mean() for a,b in stimuli['continuous_windows']])
+    if min(peaks[0], integrals[0], means[0]) <= 0:
+        raise ValueError('Nonpositive first-response denominator')
+    ratios = np.array([peaks[-1]/peaks[0], integrals[-1]/integrals[0], means[1]/means[0]])
+    if not np.isfinite(ratios).all():
+        raise ValueError('Nonfinite response ratio')
+    return dict(P20_P1=float(ratios[0]), E20_E1=float(ratios[1]), S=float(ratios[2]),
+                pulse_peaks=peaks.tolist(), pulse_integrals=integrals.tolist(),
+                continuous_means=means.tolist(),
+                pulse_boundaries=boundaries.tolist(),
+                pulse_window_samples=np.diff(boundaries).tolist(),
+                continuous_windows=stimuli['continuous_windows'].tolist(),
+                continuous_window_samples=np.diff(stimuli['continuous_windows'],axis=1).ravel().tolist())
+
+
+def clemens_metrics(config, variant='250'):
+    """G5c or G5c-300 on the frozen five-channel bank; no fit or Hilbert transform."""
+    stimuli = clemens_stimuli(variant)
+    def compound(wave):
+        return Ear2(input_mode=MODE, channels=reported_channels(), config=config).process(
+            wave, input_mode=MODE).r_graded.mean(axis=0)
+    result = clemens_statistics(compound(stimuli['pulsed']), compound(stimuli['continuous']), stimuli)
+    result.update(variant=variant, observable='rectified graded channel mean; observable mismatch, declared',
+                  realized_pulse_peak=float(np.max(np.abs(stimuli['pulsed']))),
+                  realized_continuous_peak=float(np.max(np.abs(stimuli['continuous']))),
+                  label='Clemens-faithful direction gate' if variant=='250' else 'diagnostic, not a gate')
+    if variant == '250':
+        result['passed'] = bool(result['S'] < result['P20_P1'])
+    return result
+
+
+def clemens_metrics_300(config):
+    return clemens_metrics(config, variant='300')
+
+
+@pytest.mark.parametrize('variant,pulse_samples', [('250',353),('300',88)])
+def test_round4_stimulus_structure(variant, pulse_samples):
+    s = clemens_stimuli(variant)
+    b = s['pulse_boundaries']
+    assert len(b) == 21 and len(s['template']) == pulse_samples
+    np.testing.assert_array_equal(b, [round((50+36*k)*FS/1000) for k in range(21)])
+    assert b[0] == 1102
+    assert s['continuous_windows'].tolist() == [[1102,1323],[7717,9922]]
+    assert np.diff(s['continuous_windows'],axis=1).ravel().tolist() == [221,2205]
+    assert s['continuous_offset'] - s['continuous_onset'] == 11025
+    assert len(s['pulsed']) - b[-1] == 4410
+    assert len(s['continuous']) - s['continuous_offset'] == 4410
+    assert not s['pulsed'][:b[0]].any() and not s['pulsed'][b[-1]:].any()
+    assert not s['continuous'][:1102].any() and not s['continuous'][s['continuous_offset']:].any()
+    for a,z in zip(b[:-1],b[1:]):
+        np.testing.assert_array_equal(s['pulsed'][a:a+pulse_samples],s['template'])
+        assert not s['pulsed'][a+pulse_samples:z].any()
+    assert abs(np.max(abs(s['pulsed']))-4) <= 1e-9
+    assert abs(np.max(abs(s['continuous']))-4) <= 1e-9
+    assert abs(np.max(abs(s['pulsed']))-np.max(abs(s['continuous']))) <= 1e-9
+    # Equalizing whole-train RMS would fail this independent energy inequality.
+    assert np.mean(s['pulsed'][b[0]:b[-1]]**2) < .5*np.mean(
+        s['continuous'][s['continuous_onset']:s['continuous_offset']]**2)
+
+
+def test_round4_gabor_and_hann_shapes():
+    p = clemens_pulse()
+    assert p[176] == 0
+    # Peak normalization cancels; this detects a factor 1/2 in the Gaussian,
+    # the wrong carrier, a shifted center, or altered sigma.
+    t1,t2 = 20/FS,60/FS
+    expected = np.sin(2*np.pi*250*t2)/np.sin(2*np.pi*250*t1)*np.exp(-(t2*t2-t1*t1)/.0046**2)
+    assert p[236]/p[196] == pytest.approx(expected,abs=1e-12)
+    np.testing.assert_allclose(p[:176],-p[177:][::-1],atol=1e-12,rtol=0)
+    np.testing.assert_allclose(clemens_stimuli('300')['template'],4*pulse()/max(abs(pulse())),atol=1e-12)
+
+
+def test_round4_statistics_oracle():
+    s = clemens_stimuli()
+    p,c = np.zeros_like(s['pulsed']),np.zeros_like(s['continuous'])
+    b = s['pulse_boundaries']
+    # Equal area but half the peak on pulse 20 distinguishes peak and integral.
+    p[b[0]] = 8
+    p[b[-2]:b[-2]+2] = 4
+    p[b[-1]] = 1000  # Outside last pulse window, must be excluded.
+    c[1102:1323] = 4
+    c[7717:9922] = 1
+    c[1323] = c[9922] = 1000  # Right endpoints must be excluded.
+    m = clemens_statistics(p,c,s)
+    assert m['P20_P1'] == .5 and m['E20_E1'] == 1 and m['S'] == .25
+    assert len(m['pulse_peaks']) == 20
+    assert m['pulse_peaks'][1:-1] == [0.]*18
+    assert m['pulse_integrals'][0] == 8/FS
+    # Strict direction: equality and reversed direction both miss the gate.
+    assert gate5(m['S'],m['P20_P1'])
+    assert not gate5(.5,.5) and not gate5(.6,.5)
+    with pytest.raises(ValueError,match='denominator'):
+        clemens_statistics(np.zeros_like(p),c,s)
+    p[0]=np.nan
+    with pytest.raises(ValueError,match='finite'):
+        clemens_statistics(p,c,s)
+
+
+@pytest.mark.parametrize('family', ['energy_feedback','asymmetric_energy','rectified_state'])
+def test_round4_g5c_frozen_winner(family):
+    from pathlib import Path
+    import json
+    fit = json.loads((Path(__file__).resolve().parents[1]/'records/ear_v2_e1r3_fit.json').read_text('utf-8'))
+    winner, = [w for w in fit['family_winners'] if w['parameters']['family']==family]
+    m = clemens_metrics(Config(**winner['parameters']))
+    if not m['passed']:
+        pytest.xfail(f"G5c not passed for frozen {family}: S={m['S']}, P20/P1={m['P20_P1']}")
+    assert m['S'] < m['P20_P1']

@@ -1019,12 +1019,12 @@
       "figure_or_table": "Fig. 1e",
       "source_key": "C18",
       "doi": "10.1038/s41467-017-02453-9",
-      "status": "VERIFIED",
+      "status": "REPORTED",
       "verification_scope": "main text, Methods, figures and captions",
       "disposition": "upstream_CAP_constraint",
       "fit_allowed": false,
       "null_reason": null,
-      "notes": "Level-dependent time constants, not 12.5±7.5 ms."
+      "notes": "Level-dependent time constants, not 12.5±7.5 ms. prose range 'on the order of 5-20 ms', individual fits in Fig 1e exceed 20 ms; 30 ms is a prose statement, not a fitted recovery constant; Fig 1d attribution in the paper is a tuning curve; source: report 17 (as read by external research model)."
     },
     {
       "id": "R3_007",
@@ -1042,12 +1042,12 @@
       "figure_or_table": "Fig. 1d",
       "source_key": "C18",
       "doi": "10.1038/s41467-017-02453-9",
-      "status": "VERIFIED",
+      "status": "REPORTED",
       "verification_scope": "main text, Methods, figures and captions",
       "disposition": "upstream_CAP_constraint",
       "fit_allowed": false,
       "null_reason": null,
-      "notes": ""
+      "notes": "prose range 'on the order of 5-20 ms', individual fits in Fig 1e exceed 20 ms; 30 ms is a prose statement, not a fitted recovery constant; Fig 1d attribution in the paper is a tuning curve; source: report 17 (as read by external research model)."
     },
     {
       "id": "R3_008",
@@ -2181,6 +2181,48 @@
       "fit_authorization": "E2 task and preregistration only",
       "derivation": "operator transcription",
       "id_allocation": "First available ID at or after R3_009; R3_006--R3_008 preserved"
+    },
+    {
+      "id": "R3_C18_PROTOCOL_R4",
+      "rung": 3,
+      "measurement": "Clemens 2018 continuous/pulsed response protocol",
+      "value": {
+        "carrier_hz": 250,
+        "gabor_sigma_ms": 4.6,
+        "phase_rad": 0,
+        "ipi_ms": 36,
+        "pulse_indices": [
+          1,
+          20
+        ],
+        "continuous_windows_ms": [
+          [
+            0,
+            10
+          ],
+          [
+            300,
+            400
+          ]
+        ]
+      },
+      "value_kind": "reported_protocol",
+      "unit": "protocol fields",
+      "spread": null,
+      "spread_kind": null,
+      "n": 5,
+      "n_unit": "flies (Supp Fig 8a,b only; main Fig 3h n=6)",
+      "preparation_key": "C",
+      "stimulus": "250 Hz Gabor, sigma 4.6 ms, IPI 36 ms; level/peak matching, not whole-train RMS",
+      "figure_or_table": "Fig 3h first/twentieth pulse; Fig 3j pulse peaks; Supp Fig 8a,b windows; Supp Fig 8e integrals",
+      "source_key": "C18",
+      "doi": "10.1038/s41467-017-02453-9",
+      "status": "REPORTED",
+      "verification_scope": "report 17 (as read by external research model); no independent primary audit in round 4",
+      "disposition": "upstream_CAP_protocol",
+      "fit_allowed": false,
+      "null_reason": "No spread or universal numerical acceptance cutoff supplied",
+      "notes": "CAP Hilbert envelope; bench uses rectified graded channel mean (observable mismatch, declared). P20/P1 and E20/E1 are bench derived ratios; exact Fig 3h amplitude estimator unresolved. G5-legacy cannot gate adaptation: without adaptation, duty D=4/36 gives mean/peak=D*R/R=0.111111 (approximately 0.11)."
     }
   ],
   "datasets": [
