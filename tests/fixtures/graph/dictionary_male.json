@@ -4364,7 +4364,7 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; no WED118 alias: it groups CB1484 and CB1869 and would silently include CB1869 No match in this graph snapshot; absent is not evidence of biological absence.",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
       "evidence_class": "records/vpoen_inputs_v1_report.md",
       "read_only": true,
@@ -4380,7 +4380,7 @@
       "name": "vpoEN-input:CB2364",
       "dataset": "male",
       "selector": {
-        "type_re": "^(?:CB2364)$",
+        "type_re": "^WED001$",
         "side": null,
         "superclass": null,
         "nt": null,
@@ -4389,23 +4389,36 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; per-dataset alias from external report 19 (VFB alternative name + connectivity similarity); not cell-level homology; an alias never merges two FAFB types",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
-      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "evidence_class": "annotation crosswalk, external report 19, REPORTED",
       "read_only": true,
       "group": "vpoen-input",
-      "count": 0,
-      "status": "absent",
-      "example_body_ids": [],
-      "side_distribution": {},
-      "nt_distribution": {},
-      "matched_types": {}
+      "count": 10,
+      "status": "present",
+      "example_body_ids": [
+        30558,
+        30669,
+        31586,
+        31905,
+        33435
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 6
+      },
+      "nt_distribution": {
+        "gaba": 10
+      },
+      "matched_types": {
+        "WED001": 10
+      }
     },
     {
       "name": "vpoEN-input:CB1383",
       "dataset": "male",
       "selector": {
-        "type_re": "^(?:CB1383)$",
+        "type_re": "^WED055_b$",
         "side": null,
         "superclass": null,
         "nt": null,
@@ -4414,17 +4427,30 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; per-dataset alias from external report 19 (VFB alternative name + connectivity similarity); not cell-level homology; an alias never merges two FAFB types",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
-      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "evidence_class": "annotation crosswalk, external report 19, REPORTED",
       "read_only": true,
       "group": "vpoen-input",
-      "count": 0,
-      "status": "absent",
-      "example_body_ids": [],
-      "side_distribution": {},
-      "nt_distribution": {},
-      "matched_types": {}
+      "count": 8,
+      "status": "present",
+      "example_body_ids": [
+        20068,
+        21349,
+        22270,
+        24874,
+        27330
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 4
+      },
+      "nt_distribution": {
+        "gaba": 8
+      },
+      "matched_types": {
+        "WED055_b": 8
+      }
     },
     {
       "name": "vpoEN-input:WED104",
@@ -4439,7 +4465,7 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; literal in all three graphs; no alias needed",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
       "evidence_class": "records/vpoen_inputs_v1_report.md",
       "read_only": true,
@@ -4465,7 +4491,7 @@
       "name": "vpoEN-input:AN_AVLP_8",
       "dataset": "male",
       "selector": {
-        "type_re": "^(?:AN_AVLP_8)$",
+        "type_re": "^AN17B016$",
         "side": null,
         "superclass": null,
         "nt": null,
@@ -4474,17 +4500,27 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; per-dataset alias from external report 19 (VFB alternative name + connectivity similarity); not cell-level homology; an alias never merges two FAFB types",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
-      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "evidence_class": "annotation crosswalk, external report 19, REPORTED",
       "read_only": true,
       "group": "vpoen-input",
-      "count": 0,
-      "status": "absent",
-      "example_body_ids": [],
-      "side_distribution": {},
-      "nt_distribution": {},
-      "matched_types": {}
+      "count": 2,
+      "status": "present",
+      "example_body_ids": [
+        16750,
+        16983
+      ],
+      "side_distribution": {
+        "L": 1,
+        "R": 1
+      },
+      "nt_distribution": {
+        "gaba": 2
+      },
+      "matched_types": {
+        "AN17B016": 2
+      }
     },
     {
       "name": "vpoEN-input:CB2633",
@@ -4573,7 +4609,7 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; no WED118 alias: it groups CB1484 and CB1869 No match in this graph snapshot; absent is not evidence of biological absence.",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
       "evidence_class": "records/vpoen_inputs_v1_report.md",
       "read_only": true,
@@ -4598,7 +4634,7 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; no CB2108/CB2449 to WED063_a/b aliases: cell counts disagree (20 vs 11) No match in this graph snapshot; absent is not evidence of biological absence.",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
       "evidence_class": "records/vpoen_inputs_v1_report.md",
       "read_only": true,
@@ -4614,7 +4650,7 @@
       "name": "vpoEN-input:CB1614",
       "dataset": "male",
       "selector": {
-        "type_re": "^(?:CB1614)$",
+        "type_re": "^AVLP005$",
         "side": null,
         "superclass": null,
         "nt": null,
@@ -4623,23 +4659,36 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown No match in this graph snapshot; absent is not evidence of biological absence.",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; per-dataset alias from external report 19 (VFB alternative name + connectivity similarity); not cell-level homology; an alias never merges two FAFB types",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
-      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "evidence_class": "annotation crosswalk, external report 19, REPORTED",
       "read_only": true,
       "group": "vpoen-input",
-      "count": 0,
-      "status": "absent",
-      "example_body_ids": [],
-      "side_distribution": {},
-      "nt_distribution": {},
-      "matched_types": {}
+      "count": 8,
+      "status": "present",
+      "example_body_ids": [
+        27646,
+        32889,
+        33170,
+        33442,
+        42009
+      ],
+      "side_distribution": {
+        "L": 4,
+        "R": 4
+      },
+      "nt_distribution": {
+        "gaba": 8
+      },
+      "matched_types": {
+        "AVLP005": 8
+      }
     },
     {
       "name": "vpoEN-input-top10",
       "dataset": "male",
       "selector": {
-        "type_re": "^(?:CB1484|CB2364|CB1383|WED104|AN_AVLP_8|CB2633|PVLP021|CB1869|CB2449|CB1614)$",
+        "type_re": "^(?:CB1484|CB2364|CB1383|WED104|AN_AVLP_8|CB2633|PVLP021|CB1869|CB2449|CB1614|WED001|WED055_b|AVLP005|AN17B016)$",
         "side": null,
         "superclass": null,
         "nt": null,
@@ -4648,31 +4697,35 @@
       "role": "readout",
       "literature": "Schlegel et al. (2024), whole-brain cell typing: annotation context only; rank evidence is vpoen_inputs_v1.",
       "confidence": "exact",
-      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown",
+      "notes": "anatomical input rank in vpoen_inputs_v1; not a drive target; function unknown; per-dataset alias from external report 19 (VFB alternative name + connectivity similarity); not cell-level homology; an alias never merges two FAFB types; literal union plus only the opened dataset aliases; no WED118 alias: it groups CB1484 and CB1869 and would silently include CB1869; no WED118 alias: it groups CB1484 and CB1869; no CB2108/CB2449 to WED063_a/b aliases: cell counts disagree (20 vs 11); literal in all three graphs; no alias needed",
       "source": "https://doi.org/10.1038/s41586-024-07686-5",
-      "evidence_class": "records/vpoen_inputs_v1_report.md",
+      "evidence_class": "annotation crosswalk, external report 19, REPORTED",
       "read_only": true,
       "group": "vpoen-input",
-      "count": 10,
+      "count": 38,
       "status": "present",
       "example_body_ids": [
         13794,
         15815,
-        22744,
-        37651,
-        55705
+        16750,
+        16983,
+        20068
       ],
       "side_distribution": {
-        "L": 5,
-        "R": 5
+        "L": 18,
+        "R": 20
       },
       "nt_distribution": {
         "acetylcholine": 4,
-        "gaba": 6
+        "gaba": 34
       },
       "matched_types": {
+        "AN17B016": 2,
+        "AVLP005": 8,
         "CB2633": 4,
         "PVLP021": 4,
+        "WED001": 10,
+        "WED055_b": 8,
         "WED104": 2
       }
     },

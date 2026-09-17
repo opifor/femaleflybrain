@@ -433,8 +433,11 @@ def test_e3b_roadmap_synapses_and_snapshot_metadata(e3_snapshot):
     if dataset == "female":
         assert {cell_type: rows["vpoEN-input:" + cell_type]["outputs"]["vpoEN"]
                 for cell_type in E3B_INPUTS} == E3B_INPUTS
+    # top10 is the literal FAFB list plus only the opened per-dataset aliases (report 19).
+    opened_aliases = {"female": [], "banc": ["AN17B016"],
+                      "male": ["WED001", "WED055_b", "AVLP005", "AN17B016"]}[dataset]
     np.testing.assert_array_equal(selected["vpoEN-input-top10"],
-                                  np.flatnonzero(np.isin(graph["type"], list(E3B_INPUTS))))
+                                  np.flatnonzero(np.isin(graph["type"], list(E3B_INPUTS) + opened_aliases)))
 
 
 def write_e3b_measurements():
